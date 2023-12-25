@@ -1,0 +1,154 @@
+<svg width="148" height="100" viewBox="0 0 148 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3" clip-path="url(#clip0_1_1974)">
+<g clip-path="url(#clip1_1_1974)">
+<circle cx="2" cy="2" r="2" fill="white"/>
+<circle cx="18" cy="2" r="2" fill="white"/>
+<circle cx="34" cy="2" r="2" fill="white"/>
+<circle cx="50" cy="2" r="2" fill="white"/>
+<circle cx="66" cy="2" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip2_1_1974)">
+<circle cx="2" cy="18" r="2" fill="white"/>
+<circle cx="18" cy="18" r="2" fill="white"/>
+<circle cx="34" cy="18" r="2" fill="white"/>
+<circle cx="50" cy="18" r="2" fill="white"/>
+<circle cx="66" cy="18" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip3_1_1974)">
+<circle cx="2" cy="34" r="2" fill="white"/>
+<circle cx="18" cy="34" r="2" fill="white"/>
+<circle cx="34" cy="34" r="2" fill="white"/>
+<circle cx="50" cy="34" r="2" fill="white"/>
+<circle cx="66" cy="34" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip4_1_1974)">
+<circle cx="2" cy="50" r="2" fill="white"/>
+<circle cx="18" cy="50" r="2" fill="white"/>
+<circle cx="34" cy="50" r="2" fill="white"/>
+<circle cx="50" cy="50" r="2" fill="white"/>
+<circle cx="66" cy="50" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip5_1_1974)">
+<circle cx="2" cy="66" r="2" fill="white"/>
+<circle cx="18" cy="66" r="2" fill="white"/>
+<circle cx="34" cy="66" r="2" fill="white"/>
+<circle cx="50" cy="66" r="2" fill="white"/>
+<circle cx="66" cy="66" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip6_1_1974)">
+<circle cx="2" cy="82" r="2" fill="white"/>
+<circle cx="18" cy="82" r="2" fill="white"/>
+<circle cx="34" cy="82" r="2" fill="white"/>
+<circle cx="50" cy="82" r="2" fill="white"/>
+<circle cx="66" cy="82" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip7_1_1974)">
+<circle cx="2" cy="98" r="2" fill="white"/>
+<circle cx="18" cy="98" r="2" fill="white"/>
+<circle cx="34" cy="98" r="2" fill="white"/>
+<circle cx="50" cy="98" r="2" fill="white"/>
+<circle cx="66" cy="98" r="2" fill="white"/>
+</g>
+</g>
+<g opacity="0.3" clip-path="url(#clip8_1_1974)">
+<g clip-path="url(#clip9_1_1974)">
+<circle cx="82" cy="2" r="2" fill="white"/>
+<circle cx="98" cy="2" r="2" fill="white"/>
+<circle cx="114" cy="2" r="2" fill="white"/>
+<circle cx="130" cy="2" r="2" fill="white"/>
+<circle cx="146" cy="2" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip10_1_1974)">
+<circle cx="82" cy="18" r="2" fill="white"/>
+<circle cx="98" cy="18" r="2" fill="white"/>
+<circle cx="114" cy="18" r="2" fill="white"/>
+<circle cx="130" cy="18" r="2" fill="white"/>
+<circle cx="146" cy="18" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip11_1_1974)">
+<circle cx="82" cy="34" r="2" fill="white"/>
+<circle cx="98" cy="34" r="2" fill="white"/>
+<circle cx="114" cy="34" r="2" fill="white"/>
+<circle cx="130" cy="34" r="2" fill="white"/>
+<circle cx="146" cy="34" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip12_1_1974)">
+<circle cx="82" cy="50" r="2" fill="white"/>
+<circle cx="98" cy="50" r="2" fill="white"/>
+<circle cx="114" cy="50" r="2" fill="white"/>
+<circle cx="130" cy="50" r="2" fill="white"/>
+<circle cx="146" cy="50" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip13_1_1974)">
+<circle cx="82" cy="66" r="2" fill="white"/>
+<circle cx="98" cy="66" r="2" fill="white"/>
+<circle cx="114" cy="66" r="2" fill="white"/>
+<circle cx="130" cy="66" r="2" fill="white"/>
+<circle cx="146" cy="66" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip14_1_1974)">
+<circle cx="82" cy="82" r="2" fill="white"/>
+<circle cx="98" cy="82" r="2" fill="white"/>
+<circle cx="114" cy="82" r="2" fill="white"/>
+<circle cx="130" cy="82" r="2" fill="white"/>
+<circle cx="146" cy="82" r="2" fill="white"/>
+</g>
+<g clip-path="url(#clip15_1_1974)">
+<circle cx="82" cy="98" r="2" fill="white"/>
+<circle cx="98" cy="98" r="2" fill="white"/>
+<circle cx="114" cy="98" r="2" fill="white"/>
+<circle cx="130" cy="98" r="2" fill="white"/>
+<circle cx="146" cy="98" r="2" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1_1974">
+<rect width="68" height="100" fill="white"/>
+</clipPath>
+<clipPath id="clip1_1_1974">
+<rect width="68" height="4" fill="white"/>
+</clipPath>
+<clipPath id="clip2_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(0 16)"/>
+</clipPath>
+<clipPath id="clip3_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(0 32)"/>
+</clipPath>
+<clipPath id="clip4_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(0 48)"/>
+</clipPath>
+<clipPath id="clip5_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(0 64)"/>
+</clipPath>
+<clipPath id="clip6_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(0 80)"/>
+</clipPath>
+<clipPath id="clip7_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(0 96)"/>
+</clipPath>
+<clipPath id="clip8_1_1974">
+<rect width="68" height="100" fill="white" transform="translate(80)"/>
+</clipPath>
+<clipPath id="clip9_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(80)"/>
+</clipPath>
+<clipPath id="clip10_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(80 16)"/>
+</clipPath>
+<clipPath id="clip11_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(80 32)"/>
+</clipPath>
+<clipPath id="clip12_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(80 48)"/>
+</clipPath>
+<clipPath id="clip13_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(80 64)"/>
+</clipPath>
+<clipPath id="clip14_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(80 80)"/>
+</clipPath>
+<clipPath id="clip15_1_1974">
+<rect width="68" height="4" fill="white" transform="translate(80 96)"/>
+</clipPath>
+</defs>
+</svg>
