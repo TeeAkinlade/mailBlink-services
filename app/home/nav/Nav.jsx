@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
 import { RxHamburgerMenu } from "react-icons/rx";
-import NavlinkList from "./navlinkList";
 import SignBtn from "@/components/SignBtn";
+import Navlink from "./Navlink";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -27,7 +27,7 @@ const Nav = () => {
             <RxHamburgerMenu />
           </div>
           <div className="lg:flex hidden items-center space-x-6">
-            <NavlinkList />
+            <Navlink />
             <SignBtn />
           </div>
         </div>

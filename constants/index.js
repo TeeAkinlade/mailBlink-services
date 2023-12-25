@@ -12,6 +12,14 @@ import image11 from "@/public/assets/images/Mobile.svg";
 import { IoMdMail } from "react-icons/io";
 import { FaSms, FaWpforms } from "react-icons/fa";
 
+export const NAV_LINKS = [
+  { href: "/features", key: "features", label: "Features" },
+  { href: "/about", key: "about", label: "About" },
+  { href: "/resources", key: "resources", label: "Resources" },
+  { href: "/blog", key: "blog", label: "Blog" },
+  { href: "/contact", key: "contact_us", label: "Contact Us" },
+];
+
 export const NavListData = [
   {
     id: 1,
