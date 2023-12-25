@@ -18,7 +18,7 @@ const Nav = () => {
             href="/"
             className="font-bold text-2xl md:text-4xl text-[#17181A] font-Roboto"
           >
-            MailBlink
+            MailBlink.
           </Link>
           <div
             className="text-3xl lg:hidden"
@@ -43,7 +43,7 @@ const Nav = () => {
               className="absolute top-5 right-5 duration-300"
               onClick={() => setOpen((prev) => !prev)}
             />
-            <NavlinkList />
+            <Navlink />
             <div className="mt-12 pl-5 md:pl-0 md:mt-0">
               <SignBtn />
             </div>

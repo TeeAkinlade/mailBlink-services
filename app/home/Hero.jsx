@@ -8,9 +8,8 @@ const Hero = () => {
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-10 md:pt-12">
             <p className="text-primaryBlack2 text-3xl sm:text-4xl md:text-5xl font-semibold font-Roboto leading-tight">
-              SMS Marketing and{" "}
-              <span className="text-forestGreen">Email Marketing</span> Made
-              Easy.
+              Email and SMS <span className="text-forestGreen">Marketing</span>{" "}
+              Made Easy.
             </p>
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg">
@@ -77,7 +76,6 @@ const Hero = () => {
             height="150"
             className="w-full object-cover"
           />
-          
         </div>
       </div>
     </section>
