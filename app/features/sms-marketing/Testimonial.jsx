@@ -1,9 +1,8 @@
 "use client";
 
-
-import React, { useState } from 'react';
-import TestimonialCard from './TestimonialCard';
-import Image from 'next/image';
+import React, { useState } from "react";
+import TestimonialCard from "./TestimonialCard";
+import Image from "next/image";
 
 const Testimonial = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -11,38 +10,37 @@ const Testimonial = (props) => {
   const testimonials = [
     {
       feedback:
-        'To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landify is one of the best landing page UI kits I have come across. It’s so flexible, well organised and easily editable.',
-      image: '/assets/images/display_pic.jpeg',
-      name: 'Floyd Miles',
-      position: 'Co-Founder, BookMyShow',
+        "To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landify is one of the best landing page UI kits I have come across. It’s so flexible, well organised and easily editable.",
+      image: "/assets/images/display_pic.jpeg",
+      name: "Floyd Miles",
+      position: "Co-Founder, BookMyShow",
     },
     {
       feedback:
-      "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
-      image: '/assets/images/display_pic.jpeg',
-      name: 'Floyd Miles',
-      position: 'Co-Founder, BookMyShow',
+        "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
+      image: "/assets/images/display_pic.jpeg",
+      name: "Floyd Miles",
+      position: "Co-Founder, BookMyShow",
+    },
+    {
+      feedback: "Landify saved our time in designing my company page.",
+      image: "/assets/images/display_pic.jpeg",
+      name: "Floyd Miles",
+      position: "Co-Founder, BookMyShow",
     },
     {
       feedback:
-      "Landify saved our time in designing my company page.",
-      image: '/assets/images/display_pic.jpeg',
-      name: 'Floyd Miles',
-      position: 'Co-Founder, BookMyShow',
+        "To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landify is one of the best landing page UI kits I have come across. It’s so flexible, well organised and easily editable.",
+      image: "/assets/images/display_pic.jpeg",
+      name: "Floyd Miles",
+      position: "Co-Founder, BookMyShow",
     },
     {
       feedback:
-        'To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landify is one of the best landing page UI kits I have come across. It’s so flexible, well organised and easily editable.',
-      image: '/assets/images/display_pic.jpeg',
-      name: 'Floyd Miles',
-      position: 'Co-Founder, BookMyShow',
-    },
-    {
-      feedback:
-        'To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landify is one of the best landing page UI kits I have come across. It’s so flexible, well organised and easily editable.',
-      image: '/assets/images/display_pic.jpeg',
-      name: 'Floyd Miles',
-      position: 'Co-Founder, BookMyShow',
+        "To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landify is one of the best landing page UI kits I have come across. It’s so flexible, well organised and easily editable.",
+      image: "/assets/images/display_pic.jpeg",
+      name: "Floyd Miles",
+      position: "Co-Founder, BookMyShow",
     },
     // Add more testimonials as needed
   ];
@@ -60,7 +58,10 @@ const Testimonial = (props) => {
     const currentTestimonials = testimonials.slice(startIndex, endIndex);
 
     return currentTestimonials.map((testimonial, index) => (
-      <div key={index} className=" mb-5 md:w-[50rem] flex md:flex-nowrap flex-wrap items-center justify-center gap-10">
+      <div
+        key={index}
+        className=" mb-5 md:w-[50rem] flex md:flex-nowrap flex-wrap items-center justify-center gap-10"
+      >
         <TestimonialCard {...testimonial} className="md:w-[20rem]" />
         <div>
           <div className="md:w-[25.8rem] mb-5">
@@ -88,9 +89,10 @@ const Testimonial = (props) => {
 
   return (
     <section className="md:h-[56rem] lg:p-10 md:p-5 p-10 bg-white flex flex-col justify-center">
-       <div className=" md:ml-[10%] md:mb-0 mb-8">
+      <div className=" md:ml-[10%] md:mb-0 mb-8">
         <Image
           src="/assets/icons/quote_mark.svg"
+          alt="test image"
           width={100}
           height={100}
           className="md:w-[100px] w-[60px] "
@@ -103,11 +105,7 @@ const Testimonial = (props) => {
         </div>
       </div>
       <div className=" flex md:flex-nowrap mt-5 flex-wrap items-center justify-center gap-10">
-        <div className="cursor-pointer">
-          {renderTestimonials()}
-        </div>
-       
-        
+        <div className="cursor-pointer">{renderTestimonials()}</div>
       </div>
       {/* Pagination */}
       <div className="mt-16 gap-1 flex justify-center items-center">
@@ -116,9 +114,8 @@ const Testimonial = (props) => {
             key={index}
             onClick={() => handlePageChange(index + 1)}
             className={`w-3 h-1 rounded-md cursor-pointer ${
-              currentPage === index + 1 ? 'bg-Ash' : 'bg-[#00000033]'
+              currentPage === index + 1 ? "bg-Ash" : "bg-[#00000033]"
             }`}
-           
           ></span>
         ))}
       </div>

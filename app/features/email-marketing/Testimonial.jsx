@@ -17,6 +17,7 @@ const Testimonial = () => {
       <div className=" md:ml-[10%] md:mb-0 mb-8 md:block flex-center flex-col">
         <Image
           src="/assets/icons/quote_mark.svg"
+          alt="image"
           width={100}
           height={100}
           className="md:w-[100px] w-[60px] md:-ml-0 -ml-[15rem]"
