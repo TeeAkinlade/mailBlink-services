@@ -9,7 +9,6 @@ import image8 from "@/public/assets/images/LinkedIn.svg";
 import image9 from "@/public/assets/images/Instagram.svg";
 import image10 from "@/public/assets/images/email-icon.svg";
 import image11 from "@/public/assets/images/Mobile.svg";
-import image12 from "@/public/assets/images/Location.svg";
 import { IoMdMail } from "react-icons/io";
 import { FaSms, FaWpforms } from "react-icons/fa";
 
@@ -18,13 +17,6 @@ export const NavListData = [
     id: 1,
     name: "Features",
     submenu: true,
-    sublink: [
-      { name: "Audit", link: "/" },
-      { name: "Manage", link: "/" },
-      { name: "Secure", link: "/" },
-      { name: "Automate", link: "/" },
-      { name: "About", link: "/" },
-    ],
   },
   {
     id: 2,
@@ -62,7 +54,7 @@ export const NavListData = [
       { name: "About", link: "/" },
     ],
   },
-  
+
   {
     id: 6,
     name: "Contacts",
@@ -235,247 +227,297 @@ export const contacts = [
 
 // Hero section of email marketing page
 export const stats = [
-    {
-      id: 1,
-      title: "3 billion+",
-      details: "Calling numbers connected",
-    },
-    {
-      id: 2,
-      title: "100 billion+",
-      details: "Text messages sent",
-    },
-    {
-      id: 3,
-      title: "121 million+",
-      details: "phone numbers given out",
-    }
-  ];
-  
-  // Product section of email page
-  export const products = [
-    {
-      id: 1,
-      position: "relative",
-      variations: [
-        { bg: "#ffe6e6", top: "0", image: "/assets/icons/github.icon.svg", title: "3 billion+", details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atquecupiditate delectus est distinctio veritatis." },
-        { bg: "#e6f0ff", top: "2.5rem", image: "/assets/icons/github.icon.svg", title: "3 billion+", details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atquecupiditate est distinctio veritatis." },
-        { bg: "#e1f6f4", top: "5rem", image: "/assets/icons/github.icon.svg", title: "3 billion+", details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus est distinctio veritatis." },
-      ],
-    },
-    {
-      id: 2,
-      variations: [
-        { bg: "#ffe6ff", top: "0", image: "/assets/icons/github.icon.svg", title: "3 billion+ ", details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. delectus est distinctio veritatis." },
-        { bg: "#e6ffee", top: "2.5rem", image: "/assets/icons/github.icon.svg", title: "3 billion+", details: "Calling numbers connected" },
-        { bg: "#f0f0f5", top: "5rem", image: "/assets/icons/github.icon.svg", title: "3 billion+", details: "Calling numbers connected" },
-      ],
-    },
-  ];
-  
-  // Community section of Hero page
-  export const items = [
-    {
-      id: 1,
-      image: "/assets/icons/support.svg",
-      title: "Community Support",
-      description:
-        "Community Support is also available for all open source users.",
-    },
-    {
-      id: 2,
-      image: "/assets/icons/github.icon.svg",
-      title: "MailBlink on GitHub",
-      description: "Track the MailBlink development changes on GitHub.",
-    },
-  ];
+  {
+    id: 1,
+    title: "3 billion+",
+    details: "Calling numbers connected",
+  },
+  {
+    id: 2,
+    title: "100 billion+",
+    details: "Text messages sent",
+  },
+  {
+    id: 3,
+    title: "121 million+",
+    details: "phone numbers given out",
+  },
+];
 
-  // Regex for email validation
-  export const emailRegex = {
-    pattern:
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-  };
+// Product section of email page
+export const products = [
+  {
+    id: 1,
+    position: "relative",
+    variations: [
+      {
+        bg: "#ffe6e6",
+        top: "0",
+        image: "/assets/icons/github.icon.svg",
+        title: "3 billion+",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atquecupiditate delectus est distinctio veritatis.",
+      },
+      {
+        bg: "#e6f0ff",
+        top: "2.5rem",
+        image: "/assets/icons/github.icon.svg",
+        title: "3 billion+",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atquecupiditate est distinctio veritatis.",
+      },
+      {
+        bg: "#e1f6f4",
+        top: "5rem",
+        image: "/assets/icons/github.icon.svg",
+        title: "3 billion+",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus est distinctio veritatis.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    variations: [
+      {
+        bg: "#ffe6ff",
+        top: "0",
+        image: "/assets/icons/github.icon.svg",
+        title: "3 billion+ ",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. delectus est distinctio veritatis.",
+      },
+      {
+        bg: "#e6ffee",
+        top: "2.5rem",
+        image: "/assets/icons/github.icon.svg",
+        title: "3 billion+",
+        details: "Calling numbers connected",
+      },
+      {
+        bg: "#f0f0f5",
+        top: "5rem",
+        image: "/assets/icons/github.icon.svg",
+        title: "3 billion+",
+        details: "Calling numbers connected",
+      },
+    ],
+  },
+];
 
-  // Regex for password validation
-  export const passwordRegex = {
-    pattern: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
-  };
+// Community section of Hero page
+export const items = [
+  {
+    id: 1,
+    image: "/assets/icons/support.svg",
+    title: "Community Support",
+    description:
+      "Community Support is also available for all open source users.",
+  },
+  {
+    id: 2,
+    image: "/assets/icons/github.icon.svg",
+    title: "MailBlink on GitHub",
+    description: "Track the MailBlink development changes on GitHub.",
+  },
+];
 
-  // input details for change-password page
-  export const changePasswordInput = [
-    {
-      id: "email",
-      label: "Email",
-      placeholder: "enter email",
-      type: 'text'
-    },
-    {
-      id: "newPassword",
-      label: "New password",
-      placeholder: "enter new password",
-      type: "password"
-    },
-    {
-      id: "confirmPassword",
-      label: "Confirm password",
-      placeholder: "re-enter password",
-      type: "password"
-    },
-  ];
+// Regex for email validation
+export const emailRegex = {
+  pattern:
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+};
 
-  // testimonial section
-  export const testimonials = [
-    {
-      id: 1,
-      variations: [
-        {
-          feedback: "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow1"
-        },
-        {
-          feedback: "Landify saved our time in designing my company page.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow1"
-        },
-        {
-          feedback: "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow1"
-        }
-      ]
-    },
-    {
-      id: 2,
-      variations: [
-        {
-          feedback: "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow2"
-        },
-        {
-          feedback: "Landify saved our time in designing my company page.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow2"
-        },
-        {
-          feedback: "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow2"
-        }
-      ]
-    },
-    {
-      id: 3,
-      variations: [
-        {
-          feedback: "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow3"
-        },
-        {
-          feedback: "Landify saved our time in designing my company page.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow3"
-        },
-        {
-          feedback: "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow3"
-        }
-      ]
-    },
-    {
-      id: 4,
-      variations: [
-        {
-          feedback: "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow4"
-        },
-        {
-          feedback: "Landify saved our time in designing my company page.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow4"
-        },
-        {
-          feedback: "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow4"
-        }
-      ]
-    },
-    {
-      id: 5,
-      variations: [
-        {
-          feedback: "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow5"
-        },
-        {
-          feedback: "Landify saved our time in designing my company page.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow5"
-        },
-        {
-          feedback: "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
-          image : "/assets/images/display_pic.jpeg",
-          name: "Floyd Miles",
-          position: "Co-Founder, BookMyShow5"
-        }
-      ]
-    }
-  ]
+// Regex for password validation
+export const passwordRegex = {
+  pattern: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+};
 
-  // constants for notification page
-  export const webNotifications = [
-    {
-        id: "new-subscriber",
-        label: "New subscriber"
-    },
-    {
-        id: "post-like",
-        label: "Post like"
-    },
-    {
-        id: "you-followed",
-        label: "Someone you followed posted"
-    },
-    {
-        id: "campaign-sent",
-        label: "Campaigns sent out"
-    },
-    {
-        id: "campaign-delivered",
-        label: " Campaign delivery"
-    },
-]
+// input details for change-password page
+export const changePasswordInput = [
+  {
+    id: "email",
+    label: "Email",
+    placeholder: "enter email",
+    type: "text",
+  },
+  {
+    id: "newPassword",
+    label: "New password",
+    placeholder: "enter new password",
+    type: "password",
+  },
+  {
+    id: "confirmPassword",
+    label: "Confirm password",
+    placeholder: "re-enter password",
+    type: "password",
+  },
+];
+
+// testimonial section
+export const testimonials = [
+  {
+    id: 1,
+    variations: [
+      {
+        feedback:
+          "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow1",
+      },
+      {
+        feedback: "Landify saved our time in designing my company page.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow1",
+      },
+      {
+        feedback:
+          "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow1",
+      },
+    ],
+  },
+  {
+    id: 2,
+    variations: [
+      {
+        feedback:
+          "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow2",
+      },
+      {
+        feedback: "Landify saved our time in designing my company page.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow2",
+      },
+      {
+        feedback:
+          "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow2",
+      },
+    ],
+  },
+  {
+    id: 3,
+    variations: [
+      {
+        feedback:
+          "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow3",
+      },
+      {
+        feedback: "Landify saved our time in designing my company page.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow3",
+      },
+      {
+        feedback:
+          "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow3",
+      },
+    ],
+  },
+  {
+    id: 4,
+    variations: [
+      {
+        feedback:
+          "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow4",
+      },
+      {
+        feedback: "Landify saved our time in designing my company page.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow4",
+      },
+      {
+        feedback:
+          "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow4",
+      },
+    ],
+  },
+  {
+    id: 5,
+    variations: [
+      {
+        feedback:
+          "I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow5",
+      },
+      {
+        feedback: "Landify saved our time in designing my company page.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow5",
+      },
+      {
+        feedback:
+          "I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.",
+        image: "/assets/images/display_pic.jpeg",
+        name: "Floyd Miles",
+        position: "Co-Founder, BookMyShow5",
+      },
+    ],
+  },
+];
+
+// constants for notification page
+export const webNotifications = [
+  {
+    id: "new-subscriber",
+    label: "New subscriber",
+  },
+  {
+    id: "post-like",
+    label: "Post like",
+  },
+  {
+    id: "you-followed",
+    label: "Someone you followed posted",
+  },
+  {
+    id: "campaign-sent",
+    label: "Campaigns sent out",
+  },
+  {
+    id: "campaign-delivered",
+    label: " Campaign delivery",
+  },
+];
 
 export const mailNotifications = [
-    {
-        title: "Weekly newsletter",
-        label: "A small text about what the newsletters might contain"
-    },
-    {
-        title: "Account summary",
-        label: "A small text about what the newsletters might contain"
-    },
-]
+  {
+    title: "Weekly newsletter",
+    label: "A small text about what the newsletters might contain",
+  },
+  {
+    title: "Account summary",
+    label: "A small text about what the newsletters might contain",
+  },
+];
 
 // accounts page
 export const passwordInputs = [
