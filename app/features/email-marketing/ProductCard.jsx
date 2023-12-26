@@ -4,20 +4,23 @@ import { useEffect, useState } from "react";
 
 export const ProductCard = (props) => {
   // ------------------ THIS IS ENTIRELY FOR STYLING---------------------------- //
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(1000);
+
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
+    if (typeof window !== "undefined") {
+      // Attach the event listener
+      window.addEventListener("resize", handleResize);
 
-    // Attach the event listener
-    window.addEventListener("resize", handleResize);
-
-    // Detach the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      // Detach the event listener when the component is unmounted
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []); // Empty dependency array means this effect runs once after the initial render
 
   const top = {

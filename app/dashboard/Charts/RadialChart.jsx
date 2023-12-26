@@ -3,8 +3,10 @@ import { Radialdata as data } from './Data';
 export default function RadialChart() {
 	//
 
-	let innerWidth = window.innerWidth;
-	let innerheight = window.innerHeight;
+	// let innerWidth = window.innerWidth;
+	// let innerheight = window.innerHeight;
+	let innerWidth = 1000;
+	let innerheight = 1000;
 	// Dynamic value of margin based on window width
 	let x;
 

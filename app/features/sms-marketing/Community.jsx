@@ -46,7 +46,7 @@ const Community = () => {
         </p>
         <div className="flex justify-center items-center gap-8 mt-10">
           {items.map((item) => (
-            <div className="w-[50%]">
+            <div key={item.id} className="w-[50%]">
               <img src={item.image} alt="" />
               <h3 className="font-semibold md:text-2xl text-xl mt-2">
                 {item.title}
