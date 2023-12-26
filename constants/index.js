@@ -26,14 +26,16 @@ export const campaignDetailsList = [
     photo: image1,
     alt: "Feature Icon",
     heading: "Plug-n-plPlug-n-play configuration",
-    content: "Secure your organization without changing all the settings.",
+    content:
+      "Secure your organization without changing all the settings. The text will be populated with the right information later on.",
   },
   {
     id: 2,
     photo: image1,
     alt: "Feature Icon",
     heading: "Easy Integration",
-    content: "Smooth Integrated with Microsoft Office 365",
+    content:
+      "Smooth Integrated with Microsoft Office 365.The text will be populated with the right information later on.",
   },
 ];
 

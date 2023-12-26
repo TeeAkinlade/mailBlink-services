@@ -8,13 +8,15 @@ const Hero = () => {
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-10 md:pt-12">
             <p className="text-primaryBlack2 text-3xl sm:text-4xl md:text-5xl font-semibold font-Roboto leading-tight">
-              Email and SMS <span className="text-forestGreen">Marketing</span>
+              Email and SMS <span className="text-forestGreen">Marketing </span>
               Made Easy.
             </p>
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg">
-                You can get started with your marketing automation in a few
-                minutes
+                MailBlink is an email and sms marketing for everything you need
+                to create a campaign. Hundreds of independent developers sell
+                their products here so that you could create your own unique
+                project.
               </p>
               <ul className="my-6">
                 <li className="flex items-center text-sm md:text-base">

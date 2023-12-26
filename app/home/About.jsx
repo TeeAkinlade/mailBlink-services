@@ -28,7 +28,9 @@ const About = () => {
             </h3>
             <p className="text-primaryBlack leading-[28px] mb-8">
               We develop multi-award winning enterprise-class software that
-              helps IT teams audit IT environments.
+              helps IT teams audit IT environments. Elevate your digital
+              marketing business with ourplatform tailored for visionary website
+              designers, skilled developers, and ambitious entrepreneurs.
             </p>
             <Link href="/about" className="custom-btn">
               Read More
