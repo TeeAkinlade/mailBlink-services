@@ -7,7 +7,7 @@ const SignBtn = () => {
         href="#"
         className="text-white bg-navyBlue rounded-[24px] py-2 px-6 font-medium text-sm border border-navyBlue hover:text-navyBlue hover:bg-white hover:border hover:border-navyBlue duration-200"
       >
-        Sign In
+        Sign Up
       </Link>
       <Link
         href="#"
