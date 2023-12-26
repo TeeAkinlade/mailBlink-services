@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-10 md:pt-12">
             <p className="text-primaryBlack2 text-3xl sm:text-4xl md:text-5xl font-semibold font-Roboto leading-tight">
-              Email and SMS <span className="text-forestGreen">Marketing</span>{" "}
+              Email and SMS <span className="text-forestGreen">Marketing</span>
               Made Easy.
             </p>
             <div className="my-6 md:my-12 lg:my-8">
@@ -18,19 +18,19 @@ const Hero = () => {
               </p>
               <ul className="my-6">
                 <li className="flex items-center text-sm md:text-base">
-                  <RiVerifiedBadgeFill className="text-navyBlue" size={24} />{" "}
+                  <RiVerifiedBadgeFill className="text-navyBlue" size={24} />
                   <span className="ml-4 text-[#565656]">
                     Get Overview at a glance
                   </span>
                 </li>
                 <li className="flex items-center text-sm md:text-base my-2">
-                  <RiVerifiedBadgeFill className="text-navyBlue" size={24} />{" "}
+                  <RiVerifiedBadgeFill className="text-navyBlue" size={24} />
                   <span className="ml-4 text-[#565656]">
                     Deposit funds easily, security
                   </span>
                 </li>
                 <li className="flex items-center text-sm md:text-base">
-                  <RiVerifiedBadgeFill className="text-navyBlue" size={24} />{" "}
+                  <RiVerifiedBadgeFill className="text-navyBlue" size={24} />
                   <span className="ml-4 text-[#565656]">Get Live Support</span>
                 </li>
               </ul>

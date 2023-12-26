@@ -9,7 +9,7 @@ export default function NotFound() {
         <Image src={errorImage} alt='not found image' className='px-4 sm:px-0' priority />
         <h2 className='2xl md:text-4xl font-Roboto font-bold text-center pt-6'> 404- Page Not Found</h2>
         <div className=" text-center my-10">
-          <p className='text-gray-400 text-sm md:text-base'>We're sorry, the page you requested could not be found</p>
+          <p className='text-gray-400 text-sm md:text-base'>{`We're sorry, the page you requested could not be found`}</p>
           <p className='text-gray-400 text-sm md:text-base'>Please go back to the home page</p>
         </div>
         <div className="flex justify-center">
