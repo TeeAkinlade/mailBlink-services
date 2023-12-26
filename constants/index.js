@@ -17,7 +17,7 @@ export const NAV_LINKS = [
   { href: "/about", key: "about", label: "About" },
   { href: "/resources", key: "resources", label: "Resources" },
   { href: "/blog", key: "blog", label: "Blog" },
-  { href: "/contact", key: "contact_us", label: "Contact Us" },
+  { href: "/contact-us", key: "contact_us", label: "Contact Us" },
 ];
 
 export const NavListData = [
