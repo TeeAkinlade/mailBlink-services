@@ -11,7 +11,9 @@ const Services = () => {
           </p>
           <p className="text-center padding-y text-primaryBlack">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. The text
-            will be populated with the right information later on.
+            will be populated with the right information later on. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. The text will be
+            populated with the right information later on.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-10">
             {servicesData.map(
