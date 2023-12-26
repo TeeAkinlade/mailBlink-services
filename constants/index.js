@@ -20,63 +20,6 @@ export const NAV_LINKS = [
   { href: "/contact-us", key: "contact_us", label: "Contact Us" },
 ];
 
-export const NavListData = [
-  {
-    id: 1,
-    name: "Features",
-    submenu: true,
-  },
-  {
-    id: 2,
-    name: "Resources",
-    submenu: true,
-    sublink: [
-      { name: "Audit", link: "/" },
-      { name: "Manage", link: "/" },
-      { name: "Secure", link: "/" },
-      { name: "Automate", link: "/" },
-      { name: "About", link: "/" },
-    ],
-  },
-  {
-    id: 3,
-    name: "About",
-    submenu: true,
-    sublink: [
-      { name: "Audit", link: "/" },
-      { name: "Manage", link: "/" },
-      { name: "Secure", link: "/" },
-      { name: "Automate", link: "/" },
-      { name: "About", link: "/" },
-    ],
-  },
-  {
-    id: 4,
-    name: "Blog",
-    submenu: true,
-    sublink: [
-      { name: "Audit", link: "/" },
-      { name: "Manage", link: "/" },
-      { name: "Secure", link: "/" },
-      { name: "Automate", link: "/" },
-      { name: "About", link: "/" },
-    ],
-  },
-
-  {
-    id: 6,
-    name: "Contacts",
-    submenu: true,
-    sublink: [
-      { name: "Audit", link: "/" },
-      { name: "Manage", link: "/" },
-      { name: "Secure", link: "/" },
-      { name: "Automate", link: "/" },
-      { name: "About", link: "/" },
-    ],
-  },
-];
-
 export const campaignDetailsList = [
   {
     id: 1,
