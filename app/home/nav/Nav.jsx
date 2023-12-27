@@ -35,7 +35,7 @@ const Nav = () => {
 
         {/* Dark background */}
         <div
-          className={`fixed w-full h-full top-0 text-center z-10 bg-black transition-opacity duration-500 ${
+          className={`fixed w-full h-full top-0 left-0 z-10 bg-black transition-opacity duration-500 ${
             open
               ? "pointer-events-auto opacity-50"
               : "pointer-events-none opacity-0"
