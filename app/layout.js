@@ -1,4 +1,5 @@
 import Footer from "./home/footer/Footer";
+import Nav from "./home/nav/Nav";
 import "/styles/globals.css";
 
 export const metadata = {
@@ -9,7 +10,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     <body className="font-poppins min-h-screen bg-secondary">
+      <body className="font-poppins min-h-screen bg-secondary">
+        <Nav />
         {children}
         <Footer />
       </body>
