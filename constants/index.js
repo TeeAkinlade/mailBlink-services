@@ -24,12 +24,12 @@ export const NAV_LINKS = [
         label: "Email Marketing",
       },
       {
-        href: "/features/sms-marketing", 
+        href: "/features/sms-marketing",
         key: "sms-marketing",
-        label: "SmS Marketing",
+        label: "SMS Marketing",
       },
       {
-        href: "/forms",
+        href: "/features/forms",
         key: "forms",
         label: "Form Builder",
       },
