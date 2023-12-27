@@ -13,7 +13,28 @@ import { IoMdMail } from "react-icons/io";
 import { FaSms, FaWpforms } from "react-icons/fa";
 
 export const NAV_LINKS = [
-  { href: "", key: "features", label: "Features" },
+  {
+    href: "",
+    key: "features",
+    label: "Features",
+    dropDown: [
+      {
+        href: "/features/email-marketing",
+        key: "email-marketing",
+        label: "Email Marketing",
+      },
+      {
+        href: "/features/sms-marketing", 
+        key: "sms-marketing",
+        label: "SmS Marketing",
+      },
+      {
+        href: "/forms",
+        key: "forms",
+        label: "Form Builder",
+      },
+    ],
+  },
   { href: "/about", key: "about", label: "About" },
   { href: "/resources", key: "resources", label: "Resources" },
   { href: "/blog", key: "blog", label: "Blog" },
