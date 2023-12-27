@@ -51,7 +51,7 @@ const Navlink = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="h-4 w-4"
+                  className="h-4 w-4 mx-2"
                 >
                   <path
                     strokeLinecap="round"
@@ -64,7 +64,7 @@ const Navlink = () => {
 
             {link.dropDown && (
               <div
-                className={`2lg:absolute left-0 top-full z-10 w-full 2lg:w-60 mb-2 rounded-md border border-gray-200 bg-white 2lg:shadow-md ${
+                className={`2lg:absolute left-0 top-full z-10 w-full 2lg:w-60 mb-2 rounded-md border py-4 border-gray-200 bg-white 2lg:shadow-md ${
                   showDropdown === index
                     ? "opacity-100 translate-y-0 pointer-events-auto relative"
                     : "opacity-0 translate-y-2 pointer-events-none absolute"
