@@ -52,7 +52,7 @@ const Nav = () => {
             <LiaTimesSolid size={35} onClick={() => setOpen((prev) => !prev)} />
           </button>
 
-          <Navlink className="text-center" />
+          <Navlink />
           <div className="flex items-center px-5">
             <SignBtn />
           </div>
