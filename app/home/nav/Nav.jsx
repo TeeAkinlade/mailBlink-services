@@ -53,7 +53,7 @@ const Nav = () => {
           </button>
 
           <Navlink />
-          <div className="flex items-center px-5 pb-10">
+          <div className="flex items-center px-5">
             <SignBtn />
           </div>
         </div>

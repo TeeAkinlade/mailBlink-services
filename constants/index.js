@@ -26,10 +26,10 @@ export const NAV_LINKS = [
       {
         href: "/features/sms-marketing",
         key: "sms-marketing",
-        label: "SMS Marketing",
+        label: "SmS Marketing",
       },
       {
-        href: "/features/forms",
+        href: "/forms",
         key: "forms",
         label: "Form Builder",
       },
@@ -155,8 +155,10 @@ export const socialMediaLinks = [
 export const footerLinks = [
   {
     id: 1,
-    title: "MailBlink",
+    title: "Resources",
     links: [
+      { id: 1, link: "Blog", href: "#" },
+      { id: 2, link: "Marketing Guides", href: "#" },
       { id: 1, link: "Get a demo", href: "#" },
       { id: 2, link: "Contact us", href: "#" },
     ],
@@ -170,14 +172,6 @@ export const footerLinks = [
       { id: 3, link: "SMS Marketing", href: "/sms/email-marketing" },
       { id: 4, link: "Email", href: "#" },
       { id: 5, link: "Form", href: "#" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Resources",
-    links: [
-      { id: 1, link: "Blog", href: "#" },
-      { id: 2, link: "Marketing Guides", href: "#" },
     ],
   },
 ];
