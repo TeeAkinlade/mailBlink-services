@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
 import Spinner from '../../../components/Spinner';
-import currentUser from '../currentUser';
+import { useCurrentUser } from "@/app/auth/currentUser";
 import OauthComponent from '../OauthComponent';
 // import { useRouter } from "next/router"; // Import useRouter from Next.js
 
@@ -18,7 +18,7 @@ const Signup = () => {
 	const supabase = createClientComponentClient();
 
 	// access current user from currentUser component
-	const { user } = currentUser();
+	const { user } = useCurrentUser();
 
 	// State to manage form inputs and their validation statuses
 	const [email, setEmail] = useState('');

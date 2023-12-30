@@ -1,7 +1,7 @@
 "use client";
 import HyberLink from "./HyberLink";
 import { useState, useEffect } from "react";
-import currentUser from "../../currentUser";
+import { useCurrentUser } from "@/app/auth/currentUser";
 import { passwordInputs, emailRegex, passwordRegex } from "@/constants";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import Spinner from "../../../../components/Spinner";
@@ -17,7 +17,7 @@ const Account = () => {
   const supabase = createClientComponentClient();
 
   const [userDetail, setUserDetail] = useState(null);
-  const { user, loading } = currentUser();
+  const { user, loading } = useCurrentUser();
 
   const [values, setValues] = useState({
     email: "",

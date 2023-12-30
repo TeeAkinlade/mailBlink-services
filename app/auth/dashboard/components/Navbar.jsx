@@ -5,9 +5,10 @@ import { MdOutlineWbSunny } from 'react-icons/md';
 import { MdOutlineDarkMode } from 'react-icons/md';
 import { IoNotificationsOutline } from 'react-icons/io5';
 import Image from 'next/image';
-import currentUser from '../../currentUser';
+import { useCurrentUser } from "@/app/auth/currentUser";
+
 export default function Navbar() {
-	const { user } = currentUser();
+	const { user } = useCurrentUser();
 	const [dark, setDark] = useState(false);
 	const name = user?.user_metadata?.name?.split(' ');
 	const firstName = name?.[0];
