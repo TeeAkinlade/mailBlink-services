@@ -5,21 +5,20 @@ import { MdArrowForwardIos } from 'react-icons/md';
 import { SlPeople } from 'react-icons/sl';
 import BarChart from '../Charts/BarChart';
 import RadialChart from '../Charts/RadialChart';
-import currentUser from '../../currentUser';
+import { useCurrentUser } from "@/app/auth/currentUser";
 
 export default function Home() {
-	const { user } = currentUser();
+	const { user } = useCurrentUser();
 	const name = user?.user_metadata?.name.split(' ');
 	const firstName = name?.[0];
 	return (
 		<div className='p-7 text-2xl flex-1 flex-col h-screen text-black leading-8 py-2 gap-y-2 mt-16 flex-wrap'>
 			<div>
-				{' '}
 				<h2 className='text-xl'>
 					Welcome <strong className='text-black'>{firstName}!</strong>
 				</h2>
 				<p className='text-slate-500 text-[1rem] font-[400]'>
-					Here's the summary of your email marketing process so far
+					{`Here's the summary of your email marketing process so far`}
 				</p>
 			</div>{' '}
 			<div className='grid grid-cols-1 xl:grid-cols-3 xl:gap-12 pb-8'>
@@ -96,7 +95,7 @@ export default function Home() {
 								<SlPeople />
 							</span>
 							<span className='flex flex-col gap-0 text-[0.8rem] font-[700] leading-5'>
-								<h3>Something I'm not every sure of</h3>
+								<h3>{`Something I'm not very sure of`}</h3>
 
 								<p className='text-slate-500 text-[0.8rem] font-[400]'>
 									<strong>2670</strong> Overall Subscriber count
@@ -222,7 +221,7 @@ export default function Home() {
 									Contact Demographic
 								</h3>
 								<p className='text-[0.7rem] text-slate-500'>
-									Visualization of the contacts you've made over time
+									{`Visualization of the contacts you've made over time`}
 								</p>
 							</span>
 

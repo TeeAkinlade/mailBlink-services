@@ -35,7 +35,7 @@ const Footer = () => {
                             ? `sms:${details.replace(/\s/g, "")}`
                             : `mailto:${details}`
                         }
-                        className="pb-4 font-normal"
+                        className="pb-4 font-normal hover:text-ui_primary2"
                       >
                         {details}
                       </Link>
@@ -45,13 +45,12 @@ const Footer = () => {
               </div>
               <div className="mt-10 flex items-center space-x-6">
                 {socialMediaLinks.map(({ id, alt, href, photo }) => (
-                  <Link href={href} key={id}>
+                  <Link href={href} key={id} className="hover:bg-gray-300 rounded-full transition-colors">
                     <Image
                       src={photo}
                       alt={alt}
                       width="40"
                       height="40"
-                      className="hover:translate-y-4 hover:duration-300 hover:ease-in-out"
                     />
                   </Link>
                 ))}
