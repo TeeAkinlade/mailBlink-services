@@ -17,7 +17,7 @@
 }
 
 .padding-x {
-  @apply sm:px-16 px-[2.25rem];
+  @apply sm:px-16 px-[2.15rem];
 }
 
 .padding-y {
@@ -106,7 +106,7 @@ button {
   list-style-type: lower-alpha;
 }
 .login-input-text {
-	width: 364px !important;
+  width: 364px !important;
 }
 /* End of Dashboard styles */
 
@@ -133,22 +133,22 @@ button {
 }
 
 .swiper-pagination {
-	width: 100%;
-	display: flex;
-	justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   gap: 3;
-	position: relative;
-	padding: 1rem 0;
-  }
-  
-  .swiper-pagination .swiper-pagination-bullet {
-	width: 10px;
-	height: 4px;
-	background: #7f7e7e;
-	border-radius: 30px;
-	}
-  
-  .swiper-pagination .swiper-pagination-bullet-active {
-	background: #515355;
-	width: 13px;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 4px;
+  background: #7f7e7e;
+  border-radius: 30px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #515355;
+  width: 13px;
 }
