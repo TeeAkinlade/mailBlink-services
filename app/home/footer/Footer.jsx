@@ -45,13 +45,12 @@ const Footer = () => {
               </div>
               <div className="mt-10 flex items-center space-x-6">
                 {socialMediaLinks.map(({ id, alt, href, photo }) => (
-                  <Link href={href} key={id} className="hover:bg-gray-300 rounded-full transition-colors">
-                    <Image
-                      src={photo}
-                      alt={alt}
-                      width="40"
-                      height="40"
-                    />
+                  <Link
+                    href={href}
+                    key={id}
+                    className="hover:bg-gray-300 rounded-full transition-colors"
+                  >
+                    <Image src={photo} alt={alt} width="40" height="40" />
                   </Link>
                 ))}
               </div>

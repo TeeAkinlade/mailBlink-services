@@ -8,7 +8,7 @@ import image7 from "@/public/assets/images/Twitter.svg";
 import image8 from "@/public/assets/images/LinkedIn.svg";
 import image9 from "@/public/assets/images/Instagram.svg";
 import image10 from "@/public/assets/images/email-icon.svg";
-import image11 from "@/public/assets/images/Mobile.svg";
+import image11 from "@/public/assets/icons/message.svg";
 import { IoMdMail } from "react-icons/io";
 import { FaSms, FaWpforms } from "react-icons/fa";
 

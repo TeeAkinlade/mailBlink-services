@@ -48,7 +48,7 @@ export default function ContactForm() {
       <form
         id="contact-form"
         onSubmit={handleSubmit(onSubmit)}
-        className="mb-10 flex flex-col items-center justify-center gap-4 rounded-lg border-[1px] bg-white p-10 text-center"
+        className="flex flex-col items-center justify-center gap-4 rounded-lg border-[1px] bg-white p-10 text-center"
       >
         <h2 className="text-3xl font-bold">Contact Us</h2>
         <div className="flex w-full flex-col gap-2">
