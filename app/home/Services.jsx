@@ -4,12 +4,12 @@ import { servicesData } from "@/constants";
 const Services = () => {
   return (
     <section className="bg-linear">
-      <div className="max-width padding-x">
+      <div className="max-width md:px-12 mx-auto">
         <div className="py-32 px-8">
-          <p className="text-3xl md:text-5xl font-semibold text-navyBlue font-Roboto text-center">
+          <p className="text-4xl md:text-5xl font-semibold text-navyBlue font-Roboto text-center">
             Our Services
           </p>
-          <p className="text-center padding-y text-primaryBlack">
+          <p className="text-center text-sm md:text-base padding-y text-primaryBlack">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. The text
             will be populated with the right information later on. Lorem ipsum
             dolor sit amet, consectetur adipisicing elit. The text will be
@@ -22,7 +22,7 @@ const Services = () => {
                   className="py-16 bg-backGround shadow-xl p-8 rounded-lg transition-all hover:scale-105 duration-200 border-b-4 border-transparent hover:border-ui_primary"
                   key={id}
                 >
-                  <div className="bg-[#3CBA79] p-4 rounded-[50%] inline-block">
+                  <div className="bg-[#3CBA79] p-3 rounded-[50%] inline-block">
                     <span className="text-white">{icon}</span>
                   </div>
                   <h3 className="text-xl md:text-2xl font-semibold text-primaryBlack2 py-4 font-Roboto">
