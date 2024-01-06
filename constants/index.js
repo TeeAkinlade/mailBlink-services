@@ -98,7 +98,7 @@ export const campaignFeaturesDetails = [
 export const servicesData = [
   {
     id: 1,
-    icon: <IoMdMail size={50} />,
+    icon: <IoMdMail size={30} />,
     title: "Email",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
@@ -107,7 +107,7 @@ export const servicesData = [
   },
   {
     id: 2,
-    icon: <FaSms size={50} />,
+    icon: <FaSms size={30} />,
     title: "SMS",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
@@ -116,7 +116,7 @@ export const servicesData = [
   },
   {
     id: 3,
-    icon: <FaWpforms size={50} />,
+    icon: <FaWpforms size={30} />,
     title: "Form",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
@@ -216,8 +216,8 @@ export const footerLinks = [
     links: [
       { id: 1, link: "Blog", href: "#" },
       { id: 2, link: "Marketing Guides", href: "#" },
-      { id: 1, link: "Get a demo", href: "#" },
-      { id: 2, link: "Contact us", href: "#" },
+      { id: 3, link: "Get a demo", href: "#" },
+      { id: 4, link: "Contact us", href: "#" },
     ],
   },
   {
@@ -238,15 +238,16 @@ export const contacts = [
     id: 1,
     photo: image10,
     alt: "Email-icon",
-    title: "Support:",
+    title: "Support: ",
     details: "hello@landify.co",
   },
   {
     id: 2,
     photo: image11,
     alt: "Mobile-icon",
-    title: "Phone:",
+    title: "Phone: ",
     details: "+91 98765 43210",
+    styles: 'h-6 w-8'
   },
 ];
 
