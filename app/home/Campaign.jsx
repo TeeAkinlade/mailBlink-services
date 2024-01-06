@@ -4,37 +4,27 @@ import { campaignDetailsList, campaignFeaturesDetails } from "@/constants";
 
 const Campaign = () => {
   return (
-    <section className="max-width padding-x">
+    <section className="max-width md:px-12 mx-auto">
       <div className="my-20 px-8">
-        <div className="hidden md:block lg:hidden">
-          <p className="font-Roboto text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-0 font-bold text-primaryBlack2 leading-tight">
-            Create beautiful
-            <span className="text-forestGreen"> Email Campaigns </span>
-          </p>
-          <p className="text-sm my-6 md:text-base text-primaryBlack leading-6">
-            Use our machine learning powered propriotory solutions to protect
-            your business from any cybersecurity attacts.
-          </p>
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center md:gap-10 lg:gap-20">
           <Image
-            src="/assets/images/unsplash_Of_m3hMsoAA.svg"
+            src="/assets/images/amico.svg"
             alt="campaign splash photo"
             width={80}
             height={80}
-            className="w-[80%] object-cover"
+            className="w-full md:w-[80%] object-cover"
           />
           <div className="">
-            <p className="font-Roboto text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-0 font-bold text-primaryBlack2 leading-tight md:hidden lg:block">
+            <p className="font-Roboto text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-0 font-bold text-primaryBlack2 leading-tight md:hidden lg:block text-center md:text-left">
               Create beautiful <br />
               <span className="text-forestGreen">Email Campaigns </span>
             </p>
             <div className="mt-4">
-              <p className="text-sm md:text-base text-primaryBlack leading-6 md:hidden lg:block">
+              <p className="text-base text-center md:text-left text-primaryBlack leading-6 md:hidden lg:block">
                 Use our machine learning powered propriotory solutions to
                 protect your business from any cybersecurity attacts.
               </p>
-              <p className="text-navyBlue font-semibold mt-2 font-lg text-sm md:text-base">
+              <p className="text-navyBlue font-semibold mt-6 md:mt-2 font-lg text-sm md:text-base">
                 Schedule a demo with our friendly experts.
               </p>
               <div className="mt-4">
@@ -54,8 +44,8 @@ const Campaign = () => {
                   )
                 )}
               </div>
-              <div className="py-10">
-                <Link href="/campaigns" className="custom-btn">
+              <div className="py-10 flex justify-center md:justify-start">
+            	<Link href="/campaigns" className="custom-btn">
                   Schedule a demo
                 </Link>
               </div>
