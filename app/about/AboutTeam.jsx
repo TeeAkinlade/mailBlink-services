@@ -154,11 +154,11 @@ return (
      Meet Our Team Leaders     
        </h1>
       <div className="flex flex-col items-center md:mt-10 px-10 md:px-0">
-        <div className="mt-5 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-5 py-40 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {teams.map((item, index) => (
             <div
               key={index}
-              className={`transform overflow-hidden rounded-xl border-b-4 border-transparent px-5 py-5 text-center transition-transform hover:scale-105 hover:border-ui_primary hover:bg-white hover:shadow-lg`}
+              className="rounded-lg overflow-hidden  px-5 py-5 text-center"
             >
               <div className="flex items-center justify-center ">
                <Image
