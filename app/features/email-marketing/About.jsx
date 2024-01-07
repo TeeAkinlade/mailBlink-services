@@ -3,12 +3,12 @@ import Link from "next/link"
 
 export const EmailAbout = () => {
   return (
-    <section className="max-width">
-      <div className=" md:mt-28 padding-x padding-y relative bg-white flex-between md:flex-row flex-col-reverse h-fit">
-        <div className=" absolute md:top-[20rem] top-16 left-0 w-[50%] md:h-[55rem] h-[140rem] bg-[#EFF6FE] rounded-tr-[4rem]"></div>
-        <div className=" md:w-[35%] border w-full z-[1] md:h-[25rem] sm:h-[25rem] h-[20rem] md:mt-0 mt-16">
+    <section className="max-width md:px-12 mx-auto">
+      <div className=" md:mt-28 padding-y relative px-8 bg-white flex-between md:flex-row flex-col-reverse h-fit md:gap-24 lg:gap-40">
+        {/* <div className=" absolute md:top-[20rem] top-16 left-0 w-[50%] md:h-[55rem] h-[140rem] bg-[#EFF6FE] rounded-tr-[4rem]"></div> */}
+        <div className=" md:w-[45%] border w-full z-[1] md:h-[30rem] sm:h-[25rem] h-[20rem] md:mt-0 mt-16">
           <Image
-            src="/assets/images/pexels-canva-studio-3194524.jpg"
+            src="/assets/images/bro.svg"
             alt=""
             width={500}
             height={350}
@@ -24,11 +24,11 @@ export const EmailAbout = () => {
         </div>
         </div>
 
-        <div className="md:items-start items-center flex flex-col relative md:w-[60%] w-full md:text-lg text-base text-ui_primary ">
-          <h2 className=" md:text-start text-center font-bold lg:text-[2.5rem] md:text-[2.1rem] text-[1.8rem] md:leading-[3rem] leading-[2.5rem]">
+        <div className="md:items-start items-center flex flex-col relative md:w-[55%] w-full md:text-lg text-base text-ui_primary ">
+          <h2 className=" md:text-start text-center font-bold lg:text-[2.5rem] md:text-[2.1rem] text-[34px] md:leading-[3rem] leading-[2.5rem]">
             Helping people communicate in simple ways
           </h2>
-          <p className="text-justify text-primaryBlack font-normal md:text-[16px] text-[14px] mt-5">
+          <p className="text-justify text-primaryBlack font-normal md:text-[15px] lg:text-[16px] text-[14px] mt-5">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
             cupiditate delectus est distinctio veritatis. Hic dolorem ipsa
             expedita odit, rerum asperiores harum ratione voluptatum laborum

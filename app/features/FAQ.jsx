@@ -40,8 +40,8 @@ const FAQs = ({ faqItems }) => {
               className="overflow-hidden relative -top-1.5 z-30 rounded-b-md bg-[#f6f8fc] px-6 pb-4 text-sm"
               style={{
                 maxHeight: visibleAnswer === item.id ? "200px" : "0",
-                paddingTop: visibleAnswer === item.id ? "10px" : "0",
-                paddingBottom: visibleAnswer === item.id ? "10px" : "0",
+                paddingTop: visibleAnswer === item.id ? "14px" : "0",
+                paddingBottom: visibleAnswer === item.id ? "14px" : "0",
                 transition:
                   "max-height 0.3s ease-in-out, padding 0.3s ease-in-out",
               }}
