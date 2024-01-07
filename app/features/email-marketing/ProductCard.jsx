@@ -29,7 +29,7 @@ export const ProductCard = (props) => {
 
   return (
     <div
-      className={` relative flex flex-col gap-4 p-6 bg-white rounded-lg lg:w-[25%] md:[40%] w-full box-shadow hover:scale-105 transition-all`}
+      className={`relative flex flex-col gap-4 p-6 bg-white rounded-lg lg:w-[25%] md:[40%] w-full box-shadow hover:scale-105 transition-all`}
       style={top}
     >
       <div

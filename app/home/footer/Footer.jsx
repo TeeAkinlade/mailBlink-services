@@ -6,7 +6,7 @@ import { contacts, socialMediaLinks } from "@/constants";
 const Footer = () => {
   return (
     <div className="max-width md:px-12 mx-auto">
-      <div className="mt-16">
+      <div className="mt-10">
         <div className="px-8 pt-14">
           <div className="flex flex-col gap-12 md:gap-28 md:flex-row">
             <div className="col-span-5 md:col-span-2 md:w-2/5">

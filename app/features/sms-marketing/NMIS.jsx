@@ -43,30 +43,32 @@ export default function NMIS() {
   };
 
   return (
-    <section className="mt-10 items-center bg-blue-50 md:pt-[8rem]">
-      <div className="z-10 mx-4 flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-center">
-        <main className="relative z-10 mt-10 max-w-xl rounded-3xl bg-white px-4 py-10 font-poppins shadow-lg md:mt-0 md:px-10 md:py-[5rem]">
-          <h2 className="font-poppins text-2xl font-semibold text-ui_primary md:text-4xl">
-            Download NMIS
-          </h2>
-          <p className="font-md mt-4 text-sm md:mt-7 md:text-lg">
-            NMIS (Network Management Information System) is <br /> an
-            open-source network management system
-            <br /> that was first released in 1998.
-            <br />
-            <Link href="" className="mt-2 text-ui_button underline">
-              Download dataSheet
-            </Link>
-          </p>
-          <button className="mt-10 cursor-pointer rounded-full border border-navyBlue bg-navyBlue px-8 py-3 text-white transition duration-150 ease-in-out hover:border-navyBlue hover:bg-white hover:text-navyBlue">
-            Download
-          </button>
-        </main>
+    <section className="mt-10 items-center bg-blue-50 md:pt-[8rem] md:mb-28">
+      <div className="px-8">
+        <div className=" md:px-12 z-10 md:mx-4 flex flex-col items-center gap-16 lg:gap-20 md:flex-row md:items-start md:justify-center">
+          <main className="relative z-10 mt-10 max-w-xl rounded-3xl bg-white py-10 font-poppins shadow-lg md:mt-0 md:px-10 md:py-[5rem] px-4 text-center md:text-start">
+            <h2 className="font-poppins text-2xl font-semibold text-ui_primary md:text-4xl">
+              Download NMIS
+            </h2>
+            <p className="font-md mt-4 text-sm md:mt-7 md:text-lg">
+              NMIS (Network Management Information System) is <br /> an
+              open-source network management system
+              <br /> that was first released in 1998.
+              <br />
+              <Link href="" className="mt-2 text-ui_button underline">
+                Download dataSheet
+              </Link>
+            </p>
+            <button className="mt-10 cursor-pointer rounded-full border border-navyBlue bg-navyBlue px-8 py-3 text-white transition duration-150 ease-in-out hover:border-navyBlue hover:bg-white hover:text-navyBlue">
+              Download
+            </button>
+          </main>
 
-        {/* FAQ */}
-        <section className="z-20">
-          <FAQs faqItems={faqItems} />
-        </section>
+          {/* FAQ */}
+          <section className="z-20">
+            <FAQs faqItems={faqItems} />
+          </section>
+        </div>
       </div>
       <div className="z-0 hidden absolute -mt-32 w-full md:flex">
         <Image
