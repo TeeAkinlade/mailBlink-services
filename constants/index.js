@@ -139,31 +139,31 @@ export const teams = [
     id: 2,
     image: "/assets/images/team-02.png",
     name: "Michal Kosinski",
-    description: "General Manager.",
+    position: "General Manager.",
   },
   {
     id: 3,
     image: "/assets/images/team-03.png",
     name:"Michal Kosinski",
-    description: "General Manager.",
+    position: "General Manager.",
   },
   {
     id: 4,
     image: "/assets/images/team-04.png",
     name:"Michal Kosinski",
-    description: "General Manager.",
+    position: "General Manager.",
   },
   {
     id: 5,
     image: "/assets/images/team-05.png",
     name:"Michal Kosinski",
-    description: "General Manager.",
+    position: "General Manager.",
   },
   {
     id: 6,
     image: "/assets/images/team-06.png",
     name:"Michal Kosinski",
-    description: "General Manager.",
+    position: "General Manager.",
   },
 ];
 
