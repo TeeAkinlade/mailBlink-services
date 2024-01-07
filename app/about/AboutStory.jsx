@@ -2,16 +2,12 @@ import Image from "next/image";
 
 const AboutStory = () => {
   return (
-    <section className="m-auto py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
-          <div className="w-[40px] p-14 lg:w-1/2">
-            <div className="max-w-[470px]">
-              <div className="mb-9">
-                <h3 className="whitespace-nowrap pb-20 text-center font-['Poppins'] text-[40px] font-bold leading-[48px] text-[#1f284f]">
+    <section className="max-width px-4 font-poppins text-ui_primarypy-16 flex flex-wrap items-center md:py-20 lg:py-28">
+          <div className=" p-14 lg:w-1/2">
+                <h3 className="pb-5 text-center text-5xl font-extrabold md:text-6xl leading-[38px] text-[#1f284f]">
                   Our story
                 </h3>
-                <p className="w-[519px] pb-20 font-['Poppins'] text-[20px] leading-[32px] text-[#17181a]">
+                <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
                   Our FirstWave support engineers are highly skilled and
                   experienced in NMIS, Open-AudIT and all of our commercial
                   products and helped customers from Telcos, MSP, enterprise
@@ -19,10 +15,8 @@ const AboutStory = () => {
                   and rollout, as well as post delivery of our solutions. as
                   well as post delivery of our solutions.
                 </p>
-              </div>
             </div>
-          </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div className="w-full px-4 lg:w-1/2 ">
             <div
               className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
@@ -36,36 +30,14 @@ const AboutStory = () => {
               />
             </div>
           </div>
-          <p className="w-[1140px] font-['Poppins'] text-[20px] leading-[32px] text-[#575757]">
-            Our mailblink support engineers are highly skilled and experienced
-            in NMIS, Open-AudIT and all of our commercial products and helped
-            customers from Telcos, MSP, enterprise organisations.Our FirstWave
-            support engineers are highly skilled and experienced in NMIS,
-            Open-AudIT and all of our commercial products and helped customers
-            from Telcos, MSP, enterprise organisations.. <br />
-            <br />
-            Our FirstWave support engineers are highly skilled and experienced
-            in NMIS, Open-AudIT and all of our commercial products and helped
-            customers from Telcos, MSP, enterprise organisations.
-            <br />
-            Our FirstWave support engineers are highly skilled and experienced
-            in NMIS, Open-AudIT and all of our commercial products and helped
-            customers from Telcos, MSP, enterprise organisations.Our FirstWave
-            support engineers are highly skilled and experienced in NMIS,
-            Open-AudIT and all of our commercial products and helped customers
-            from Telcos, MSP, enterprise organisations.Our FirstWave support
-            engineers are highly skilled and experienced in NMIS, Open-AudIT and
-            all of our commercial products and helped customers from Telcos,
-            MSP, enterprise organisations.t <br />
-            Our FirstWave support engineers are highly skilled and experienced
-            in NMIS, Open-AudIT and all of our commercial products and helped
-            customers from Telcos, MSP, enterprise organisations.
-            <br />
-            We’re tired with recruiting and we know it can be done better. We’re
-            starting with juniors and tech.
-          </p>
-        </div>
-      </div>
+          <div className="my-6 px-30 lg:px-20 md:my-12 lg:my-8">
+              <p className="text-[#565656] text-sm md:text-lg text-center md:text-left ">
+                Our mailblink support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.. <br/>
+                Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.<br/>
+                Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.<br/>Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.<br/>
+                Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.We’re tired with recruiting and we know it can be done better. We’re starting with juniors and tech.
+                </p>
+          </div>
     </section>
   );
 };

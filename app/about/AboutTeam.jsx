@@ -1,113 +1,41 @@
+import {teams } from "@/constants";
 import Image from "next/image";
 import React from "react";
 
 const AboutTeam = () => {
-  return (
-    <div className="m-50 container">
-      <div className="mt-5 w-[1140px] p-20 text-center font-['Poppins'] text-[40px] font-bold leading-[48px] text-[#1f284f]">
-        Meet Our Team Leaders
-        <div className="flex flex-row items-start justify-start gap-[149px] ">
-          <div className="flex w-[200px] shrink-0 flex-col items-center justify-start gap-[24px]">
-            <Image
+ return (
+  <main className="mt-10 bg-blue-50 px-4 py-10 font-poppins text-ui_primary md:px-20 md:py-[100px] lg:px-40">
+      <h1 className="text-center text-2xl font-extrabold md:text-4xl">
+     Meet Our Team Leaders     
+       </h1>
+      <div className="flex flex-col items-center md:mb-5 px-10 md:px-0">
+        <div className="py-40 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+          {teams.map((item, index) => (
+            <div
+              key={index}
+              className="rounded-lg overflow-hidden  px-5 py-5 text-center"
+            >
+              <div className="flex items-center justify-center ">
+               <Image
               alt=""
               width="200"
               height="200"
-              src="/assets/images/team-01.png"
-            ></Image>
-            <div className="relative flex h-[63px] w-[176px] shrink-0 p-10">
-              <h2 className="absolute left-[0px] top-0 whitespace-nowrap font-['Poppins'] text-[22px] font-bold text-[#000] ">
-                Michal Kosinski{" "}
+              src={item.image}
+               />     
+                
+              </div>
+              <h2 className="text-md mt-3 font-bold md:mt-5 md:text-lg">
+                {item.name}
               </h2>
-              <p className="absolute left-0 top-[33px] whitespace-nowrap font-['Poppins'] text-[20px] text-[#979292]">
-                General Manager
-              </p>
-            </div>
-          </div>
-          <div className="flex w-[200px] shrink-0 flex-col items-center justify-start gap-[24px]">
-            <Image
-              alt=""
-              width="200"
-              height="200"
-              src="/assets/images/team-01.png"
-            ></Image>
-            <div className="relative flex h-[63px] w-[214px] shrink-0">
-              <h2 className="absolute left-[18px] top-0 whitespace-nowrap font-['Poppins'] text-[22px] font-bold text-[#000]">
-                Michal Kosinski{" "}
+              <h2 className="text-md mt-3 font-bold md:mt-5 md:text-lg">
+                {item.title}
               </h2>
-              <p className="absolute left-0 top-[33px] whitespace-nowrap font-['Poppins'] text-[20px] text-[#979292]">
-                Community Manager
-              </p>
+              <p className="text-sm md:text-base">{item.position}</p>
             </div>
-          </div>
-          <div className="flex w-[200px] shrink-0 flex-col items-center justify-center gap-[24px]">
-            <Image
-              alt=""
-              width="200"
-              height="200"
-              src="/assets/images/team-01.png"
-            ></Image>
-            <div className="relative flex h-[63px] w-[214px] shrink-0">
-              <h2 className="absolute left-[19px] top-0 whitespace-nowrap font-['Poppins'] text-[22px] font-bold text-[#000]">
-                Michal Kosinski{" "}
-              </h2>
-              <p className="absolute left-0 top-[33px] whitespace-nowrap font-['Poppins'] text-[20px] text-[#979292]">
-                Community Manager
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-row items-start justify-start gap-[149px]">
-          <div className="flex w-[200px] shrink-0 flex-col items-center justify-start gap-[24px]">
-            <Image
-              alt=""
-              width="200"
-              height="200"
-              src="/assets/images/team-01.png"
-            ></Image>{" "}
-            <div className="relative flex h-[63px] w-[176px] shrink-0">
-              <h2 className="absolute left-[0px] top-0 whitespace-nowrap font-['Poppins'] text-[22px] font-bold text-[#000]">
-                Michal Kosinski{" "}
-              </h2>
-              <p className="absolute left-0 top-[33px] whitespace-nowrap font-['Poppins'] text-[20px] text-[#979292]">
-                General Manager
-              </p>
-            </div>
-          </div>
-          <div className="flex w-[200px] shrink-0 flex-col items-center justify-start gap-[24px]">
-            <Image
-              alt=""
-              width="200"
-              height="200"
-              src="/assets/images/team-01.png"
-            ></Image>{" "}
-            <div className="relative flex h-[63px] w-[214px] shrink-0">
-              <h2 className="absolute left-[18px] top-0 whitespace-nowrap font-['Poppins'] text-[22px] font-bold text-[#000]">
-                Michal Kosinski{" "}
-              </h2>
-              <p className="absolute left-0 top-[33px] whitespace-nowrap font-['Poppins'] text-[20px] text-[#979292]">
-                Community Manager
-              </p>
-            </div>
-          </div>
-          <div className="flex w-[200px] shrink-0 flex-col items-center justify-center gap-[24px]">
-            <Image
-              alt=""
-              width="200"
-              height="200"
-              src="/assets/images/team-01.png"
-            ></Image>{" "}
-            <div className="relative flex h-[63px] w-[214px] shrink-0">
-              <h2 className="absolute left-[19px] top-0 whitespace-nowrap font-['Poppins'] text-[22px] font-bold text-[#000]">
-                Michal Kosinski{" "}
-              </h2>
-              <p className="absolute left-0 top-[33px] whitespace-nowrap font-['Poppins'] text-[20px] text-[#979292]">
-                Community Manager
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

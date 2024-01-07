@@ -1,6 +1,6 @@
 import AboutContact from "./AboutContact";
 import AboutHero from "./AboutHero";
-import AboutLocations from "./AboutLocations";
+import AboutLocations from "./Locations";
 import AboutProducts from "./AboutProduct";
 import AboutStory from "./AboutStory";
 import AboutTeam from "./AboutTeam";

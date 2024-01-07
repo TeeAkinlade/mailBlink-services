@@ -7,15 +7,15 @@ import { aboutData } from "@/constants";
 const AboutLocations = () => {
   return (
     <section className="md:bg-white-500 mt-10 flex flex-col items-start justify-start gap-[33px] md:my-20 md:flex-row md:gap-10 md:px-24 bg-[#f4f2ff]">
-      <h1 className="text-[40px] leading-[48px] font-bold text-[#1f284f]">Locations</h1>
     <div className="mt-5 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+      <h1 className="text-[40px] leading-[48px] font-bold text-[#1f284f]">Locations</h1>
           {aboutData.map((item, index) => (
         <div
             key={index}
             className={`flex flex-col items-start justify-start`}
             >
          <Image
-          src="/assets/images/Group 11_3097.png"
+          src="/assets/images/location-img-1.png"
           alt="location-img"
           width={343} 
           height={206} 
