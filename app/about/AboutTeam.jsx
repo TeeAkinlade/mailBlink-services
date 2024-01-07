@@ -153,8 +153,8 @@ return (
       <h1 className="text-center text-2xl font-extrabold md:text-4xl">
      Meet Our Team Leaders     
        </h1>
-      <div className="flex flex-col items-center md:mt-10 px-10 md:px-0">
-        <div className="mt-5 py-40 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-col items-center md:mb-5 px-10 md:px-0">
+        <div className="py-40 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {teams.map((item, index) => (
             <div
               key={index}
