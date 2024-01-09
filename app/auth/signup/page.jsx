@@ -1,125 +1,122 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { useRouter } from 'next/navigation';
-import Spinner from '../../../components/Spinner';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { useRouter } from "next/navigation";
+import Spinner from "../../../components/Spinner";
 import { useCurrentUser } from "@/app/auth/currentUser";
-import OauthComponent from '../OauthComponent';
+import OauthComponent from "../OauthComponent";
 // import { useRouter } from "next/router"; // Import useRouter from Next.js
 
 const Signup = () => {
+  // Access routing functionality
+  const router = useRouter();
+  // Initialize Supabase client
+  const supabase = createClientComponentClient();
 
-	// Access routing functionality
-	const router = useRouter();
-	// Initialize Supabase client
-	const supabase = createClientComponentClient();
+  // access current user from currentUser component
+  const { user } = useCurrentUser();
 
-	// access current user from currentUser component
-	const { user } = useCurrentUser();
+  // State to manage form inputs and their validation statuses
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
-	// State to manage form inputs and their validation statuses
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [errors, setErrors] = useState({});
-	const [loading, setLoading] = useState(false);
+  // Function to handle input changes
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
 
-	// Function to handle input changes
-	const handleEmailChange = (event) => {
-		setEmail(event.target.value);
-	};
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
 
-	const handlePasswordChange = (event) => {
-		setPassword(event.target.value);
-	};
+  // Function to validate form inputs
+  const validateForm = () => {
+    const errors = {};
 
-	// Function to validate form inputs
-	const validateForm = () => {
-		const errors = {};
+    // Validate username
+    if (!email.trim()) {
+      errors.email = "email is required";
+    }
 
-		// Validate username
-		if (!email.trim()) {
-			errors.email = 'email is required';
-		}
+    // Validate password
+    if (!password.trim()) {
+      errors.password = "Password is required";
+    }
 
-		// Validate password
-		if (!password.trim()) {
-			errors.password = 'Password is required';
-		}
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
-		setErrors(errors);
-		return Object.keys(errors).length === 0;
-	};
+  // Function to handle form submission
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // Validate form and check if it's valid
+    const isValid = validateForm();
+    if (!isValid) {
+      return; // Don't proceed if validation fails
+    }
 
-	// Function to handle form submission
-	const handleSubmit = async (event) => {
-		event.preventDefault();
-		// Validate form and check if it's valid
-		const isValid = validateForm();
-		if (!isValid) {
-			return; // Don't proceed if validation fails
-		}
+    // Set loading state and start signup process
+    setLoading(true);
 
-		// Set loading state and start signup process
-		setLoading(true);
+    try {
+      // Attempt signup using Supabase
+      const {
+        data: { user },
+        error,
+      } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: `${location.origin}/auth/callback`,
+        },
+      });
 
-		try {
-			// Attempt signup using Supabase
-			const {
-				data: { user },
-				error,
-			} = await supabase.auth.signUp({
-				email,
-				password,
-				options: {
-					emailRedirectTo: `${location.origin}/auth/callback`,
-				},
-			});
+      // Update loading state and handle response
+      setLoading(false);
+      if (error) {
+        alert("Supabase error: " + error.message);
+      } else if (user.identities.length === 0) {
+        // User already exists with this email
+        alert("A user with this email already exists");
+      } else {
+        // Successful signup with no existing user
+        router.push("/"); // Redirect page to home page
+        console.log(user); // Log user data for debug
+        // alert(
+        //   "A confirmation link has been sent to your email, Verify your account to continue"
+        // );
+      }
+    } catch (error) {
+      // Handle unexpected errors
+      alert("catch error: " + error.message);
+    }
+  };
 
-			// Update loading state and handle response
-			setLoading(false);
-			if (error) {
-				alert('Supabase error: ' + error.message);
-			} else if (user.identities.length === 0) {
-				// User already exists with this email
-				alert('A user with this email already exists');
-			} else {
-				// Successful signup with no existing user
-				router.push("/"); // Redirect page to home page
-				console.log(user); // Log user data for debug
-				alert(
-					'A confirmation link has been sent to your email, Verify your account to continue'
-				);
-			}
-		} catch (error) {
-			// Handle unexpected errors
-			alert('catch error: ' + error.message);
-		}
-	};
+  return (
+    <div>
+      {/* spinner displays loading animation when loading is true */}
+      {loading && <Spinner />}
 
-	return (
-		<div>
-			{/* spinner displays loading animation when loading is true */}
-			{loading && <Spinner />}
-
-			{/* Signup form */}
-			<div className="lg:flex">
+      {/* Signup form */}
+      <div className="lg:flex">
         <div
           className="lg:w-[720px] h-[100vh]"
           style={{
             background: `linear-gradient(141deg, #F5F0FF 0%, #EFF6FE 50.36%, #EDFAF5 100%)`,
           }}
         >
-            <h1 className="text-[#17181A] text-[35px] ps-[1rem] font-[700] leading-[64px] font-Poppins">
-              MailBlink
-            </h1>
-        <div
-            className="lg:ps-[110px] lg:pr-[109px] xs:ps-[10px] pt-[160px]"
-          >
+          <h1 className="text-[#17181A] text-[35px] ps-[1rem] font-[700] leading-[64px] font-Poppins">
+            MailBlink
+          </h1>
+          <div className="lg:ps-[110px] lg:pr-[109px] xs:ps-[10px] pt-[160px]">
             <h3 className="text-[#17181A] text-[32px] font-[700] leading-[40px] font-Poppins mt-[15px] flex">
-              We are mailblink <br /> So are you.{" "}
+              We are mailblink <br /> So are you.
               <Image
                 src="/assets/images/Group 2942.svg"
                 width="40"
@@ -128,27 +125,27 @@ const Signup = () => {
               />
             </h3>
             <p className="text-[#17181A] text-[16px] font-[400] leading-[28px] font-Poppins mt-[24px]">
-              Join to improve your job search, yourself, and{" "}
-              <br className="md:hidden" /> more. Get started by creating{" "}
+              Join to improve your job search, yourself, and
+              <br className="md:hidden" /> more. Get started by creating
               <br className="lg:hidden xs:hidden md:block" /> a free account!
             </p>
             <p className="text-[#17181A] text-[16px] font-[400] leading-[28px] font-Poppins mt-[5px]">
-              We’re creating a service that puts you front{" "}
+              We’re creating a service that puts you front
               <br className="md:hidden" /> and center in your career.
             </p>
           </div>
-       </div>
+        </div>
         <div className="lg:w-[720px] bg-[#fff] lg:ps-[109px] lg:pt-[160px] xs:pt-[100px] xs:ps-[10px] xs:px-[0.85rem] md:px-[0.85rem]">
           <h3 className="text-[#17181A] text-[24px] font-[600] leading-[32px] font-Poppins ms-[1rem]">
             Create a an account
           </h3>
           <form className="mt-[16px]" onSubmit={handleSubmit}>
             <label className="text-[#515458] text-[12px] font-[500] font-Poppins mt-[22px]">
-              user name
+              email
             </label>
             <input
               type="text"
-              placeholder="enter user name"
+              placeholder="enter email"
               className="text-[#575757] bg-[#fff] border-[#B7BFC7] border-[1px] border-solid rounded-[8px] text-[16px] font-[400] font-Poppins outline-none lg:w-[364px] xs:w-[100%] md:w-[600px] login-input-text mt-[-1rem]"
               style={{ padding: "12px 0px 12px 12px", height: "48px" }}
               value={email}
@@ -158,7 +155,7 @@ const Signup = () => {
             {/* Display error message */}
             <label className="text-[#515458] text-[12px] font-[500] font-Poppins">
               password
-            </label>{" "}
+            </label>
             <input
               type="password"
               placeholder="enter password"
@@ -169,7 +166,7 @@ const Signup = () => {
             />
             {errors.password && (
               <p className="text-red-500">{errors.password}</p>
-            )}{" "}
+            )}
             {/* Display error message */}
             <button
               type="submit"
@@ -200,8 +197,8 @@ const Signup = () => {
           </form>
         </div>
       </div>
-		</div>
-	);
+    </div>
+  );
 };
 
 export default Signup;
