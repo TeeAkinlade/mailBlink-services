@@ -5,19 +5,19 @@ import { GoVideo } from "react-icons/go";
 
 export const EmailHero = () => {
   return (
-    <section className="max-width">
-      <div className=" bg-white flex-between md:flex-row flex-col md:h-[42rem] h-full md:p-0 px-[2.25rem] pb-20 pt-10 padding-x">
-        <div className=" md:w-[50%] w-full relative z-[1] md:ml-16 h-fit md:text-lg flex flex-col md:items-start items-center text-base text-ui_primary">
+    <section className="max-width md:px-12 mx-auto">
+      <div className=" bg-white flex-between md:flex-row flex-col md:gap-20 md:h-[42rem] h-full px-8 pb-20 md:pt-10">
+        <div className=" md:w-[50%] w-full relative z-[1] h-fit md:text-lg flex flex-col md:items-start items-center text-base text-ui_primary">
           <div className="relative md:-top-2 top-5 md:text-start text-center">
-            <h1 className=" w-full font-bold lg:text-[3.1rem] md:text-[2.8rem] text-[2.5rem] md:leading-[3.8rem] leading-[3rem]">
+            <h1 className=" w-full font-bold lg:text-[3.1rem] md:text-[2.8rem] text-[34px] md:leading-[3.8rem] leading-[3rem]">
               Helping people communicate in simple ways
             </h1>
-            <p className=" text-primaryBlack text-[14px] mt-5 w-full">
+            <p className=" text-primaryBlack text-[14px] my-5 w-full">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Asperiores, perferendis! Laborum ullam,us, blanditiis provident
               corporis odit praesentium sunt iste?.
             </p>
-            <div className="flex gap-7 md:justify-start justify-center mt-5">
+            <div className="flex gap-4 md:gap-7 justify-start mt-5">
             <Link href="/campaigns">
               <button className="custom-btn">
                 Get Started
@@ -31,7 +31,7 @@ export const EmailHero = () => {
             </Link>
             </div>
           </div>
-          <div className=" relative md:top-10 md:w-[140%] md:block hidden">
+          <div className="relative md:top-10 md:w-[140%] md:block hidden">
             <img
               src="/assets/icons/hero_dots.svg"
               alt=""
@@ -54,7 +54,7 @@ export const EmailHero = () => {
         <div className=" md:w-[50%] w-full bg-[#EFF6FE] md:h-full h-[25rem] md:pr-[4rem] flex justify-end md:items-center items-end rounded-bl-[4rem] md:rounded-tr-[0] rounded-tr-[4rem] md:mt-0 mt-20">
           <div className="md:h-[65%] h-[80%] md:w-[70%] w-[80%]">
           <Image
-          src="/assets/images/student-849825_1280.jpg"
+          src="/assets/images/amico.svg"
           alt=""
           width={400}
           height={300}

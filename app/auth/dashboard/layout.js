@@ -10,24 +10,24 @@ export default function DashboardLayout({ children }) {
 	const router = useRouter();
 	const [authorized, setAuthorized] = useState(false);
 
-	console.log(user);
-	let timer;
-	useEffect(() => {
-		timer = setTimeout(() => {
-			return null;
-		}, 10000);
+  console.log(user);
+  let timer;
+  useEffect(() => {
+    timer = setTimeout(() => {
+      return null;
+    }, 10000);
 
-		if (user?.user_metadata?.name) {
-			setAuthorized(true);
+    if (user?.user_metadata?.name) {
+      setAuthorized(true);
 
-			// 10 seconds in milliseconds
-		}
+      // 10 seconds in milliseconds
+    }
 
-		return () => {
-			// Clear the timer if the component unmounts before the delay
-			clearTimeout(timer);
-		};
-	}, [timer]);
+    return () => {
+      // Clear the timer if the component unmounts before the delay
+      clearTimeout(timer);
+    };
+  }, [timer]);
 
 	console.log(timer);
 	// protected route logic using a timer

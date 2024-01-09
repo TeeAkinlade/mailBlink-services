@@ -8,24 +8,26 @@ const FooterLink = () => {
   const [subscribed, setSubscribed] = useState(false);
 
   return (
-    <div className="flex flex-col gap-10 md:flex-row">
-      {footerLinks.map((item) => (
-        <div className="col-span-1" key={item.id}>
-          <h3 className="font-Roboto mb-6 text-base font-semibold text-primaryBlack2 md:text-lg">
-            {item.title}
-          </h3>
-          {item.links.map(({ id, href, link }) => (
-            <div className="py-2" key={id}>
-              <Link
-                href={href}
-                className="text-xs font-medium text-primaryBlack hover:text-ui_secondary1 md:text-sm"
-              >
-                {link}
-              </Link>
-            </div>
-          ))}
-        </div>
-      ))}
+    <div className="flex flex-col md:gap-10 md:flex-row">
+      <div className="flex gap-10">
+        {footerLinks.map((item) => (
+          <div key={item.id}>
+            <h3 className="font-Roboto mb-6 text-base font-semibold text-primaryBlack2 md:text-lg">
+              {item.title}
+            </h3>
+            {item.links.map(({ id, href, link }) => (
+              <div className="pb-4" key={id}>
+                <Link
+                  href={href}
+                  className="text-xs font-medium text-primaryBlack hover:text-ui_secondary1 md:text-sm"
+                >
+                  {link}
+                </Link>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
       <div>
         <h3 className="font-Roboto mb-6 text-base font-semibold text-primaryBlack2 md:text-lg">
           Newsletter
@@ -59,7 +61,7 @@ const FooterLink = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              class="h-6 w-6"
+              className="h-6 w-6"
             >
               <path
                 strokeLinecap="round"

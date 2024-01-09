@@ -1,12 +1,14 @@
-import React from 'react';
-import { ResponsiveBar } from '@nivo/bar';
-import { BarData as data } from './Data';
+import React from "react";
+import { ResponsiveBar } from "@nivo/bar";
+import { BarData as data } from "./Data";
 
 const BarChart = () => {
-	let innerWidth = window.innerWidth;
-	let innerheight = window.innerHeight;
-	// Dynamic value of margin based on window width
-	let x;
+  let innerWidth = 1000;
+  // let innerWidth = window.innerWidth;
+  // let innerheight = window.innerHeight;
+  let innerheight = 1000;
+  // Dynamic value of margin based on window width
+  let x;
 
 	if (innerWidth <= 768) {
 		x = 2;

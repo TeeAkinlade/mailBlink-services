@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
-const currentUser = () => {
+export const useCurrentUser = () => {
   const supabase = createClientComponentClient();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -31,5 +31,3 @@ const currentUser = () => {
 
   return { user, loading };
 };
-
-export default currentUser;

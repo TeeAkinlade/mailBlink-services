@@ -8,7 +8,7 @@ import image7 from "@/public/assets/images/Twitter.svg";
 import image8 from "@/public/assets/images/LinkedIn.svg";
 import image9 from "@/public/assets/images/Instagram.svg";
 import image10 from "@/public/assets/images/email-icon.svg";
-import image11 from "@/public/assets/images/Mobile.svg";
+import image11 from "@/public/assets/icons/message.svg";
 import { IoMdMail } from "react-icons/io";
 import { FaSms, FaWpforms } from "react-icons/fa";
 
@@ -38,7 +38,7 @@ export const NAV_LINKS = [
   { href: "/about", key: "about", label: "About" },
   { href: "/resources", key: "resources", label: "Resources" },
   { href: "/blog", key: "blog", label: "Blog" },
-  { href: "/contact-us", key: "contact_us", label: "Contact Us" },
+  { href: "/contact", key: "contact_us", label: "Contact Us" },
 ];
 
 export const campaignDetailsList = [
@@ -98,7 +98,7 @@ export const campaignFeaturesDetails = [
 export const servicesData = [
   {
     id: 1,
-    icon: <IoMdMail size={50} />,
+    icon: <IoMdMail size={30} />,
     title: "Email",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
@@ -107,7 +107,7 @@ export const servicesData = [
   },
   {
     id: 2,
-    icon: <FaSms size={50} />,
+    icon: <FaSms size={30} />,
     title: "SMS",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
@@ -116,12 +116,112 @@ export const servicesData = [
   },
   {
     id: 3,
-    icon: <FaWpforms size={50} />,
+    icon: <FaWpforms size={30} />,
     title: "Form",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
     href: "#",
     linkText: "Learn more",
+  },
+];
+
+// Team Section of About page
+
+export const teams = [
+  {
+    id: 1,
+    image: "/assets/images/team-01.png",
+    name: "Michal Kosinski",
+    position:
+      "General Manager.",
+  },
+  {
+    id: 2,
+    image: "/assets/images/team-02.png",
+    name: "Michal Kosinski",
+    position: "General Manager.",
+  },
+  {
+    id: 3,
+    image: "/assets/images/team-03.png",
+    name:"Michal Kosinski",
+    position: "General Manager.",
+  },
+  {
+    id: 4,
+    image: "/assets/images/team-04.png",
+    name:"Michal Kosinski",
+    position: "General Manager.",
+  },
+  {
+    id: 5,
+    image: "/assets/images/team-05.png",
+    name:"Michal Kosinski",
+    position: "General Manager.",
+  },
+  {
+    id: 6,
+    image: "/assets/images/team-06.png",
+    name:"Michal Kosinski",
+    position: "General Manager.",
+  },
+];
+
+// Location Section of About page
+
+export const aboutData = [
+  {
+    id: 1,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300,<br/>Sausalito, CA, 94965<br/>United States of America`,
+  },
+
+  {
+    id: 2,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300,<br/>Sausalito, CA, 94965<br/>United States of America`,
+  },
+
+  {
+    id: 3,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300,<br/>Sausalito, CA, 94965<br/>United States of America`,
+  },
+
+  {
+    id: 4,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300,<br/>Sausalito, CA, 94965<br/>United States of America`,
+  },
+
+  {
+    id: 5,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300,<br/>Sausalito, CA, 94965<br/>United States of America`,
+  },
+
+  {
+    id: 6,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300,<br/>Sausalito, CA, 94965<br/>United States of America`,
   },
 ];
 
@@ -159,8 +259,8 @@ export const footerLinks = [
     links: [
       { id: 1, link: "Blog", href: "#" },
       { id: 2, link: "Marketing Guides", href: "#" },
-      { id: 1, link: "Get a demo", href: "#" },
-      { id: 2, link: "Contact us", href: "#" },
+      { id: 3, link: "Get a demo", href: "#" },
+      { id: 4, link: "Contact us", href: "#" },
     ],
   },
   {
@@ -181,15 +281,16 @@ export const contacts = [
     id: 1,
     photo: image10,
     alt: "Email-icon",
-    title: "Support:",
+    title: "Support: ",
     details: "hello@landify.co",
   },
   {
     id: 2,
     photo: image11,
     alt: "Mobile-icon",
-    title: "Phone:",
+    title: "Phone: ",
     details: "+91 98765 43210",
+    styles: "h-6 w-8",
   },
 ];
 
@@ -286,7 +387,7 @@ export const items = [
     id: 2,
     image: "/assets/icons/github.icon.svg",
     title: "MailBlink on GitHub",
-    description: "Track the MailBlink development changes on GitHub.",
+    description: "General Manager.",
   },
 ];
 
