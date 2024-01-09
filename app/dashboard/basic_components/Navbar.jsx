@@ -14,7 +14,7 @@ export default function Navbar() {
 					<input
 						type='text'
 						placeholder='Search'
-						className='outline-none bg-transparent px-3 py-2 w-full text-[0.8rem] font-poppins text-black placeholder-accent_3 '
+						className='outline-none bg-transparent px-3 py-2 w-full text-[0.8rem] font-poppins text-black placeholder-[#B7C5CC] '
 					/>
 
 					<MdSearch className='text-ui_primary font-[900] h-5 w-5 cursor-pointer' />

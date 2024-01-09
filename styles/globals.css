@@ -1,109 +1,112 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 
+:root {
+	--fc-today-bg-color: #f4c0785c;
+}
 /* START: General styles */
 .max-width {
-  @apply max-w-[1440px] mx-auto;
+	@apply max-w-[1440px] mx-auto;
 }
 
 .padding-x {
-  @apply sm:px-16 px-[2.25rem];
+	@apply sm:px-16 px-[2.25rem];
 }
 
 .padding-y {
-  @apply py-4;
+	@apply py-4;
 }
 
 .flex-center {
-  @apply flex justify-center items-center;
+	@apply flex justify-center items-center;
 }
 
 .flex-start {
-  @apply flex justify-start items-start;
+	@apply flex justify-start items-start;
 }
 
 .flex-end {
-  @apply flex justify-end items-center;
+	@apply flex justify-end items-center;
 }
 
 .flex-between {
-  @apply flex justify-between items-center;
+	@apply flex justify-between items-center;
 }
 
 .custom-btn {
-  @apply bg-navyBlue text-white sm:px-8 py-3 px-5 sm:text-base text-[12px] border border-navyBlue hover:text-navyBlue hover:bg-white hover:border-navyBlue rounded-full transition duration-150 ease-in-out cursor-pointer;
+	@apply bg-navyBlue text-white sm:px-8 py-3 px-5 sm:text-base text-[12px] border border-navyBlue hover:text-navyBlue hover:bg-white hover:border-navyBlue rounded-full transition duration-150 ease-in-out cursor-pointer;
 }
 /* END: General styles */
 
 /* Styles for the forms since all of them are the same */
 
 form {
-  @apply text-slate-500 flex flex-col gap-5;
+	@apply text-slate-500 flex flex-col gap-5;
 }
 
 form label {
-  @apply text-xs font-medium mb-2;
+	@apply text-xs font-medium mb-2;
 }
 
-form input[type="text"],
+form input[type='text'],
 form select,
 form textarea {
-  @apply border-[1px] border-slate-400 font-normal rounded-lg w-full px-2 py-3;
+	@apply border-[1px] border-slate-400 font-normal rounded-lg w-full px-2 py-3;
 }
 
 form button {
-  @apply btn bg-ui_secondary1 hover:bg-ui_primary;
+	@apply btn bg-ui_secondary1 hover:bg-ui_primary;
 }
 
 .btn {
-  @apply flex justify-center items-center text-white w-full py-4 px-8 font-semibold md:text-base text-sm rounded-full transition-all hover:scale-95;
+	@apply flex justify-center items-center text-white w-full py-4 px-8 font-semibold md:text-base text-sm rounded-full transition-all hover:scale-95;
 }
 
 input:checked + label {
-  color: black;
+	color: black;
 }
 
 button {
-  @apply transition-all hover:scale-95 cursor-pointer;
+	@apply transition-all hover:scale-95 cursor-pointer;
 }
 
 /* Start of dashboard/settings styles*/
 
 #input {
-  @apply w-full px-2 py-3 md:w-[100%] mt-2  border border-gray-400  rounded-md;
+	@apply w-full px-2 py-3 md:w-[100%] mt-2  border border-gray-400  rounded-md;
 }
 #button {
-  @apply w-[100%] md:w-[50%];
+	@apply w-[100%] md:w-[50%];
 }
 #inputa,
 #inputb {
-  @apply w-full md:w-[100%];
+	@apply w-full md:w-[100%];
 }
 
 .btn {
-  @apply flex justify-center items-center text-white w-full py-4 px-8 font-semibold md:text-base text-sm rounded-full transition-all hover:scale-95;
+	@apply flex justify-center items-center text-white w-full py-4 px-8 font-semibold md:text-base text-sm rounded-full transition-all hover:scale-95;
 }
 
 input:checked + label {
-  color: black;
+	color: black;
 }
 
 button {
-  @apply transition-all hover:scale-95 cursor-pointer;
+	@apply transition-all hover:scale-95 cursor-pointer;
 }
 
 .list-alphabet {
-  list-style-type: lower-alpha;
+	list-style-type: lower-alpha;
 }
 .login-input-text {
 	width: 364px !important;
@@ -113,42 +116,119 @@ button {
 /* Custom CSS */
 
 ::-webkit-scrollbar {
-  width: 6px;
+	width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #33333382;
-  border-radius: 40px;
+	background-color: #33333382;
+	border-radius: 40px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #fefefe;
+	background-color: #fefefe;
 }
 
 * {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 .box-shadow {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-pagination {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-  gap: 3;
+	gap: 3;
 	position: relative;
 	padding: 1rem 0;
-  }
-  
-  .swiper-pagination .swiper-pagination-bullet {
+}
+
+.swiper-pagination .swiper-pagination-bullet {
 	width: 10px;
 	height: 4px;
 	background: #7f7e7e;
 	border-radius: 30px;
-	}
-  
-  .swiper-pagination .swiper-pagination-bullet-active {
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
 	background: #515355;
 	width: 13px;
+}
+
+/* Fullcalendar styling */
+
+.fc .fc-toolbar-title {
+	font-weight: 700;
+	font-size: 1rem;
+	color: #0070f0;
+}
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+	font-size: 0.7rem;
+	text-transform: capitalize;
+}
+
+.fc .fc-button-group > .fc-button {
+	text-transform: capitalize;
+	font-size: 0.7rem;
+}
+.fc .fc-button:disabled {
+	text-transform: capitalize;
+	font-size: 0.7rem;
+	background: hsl(215.38deg 16.32% 46.86%);
+	border: none;
+	cursor: not-allowed;
+	color: #fefefe !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+	background: #6aacf844;
+	cursor: pointer;
+	position: relative;
+}
+
+.fc .fc-daygrid-day.fc-day-today:hover {
+	scale: calc(1.05);
+	backdrop-filter: blur(25px);
+	transition: all 1s ease-in-out;
+}
+
+.fc .fc-col-header-cell-cushion,
+.fc-timegrid-axis-cushion,
+.fc-timegrid-slot-label-cushion {
+	font-size: 0.8rem;
+	text-transform: capitalize;
+}
+
+.fc-daygrid-day-number {
+	font-size: 0.68rem;
+}
+.fc-h-event,
+.fc-h-event .fc-event-main {
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 8rem;
+	padding: 0 0.5rem;
+	border: none;
+	background: #b39173;
+	border-radius: 7px;
+	font-size: 0.8rem;
+	text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+	.fc .fc-toolbar.fc-header-toolbar {
+		gap: 1rem;
+	}
+
+	.fc .fc-button:disabled,
+	.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+		display: none;
+	}
+
+	.fc .fc-toolbar-title {
+		font-size: 1rem;
+		font-weight: 700;
+	}
 }

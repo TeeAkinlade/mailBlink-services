@@ -22,6 +22,29 @@ export default function RadialChart() {
 	return (
 		<ResponsiveRadialBar
 			data={data}
+			theme={{
+				axis: {
+					domain: {
+						line: {
+							stroke: 'rgb(100 116 139)',
+						},
+					},
+					legend: {
+						text: {
+							fill: 'rgb(100 116 139)',
+						},
+					},
+					ticks: {
+						line: {
+							stroke: 'rgb(100 116 139)',
+							strokeWidth: 1,
+						},
+						text: {
+							fill: 'rgb(100 116 139)',
+						},
+					},
+				},
+			}}
 			valueFormat='>-.2f'
 			startAngle={-3}
 			endAngle={272}

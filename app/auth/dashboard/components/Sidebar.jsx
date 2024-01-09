@@ -7,19 +7,19 @@ import { LiaSignOutAltSolid } from 'react-icons/lia';
 import { RiContactsLine } from 'react-icons/ri';
 import { AiOutlineSchedule } from 'react-icons/ai';
 import { TbBrandCampaignmonitor } from 'react-icons/tb';
-import { VscReport } from 'react-icons/vsc';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { IoIosArrowBack } from 'react-icons/io';
 import { MdSearch } from 'react-icons/md';
 import { VscAccount } from 'react-icons/vsc';
-import currentUser from '../../currentUser';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import currentUser from '../../currentUser';
+import Image from 'next/image';
 import Spinner from '../../../../components/Spinner';
 
 export default function Sidebar() {
-	const { user, loading} = currentUser();
+	const { user, loading } = currentUser();
 
 	// SignOut Functionality
 	const supabase = createClientComponentClient();
@@ -51,7 +51,7 @@ export default function Sidebar() {
 
 	const MenuLinks = [
 		{
-			title: 'Dashboard',
+			title: 'Home',
 			src: <MdDashboardCustomize />,
 			onClick: handleNavigate,
 		},
@@ -111,11 +111,10 @@ export default function Sidebar() {
 		};
 	}, []);
 
-	console.log('Current miniSidebar state:', miniSidebar); // Move console.log here or within the return statement
+	console.log('Current miniSidebar state:', miniSidebar, user?.email.length); // Move console.log here or within the return statement
 
 	return (
 		<>
-			{loading && <Spinner />}
 			{!miniSidebar ? (
 				<aside
 					className={` ${
@@ -146,8 +145,8 @@ export default function Sidebar() {
 						{MenuLinks.map((menu, index) => (
 							<li
 								key={index}
-								className={`text-accent_3 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
-									menu.gap ? 'mt-9' : 'mt-3'
+								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
+									menu.gap ? 'mt-9 LinkBorder' : 'mt-3'
 								}  `}
 								onClick={() => {
 									setActiveLink(index);
@@ -160,6 +159,7 @@ export default function Sidebar() {
 									}
 								}}
 							>
+								{' '}
 								<div
 									className={` md:h-4 md:w-4  ${
 										activeLink === index && 'text-ui_secondary1'
@@ -178,7 +178,7 @@ export default function Sidebar() {
 							</li>
 						))}
 						<div
-							className='text-accent_3 text-sm flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 bg-transparent mt-8 rounded-md duration-500'
+							className='text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 bg-transparent mt-8 rounded-md duration-500'
 							onClick={() => setToggle(!toggle)}
 						>
 							<div className=' '>
@@ -191,8 +191,10 @@ export default function Sidebar() {
 								Collapse Menu{' '}
 							</span>
 						</div>
-						<div
-							className='text-accent_3 text-sm flex items-center gap-x-4 cursor-pointer p-2  bg-transparent mt-8 duration-500'
+						<Link
+							href='/auth/dashboard/Accounts
+										'
+							className='text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  bg-transparent mt-8 duration-500'
 							onClick={() => setToggle(!toggle)}
 						>
 							{user ? (
@@ -210,16 +212,20 @@ export default function Sidebar() {
 							)}
 
 							<span className={`flex flex-col gap-0 ${!toggle && 'scale-0'}`}>
-								<h3 className='text-md font-[600] text-[#fefefe]'>
+								<h3
+									className={`text-md font-[600] text-[#fefefe] ${
+										user?.email?.length >= 40 && 'text-[0.8rem]'
+									}`}
+								>
 									{firstName} <strong>{LastName}</strong>
 									<br />
 									{''}({user?.email})
 								</h3>
-								<p className='text-[0.75rem] text-accent_3 mt-1'>
+								<p className='text-[0.75rem] text-[#B7C5CC] mt-1'>
 									Your personal account
 								</p>
 							</span>
-						</div>
+						</Link>
 					</ul>
 				</aside>
 			) : (
@@ -252,14 +258,16 @@ export default function Sidebar() {
 						{MenuLinks.map((menu, index) => (
 							<li
 								key={index}
-								className={`text-accent_3 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 hover:text-ui_secondary1 bg-transparent rounded-md duration-500 ${
+								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 hover:text-ui_secondary1 bg-transparent rounded-md duration-500 ${
 									menu.gap ? 'mt-9' : 'mt-5'
 								}  `}
 								onClick={() => {
 									setActiveLink(index);
 									setMiniToggle(!miniToggle);
-									if (menu.onClick) {
+									if (menu.onClick == handleSignOut) {
 										menu.onClick();
+									} else if (menu.onClick == handleNavigate) {
+										menu.onClick(menu.title);
 									}
 								}}
 							>
@@ -289,7 +297,7 @@ export default function Sidebar() {
 							<input
 								type='text'
 								placeholder='Search'
-								className='outline-none bg-transparent px-3 py-2 text-[0.8rem] font-poppins text-black placeholder-accent_3 '
+								className='outline-none bg-transparent px-3 py-2 text-[0.8rem] font-poppins text-black placeholder-[#B7C5CC] '
 							/>
 
 							<MdSearch className='text-ui_primary font-[900] h-5 w-5 cursor-pointer' />

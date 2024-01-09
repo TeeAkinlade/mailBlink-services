@@ -2,11 +2,11 @@
 import { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
 import currentUser from '../currentUser';
 import { useRouter } from 'next/navigation';
+import Spinner from '@/components/Spinner';
 export default function DashboardLayout({ children }) {
-	const { user } = currentUser();
+	const { user, loading } = currentUser();
 	const router = useRouter();
 	const [authorized, setAuthorized] = useState(false);
 
@@ -37,7 +37,7 @@ export default function DashboardLayout({ children }) {
 	return (
 		<>
 			{/* Sidebar component remains static above all elements on the page */}
-			<main className='flex overflow-hidden h-screen w-screen max-width'>
+			<main className='flex overflow-hidden h-screen w-screen dark:bg-dark_bg dark:text-dark_text '>
 				{/* <Sidebar /> */}
 				<Sidebar />
 				{/* Main Dashboard display area */}
@@ -45,9 +45,8 @@ export default function DashboardLayout({ children }) {
 					{/* Navbar COMPONENT goes here */}
 
 					<Navbar />
-
 					{/* When routing begins we would use the <Outlet/> functionality to render different pages */}
-					{children}
+					{loading ? <Spinner /> : <div>{children}</div>}
 				</div>
 			</main>
 		</>

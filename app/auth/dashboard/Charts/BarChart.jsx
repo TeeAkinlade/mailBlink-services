@@ -18,9 +18,41 @@ const BarChart = () => {
 	} else {
 		x = 0; // Set x value
 	}
+	const darkMode = () => {
+		// Retrieve 'theme' value from localStorage
+		const storedTheme = localStorage.getItem('theme');
+		// Check if 'theme' exists and return true/false accordingly
+		if (storedTheme === 'dark') return true;
+		// return storedTheme === 'dark';
+	};
 	return (
 		<ResponsiveBar
 			data={data}
+			theme={
+				darkMode && {
+					axis: {
+						domain: {
+							line: {
+								stroke: 'rgb(100 116 139)',
+							},
+						},
+						legend: {
+							text: {
+								fill: 'rgb(100 116 139)',
+							},
+						},
+						ticks: {
+							line: {
+								stroke: 'rgb(100 116 139)',
+								strokeWidth: 1,
+							},
+							text: {
+								fill: 'rgb(100 116 139)',
+							},
+						},
+					},
+				}
+			}
 			keys={[
 				'Sunday',
 				'Saturday',
@@ -101,7 +133,7 @@ const BarChart = () => {
 			enableLabel={false}
 			labelSkipWidth={12}
 			labelSkipHeight={7}
-			labelTextColor="blue"
+			labelTextColor='blue'
 			legends={[]}
 			tooltip={() => {
 				return (
