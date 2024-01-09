@@ -2,11 +2,11 @@
 import { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
-import currentUser from '../currentUser';
+import { useCurrentUser } from '../currentUser';
 import { useRouter } from 'next/navigation';
 import Spinner from '@/components/Spinner';
 export default function DashboardLayout({ children }) {
-	const { user, loading } = currentUser();
+	const { user, loading } = useCurrentUser();
 	const router = useRouter();
 	const [authorized, setAuthorized] = useState(false);
 

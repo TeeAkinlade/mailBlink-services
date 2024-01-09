@@ -44,10 +44,7 @@ export default function Sidebar() {
 			src: <RiContactsLine />,
 		},
 
-		// {
-		// 	title: 'Reports',
-		// 	src: <VscReport />,
-		// },
+		
 		{
 			title: 'Settings',
 
@@ -68,7 +65,7 @@ export default function Sidebar() {
 
 	useEffect(() => {
 		const handleSideMenu = () => {
-			//   setMiniSidebar(window.innerWidth < 768);
+		//   setMiniSidebar(window.innerWidth < 768);
 			setMiniSidebar(true);
 		};
 

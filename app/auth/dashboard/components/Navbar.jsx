@@ -1,11 +1,11 @@
 import { MdSearch } from 'react-icons/md';
 import { IoNotificationsOutline } from 'react-icons/io5';
 import Image from 'next/image';
-import currentUser from '../../currentUser';
+import  { useCurrentUser } from '../../currentUser';
 import ThemeToggle from '@/components/ThemeToggle';
 import Link from 'next/link';
 export default function Navbar() {
-	const { user } = currentUser();
+	const { user } = useCurrentUser();
 	const name = user?.user_metadata?.name?.split(' ');
 	const firstName = name?.[0];
 	const LastName = name?.[1];

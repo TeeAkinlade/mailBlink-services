@@ -1,12 +1,16 @@
 import { ResponsiveRadialBar } from "@nivo/radial-bar";
 import { Radialdata as data } from "./Data";
+import useDeviceSize from '@/hooks/useDeviceSize';
+
 export default function RadialChart() {
   //
 
+  	const [innerWidth, innerheight] = useDeviceSize();
+
   // let innerWidth = window.innerWidth;
   // let innerheight = window.innerHeight;
-  let innerWidth = 1000;
-  let innerheight = 1000;
+//   let innerWidth = 1000;
+//   let innerheight = 1000;
   // Dynamic value of margin based on window width
   let x;
 

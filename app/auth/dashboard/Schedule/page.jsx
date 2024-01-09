@@ -7,7 +7,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import listPlugin from '@fullcalendar/list';
-import { formatDate } from '@fullcalendar/core'; 
+import { formatDate } from '@fullcalendar/core';
 
 const page = () => {
 	const [currentEvents, setCurrentEvents] = useState([]);
@@ -47,13 +47,15 @@ const page = () => {
 
 			<div className='flex flex-col justify-between items-start md:flex-row gap-y-8 '>
 				{/* SCHEDULE SIDEBAR */}
-				<div className='flex-[1_1_20%] bg-ui_primary p-8 rounded-md h-[70vh] w-full'>
-					<h5 className='text-white text-[1rem] '>Events</h5>
+				<div className='flex-[1_1_20%] bg-ui_primary px-8 pb-8 pt-5 rounded-md h-[70vh] w-full'>
+					<h5 className='text-dark_text font-[700] text-[1rem] mb-2 '>
+						EVENTS
+					</h5>
 					<ul>
 						{currentEvents.map((event) => (
 							<li
 								key={event.id}
-								className='bg-teal-500  my-4 p-4 rounded-md text-white text-[0.8rem] hover:scale-110 ease-out duration-500 cursor-pointer'
+								className='bg-teal-500 max-w-[15rem]  overflow-hidden my-4 p-4 rounded-md text-white text-[0.8rem] hover:scale-110 ease-out duration-500 cursor-pointer'
 								// onClick={handleEventClick}
 							>
 								<p>
@@ -112,7 +114,6 @@ const page = () => {
 					/>
 				</div>
 			</div>
-			
 		</main>
 	);
 };

@@ -14,40 +14,40 @@ import { VscAccount } from 'react-icons/vsc';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import currentUser from '../../currentUser';
+import { useCurrentUser } from '../../currentUser';
 import Image from 'next/image';
 import Spinner from '../../../../components/Spinner';
 
 export default function Sidebar() {
-	const { user, loading } = currentUser();
+	const { user, loading } = useCurrentUser();
 
-  // SignOut Functionality
-  const supabase = createClientComponentClient();
-  const router = useRouter();
-  const handleSignOut = async () => {
-    await supabase.auth.signOut();
-    router.push("/");
+	// SignOut Functionality
+	const supabase = createClientComponentClient();
+	const router = useRouter();
+	const handleSignOut = async () => {
+		await supabase.auth.signOut();
+		router.push('/');
 
-    if (loading) {
-      return <Spinner />;
-    }
-  };
+		if (loading) {
+			return <Spinner />;
+		}
+	};
 
-  //Handling Navigation for the sidebar
-  const handleNavigate = (point) => {
-    return router.push(`/auth/dashboard/${point}`);
-  };
+	//Handling Navigation for the sidebar
+	const handleNavigate = (point) => {
+		return router.push(`/auth/dashboard/${point}`);
+	};
 
-  // retrieving user information from currentUser.js
-  const name = user?.user_metadata?.name?.split(" ");
-  const firstName = name?.[0];
-  const LastName = name?.[1];
-  // State Management for smaller screens
-  const [miniToggle, setMiniToggle] = useState(true);
-  const [miniSidebar, setMiniSidebar] = useState(false);
-  // State Management for regular sized screens
-  const [toggle, setToggle] = useState(true);
-  const [activeLink, setActiveLink] = useState(false);
+	// retrieving user information from currentUser.js
+	const name = user?.user_metadata?.name?.split(' ');
+	const firstName = name?.[0];
+	const LastName = name?.[1];
+	// State Management for smaller screens
+	const [miniToggle, setMiniToggle] = useState(true);
+	const [miniSidebar, setMiniSidebar] = useState(false);
+	// State Management for regular sized screens
+	const [toggle, setToggle] = useState(true);
+	const [activeLink, setActiveLink] = useState(false);
 
 	const MenuLinks = [
 		{
@@ -77,46 +77,43 @@ export default function Sidebar() {
 			onClick: handleNavigate,
 		},
 
-    {
-      title: "Settings",
+		{
+			title: 'Settings',
 
-      src: <IoSettingsOutline />,
-      gap: true,
-      onClick: handleNavigate,
-    },
-    {
-      title: "Accounts",
+			src: <IoSettingsOutline />,
+			gap: true,
+			onClick: handleNavigate,
+		},
+		{
+			title: 'Accounts',
 
-      src: <VscAccount />,
-      gap: false,
-      onClick: handleNavigate,
-    },
-    {
-      title: "Sign Out",
-      src: <LiaSignOutAltSolid />,
-      onClick: handleSignOut,
-    },
-  ];
+			src: <VscAccount />,
+			gap: false,
+			onClick: handleNavigate,
+		},
+		{
+			title: 'Sign Out',
+			src: <LiaSignOutAltSolid />,
+			onClick: handleSignOut,
+		},
+	];
 
-  useEffect(() => {
-    const handleSideMenu = () => {
-      //   setMiniSidebar(window.innerWidth < 768);
-      setMiniSidebar(true);
-    };
+	useEffect(() => {
+		const handleSideMenu = () => {
+			setMiniSidebar(window?.innerWidth < 768);
+			
+		};
 
-    // Check if window is defined before accessing it
-    if (typeof window !== "undefined") {
-      handleSideMenu();
-      window.addEventListener("resize", handleSideMenu);
+// Calling the SideMenu function to decide which sidebar to render
+		handleSideMenu();
+		window.addEventListener('resize', handleSideMenu);
 
-      return () => {
-        window.removeEventListener("resize", handleSideMenu);
-      };
-    }
-  }, []);
+		return () => {
+			window.removeEventListener('resize', handleSideMenu);
+		};
+	}, []);
 
-	console.log('Current miniSidebar state:', miniSidebar, user?.email.length); // Move console.log here or within the return statement
-
+	
 	return (
 		<>
 			{!miniSidebar ? (
@@ -132,9 +129,9 @@ export default function Sidebar() {
 						} ease-in-out duration-500 hidden`}
 					/>
 
-          {/* Header for sidebar */}
-          <div className="flex gap-x-4 items-center">
-            {/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
+					{/* Header for sidebar */}
+					<div className='flex gap-x-4 items-center'>
+						{/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
 
 						<h1
 							className={`font-poppins origin-left text-[2rem] font-[700] leading-8 text-white ${
@@ -304,11 +301,11 @@ export default function Sidebar() {
 								className='outline-none bg-transparent px-3 py-2 text-[0.8rem] font-poppins text-black placeholder-[#B7C5CC] '
 							/>
 
-              <MdSearch className="text-ui_primary font-[900] h-5 w-5 cursor-pointer" />
-            </div>
-          </ul>
-        </aside>
-      )}
-    </>
-  );
+							<MdSearch className='text-ui_primary font-[900] h-5 w-5 cursor-pointer' />
+						</div>
+					</ul>
+				</aside>
+			)}
+		</>
+	);
 }

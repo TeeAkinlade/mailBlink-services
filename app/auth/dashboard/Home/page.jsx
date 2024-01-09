@@ -6,11 +6,11 @@ import { MdArrowForwardIos } from 'react-icons/md';
 import { SlPeople } from 'react-icons/sl';
 import BarChart from '../Charts/BarChart';
 import RadialChart from '../Charts/RadialChart';
-import currentUser from '../../currentUser';
+import { useCurrentUser } from '../../currentUser';
 import Link from 'next/link';
 
 export default function Home() {
-	const { user, loading } = currentUser();
+	const { user, loading } = useCurrentUser();
 	const name = user?.user_metadata?.name?.split(' ');
 	const firstName = name?.[0];
 	return (
@@ -133,7 +133,7 @@ export default function Home() {
 									Most Recent Campaign
 								</h2>
 								<Link
-									href='#'
+									href='/campaigns'
 									className='flex gap-x-2 text-ui_secondary1 text-[0.8rem] justify-center items-center group '
 								>
 									See all{' '}
@@ -169,11 +169,11 @@ export default function Home() {
 									</span>
 								</div>
 							</div>
-							<div className='flex w-full justify-end items-end'>
+							<Link href="/campaigns" className='flex w-full justify-end items-end'>
 								<button className='p-2 px-4 text-white bg-ui_secondary1 cursor-pointer rounded-xl text-[0.8rem] leading-7 hover:scale-105 duration-500 hover:opacity-80'>
 									View Campaign
 								</button>
-							</div>
+							</Link >
 						</div>
 					</div>
 					{/* SCHEDULE */}
