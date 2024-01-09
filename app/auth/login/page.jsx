@@ -75,7 +75,7 @@ const Login = () => {
       if (error) {
         alert(error.message);
       } else if (user.length !== 0) {
-        router.push("/auth/dashboard");
+        router.push("/auth/dashboard/Home");
       }
     } catch (error) {
       // Handle unexpected errors
