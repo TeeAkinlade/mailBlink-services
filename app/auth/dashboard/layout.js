@@ -17,7 +17,8 @@ export default function DashboardLayout({ children }) {
       return null;
     }, 10000);
 
-    if (user?.user_metadata?.name) {
+    if (user?.aud === "authenticated") {
+      console.log("authorized")
       setAuthorized(true);
 
       // 10 seconds in milliseconds
