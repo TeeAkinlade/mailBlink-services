@@ -1,5 +1,5 @@
 import AboutForm from "./AboutForm";
-
+import Image from "/Image";
 const AboutContact = () => {
   return (
     <section>
@@ -18,8 +18,14 @@ const AboutContact = () => {
         <div class="w-[186px] h-[186px] opacity-30 bg-blue-600 bg-opacity-90 rounded-[100px]"></div>
       </div>
       <div className="flex relative items-center bg-[#030303] w-full md:h-[15rem] h-[12rem]">
-        <div className=" rounded-full bg-blue-950 opacity-70 md:w-[11.6rem] md:h-[11.6rem] w-[9.6rem] h-[9.6rem] relative -left-[7rem] "></div>
-        <div class="w-[186px] h-[186px] opacity-30 bg-blue-600 bg-opacity-90 rounded-[100px]"></div>
+        <div className=" rounded-full bg-[#0070F0E5] opacity-70 md:w-[11.6rem] md:h-[11.6rem] w-[9.6rem] h-[9.6rem] relative -left-[7rem]"></div>
+        <Image
+          src="/assets/icons/dots.svg"
+          alt=""
+          className="absolute bottom-6 right-[45%] w-36"
+        />
+        <div className=" rounded-full bg-blue-950 opacity-70 md:w-[11.6rem] md:h-[11.6rem] w-[9.6rem] h-[9.6rem] relative -left-[17rem] "></div>
+        <div class="w-[186px] relative h-[186px] opacity-30 bg-blue-600 bg-opacity-90 rounded-[100px] left-20"></div>
       </div>
     </section>
   );
