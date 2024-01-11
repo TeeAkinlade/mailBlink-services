@@ -1,6 +1,6 @@
 import AboutContact from "./AboutContact";
 import AboutHero from "./AboutHero";
-import AboutLocations from "./Locations";
+import AboutLocation from "./AboutLocation";
 import AboutProducts from "./AboutProduct";
 import AboutStory from "./AboutStory";
 import AboutTeam from "./AboutTeam";
@@ -13,7 +13,7 @@ const AboutPage = () => {
   return (
     <>
     <AboutHero/>
-    <AboutLocations/>
+    <AboutLocation/>
     <AboutProducts/>
     <AboutStory/>
     <AboutTeam/>
