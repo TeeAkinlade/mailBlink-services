@@ -22,7 +22,7 @@ const AboutContact = () => {
         <Image
           src="/assets/icons/dots.svg"
           alt=""
-          className="absolute bottom-6 right-[45%] w-36"
+          className="absolute bottom-6 right-[45%] w-46"
         />
         <div className=" rounded-full bg-blue-950 opacity-70 md:w-[11.6rem] md:h-[11.6rem] w-[9.6rem] h-[9.6rem] relative -left-[17rem] "></div>
         <div class="w-[186px] relative h-[186px] opacity-30 bg-blue-600 bg-opacity-90 rounded-[100px] left-20"></div>
