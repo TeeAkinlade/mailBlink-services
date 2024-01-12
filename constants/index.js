@@ -176,7 +176,7 @@ export const aboutData = [
     title: "Head Office and USA West Coast",
     phone: "+1 (415) 322 2479",
     contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300,<br/>Sausalito, CA, 94965, United States of America`,
+    address: `One Harbor Drive, Suite 300,Sausalito, CA, 94965, United States of America`,
   },
 
   {
@@ -203,7 +203,7 @@ export const aboutData = [
     title: "Head Office and USA West Coast",
     phone: "+1 (415) 322 2479",
     contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300,<br/>Sausalito, CA, 94965, United States of America`,
+    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
   },
 
   {

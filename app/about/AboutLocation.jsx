@@ -15,7 +15,7 @@ const AboutLocation = () => {
           {aboutData.map((item, index) => (
             <div
               key={index}
-              className="rounded-3xl overflow-hidden  px-5 py-5 text-center border-2 border-blue-100 transition-transform hover:scale-105 hover:border-white hover:bg-white"
+              className="rounded-3xl overflow-hidden  px-5 py-5 text-center border-2 border-blue-950 transition-transform hover:scale-105 hover:border-white hover:bg-white"
             >
               <div className="flex items-center justify-center ">
                <Image
