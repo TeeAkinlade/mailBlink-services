@@ -14,9 +14,11 @@ export const useCurrentUser = () => {
           data: { user },
           error,
         } = await supabase.auth.getUser();
+        console.log("hook",user);
         if (error) {
           console.log(error.message);
         } else {
+          console.log(user);
           setUser(user);
         }
       } catch (error) {

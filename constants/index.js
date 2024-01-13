@@ -13,6 +13,8 @@ import photo from "@/public/assets/images/unsplash_376KN_ISplE.svg";
 import photo2 from "@/public/assets/images/unsplash_g1Kr4Ozfoac.svg";
 import photo3 from "@/public/assets/images/unsplash_QckxruozjRg.svg";
 import photo4 from "@/public/assets/images/unsplash_UpsEF48wAgk.svg";
+=======
+import image11 from "@/public/assets/icons/message.svg";
 import { IoMdMail } from "react-icons/io";
 import { FaSms, FaWpforms } from "react-icons/fa";
 
@@ -42,7 +44,7 @@ export const NAV_LINKS = [
   { href: "/about", key: "about", label: "About" },
   { href: "/resources", key: "resources", label: "Resources" },
   { href: "/blog", key: "blog", label: "Blog" },
-  { href: "/contact-us", key: "contact_us", label: "Contact Us" },
+  { href: "/contact", key: "contact_us", label: "Contact Us" },
 ];
 
 export const campaignDetailsList = [
@@ -129,6 +131,106 @@ export const servicesData = [
   },
 ];
 
+// Team Section of About page
+
+export const teams = [
+  {
+    id: 1,
+    image: "/assets/images/team-01.png",
+    name: "Michal Kosinski",
+    position:
+      "General Manager.",
+  },
+  {
+    id: 2,
+    image: "/assets/images/team-02.png",
+    name: "Michal Kosinski",
+    position: "General Manager.",
+  },
+  {
+    id: 3,
+    image: "/assets/images/team-03.png",
+    name:"Michal Kosinski",
+    position: "General Manager.",
+  },
+  {
+    id: 4,
+    image: "/assets/images/team-04.png",
+    name:"Michal Kosinski",
+    position: "General Manager.",
+  },
+  {
+    id: 5,
+    image: "/assets/images/team-05.png",
+    name:"Michal Kosinski",
+    position: "General Manager.",
+  },
+  {
+    id: 6,
+    image: "/assets/images/team-06.png",
+    name:"Michal Kosinski",
+    position: "General Manager.",
+  },
+];
+
+// Location Section of About page
+
+export const aboutData = [
+  {
+    id: 1,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300,Sausalito, CA, 94965, United States of America`,
+  },
+
+  {
+    id: 2,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300,Sausalito, CA, 94965,United States of America`,
+  },
+
+  {
+    id: 3,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
+  },
+
+  {
+    id: 4,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
+  },
+
+  {
+    id: 5,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
+  },
+
+  {
+    id: 6,
+    image: "/assets/images/location-img-1.png",
+    title: "Head Office and USA West Coast",
+    phone: "+1 (415) 322 2479",
+    contact: "contact@opmantek.com",
+    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
+  },
+];
+
 export const socialMediaLinks = [
   {
     id: 1,
@@ -194,7 +296,7 @@ export const contacts = [
     alt: "Mobile-icon",
     title: "Phone: ",
     details: "+91 98765 43210",
-    styles: 'h-6 w-8'
+    styles: "h-6 w-8",
   },
 ];
 
@@ -291,7 +393,7 @@ export const items = [
     id: 2,
     image: "/assets/icons/github.icon.svg",
     title: "MailBlink on GitHub",
-    description: "Track the MailBlink development changes on GitHub.",
+    description: "General Manager.",
   },
 ];
 

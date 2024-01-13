@@ -81,4 +81,4 @@ const Resouces = () => {
   ) 
 }
 
-export default Resouces
+export default Resouces;
