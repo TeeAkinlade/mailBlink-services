@@ -3,7 +3,7 @@ import { GoVideo } from "react-icons/go";
 
 export const SmsHero = () => {
   return (
-    <header className="md:bg-white-500 flex flex-col items-center gap-10 justify-center bg-white text-center md:my-16 md:flex-row md:gap-20 md:px-16">
+    <header className="md:bg-white-500 flex-center flex-col gap-10 bg-white text-center md:my-16 md:flex-row md:gap-20 md:px-16">
       <div className="mb-4 bg-white md:w-4/5 md:text-left">
         <h3 className="text-sm text-ui_secondary1 md:text-lg">
           WELCOME TO SMS MARKETING
