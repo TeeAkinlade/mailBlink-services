@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Support() {
   return (
-    <main className="md:b-10 mt-0 w-full bg-blue-50 py-4 font-poppins text-ui_primary md:px-[2.25rem] md:py-10">
+    <main className="md:b-10 mt-0 w-full bg-blue-50 py-4 text-ui_primary md:px-[2.25rem] md:py-10">
       <div className="mx-4 md:mx-10 md:max-w-screen-lg lg:max-w-screen-xl">
         <div className="mb-[100px] flex flex-col items-center justify-center md:flex-row">
           <div className="flex flex-col text-center md:w-1/2 md:text-left">
