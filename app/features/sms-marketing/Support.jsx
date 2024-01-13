@@ -8,7 +8,7 @@ export default function Support() {
         <h2 className="mt-10 text-xl font-semibold text-ui_primary md:text-4xl md:font-bold">
           Premium Support
         </h2>
-        <p className="text-md font-md mt-4 md:mt-10 md:text-lg md:pr-[7.5rem]">
+        <p className="text-md font-md mt-4 md:mt-10 md:text-lg">
           Our FirstWave support engineers are highly skilled and experienced in
           NMIS, Open-AudIT and all of our commercial products and helped
           customers from Telcos, MSP, enterprise organizations.
@@ -21,7 +21,7 @@ export default function Support() {
           Go to Support
         </button>
       </div>
-      <div className="mb-4 flex w-full justify-center p-4">
+      <div className="mb-4 w-full p-4">
         <Image
           src="/assets/images/Group 1000000830.png"
           width={1000}
