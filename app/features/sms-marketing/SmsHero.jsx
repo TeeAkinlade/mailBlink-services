@@ -20,7 +20,7 @@ export const SmsHero = () => {
           platform underpinning Opmantek Performance and Management solutions.
           More text will be available in the documentation.
         </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-5 md:flex-row md:justify-start">
+        <div className="mt-10 flex-center flex-wrap gap-5 md:flex-row md:justify-start">
           <button className="cursor-pointer rounded-full border border-navyBlue bg-navyBlue px-8 py-3 text-white transition duration-150 ease-in-out hover:border-navyBlue hover:bg-white hover:text-navyBlue">
             Get Started Now!
           </button>

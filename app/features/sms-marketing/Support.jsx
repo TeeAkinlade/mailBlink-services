@@ -21,7 +21,7 @@ export default function Support() {
           Go to Support
         </button>
       </div>
-      <div className="pb-10 w-full">
+      <div className="mb-4 flex w-full justify-center p-4">
         <Image
           src="/assets/images/Group 1000000830.png"
           width={1000}
