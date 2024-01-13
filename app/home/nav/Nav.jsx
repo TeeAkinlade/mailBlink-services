@@ -34,7 +34,7 @@ const Nav = () => {
             href="/"
             className="font-Roboto text-2xl font-bold text-[#17181A] md:text-4xl"
           >
-            SalesBlink.
+            Salesblink.
           </Link>
           <button
             className="text-3xl 2lg:hidden"
