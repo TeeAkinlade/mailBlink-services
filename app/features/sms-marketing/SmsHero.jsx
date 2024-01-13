@@ -3,7 +3,7 @@ import { GoVideo } from "react-icons/go";
 
 export const SmsHero = () => {
   return (
-    <header className="md:bg-white-500 mt-10 flex flex-col items-center justify-center gap-5 bg-white px-4 text-center font-poppins md:my-20 md:flex-row md:gap-10 md:px-24">
+    <header className="md:bg-white-500 flex flex-col items-center justify-center gap-16 bg-white text-center md:my-16 md:flex-row md:gap-16 md:px-16">
       <div className="mb-4 bg-white md:w-4/5 md:text-left">
         <h3 className="text-sm text-ui_secondary1 md:text-lg">
           WELCOME TO SMS MARKETING
@@ -18,6 +18,7 @@ export const SmsHero = () => {
         <p className="mt-3 text-sm md:mt-7 md:text-lg">
           Network Management Information System (NMIS) is the robust software
           platform underpinning Opmantek Performance and Management solutions.
+          More text will be available in the documentation.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-5 md:flex-row md:justify-start">
           <button className="cursor-pointer rounded-full border border-navyBlue bg-navyBlue px-8 py-3 text-white transition duration-150 ease-in-out hover:border-navyBlue hover:bg-white hover:text-navyBlue">
