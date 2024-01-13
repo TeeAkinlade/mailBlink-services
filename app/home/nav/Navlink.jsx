@@ -3,9 +3,11 @@
 import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const Navlink = () => {
+  const router = useRouter();
   const [showDropdown, setShowDropdown] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -24,10 +26,11 @@ const Navlink = () => {
     }
   };
 
-  const handleLinkClick = (index) => {
+  const handleLinkClick = (index, link) => {
     if (window.innerWidth <= 768) {
       handleClick(index);
     }
+    router.push(link);
   };
 
   return (
@@ -41,7 +44,7 @@ const Navlink = () => {
             onMouseLeave={handleMouseLeave}
           >
             <div
-              onClick={() => handleLinkClick(index)}
+              onClick={() => handleLinkClick(index, link.href)}
               className="flex cursor-pointer items-center pb-1.5 pr-5 font-medium text-[#17181A] transition-all hover:text-forestGreen"
             >
               {link.label}
@@ -71,13 +74,15 @@ const Navlink = () => {
                     : "opacity-0 translate-y-2 pointer-events-none absolute"
                 } transition-all duration-300 ease-in-out`}
               >
-                <ul className="py-2 text-sm w-full">
+                <ul className="py-2 text-sm w-full flex flex-col">
                   {link.dropDown.map((item, subIndex) => (
-                    <li key={subIndex} className="px-4 py-2 hover:bg-gray-100">
-                      <Link href={item.href}>
-                        <span className="text-gray-800">{item.label}</span>
-                      </Link>
-                    </li>
+                    <Link
+                      key={subIndex}
+                      href={item.href}
+                      className="px-4 py-2 hover:bg-gray-100"
+                    >
+                      <span className="text-gray-800">{item.label}</span>
+                    </Link>
                   ))}
                 </ul>
               </div>

@@ -1,14 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import {
   readRelatedEmail,
   readRelatedGroups,
+  updateCampaignStatus,
 } from "@/services/supabase.service";
 
 const CampaignPreview = () => {
+  const router = useRouter();
   const { campaignID } = useParams();
   const [campaign, setCampaign] = useState();
   const [email, setEmail] = useState(null);
@@ -28,6 +30,36 @@ const CampaignPreview = () => {
     getPreview();
   }, []);
 
+  const sendCampaign = async () => {
+    // console.log(campaign, email, group);
+
+    const data = {
+      //For now it can only send to the test email (Awaiting approval in AWS)
+      recipientsEmail: ["digitsteminterns@gmail.com"],
+      html: email.content,
+      subject: campaign.subject,
+    };
+
+    // console.log(data)
+
+    fetch("https://mailblink-backend.onrender.com/email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log("Success:", data))
+      .then(() => {
+        updateCampaignStatus(campaignID, "sent");
+      })
+      .then(() => {
+        router.push("/campaigns");
+      })
+      .catch((error) => console.error("Error:", error));
+  };
+
   return (
     <>
       <header className="mx-10 py-5">
@@ -36,12 +68,13 @@ const CampaignPreview = () => {
             <h1>Review and Send</h1>
           </article>
           <div className="hidden w-60 lg:block">
-            <Link
+            <button
               href={`/campaigns`}
               className="custom-btn"
+              onClick={sendCampaign}
             >
               Send Campaign
-            </Link>
+            </button>
           </div>
         </div>
       </header>

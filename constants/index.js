@@ -8,6 +8,12 @@ import image7 from "@/public/assets/images/Twitter.svg";
 import image8 from "@/public/assets/images/LinkedIn.svg";
 import image9 from "@/public/assets/images/Instagram.svg";
 import image10 from "@/public/assets/images/email-icon.svg";
+import image11 from "@/public/assets/images/Mobile.svg";
+import photo from "@/public/assets/images/unsplash_376KN_ISplE.svg";
+import photo2 from "@/public/assets/images/unsplash_g1Kr4Ozfoac.svg";
+import photo3 from "@/public/assets/images/unsplash_QckxruozjRg.svg";
+import photo4 from "@/public/assets/images/unsplash_UpsEF48wAgk.svg";
+=======
 import image11 from "@/public/assets/icons/message.svg";
 import { IoMdMail } from "react-icons/io";
 import { FaSms, FaWpforms } from "react-icons/fa";
@@ -38,7 +44,7 @@ export const NAV_LINKS = [
   { href: "/about", key: "about", label: "About" },
   { href: "/resources", key: "resources", label: "Resources" },
   { href: "/blog", key: "blog", label: "Blog" },
-  { href: "/contact", key: "contact_us", label: "Contact Us" },
+  { href: "/contact-us", key: "contact_us", label: "Contact Us" },
 ];
 
 export const campaignDetailsList = [
@@ -598,3 +604,325 @@ export const passwordInputs = [
     label: "Confirm password",
   },
 ];
+
+export const resourceHeroData = [
+  {
+    id: 1,
+    variations: [
+      {id: 1, content1: 'Read the latest insights from Opmantek engineering about Open-AudIT.' },
+      {id: 2, content2: 'Network Management Information System (NMIS) and the Opmantek suite of products.' },
+      {id: 3, content3: 'Share your results with potential employers to display your strengths and unique fit.' },
+    ],
+  },
+  {
+    id: 2,
+    variations: [
+      {id: 1, content1: 'Read the latest insights from Opmantek engineering about Open-AudIT.' },
+      {id: 2, content2: 'Network Management Information System (NMIS) and the Opmantek suite of products.' },
+      {id: 3, content3: 'Share your results with potential employers to display your strengths and unique fit.' },
+    ],
+  },
+  {
+    id: 3,
+    variations: [
+      {id: 1, content1: 'Read the latest insights from Opmantek engineering about Open-AudIT.' },
+      {id: 2, content2: 'Network Management Information System (NMIS) and the Opmantek suite of products.' },
+      {id: 3, content2: 'Share your results with potential employers to display your strengths and unique fit.' },
+    ],
+  },
+  {
+    id: 4,
+    variations: [
+      {id: 1, content1: 'Read the latest insights from Opmantek engineering about Open-AudIT.' },
+      {id: 2, content2: 'Network Management Information System (NMIS) and the Opmantek suite of products.' },
+      {id: 3, content3: 'Share your results with potential employers to display your strengths and unique fit.' },
+    ],
+  },
+  {
+    id: 5,
+    variations: [
+      {id: 1, content1: 'Read the latest insights from Opmantek engineering about Open-AudIT.' },
+      {id: 2, content2: 'Network Management Information System (NMIS) and the Opmantek suite of products.' },
+      {id: 3, content3: 'Share your results with potential employers to display your strengths and unique fit.' },
+    ],
+  },
+]
+
+export const blogTitles = [
+  {
+    id: 1,
+    title: "Blogs"
+  },
+  {
+    id: 2,
+    title: 'Webinars'
+  },
+  {
+    id: 3,
+    title: 'Enterprise'
+  },
+  {
+    id: 4,
+    title: 'Podcasts'
+  },
+  {
+    id: 5,
+    title: 'White papers'
+  },
+  {
+    id: 6,
+    title: 'Case Studies'
+  },
+]
+
+export const blogs = [
+      {
+        id: 1,
+        src: photo4,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities.',
+        content2: 'Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 2,
+        src: photo2,
+        heading: 'Cope Inventory',
+        content: 'Discover the top traits that help you excel and determine your work fit.',
+        content2: 'Check your reasoning abilities.',
+      },
+      {
+        id: 3,
+        src: photo3,
+        heading: 'Cope Inventory',
+        content: 'Discover your communication style! Really useful for teams.',
+        content2: 'Check your reasoning abilities',
+      },
+      {
+        id: 4,
+        src: photo4,
+        heading: 'Entrepreneurial Personality',
+        content: 'Get a clean picture of yourself with insights into your personality and character.',
+        content2: 'Check your reasoning abilities',
+      },
+      {
+        id: 5,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.',
+        content2: 'Check your reasoning abilities',
+      },
+      {
+        id: 6,
+        src: photo2,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.',
+        content2: 'Check your reasoning abilities',
+      },
+]
+ 
+export const webinars = [
+      {
+        id: 1,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities.',
+        content2: 'Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 2,
+        src: photo4,
+        heading: 'Cope Inventory',
+        content: 'Discover the top traits that help you excel and determine your work fit.',
+        content2: 'Check your reasoning abilities.',
+      },
+      {
+        id: 3,
+        src: photo3,
+        heading: 'Cope Inventory',
+        content: 'Discover your communication style! Really useful for teams.',
+        content2: 'Check your reasoning abilities',
+      },
+      {
+        id: 4,
+        src: photo4,
+        heading: 'Entrepreneurial Personality',
+        content: 'Get a clean picture of yourself with insights into your personality and character.4'
+      },
+      {
+        id: 5,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 6,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+]
+export const enterprise = [
+      {
+        id: 1,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities.',
+        content2: 'Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 2,
+        src: photo4,
+        heading: 'Cope Inventory',
+        content: 'Discover the top traits that help you excel and determine your work fit.',
+        content2: 'Check your reasoning abilities.',
+      },
+      {
+        id: 3,
+        src: photo2,
+        heading: 'Cope Inventory',
+        content: 'Discover your communication style! Really useful for teams.',
+        content2: 'Check your reasoning abilities',
+      },
+      {
+        id: 4,
+        src: photo4,
+        heading: 'Entrepreneurial Personality',
+        content: 'Get a clean picture of yourself with insights into your personality and character.'
+      },
+      {
+        id: 5,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 6,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+]
+export const podcast = [
+      {
+        id: 1,
+        src: photo4,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities.',
+        content2: 'Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 2,
+        src: photo2,
+        heading: 'Cope Inventory',
+        content: 'Discover the top traits that help you excel and determine your work fit.',
+        content2: 'Check your reasoning abilities.',
+      },
+      {
+        id: 3,
+        src: photo3,
+        heading: 'Cope Inventory',
+        content: 'Discover your communication style! Really useful for teams.',
+        content2: 'Check your reasoning abilities',
+      },
+      {
+        id: 4,
+        src: photo2,
+        heading: 'Entrepreneurial Personality',
+        content: 'Get a clean picture of yourself with insights into your personality and character.'
+      },
+      {
+        id: 5,
+        src: photo4,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 6,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+]
+export const whitepaper = [
+      {
+        id: 1,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities.',
+        content2: 'Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 2,
+        src: photo2,
+        heading: 'Cope Inventory',
+        content: 'Discover the top traits that help you excel and determine your work fit.',
+        content2: 'Check your reasoning abilities.',
+      },
+      {
+        id: 3,
+        src: photo4,
+        heading: 'Cope Inventory',
+        content: 'Discover your communication style! Really useful for teams.',
+        content2: 'Check your reasoning abilities',
+      },
+      {
+        id: 4,
+        src: photo4,
+        heading: 'Entrepreneurial Personality',
+        content: 'Get a clean picture of yourself with insights into your personality and character.'
+      },
+      {
+        id: 5,
+        src: photo4,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 6,
+        src: photo2,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+]
+
+export const caseStudies = [
+      {
+        id: 1,
+        src: photo4,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities.',
+        content2: 'Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 2,
+        src: photo2,
+        heading: 'Cope Inventory',
+        content: 'Discover the top traits that help you excel and determine your work fit.',
+        content2: 'Check your reasoning abilities.',
+      },
+      {
+        id: 3,
+        src: photo3,
+        heading: 'Cope Inventory',
+        content: 'Discover your communication style! Really useful for teams.',
+        content2: 'Check your reasoning abilities',
+      },
+      {
+        id: 4,
+        src: photo4,
+        heading: 'Entrepreneurial Personality',
+        content: 'Get a clean picture of yourself with insights into your personality and character.'
+      },
+      {
+        id: 5,
+        src: photo2,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+      {
+        id: 6,
+        src: photo3,
+        heading: 'Reasoning Ability',
+        content: 'Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.'
+      },
+]

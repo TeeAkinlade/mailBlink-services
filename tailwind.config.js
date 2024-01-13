@@ -20,7 +20,7 @@ module.exports = {
       },
       colors: {
         backGround: "#E5E5E5",
-        navyBlue: "#001F3F",
+        navyBlue: "#086250",
         forestGreen: "#228B22",
         lightBlue: "#2EC5CE",
         primaryBlack: "#575757",
