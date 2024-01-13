@@ -13,19 +13,18 @@ const Nav = () => {
   const menuRef = useRef();
 
   //detects if outside the navbar on mobile is clicked and closes the navbar
-  useEffect(() =>{
+  useEffect(() => {
     let handler = (event) => {
-      if(!menuRef.current.contains(event.target)){
+      if (!menuRef.current.contains(event.target)) {
         setOpen(false);
       }
-    }
-    document.addEventListener('mousedown', handler )
-    
-    return () => {
-      document.removeEventListener('mousedown', handler )
+    };
+    document.addEventListener("mousedown", handler);
 
-    }
-  })
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
   return (
     <nav className="max-width md:px-12 mx-auto">
@@ -35,7 +34,7 @@ const Nav = () => {
             href="/"
             className="font-Roboto text-2xl font-bold text-[#17181A] md:text-4xl"
           >
-            MailBlink.
+            SalesBlink.
           </Link>
           <button
             className="text-3xl 2lg:hidden"
