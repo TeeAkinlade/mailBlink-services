@@ -19,7 +19,7 @@ export default function Support() {
               We work closely with you during implementation and rollout, as
               well as post delivery of our solutions.
             </p>
-            <button className="mt-10 cursor-pointer rounded-full border border-navyBlue bg-navyBlue px-8 py-3 text-white transition duration-150 ease-in-out hover:border-navyBlue hover:bg-white hover:text-navyBlue">
+            <button className="custom-btn mt-10 cursor-pointer transition duration-150 ease-in-out">
               Go to Support
             </button>
           </div>
