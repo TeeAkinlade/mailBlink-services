@@ -7,113 +7,81 @@ import { LiaSignOutAltSolid } from 'react-icons/lia';
 import { RiContactsLine } from 'react-icons/ri';
 import { AiOutlineSchedule } from 'react-icons/ai';
 import { TbBrandCampaignmonitor } from 'react-icons/tb';
+import { VscReport } from 'react-icons/vsc';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { IoIosArrowBack } from 'react-icons/io';
 import { MdSearch } from 'react-icons/md';
 import { VscAccount } from 'react-icons/vsc';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { useCurrentUser } from '../../currentUser';
 import Image from 'next/image';
-import Spinner from '../../../../components/Spinner';
 
 export default function Sidebar() {
-	const { user, loading } = useCurrentUser();
-
-	// SignOut Functionality
-	const supabase = createClientComponentClient();
-	const router = useRouter();
-	const handleSignOut = async () => {
-		await supabase.auth.signOut();
-		router.push('/');
-
-		if (loading) {
-			return <Spinner />;
-		}
-	};
-
-	//Handling Navigation for the sidebar
-	const handleNavigate = (point) => {
-		return router.push(`/auth/dashboard/${point}`);
-	};
-
-	// retrieving user information from currentUser.js
-	const name = user?.user_metadata?.name?.split(' ');
-	const firstName = name?.[0];
-	const LastName = name?.[1];
 	// State Management for smaller screens
 	const [miniToggle, setMiniToggle] = useState(true);
 	const [miniSidebar, setMiniSidebar] = useState(false);
 	// State Management for regular sized screens
 	const [toggle, setToggle] = useState(true);
 	const [activeLink, setActiveLink] = useState(false);
-
 	const MenuLinks = [
 		{
-			title: 'Home',
+			title: 'Dashboard',
 			src: <MdDashboardCustomize />,
-			onClick: handleNavigate,
 		},
 		{
 			title: 'Inbox',
 			src: <HiInboxArrowDown />,
-			onClick: handleNavigate,
 		},
 		{
 			title: 'Schedule',
 			src: <AiOutlineSchedule />,
 			gap: false,
-			onClick: handleNavigate,
 		},
 		{
 			title: 'Analytics',
 			src: <TbBrandCampaignmonitor />,
-			onClick: handleNavigate,
 		},
 		{
 			title: 'Contacts',
 			src: <RiContactsLine />,
-			onClick: handleNavigate,
 		},
 
+		
 		{
 			title: 'Settings',
 
 			src: <IoSettingsOutline />,
 			gap: true,
-			onClick: handleNavigate,
 		},
 		{
 			title: 'Accounts',
 
 			src: <VscAccount />,
 			gap: false,
-			onClick: handleNavigate,
 		},
 		{
 			title: 'Sign Out',
 			src: <LiaSignOutAltSolid />,
-			onClick: handleSignOut,
 		},
 	];
 
 	useEffect(() => {
 		const handleSideMenu = () => {
-			setMiniSidebar(window?.innerWidth < 768);
-			
+		//   setMiniSidebar(window.innerWidth < 768);
+			setMiniSidebar(true);
 		};
 
-// Calling the SideMenu function to decide which sidebar to render
-		handleSideMenu();
-		window.addEventListener('resize', handleSideMenu);
+		// Check if window is defined before accessing it
+		if (typeof window !== 'undefined') {
+			handleSideMenu();
+			window.addEventListener('resize', handleSideMenu);
 
-		return () => {
-			window.removeEventListener('resize', handleSideMenu);
-		};
+			return () => {
+				window.removeEventListener('resize', handleSideMenu);
+			};
+		}
 	}, []);
 
-	
+	console.log('Current miniSidebar state:', miniSidebar); // Move console.log here or within the return statement
+
 	return (
 		<>
 			{!miniSidebar ? (
@@ -147,20 +115,13 @@ export default function Sidebar() {
 							<li
 								key={index}
 								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
-									menu.gap ? 'mt-9 LinkBorder' : 'mt-3'
+									menu.gap ? 'mt-9' : 'mt-3'
 								}  `}
 								onClick={() => {
 									setActiveLink(index);
 									setToggle(!toggle);
-									// setLoading(true);
-									if (menu.onClick == handleSignOut) {
-										menu.onClick();
-									} else if (menu.onClick == handleNavigate) {
-										menu.onClick(menu.title);
-									}
 								}}
 							>
-								{' '}
 								<div
 									className={` md:h-4 md:w-4  ${
 										activeLink === index && 'text-ui_secondary1'
@@ -192,41 +153,28 @@ export default function Sidebar() {
 								Collapse Menu{' '}
 							</span>
 						</div>
-						<Link
-							href='/auth/dashboard/Accounts
-										'
+						<div
 							className='text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  bg-transparent mt-8 duration-500'
 							onClick={() => setToggle(!toggle)}
 						>
-							{user ? (
-								<div className='text-white  h-[50px] w-[50px] rounded-full flex items-center justify-center bg-slate-500 cursor-pointer'>
-									{user?.email[0].toUpperCase()}
-								</div>
-							) : (
-								<Image
-									src='/assets/images/pexels-vlad-bagacian-1368382.jpg'
-									width={40}
-									height={30}
-									alt='Profile Icon'
-									className='text-white italic h-[50px]  rounded-full flex items-center bg-ui_secondary1 cursor-pointer'
-								/>
-							)}
+							<Image
+								src='/assets/images/pexels-vlad-bagacian-1368382.jpg'
+								width={40}
+								height={30}
+								alt='Profile Icon'
+								className='text-ui_primary italic h-[50px] rounded-full  cursor-pointer'
+							/>
 
 							<span className={`flex flex-col gap-0 ${!toggle && 'scale-0'}`}>
-								<h3
-									className={`text-md font-[600] text-[#fefefe] ${
-										user?.email?.length >= 40 && 'text-[0.8rem]'
-									}`}
-								>
-									{firstName} <strong>{LastName}</strong>
-									<br />
-									{''}({user?.email})
+								<h3 className='text-md font-[600] text-[#fefefe]'>
+									Donald <strong>Davidson</strong>
+									{''}(@donaldDavid33)
 								</h3>
 								<p className='text-[0.75rem] text-[#B7C5CC] mt-1'>
 									Your personal account
 								</p>
 							</span>
-						</Link>
+						</div>
 					</ul>
 				</aside>
 			) : (
@@ -265,11 +213,6 @@ export default function Sidebar() {
 								onClick={() => {
 									setActiveLink(index);
 									setMiniToggle(!miniToggle);
-									if (menu.onClick == handleSignOut) {
-										menu.onClick();
-									} else if (menu.onClick == handleNavigate) {
-										menu.onClick(menu.title);
-									}
 								}}
 							>
 								<div
