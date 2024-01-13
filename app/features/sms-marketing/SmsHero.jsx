@@ -9,7 +9,7 @@ export const SmsHero = () => {
           WELCOME TO SMS MARKETING
         </h3>
         <h1 className="mt-2 cursor-pointer text-4xl font-extrabold text-ui_primary md:mt-5 md:text-7xl">
-          MailBlink
+          SalesBlink
         </h1>
         <p className="mt-3 text-sm font-bold text-ui_primary md:mt-10 md:text-lg">
           The backbone of your network <br />
