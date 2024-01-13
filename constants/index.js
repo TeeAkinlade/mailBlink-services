@@ -132,8 +132,7 @@ export const teams = [
     id: 1,
     image: "/assets/images/team-01.png",
     name: "Michal Kosinski",
-    position:
-      "General Manager.",
+    position: "General Manager.",
   },
   {
     id: 2,
@@ -144,25 +143,25 @@ export const teams = [
   {
     id: 3,
     image: "/assets/images/team-03.png",
-    name:"Michal Kosinski",
+    name: "Michal Kosinski",
     position: "General Manager.",
   },
   {
     id: 4,
     image: "/assets/images/team-04.png",
-    name:"Michal Kosinski",
+    name: "Michal Kosinski",
     position: "General Manager.",
   },
   {
     id: 5,
     image: "/assets/images/team-05.png",
-    name:"Michal Kosinski",
+    name: "Michal Kosinski",
     position: "General Manager.",
   },
   {
     id: 6,
     image: "/assets/images/team-06.png",
-    name:"Michal Kosinski",
+    name: "Michal Kosinski",
     position: "General Manager.",
   },
 ];
@@ -257,10 +256,10 @@ export const footerLinks = [
     id: 1,
     title: "Resources",
     links: [
-      { id: 1, link: "Blog", href: "#" },
+      { id: 1, link: "Blog", href: "/blog" },
       { id: 2, link: "Marketing Guides", href: "#" },
       { id: 3, link: "Get a demo", href: "#" },
-      { id: 4, link: "Contact us", href: "#" },
+      { id: 4, link: "Contact us", href: "/contact-us" },
     ],
   },
   {
@@ -289,7 +288,7 @@ export const contacts = [
     photo: image11,
     alt: "Mobile-icon",
     title: "Phone: ",
-    details: "+91 98765 43210",
+    details: "+234 98765 43210",
     styles: "h-6 w-8",
   },
 ];
