@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function Support() {
   return (
-    <main className="max-width padding-x flex-center md:flex-row w-full bg-blue-50 py-4 text-ui_primary md:px-[.5rem] md:py-10">
-      <div className="md:w-3/5 md:text-left ">
-        <h2 className="mt-10 font-poppins text-xl font-semibold text-ui_primary md:text-4xl md:font-bold">
+    <main className="px-16 flex-center gap-16 py-10 md:flex-row w-full bg-blue-50 text-ui_primary md:px-[.5rem] md:py-16 md:gap-20 ">
+      <div className="md:w-3/5 md:text-left flex-center flex-col px-16">
+        <h2 className="mt-10 text-xl font-semibold text-ui_primary md:text-4xl md:font-bold">
           Premium Support
         </h2>
         <p className="text-md font-md mt-4 md:mt-10 md:text-lg md:pr-[7.5rem]">
@@ -21,7 +21,7 @@ export default function Support() {
           Go to Support
         </button>
       </div>
-      <div className="">
+      <div className="pb-10 w-full">
         <Image
           src="/assets/images/Group 1000000830.png"
           width={1000}
