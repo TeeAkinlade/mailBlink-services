@@ -24,8 +24,8 @@ export default function Support() {
       <div className="md:w-2/5">
         <Image
           src="/assets/images/Group 1000000830.png"
-          width={2000}
-          height={800}
+          width={1000}
+          height={500}
           alt="support"
           className="w-full md:max-w-xl"
         />
