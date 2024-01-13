@@ -3,14 +3,12 @@ import Image from "next/image";
 
 export default function Support() {
   return (
-    <main className="flex-center md:b-10 mt-0 w-full bg-blue-50 py-4 text-ui_primary md:px-[2.25rem] md:py-10">
-      {/* <div className="mx-4 md:mx-10 md:max-w-screen-lg lg:max-w-screen-xl">
-        <div className="mb-[100px] flex flex-col items-center justify-center md:flex-row"> */}
-      <div className="flex flex-col text-center md:w-1/2 md:text-left">
+    <main className="max-width padding-x flex-center md:flex-row w-full bg-blue-50 py-4 text-ui_primary md:px-[.5rem] md:py-10">
+      <div className="md:w-3/5 md:text-left ">
         <h2 className="mt-10 font-poppins text-xl font-semibold text-ui_primary md:text-4xl md:font-bold">
           Premium Support
         </h2>
-        <p className="text-md font-md mt-4 md:mt-10 md:text-lg">
+        <p className="text-md font-md mt-4 md:mt-10 md:text-lg md:pr-[7.5rem]">
           Our FirstWave support engineers are highly skilled and experienced in
           NMIS, Open-AudIT and all of our commercial products and helped
           customers from Telcos, MSP, enterprise organizations.
@@ -23,17 +21,15 @@ export default function Support() {
           Go to Support
         </button>
       </div>
-      <div>
+      <div className="md:w-2/5">
         <Image
           src="/assets/images/Group 1000000830.png"
-          width={1000}
-          height={500}
+          width={2000}
+          height={800}
           alt="support"
           className="w-full md:max-w-xl"
         />
       </div>
-      {/* </div>
-      </div> */}
     </main>
   );
 }
