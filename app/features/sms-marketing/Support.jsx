@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function Support() {
   return (
-    <main className="px-16 flex-center gap-16 py-10 md:flex-row w-full bg-blue-50 text-ui_primary md:px-[.5rem] md:py-16 md:gap-20 ">
+    <main>
       <div className="md:w-3/5 md:text-left flex-center flex-col px-16">
         <h2 className="mt-10 text-xl font-semibold text-ui_primary md:text-4xl md:font-bold">
           Premium Support
         </h2>
-        <p className="text-md font-md mt-4 md:mt-10 md:text-lg">
+        <p className="text-md font-md mt-4 md:mt-4 md:text-lg">
           Our FirstWave support engineers are highly skilled and experienced in
           NMIS, Open-AudIT and all of our commercial products and helped
           customers from Telcos, MSP, enterprise organizations.
@@ -21,13 +21,12 @@ export default function Support() {
           Go to Support
         </button>
       </div>
-      <div className="mb-4 w-full p-4">
+      <div className="mb-4 w-full p-20">
         <Image
           src="/assets/images/Group 1000000830.png"
-          width={1000}
-          height={500}
+          width={800}
+          height={400}
           alt="support"
-          className="w-full md:max-w-xl"
         />
       </div>
     </main>
