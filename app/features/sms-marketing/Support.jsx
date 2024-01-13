@@ -21,7 +21,7 @@ export default function Support() {
           Go to Support
         </button>
       </div>
-      <div className="md:w-2/5">
+      <div className="">
         <Image
           src="/assets/images/Group 1000000830.png"
           width={1000}
