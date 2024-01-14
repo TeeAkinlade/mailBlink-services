@@ -1,17 +1,17 @@
-import NMIS from "../sms-marketing/NMIS";
+import NMIS from "../../sms-marketing/NMIS";
 import { EmailAbout } from "./About";
 import { EmailHero } from "./EmailHero";
 import { Products } from "./Product";
-import Testimonial  from "./Testimonial";
+import Testimonial from "./Testimonial";
 
 const Email_Marketing = () => {
   return (
     <div>
       <EmailHero />
-      <EmailAbout/>
-      <Products/>
-      <Testimonial/>
-      <NMIS/>
+      <EmailAbout />
+      <Products />
+      <Testimonial />
+      <NMIS />
     </div>
   );
 };
