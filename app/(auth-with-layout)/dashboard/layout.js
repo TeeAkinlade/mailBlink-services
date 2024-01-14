@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import { useCurrentUser } from '../currentUser';
 import { useRouter } from 'next/navigation';
 import Spinner from '@/components/Spinner';
+import Footer from './components/Footer';
+import '/styles/globals.css';
 export default function DashboardLayout({ children }) {
 	const { user, loading } = useCurrentUser();
 	const router = useRouter();
@@ -42,12 +44,18 @@ export default function DashboardLayout({ children }) {
 				{/* <Sidebar /> */}
 				<Sidebar />
 				{/* Main Dashboard display area */}
-				<div className='flex flex-col overflow-x-hidden  gap-4 md:gap-0 w-full h-full overflow-y-auto '>
+				<div className='flex flex-col overflow-x-hidden justify-between gap-4 md:gap-0 w-full h-full overflow-y-auto '>
 					{/* Navbar COMPONENT goes here */}
 
 					<Navbar />
 					{/* When routing begins we would use the <Outlet/> functionality to render different pages */}
-					{loading ? <Spinner /> : <div>{children}</div>}
+					{loading ? <Spinner /> : <div className='flex flex-col mb-6'>{children}</div>}
+				
+			<div>
+				<Footer  />
+
+				</div>	
+				
 				</div>
 			</main>
 		</>

@@ -14,12 +14,13 @@ import { VscAccount } from 'react-icons/vsc';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { IoNotificationsOutline } from 'react-icons/io5';
 import { useCurrentUser } from '../../currentUser';
 import Image from 'next/image';
 import Spinner from '../../../../components/Spinner';
 
 export default function Sidebar() {
-	const { user, loading } = useCurrentUser();
+	const { user, loading, setLoading } = useCurrentUser();
 
 	// SignOut Functionality
 	const supabase = createClientComponentClient();
@@ -35,13 +36,17 @@ export default function Sidebar() {
 
 	//Handling Navigation for the sidebar
 	const handleNavigate = (point) => {
-		return router.push(`/auth/dashboard/${point}`);
+		return router.push(`/dashboard/${point}`);
+	};
+	const externalNavigate = (point) => {
+		return router.push(`/${point}`);
 	};
 
 	// retrieving user information from currentUser.js
 	const name = user?.user_metadata?.name?.split(' ');
-	const firstName = name?.[0];
-	const LastName = name?.[1];
+	const firstName = name?.[0].charAt(0).toUpperCase() + name?.[0].slice(1);
+	const LastName = name?.[1].charAt(0).toUpperCase() + name?.[1].slice(1);;
+	
 	// State Management for smaller screens
 	const [miniToggle, setMiniToggle] = useState(true);
 	const [miniSidebar, setMiniSidebar] = useState(false);
@@ -53,47 +58,62 @@ export default function Sidebar() {
 		{
 			title: 'Home',
 			src: <MdDashboardCustomize />,
+			route: 'Home',
 			onClick: handleNavigate,
 		},
 		{
-			title: 'Inbox',
+			header: 'Utilities',
+			title: 'Campaigns',
 			src: <HiInboxArrowDown />,
-			onClick: handleNavigate,
+			route: 'campaigns',
+			gap: true,
+			onClick: externalNavigate,
 		},
 		{
 			title: 'Schedule',
 			src: <AiOutlineSchedule />,
-			gap: false,
+			route: 'Schedule',
 			onClick: handleNavigate,
 		},
 		{
 			title: 'Analytics',
 			src: <TbBrandCampaignmonitor />,
+			route: 'Analytics',
 			onClick: handleNavigate,
 		},
 		{
 			title: 'Contacts',
 			src: <RiContactsLine />,
+			route: 'Contacts',
 			onClick: handleNavigate,
 		},
 
 		{
-			title: 'Settings',
-
+			header: 'Settings',
+			title: 'Profile Settings',
+			route: 'Settings',
 			src: <IoSettingsOutline />,
 			gap: true,
 			onClick: handleNavigate,
 		},
 		{
-			title: 'Accounts',
-
+			title: 'Account Settings',
+			route: 'Accounts',
 			src: <VscAccount />,
 			gap: false,
 			onClick: handleNavigate,
 		},
 		{
+			title: 'Notification Settings',
+			route: 'Notifications',
+			src: <IoNotificationsOutline />,
+
+			onClick: handleNavigate,
+		},
+		{ header:'Exit',
 			title: 'Sign Out',
 			src: <LiaSignOutAltSolid />,
+			gap: true,
 			onClick: handleSignOut,
 		},
 	];
@@ -101,10 +121,9 @@ export default function Sidebar() {
 	useEffect(() => {
 		const handleSideMenu = () => {
 			setMiniSidebar(window?.innerWidth < 768);
-			
 		};
 
-// Calling the SideMenu function to decide which sidebar to render
+		// Calling the SideMenu function to decide which sidebar to render
 		handleSideMenu();
 		window.addEventListener('resize', handleSideMenu);
 
@@ -113,7 +132,6 @@ export default function Sidebar() {
 		};
 	}, []);
 
-	
 	return (
 		<>
 			{!miniSidebar ? (
@@ -138,64 +156,73 @@ export default function Sidebar() {
 								!toggle && 'scale-[0.3]'
 							} cursor-pointer hover:animate-pulse duration-500 mb-2`}
 						>
-							MailBlink
+							Saleblink.
 						</h1>
 					</div>
 					{/* Link Items */}
 					<ul className='pt-6'>
 						{MenuLinks.map((menu, index) => (
-							<li
-								key={index}
-								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
-									menu.gap ? 'mt-9 LinkBorder' : 'mt-3'
-								}  `}
-								onClick={() => {
-									setActiveLink(index);
-									setToggle(!toggle);
-									// setLoading(true);
-									if (menu.onClick == handleSignOut) {
-										menu.onClick();
-									} else if (menu.onClick == handleNavigate) {
-										menu.onClick(menu.title);
-									}
-								}}
-							>
-								{' '}
-								<div
-									className={` md:h-4 md:w-4  ${
-										activeLink === index && 'text-ui_secondary1'
-									} `}
-								>
-									{menu.src}
-								</div>
-								<span
-									className={`${
-										!toggle && 'scale-0'
-									} duration-500 ease-in-out group-hover:text-ui_secondary1`}
+							<>
+								{menu.gap && (
+									<span className=' mt-2  text-[0.66rem] text-[#7C8693] text-opacity-50 '>
+										{menu.header}
+									</span>
+								)}
+								<li
+									key={index}
+									className={`text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
+										menu.gap ? 'mt-4 ' : 'mt-2'
+									}  `}
+									onClick={() => {
+										setActiveLink(index);
+										setToggle(!toggle);
+										if (menu.onClick == handleSignOut) {
+											menu.onClick();
+										} else if (menu.onClick == handleNavigate) {
+											menu.onClick(menu.route);
+										} else if (menu.onClick == externalNavigate) {
+											menu.onClick(menu.route);
+										}
+									}}
 								>
 									{' '}
-									{menu.title}{' '}
-								</span>
-							</li>
+									<div
+										className={` md:h-4 md:w-4  ${
+											activeLink === index && 'text-ui_button'
+										} `}
+									>
+										{menu.src}
+									</div>
+									<span
+										className={`${
+											!toggle && 'scale-0'
+										} duration-500 ease-in-out group-hover:text-ui_button`}
+									>
+										{' '}
+										{menu.title}{' '}
+									</span>
+								</li>
+							</>
 						))}
 						<div
-							className='text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 bg-transparent mt-8 rounded-md duration-500'
+							className='text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_button bg-transparent  rounded-md duration-500'
 							onClick={() => setToggle(!toggle)}
 						>
 							<div className=' '>
 								<TiChevronLeft className={`${!toggle && 'rotate-180'}`} />
 							</div>
 							<span
-								className={`${!toggle && 'scale-0'}  duration-500 ease-in-out`}
+								className={`${
+									!toggle && 'scale-0'
+								} text-[0.75rem] duration-500 ease-in-out`}
 							>
 								{' '}
 								Collapse Menu{' '}
 							</span>
 						</div>
 						<Link
-							href='/auth/dashboard/Accounts
-										'
-							className='text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  bg-transparent mt-8 duration-500'
+							href='/dashboard/Accounts'
+							className='text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  bg-transparent mt-5'
 							onClick={() => setToggle(!toggle)}
 						>
 							{user ? (
@@ -208,21 +235,24 @@ export default function Sidebar() {
 									width={40}
 									height={30}
 									alt='Profile Icon'
-									className='text-white italic h-[50px]  rounded-full flex items-center bg-ui_secondary1 cursor-pointer'
+									className='text-white italic h-[50px]  rounded-full flex items-center bg-ui_button cursor-pointer'
 								/>
 							)}
 
 							<span className={`flex flex-col gap-0 ${!toggle && 'scale-0'}`}>
-								<h3
-									className={`text-md font-[600] text-[#fefefe] ${
-										user?.email?.length >= 40 && 'text-[0.8rem]'
-									}`}
-								>
+								<h3 className={`text-md font-[400] text-[#fefefe] `}>
 									{firstName} <strong>{LastName}</strong>
 									<br />
-									{''}({user?.email})
+									<div
+										className={`text-md font-[600] text-[#fefefe] ${
+											user?.email?.length >= 20 && 'text-[0.65rem]'
+										}`}
+									>
+										{''}
+										{user?.email}
+									</div>
 								</h3>
-								<p className='text-[0.75rem] text-[#B7C5CC] mt-1'>
+								<p className='text-[0.7rem] text-[#B7C5CC] '>
 									Your personal account
 								</p>
 							</span>
@@ -238,7 +268,7 @@ export default function Sidebar() {
 					<IoIosArrowBack
 						onClick={() => setMiniToggle(!miniToggle)}
 						alt='Controller icon for collapsable sidebar'
-						className={`absolute bg-slate-200 font-[600] cursor-pointer text-ui_secondary1  rounded-md h-10 -right-14 p-2 top-28 shadow-[-5px 0px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)] w-10 ${
+						className={`absolute bg-slate-200 font-[600] cursor-pointer text-ui_button  rounded-md h-10 -right-14 p-2 top-28 shadow-[-5px 0px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)] w-10 ${
 							!miniToggle && 'rotate-180'
 						} ease-in-out duration-500`}
 					/>
@@ -251,7 +281,7 @@ export default function Sidebar() {
 								!miniToggle && 'scale-[0.3]'
 							} cursor-pointer hover:animate-pulse duration-500`}
 						>
-							MailBlink
+							Saleblink.
 						</h1>
 					</div>
 					{/* Link Items */}
@@ -259,7 +289,7 @@ export default function Sidebar() {
 						{MenuLinks.map((menu, index) => (
 							<li
 								key={index}
-								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 hover:text-ui_secondary1 bg-transparent rounded-md duration-500 ${
+								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 hover:text-ui_button bg-transparent rounded-md duration-500 ${
 									menu.gap ? 'mt-9' : 'mt-5'
 								}  `}
 								onClick={() => {
@@ -268,13 +298,15 @@ export default function Sidebar() {
 									if (menu.onClick == handleSignOut) {
 										menu.onClick();
 									} else if (menu.onClick == handleNavigate) {
-										menu.onClick(menu.title);
+										menu.onClick(menu.route);
+									} else if (menu.onClick == externalNavigate) {
+										menu.onClick(menu.route);
 									}
 								}}
 							>
 								<div
 									className={` md:h-4 md:w-4  ${
-										activeLink === index && 'text-ui_secondary1'
+										activeLink === index && 'text-ui_button'
 									} `}
 								>
 									{menu.src}

@@ -6,7 +6,7 @@ import { IoCheckbox } from "react-icons/io5";
 import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
 import { webNotifications, mailNotifications } from "@/constants";
 
-const page = () => {
+const Notification = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleCheckbox = (id) => {
@@ -61,4 +61,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Notification;

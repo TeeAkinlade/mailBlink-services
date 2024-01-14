@@ -12,7 +12,7 @@ const analytics = () => {
 				{' '}
 				<h3 className='text-[0.8rem] leading-[1.12rem] lg:text-xl text-black lg:leading-7 dark:text-dark_text'>
 					Welcome to our analytics dashboard, where data transforms into
-					actionable <strong className='text-ui_secondary1'>insights! </strong>{' '}
+					actionable <strong className='text-ui_button'>insights! </strong>{' '}
 				</h3>{' '}
 				<p className='text-[0.67rem] lg:text-sm text-primaryBlack dark:text-slate-500 leading-3'>
 					Dive into real-time analytics, visualize trends, and uncover valuable
@@ -24,13 +24,13 @@ const analytics = () => {
 				<div className='flex flex-col col-span-2 gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 rounded-xl pb-4 mt-8 '>
 					<div className='flex justify-between items-center'>
 						{' '}
-						<h2 className='text-[1rem] text-ui_primary dark:text-ui_secondary1 font-[600]'>
+						<h2 className='text-[1rem] text-ui_primary dark:text-ui_button font-[600]'>
 							Subscriber Count
 						</h2>
 					</div>
 
 					<div className='flex gap-2 '>
-						<span className='text-ui_secondary1 bg-[#6aacf844] rounded-xl flex items-center p-2 px-4 '>
+						<span className='text-ui_button bg-[#6aacf844] rounded-xl flex items-center p-2 px-4 '>
 							<SlPeople />
 						</span>
 						<span className='flex flex-col gap-0 text-[0.8rem] font-[700] dark:text-dark_text leading-5'>
@@ -48,7 +48,7 @@ const analytics = () => {
 				</div>
 				<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 px-6 rounded-xl pb-4 md:mt-10 col-span-1'>
 					<span className='flex flex-col'>
-						<h3 className='text-[1rem] leading-6 font-[600] dark:text-ui_secondary1'>
+						<h3 className='text-[1rem] leading-6 font-[600] dark:text-ui_button'>
 							Contact Demographic
 						</h3>
 						<p className='text-[0.7rem] text-slate-500'>
@@ -64,7 +64,7 @@ const analytics = () => {
 
 			<div className='flex flex-col col-span-2 gap-y-4 bg-white dark:bg-dark_field shadow-md cursor-pointer p-4 rounded-xl pb-4 mt-8 overflow-hidden'>
 				<div className='flex flex-col justify-start items-start w-full'>
-					<h2 className='text-[1rem] text-ui_primary font-[600] dark:text-ui_secondary1'>
+					<h2 className='text-[1rem] text-ui_primary font-[600] mb-2 dark:text-ui_button'>
 						Activity Map
 					</h2>
 					<p className='text-[0.7rem] text-slate-500 leading-[1rem] dark:text-slate-500'>
