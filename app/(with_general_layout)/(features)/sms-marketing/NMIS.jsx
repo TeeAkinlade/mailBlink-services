@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import FAQs from "../FAQ";
+import FAQs from "../../FAQ";
 
 const faqItems = [
   {
