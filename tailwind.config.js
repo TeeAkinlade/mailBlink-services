@@ -21,7 +21,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       colors: {
-        backGround: "#E5E5E5",
+        backGround: "#84b4AA",
         navyBlue: "#086250",
         forestGreen: "#089373",
         lightBlue: "#2EC5CE",
