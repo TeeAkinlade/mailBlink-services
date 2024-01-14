@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <main>
       <div className="flex flex-col items-center justify-between gap-10 px-7 py-4 pb-24 md:flex-row md:px-24">
-        <div className="flex flex-col items-center gap-8 text-center text-base font-medium text-ui_primary md:items-start md:text-left">
+        <div className="flex flex-col items-center gap-8 text-center text-base font-medium text-navyBlue md:items-start md:text-left">
           <h2 className="font-poppins text-[2.2rem] font-bold md:text-[3.125rem]">
             CONTACT <span className="font-light">US</span>
           </h2>
@@ -34,7 +34,7 @@ const Contact = () => {
         </div>
       </div>
       <section id="contact">
-        <div className="flex flex-col gap-10 bg-[#1F384F] px-7 py-20 md:flex-row md:gap-10 md:p-20">
+        <div className="flex flex-col gap-10 bg-navyBlue px-7 py-20 md:flex-row md:gap-10 md:p-20">
           <div className="flex w-full flex-col items-center justify-between gap-4 text-white md:w-[50%] md:items-start">
             <h2 className="text-[2rem] font-bold md:text-[3rem]">
               Make your Inquiry
@@ -46,9 +46,9 @@ const Contact = () => {
               {contacts.map(({ id, alt, title, details }) => (
                 <div
                   key={id}
-                  className="cursor pointer flex w-fit gap-1 rounded-md border-2 border-transparent px-2 py-3 transition-all hover:border-green-50 hover:bg-[#0d3052]"
+                  className="cursor pointer flex w-fit gap-1 rounded-md border-2 border-transparent px-2 py-3 transition-all hover:border-green-50 hover:bg-[#032b25]"
                 >
-                  {title === "Support:" ? (
+                  {title === "Support: " ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -88,7 +88,7 @@ const Contact = () => {
                 <Link
                   href={href}
                   key={id}
-                  className="rounded-full transition-colors hover:bg-white"
+                  className="rounded-full bg-white transition-colors hover:bg-gray-400"
                 >
                   <Image src={photo} alt={alt} width="40" height="40" />
                 </Link>

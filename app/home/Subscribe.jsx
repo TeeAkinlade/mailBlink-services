@@ -20,8 +20,7 @@ const Subscribe = () => {
           </div>
           <ul>
             <li className="flex items-center text-white text-sm gap-4 font-light">
-              <span className="bg-[#3CBA79] p-[10px] rounded-[50%] inline-block">
-                {" "}
+              <span className="bg-[#13b68d] p-[10px] rounded-[50%] inline-block">
                 <FiFeather className="text-ui_secondary" />
               </span>
               <p>
@@ -30,7 +29,7 @@ const Subscribe = () => {
               </p>
             </li>
             <li className="flex items-center text-sm gap-4 text-white padding-y">
-              <span className="bg-[#3CBA79] p-[10px] rounded-[50%] inline-block">
+              <span className="bg-[#13b68d] p-[10px] rounded-[50%] inline-block">
                 <SlEye className="text-ui_secondary" />
               </span>
               <p>
@@ -39,7 +38,7 @@ const Subscribe = () => {
               </p>
             </li>
             <li className="flex items-center text-sm gap-4 text-white">
-              <span className="bg-[#3CBA79] p-[10px] rounded-[50%] inline-block">
+              <span className="bg-[#13b68d] p-[10px] rounded-[50%] inline-block">
                 <FiSun className="text-ui_secondary" />
               </span>
               <p>
@@ -48,7 +47,7 @@ const Subscribe = () => {
               </p>
             </li>
             <li className="flex items-center text-sm gap-4 text-white padding-y">
-              <span className="bg-[#3CBA79] p-[10px] rounded-[50%] inline-block">
+              <span className="bg-[#13b68d] p-[10px] rounded-[50%] inline-block">
                 <FiSun className="text-ui_secondary" />
               </span>
               <p>

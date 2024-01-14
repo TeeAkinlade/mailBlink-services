@@ -68,7 +68,7 @@ const Blog = () => {
     }
 
     return (
-        <main className="bg-[#c5defc]">
+        <main className="bg-[#ECFDF6]">
             <div className="mt-16 px-8 md:px-28 py-20">
                 <div className=''>
                     <div className="flex flex-col md:flex-row items-center gap-10 mb-20">

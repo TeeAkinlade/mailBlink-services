@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TestimonialCard = (props) => {
   return (
-    <div className="bg-white rounded-2xl w-full flex items-start gap-3 p-5 box-shadow transition-all hover:scale-105 border-b-4 border-transparent hover:border-ui_primary">
+    <div className="box-shadow flex w-full items-start gap-3 rounded-2xl border-b-4 border-transparent bg-white p-5 transition-all hover:scale-105 hover:border-navyBlue">
       <Image
         src="/assets/icons/quote_mark.svg"
         alt="quation mark"
@@ -10,18 +10,18 @@ const TestimonialCard = (props) => {
         height={15}
       />
       <div>
-        <p className=" text-base text-[#17181A] mb-6">{props.feedback}</p>
+        <p className="mb-6 text-base text-[#17181A]">{props.feedback}</p>
         <div className="flex items-center">
           <Image
             src={props.image}
             alt="Testimonial images"
             width={50}
             height={50}
-            className=" rounded-full w-[2.75rem] h-[2.75rem] object-cover mr-5"
+            className="mr-5 h-[2.75rem] w-[2.75rem] rounded-full object-cover"
           />
           <div className="flex flex-col">
             <span className="text-lg font-semibold">{props.name}</span>
-            <span className=" text-Ash text-sm">{props.position}</span>
+            <span className="text-sm text-Ash">{props.position}</span>
           </div>
         </div>
       </div>

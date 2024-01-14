@@ -1,3 +1,4 @@
+import { useRouter } from "next/navigation";
 import Footer from "./home/footer/Footer";
 import Nav from "./home/nav/Nav";
 import "/styles/globals.css";
@@ -8,6 +9,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const router = useRouter();
+  
   return (
     <html lang="en">
       <body className="font-poppins min-h-screen min-w-screen bg-secondary">
