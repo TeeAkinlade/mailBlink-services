@@ -164,9 +164,9 @@ const Login = () => {
             </button>
             <OauthComponent className="mt-[-8rem]" />
             <p className="text-[#575757] text-center text-[14px] font-Poppins font-[400] leading-[18px] lg:ms-[-12rem] md:ms-[-8rem]">
-              Don't have an account?{" "}
-              <Link href="/auth/signup" className="text-[#1F284F] font-[600]">
-                Create an account
+              Don't have an account? {" "}
+              <Link href="/login" className="text-[#1F284F] font-[600]">
+                 Create an account
               </Link>
             </p>
           </form>
