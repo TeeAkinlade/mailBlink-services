@@ -1,7 +1,7 @@
 "use client";
 import HyberLink from "./HyberLink";
 import { useState, useEffect } from "react";
-import { useCurrentUser } from "@/app/auth/currentUser";
+import { useCurrentUser } from '../../currentUser';
 import { passwordInputs, emailRegex, passwordRegex } from "@/constants";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import Spinner from "../../../../components/Spinner";

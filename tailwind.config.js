@@ -34,6 +34,7 @@ module.exports = {
         ui_primary2: "#228B22",
         ui_button: "#0070F0",
         linear: "#F5F0FF",
+        db_ui_secondary: "#0070F0",
         dark_bg: "#111420",
         dark_primary: "#1a2235",
         dark_field: "#1c2536",
