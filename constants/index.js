@@ -23,12 +23,12 @@ export const NAV_LINKS = [
     label: "Features",
     dropDown: [
       {
-        href: "/features/email-marketing",
+        href: "/email-marketing",
         key: "email-marketing",
         label: "Email Marketing",
       },
       {
-        href: "/features/sms-marketing",
+        href: "/sms-marketing",
         key: "sms-marketing",
         label: "SmS Marketing",
       },
