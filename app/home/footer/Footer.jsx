@@ -26,7 +26,13 @@ const Footer = () => {
                 </p>
                 {contacts.map(({ id, photo, alt, title, details, styles }) => (
                   <div className="flex items-center space-x-3 pb-4" key={id}>
-                    <Image src={photo} alt={alt} width="25" height="25" className={styles} />
+                    <Image
+                      src={photo}
+                      alt={alt}
+                      width="25"
+                      height="25"
+                      className={styles}
+                    />
                     <p className="text-xs font-semibold text-primaryBlack md:text-sm">
                       {title}
                       <Link
@@ -35,7 +41,7 @@ const Footer = () => {
                             ? `sms:${details.replace(/\s/g, "")}`
                             : `mailto:${details}`
                         }
-                        className="pb-4 font-normal hover:text-ui_primary2"
+                        className="pb-4 font-normal hover:text-[#089373]"
                       >
                         {details}
                       </Link>
@@ -48,7 +54,7 @@ const Footer = () => {
                   <Link
                     href={href}
                     key={id}
-                    className="hover:bg-gray-300 rounded-full transition-colors"
+                    className="hover:bg-gray-300 border-2 border-[#515458] rounded-full transition-colors"
                   >
                     <Image src={photo} alt={alt} width="40" height="40" />
                   </Link>
@@ -64,7 +70,7 @@ const Footer = () => {
             <p className="text-xs text-primaryBlack md:text-sm">
               <Link
                 href="#"
-                className="text-xs text-primaryBlack hover:text-ui_secondary1 md:text-sm"
+                className="text-xs text-primaryBlack hover:text-[#089373] md:text-sm"
               >
                 MailBlink &copy; 2023. All rights reserved
               </Link>
@@ -73,14 +79,14 @@ const Footer = () => {
               <p className="flex text-xs text-primaryBlack md:text-sm">
                 <Link
                   href="/terms-of-use"
-                  className="text-xs text-primaryBlack hover:text-ui_secondary1 md:text-sm"
+                  className="text-xs text-primaryBlack hover:text-[#089373] md:text-sm"
                 >
-                  Terms of use 
+                  Terms of use
                 </Link>
-                 <span className="px-1"> | </span>
+                <span className="px-1"> | </span>
                 <Link
                   href="/privacy-policy"
-                  className="text-xs text-primaryBlack hover:text-ui_secondary1 md:text-sm"
+                  className="text-xs text-primaryBlack hover:text-[#089373] md:text-sm"
                 >
                   Privacy policy
                 </Link>

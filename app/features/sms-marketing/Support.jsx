@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function Support() {
   return (
-    <main>
-      <div className="md:w-3/5 md:text-left flex-center flex-col px-16">
-        <h2 className="mt-10 text-xl font-semibold text-ui_primary md:text-4xl md:font-bold">
+    <main className="flex flex-col md:flex-row justify-center items-center">
+      <div className="md:w-3/5 md:text-left text-center justify-center items-center flex-col px-16">
+        <h2 className="mt-10 text-xl font-semibold text-navyBlue md:text-4xl md:font-bold">
           Premium Support
         </h2>
         <p className="text-md font-md mt-4 md:mt-4 md:text-lg">

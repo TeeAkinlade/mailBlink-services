@@ -19,7 +19,7 @@ const FooterLink = () => {
               <div className="pb-4" key={id}>
                 <Link
                   href={href}
-                  className="text-xs font-medium text-primaryBlack hover:text-ui_secondary1 md:text-sm"
+                  className="text-xs font-medium text-primaryBlack hover:text-[#089373] md:text-sm"
                 >
                   {link}
                 </Link>

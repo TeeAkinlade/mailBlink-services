@@ -31,8 +31,8 @@ const Community = () => {
         />
       </div>
 
-      <div className="md:w-[60%] text-center md:text-left">
-        <h2 className="mt-5 text-4xl font-bold text-ui_primary lg:text-5xl">
+      <div className="text-center md:w-[60%] md:text-left">
+        <h2 className="mt-5 text-4xl font-bold text-navyBlue lg:text-5xl">
           Download NMIS
         </h2>
         <p className="text-md mt-2 leading-8 text-Ash md:text-lg">
@@ -60,7 +60,7 @@ const Community = () => {
               </h3>
               <p className="my-5 text-lg text-Ash">{item.description}</p>
               <Link href="/" className="flex w-full">
-                <button className="w-full md:w-auto cursor-pointer rounded-full border border-navyBlue bg-navyBlue px-8 py-3 text-white transition duration-150 ease-in-out hover:border-navyBlue hover:bg-white hover:text-navyBlue">
+                <button className="w-full cursor-pointer rounded-full border border-navyBlue bg-navyBlue px-8 py-3 text-white transition duration-150 ease-in-out hover:border-navyBlue hover:bg-white hover:text-navyBlue md:w-auto">
                   Join
                 </button>
               </Link>

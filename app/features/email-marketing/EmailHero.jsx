@@ -7,7 +7,7 @@ export const EmailHero = () => {
   return (
     <section className="max-width md:px-12 mx-auto">
       <div className=" bg-white flex-between md:flex-row flex-col md:gap-20 md:h-[42rem] h-full px-8 pb-20 md:pt-10">
-        <div className=" md:w-[50%] w-full relative z-[1] h-fit md:text-lg flex flex-col md:items-start items-center text-base text-ui_primary">
+        <div className=" md:w-[50%] w-full relative z-[1] h-fit md:text-lg flex flex-col md:items-start items-center text-base text-navyBlue">
           <div className="relative md:-top-2 top-5 md:text-start text-center">
             <h1 className=" w-full font-bold lg:text-[3.1rem] md:text-[2.8rem] text-[34px] md:leading-[3.8rem] leading-[3rem]">
               Helping people communicate in simple ways

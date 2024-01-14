@@ -7,7 +7,6 @@ export const ProductCard = (props) => {
   // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowWidth, setWindowWidth] = useState(1000);
 
-
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -38,7 +37,7 @@ export const ProductCard = (props) => {
       >
         <img src={props.src} alt="" className=" w-6" />
       </div>
-      <h3 className="text-lg font-bold text-ui_primary md:h-[2.8rem]">
+      <h3 className="text-lg font-bold text-navyBlue md:h-[2.8rem]">
         {props.title}
       </h3>
       <p className="text-base text-primaryBlack md:h-[8rem] ">

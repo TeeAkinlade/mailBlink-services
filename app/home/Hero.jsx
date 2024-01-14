@@ -41,9 +41,9 @@ const Hero = () => {
               <input
                 type="email"
                 placeholder="Enter email"
-                className="px-3 md:px-5 py-2 focus:border-0 outline-none shadow-xl w-full md:w-2/3 cursor-pointer hover:border hover:border-navyBlue hover:rounded-md"
+                className="px-3 md:px-5 py-2 focus:border-0 outline-none shadow-md w-full md:w-2/3 cursor-pointer hover:border hover:border-navyBlue hover:rounded-md"
               />
-              <button className="custom-btn">Let’s Talk</button>
+              <button className="custom-btn whitespace-nowrap">Let’s Talk</button>
             </div>
           </div>
           <div className="">

@@ -323,7 +323,7 @@ export const products = [
     position: "relative",
     variations: [
       {
-        bg: "#ffe6e6",
+        bg: "#d2f9e8",
         top: "0",
         image: "/assets/icons/github.icon.svg",
         title: "3 billion+",
@@ -331,7 +331,7 @@ export const products = [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atquecupiditate delectus est distinctio veritatis.",
       },
       {
-        bg: "#e6f0ff",
+        bg: "#d2f9e8",
         top: "2.5rem",
         image: "/assets/icons/github.icon.svg",
         title: "3 billion+",
@@ -339,7 +339,7 @@ export const products = [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atquecupiditate est distinctio veritatis.",
       },
       {
-        bg: "#e1f6f4",
+        bg: "#d2f9e8",
         top: "5rem",
         image: "/assets/icons/github.icon.svg",
         title: "3 billion+",
@@ -352,7 +352,7 @@ export const products = [
     id: 2,
     variations: [
       {
-        bg: "#ffe6ff",
+        bg: "#d2f9e8",
         top: "0",
         image: "/assets/icons/github.icon.svg",
         title: "3 billion+ ",
@@ -360,14 +360,14 @@ export const products = [
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. delectus est distinctio veritatis.",
       },
       {
-        bg: "#e6ffee",
+        bg: "#d2f9e8",
         top: "2.5rem",
         image: "/assets/icons/github.icon.svg",
         title: "3 billion+",
         details: "Calling numbers connected",
       },
       {
-        bg: "#f0f0f5",
+        bg: "#d2f9e8",
         top: "5rem",
         image: "/assets/icons/github.icon.svg",
         title: "3 billion+",
