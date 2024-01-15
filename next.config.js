@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  outputFileTracing: false, // setting here outputFileTracing
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
