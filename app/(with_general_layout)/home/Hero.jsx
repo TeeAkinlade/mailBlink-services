@@ -1,23 +1,7 @@
-"use client";
-
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import TextTransition, { presets } from "react-text-transition";
 
 const Hero = () => {
-  const TEXTS = ["Made Easy.", "In a  Blink."];
-  const [index, setIndex] = useState(0);
-
-  // text transition
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000 // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
-
   return (
     <section className="max-width md:pr-12  mx-auto mb-24 md:mb-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
