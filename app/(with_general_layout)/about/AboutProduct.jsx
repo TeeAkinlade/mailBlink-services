@@ -36,11 +36,11 @@ export default function AboutProducts() {
   ];
 
   return (
-    <main className="mt-10 bg-blue-50 px-4 py-10 font-poppins text-ui_primary md:px-20 md:py-[100px] lg:px-40">
-      <h2 className="text-center text-2xl font-extrabold md:text-4xl">
+    <main className="mt-10 bg-blue-50 px-4 py-16 font-poppins text-ui_primary md:px-20 md:py-[100px] lg:px-40">
+      <h2 className="text-center text-[38px] font-extrabold md:text-4xl">
         Why Top Companies use MailBlink
       </h2>
-      <div className="flex flex-col items-center md:mt-10 px-10 md:px-0">
+      <div className="flex flex-col items-center mt-6 md:mt-10 px-10 md:px-0">
         <div className="mt-5 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, index) => (
             <div

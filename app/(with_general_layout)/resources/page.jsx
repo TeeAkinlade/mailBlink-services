@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay  } from 'swiper/modules'; 
 import { GiCheckMark } from "react-icons/gi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Image from 'next/image'
@@ -9,28 +9,24 @@ import Link from 'next/link'
 
 // Import Swiper styles
 import 'swiper/css/pagination';
-import { SwiperButton } from './SwiperButton';
 import { resourceHeroData } from '@/constants';
-import 'swiper/css';
+import 'swiper/css/bundle';
 import Blog from './Blog';
 
 const Resouces = () => {
 
   return (
-    <div className="max-width mx-auto py-8 md:pt-12">
-        <div className="px-8 md:px-12">
+
+    <div className="max-width mx-auto">
+        <div className="px-8 md:px-20 pb-12">
             <div className="flex flex-col md:flex-row items-center gap-20 lg:gap-40">
-                <div className="md:pl-20">
+                <div>
                     <h2 className="text-center md:text-start font-bold text-[42px] md:text-5xl text-navyBlue">Resource Hub</h2>
                     <Swiper
-                        pagination={{
-                        type: 'fraction',
-                        clickable: true,
-                        el: '.swiper-pagination2',
-                        }}
                         slidespreview={'1'}
                         centeredSlides={true}
-                        modules={[ Pagination, Navigation]}
+                        modules={[ Pagination, Navigation, Autoplay,]}
+                        autoplay={{ delay: 3000 }}
                         className="w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] px-8 md:px-0"
                     >
                             { resourceHeroData.map((heroData, index) => (
@@ -49,12 +45,7 @@ const Resouces = () => {
                                     </div>
                                 </SwiperSlide>
                             ))}
-                            <div className="flex items-center gap-20 md:gap-40 mt-10">
-                                <div className="swiper-pagination2 max-w-[100px]"></div>
-                                <SwiperButton />
-                            </div>
                     </Swiper>
-
                 </div>
                 <div className="relative flex-center flex-col">
                     <div className="w-3/4 rotate-3">

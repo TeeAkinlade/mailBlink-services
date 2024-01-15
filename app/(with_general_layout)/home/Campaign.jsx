@@ -4,6 +4,7 @@ import { campaignDetailsList, campaignFeaturesDetails } from "@/constants";
 
 const Campaign = () => {
   return (
+
     <section className="max-width md:px-12 mx-auto">
       <div className="my-20 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center md:gap-10 lg:gap-20">
@@ -44,7 +45,7 @@ const Campaign = () => {
                   )
                 )}
               </div>
-              <div className="py-10 flex justify-center md:justify-start">
+              <div className="py-10 flex justify-center md:justify-start md:ml-4">
             	<Link href="/campaigns" className="custom-btn">
                   Schedule a demo
                 </Link>

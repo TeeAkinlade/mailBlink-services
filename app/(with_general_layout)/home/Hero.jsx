@@ -1,16 +1,36 @@
+'use client'
+
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import Image from "next/image";
+import { useState, useEffect } from 'react';
+import TextTransition, { presets } from 'react-text-transition';
 
 const Hero = () => {
+  const TEXTS = ['Made Easy.', 'In a  Blink.', ];
+  const [index, setIndex] = useState(0);
+
+  // text transition
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000, // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
   return (
+
     <section className="max-width md:px-12 mx-auto mb-24 md:mb-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-4 md:pt-12">
             <p className="text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left">
-              Email and SMS <span className="text-forestGreen">Marketing </span>
-              Made Easy.
+              Email and SMS
             </p>
+              <div className="flex items-center text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left mt-2">
+              <span className="text-forestGreen mr-2">Marketing </span>
+                <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
+              </div>
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
                 MailBlink is an email and sms marketing for everything you need
@@ -82,6 +102,7 @@ const Hero = () => {
       </div>
     </section>
   );
+
 };
 
 export default Hero;

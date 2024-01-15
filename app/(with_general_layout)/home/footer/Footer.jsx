@@ -16,7 +16,7 @@ const Footer = () => {
               >
                 MailBlink.io
               </Link>
-              <p className="my-4 text-sm font-medium text-primaryBlack">
+              <p className="my-4 text-base font-medium text-primaryBlack">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
                 non leo at justo posuere luctus. Maecenas id mauris sit.
               </p>
