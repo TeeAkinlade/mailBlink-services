@@ -43,7 +43,7 @@ function OauthComponent() {
 						padding: '12px 24px',
 					}}
 					onClick={handleSignInWithGoogle}
-					className='text-[16px] font-[600] leading-[24px] gap-x-4 bg-black flex justify-center items-center font-Poppins text-[#fff] lg:mt-[24px] lg:w-[364px] xs:w-[100%] md:w-[600px]'
+					className="w-full flex gap-2 rounded-[24px] px-6 py-2 text-center text-sm font-medium text-white duration-200"
 				>
 					Continue with Google
 					<span>
