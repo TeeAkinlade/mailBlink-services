@@ -1,9 +1,11 @@
+"use client"
+
 import Link from "next/link";
 import { servicesData } from "@/constants";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination, Navigation } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Services = () => {
   return (
@@ -19,22 +21,22 @@ const Services = () => {
             dolor sit amet, consectetur adipisicing elit. The text will be
             populated with the right information later on.
           </p>
-          {/* <Swiper
-            slidespreview={"1"}
+          <Swiper
+            slidespreview={"3"}
             centeredSlides={true}
             pagination={{
               clickable: true,
               el: ".swiper-pagination",
             }}
             modules={[Pagination, Navigation]}
-            // className="w-full"
-          > */}
+            className="w-full"
+          >
           <div className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-10">
-          {/* <SwiperSlide> */}
             {servicesData.map(
               ({ id, icon, title, contents, href, linkText }) => (
+                <SwiperSlide>
                   <div
-                    className="py-16 bg-backGround shadow-xl p-8 rounded-lg transition-all hover:scale-105 duration-200 border-b-4 border-transparent hover:border-navyBlue" key={id}
+                    className="py-16 bg-backGround shadow-xl p-8 rounded-lg transition-all hover:scale-105 duration-200 border-b-4 border-transparent hover:border-navyBlue"
                   >
                     <div className="bg-navyBlue p-3 rounded-[50%] inline-block">
                       <span className="text-white">{icon}</span>
@@ -52,11 +54,14 @@ const Services = () => {
                       {linkText}
                     </Link>
                   </div>
+                </SwiperSlide>
                   )
                 )}
-                {/* </SwiperSlide> */}
+                  <div className="">
+                    <div className="swiper-pagination"></div>
+                  </div>
           </div>
-        {/* </Swiper> */}
+        </Swiper>
         </div>
       </div>
     </section>
