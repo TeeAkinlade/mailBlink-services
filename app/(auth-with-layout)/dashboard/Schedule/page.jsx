@@ -9,7 +9,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import listPlugin from '@fullcalendar/list';
 import { formatDate } from '@fullcalendar/core';
 
-const page = () => {
+const Schedule = () => {
 	const [currentEvents, setCurrentEvents] = useState([]);
 	const handleDateClick = (selected) => {
 		const title = prompt('Enter new title for your event');
@@ -118,4 +118,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Schedule;
