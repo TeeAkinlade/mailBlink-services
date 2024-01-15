@@ -20,7 +20,7 @@ import Image from 'next/image';
 import Spinner from '../../../../components/Spinner';
 
 export default function Sidebar() {
-	const { user, loading, setLoading } = useCurrentUser();
+	const { user, loading } = useCurrentUser();
 
 	// SignOut Functionality
 	const supabase = createClientComponentClient();
@@ -44,9 +44,12 @@ export default function Sidebar() {
 
 	// retrieving user information from currentUser.js
 	const name = user?.user_metadata?.name?.split(' ');
-	const firstName = name?.[0].charAt(0).toUpperCase() + name?.[0].slice(1);
-	const LastName = name?.[1].charAt(0).toUpperCase() + name?.[1].slice(1);;
-	
+	const firstName = name?.[0]
+		.charAt(0)
+		.toUpperCase()
+		.concat(name?.[0].slice(1));
+	const LastName = name?.[1].charAt(0).toUpperCase().concat(name?.[1].slice(1));
+
 	// State Management for smaller screens
 	const [miniToggle, setMiniToggle] = useState(true);
 	const [miniSidebar, setMiniSidebar] = useState(false);
@@ -110,7 +113,8 @@ export default function Sidebar() {
 
 			onClick: handleNavigate,
 		},
-		{ header:'Exit',
+		{
+			header: 'Exit',
 			title: 'Sign Out',
 			src: <LiaSignOutAltSolid />,
 			gap: true,
@@ -156,7 +160,7 @@ export default function Sidebar() {
 								!toggle && 'scale-[0.3]'
 							} cursor-pointer hover:animate-pulse duration-500 mb-2`}
 						>
-							Saleblink.
+							Salesblink.
 						</h1>
 					</div>
 					{/* Link Items */}
@@ -240,18 +244,21 @@ export default function Sidebar() {
 							)}
 
 							<span className={`flex flex-col gap-0 ${!toggle && 'scale-0'}`}>
-								<h3 className={`text-md font-[400] text-[#fefefe] `}>
-									{firstName} <strong>{LastName}</strong>
-									<br />
-									<div
-										className={`text-md font-[600] text-[#fefefe] ${
-											user?.email?.length >= 20 && 'text-[0.65rem]'
-										}`}
-									>
-										{''}
-										{user?.email}
-									</div>
-								</h3>
+								{name && (
+									<h3 className={`text-md font-[400] text-[#fefefe] `}>
+										{firstName} <strong>{LastName}</strong>
+										<br />
+									</h3>
+								)}
+								<div
+									className={`text-md font-[600] text-[#fefefe] ${
+										user?.email?.length >= 20 && 'text-[0.65rem]'
+									}`}
+								>
+									{''}
+									{user?.email}
+								</div>
+
 								<p className='text-[0.7rem] text-[#B7C5CC] '>
 									Your personal account
 								</p>

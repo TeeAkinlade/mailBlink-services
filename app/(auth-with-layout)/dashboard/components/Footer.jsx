@@ -8,7 +8,7 @@ function Footer() {
 				{' '}
 				<div className='flex justify-between items-center mt-4  w-full py-0 pb-[.8rem]'>
 					<div className='flex flex-row cursor-pointer text-[0.73rem] pr-[0.3rem] gap-3'>
-						<p> &copy; 2023 Saleblink, Inc. All rights reserved. </p>
+						<p> &copy; 2023 Salesblink, Inc. All rights reserved. </p>
 						<span className=' text-[0.8rem]'>·</span>
 						<p className='hover:text-ui_button ease-in-out duration-300'>
 							Terms

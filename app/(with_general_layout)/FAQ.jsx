@@ -18,7 +18,7 @@ const FAQs = ({ faqItems }) => {
 
       <div>
         {faqItems.map((item) => (
-          <div key={item.id} className="mb-4">
+          <div key={item.id} className="mb-4 divShadow">
             <div
               className={`flex gap-4 w-full z-40 relative cursor-pointer items-center justify-between rounded-t-md ${
                 visibleAnswer === item.id ? "" : "rounded-b-md"
