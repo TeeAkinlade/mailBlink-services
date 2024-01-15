@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="flex flex-col items-center justify-between gap-10 px-7 py-4 pb-24 md:flex-row md:px-24">
         <div className="flex flex-col items-center gap-8 text-center text-base font-medium text-navyBlue md:items-start md:text-left">
           <h2 className="font-poppins text-[2.2rem] font-bold md:text-[3.125rem]">
-            CONTACT <span className="font-light">US</span>
+            Get In <span className="font-light">Touch</span>
           </h2>
           <p className="font-normal text-[#575757]">
             {`Whether you have questions, suggestions, or just want to say hello,
@@ -20,15 +20,15 @@ const Contact = () => {
             type="submit"
             className="custom-btn w-full md:w-fit"
           >
-            KNOW MORE
+            Send Us a Message 👇
           </Link>
         </div>
         <div className="hidden w-full md:block">
           <Image
             src="/assets/images/contact-us-hero.webp"
             alt="hero image"
-            width={600}
-            height={600}
+            width={400}
+            height={350}
             className="object-cover"
           />
         </div>
