@@ -55,7 +55,7 @@ export const SMSList = ({ smsCampaigns, getCampaigns }) => {
             <div className="w-fit">
               <button
                 type="submit"
-                className="bg-gray-200"
+                className="bg-gray-200 rounded-xl"
               >
                 <Image
                   src="/assets/icons/search.icon.svg"
