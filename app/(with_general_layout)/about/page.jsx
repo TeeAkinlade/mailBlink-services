@@ -13,7 +13,7 @@ const AboutPage = () => {
   return (
     <>
     <AboutHero/>
-    <AboutLocation/>
+    {/* <AboutLocation/> */}
     <AboutProducts/>
     <AboutStory/>
     <AboutTeam/>

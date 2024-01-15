@@ -54,7 +54,7 @@ export const EmailHero = () => {
         <div className=" md:w-[50%] w-full bg-[#EFF6FE] md:h-full h-[25rem] md:pr-[4rem] flex justify-end md:items-center items-end rounded-bl-[4rem] md:rounded-tr-[0] rounded-tr-[4rem] md:mt-0 mt-20">
           <div className="md:h-[65%] h-[80%] md:w-[70%] w-[80%]">
           <Image
-          src="/assets/images/amico.svg"
+          src="/assets/images/amico1.svg"
           alt=""
           width={400}
           height={300}
