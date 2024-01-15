@@ -6,14 +6,13 @@ import { contacts, socialMediaLinks } from "@/constants";
 const Contact = () => {
   return (
     <main>
-      <div className="flex flex-col items-center justify-between gap-10 px-7 py-4 pb-24 md:flex-row md:px-24">
+      <div className="flex flex-col items-center justify-between gap-10 px-5 py-4 pb-24 md:flex-row md:px-16">
         <div className="flex flex-col items-center gap-8 text-center text-base font-medium text-navyBlue md:items-start md:text-left">
           <h2 className="font-poppins text-[2.2rem] font-bold md:text-[3.125rem]">
             Get In <span className="font-light">Touch</span>
           </h2>
-          <p className="font-normal text-[#171717]">
-            {`Whether you have questions, suggestions, or just want to say hello,
-            we're here and ready to assist you in any way we can.`}
+          <p className="font-normal text-[#171717] md:pr-16 py-4">
+            {`Feel free to reach out! Our team is eager to assist you. Whether you have questions, feedback, or inquiries, we're here for you. Contact us via email, phone, or the form below. Your satisfaction is our priority.`}
           </p>
           <Link
             href={"#contact"}
@@ -36,9 +35,7 @@ const Contact = () => {
       <section id="contact">
         <div className="flex flex-col gap-10 bg-navyBlue px-7 py-20 md:flex-row md:gap-10 md:p-20">
           <div className="flex w-full flex-col items-center justify-between gap-4 text-white md:w-[50%] md:items-start">
-            <h2 className="text-[2rem] font-bold md:text-[3rem]">
-              Make your Inquiry
-            </h2>
+            <h2 className="text-[2rem] md:text-[3rem]">Make your Inquiry</h2>
             <p className="text-gray-20 w-[80%]">
               {`Send us a message and we'll respond to you as shortly as we can.`}
             </p>
