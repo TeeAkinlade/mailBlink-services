@@ -92,7 +92,7 @@ export const CreateSMSForm = () => {
         onClick={() => {
           setIsCreateCampaignOpen(true);
         }}
-        className="custom-btn"
+        className="rounded-xl bg-navyBlue p-2 px-4 text-[0.8rem] leading-7 text-white duration-500 hover:scale-105 hover:opacity-80"
       >
         Create Campaign
       </button>
@@ -102,9 +102,7 @@ export const CreateSMSForm = () => {
           open={isCreateCampaignOpen}
           className="fixed top-0 flex h-full w-full animate-fade-in items-center justify-center bg-gray-400 bg-opacity-60 backdrop-blur-sm"
         >
-          <div
-            className="mx-10 flex w-full max-w-md flex-col rounded-md bg-gray-100"
-          >
+          <div className="mx-10 flex w-full max-w-md flex-col rounded-md bg-gray-100">
             <div className="m-2 flex items-center justify-between">
               <article className="relative left-5 z-0 flex w-full items-center justify-center">
                 <h2 className="text-lg font-bold">
@@ -222,10 +220,7 @@ export const CreateSMSForm = () => {
 
                 {/* Button */}
                 <section>
-                  <button
-                    type="submit"
-                    className="custom-btn"
-                  >
+                  <button type="submit" className="custom-btn">
                     Next: Preview
                   </button>
                 </section>

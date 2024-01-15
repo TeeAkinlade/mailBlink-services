@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TestimonialCard = (props) => {
   return (
-    <div className="box-shadow flex w-full items-start gap-3 rounded-2xl border-b-4 border-transparent bg-white p-5 transition-all hover:scale-105 hover:border-navyBlue">
+    <div className="box-shadow flex w-full items-start gap-3 rounded-2xl border-b-4 border-transparent bg-white p-5 transition-all hover:scale-105 hover:border-navyBlue ease-in-out duration-500">
       <Image
         src="/assets/icons/quote_mark.svg"
         alt="quation mark"
