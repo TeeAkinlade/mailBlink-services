@@ -27,22 +27,22 @@ export const ProductCard = (props) => {
   };
 
   return (
-    <div
-      className={`relative flex flex-col gap-4 p-6 bg-white rounded-lg lg:w-[25%] md:[40%] w-full box-shadow hover:scale-105 transition-all`}
-      style={top}
-    >
-      <div
-        className={`rounded-full w-12 h-12 flex-center md:p-3 p-2`}
-        style={{ backgroundColor: `${props.bg}` }}
-      >
-        <img src={props.src} alt="" className=" w-6" />
-      </div>
-      <h3 className="text-lg font-bold text-navyBlue md:h-[2.8rem]">
-        {props.title}
-      </h3>
-      <p className="text-base text-primaryBlack md:h-[8rem] ">
-        {props.details}
-      </p>
-    </div>
-  );
+		<div
+			className={`relative flex flex-col gap-4 p-6 bg-white rounded-lg lg:w-[25%] md:[40%] w-full box-shadow hover:scale-105 transition-all ease-in-out duration-500`}
+			style={top}
+		>
+			<div
+				className={`rounded-full w-12 h-12 flex-center md:p-3 p-2`}
+				style={{ backgroundColor: `${props.bg}` }}
+			>
+				<img src={props.src} alt='' className=' w-6' />
+			</div>
+			<h3 className='text-lg font-bold text-navyBlue md:h-[2.8rem]'>
+				{props.title}
+			</h3>
+			<p className='text-base text-primaryBlack md:h-[8rem] '>
+				{props.details}
+			</p>
+		</div>
+	);
 };

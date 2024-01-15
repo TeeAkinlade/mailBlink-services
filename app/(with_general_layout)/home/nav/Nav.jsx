@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -34,7 +35,7 @@ const Nav = () => {
             href="/"
             className="font-Roboto text-2xl font-bold text-[#17181A] md:text-4xl"
           >
-            Salesblink.
+            <Image src='/assets/images/Logo VendGenix.svg' ait='logo' width='150' height='150' />
           </Link>
           <button
             className="text-3xl 2lg:hidden"
