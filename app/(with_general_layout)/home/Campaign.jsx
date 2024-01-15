@@ -44,7 +44,7 @@ const Campaign = () => {
                   )
                 )}
               </div>
-              <div className="py-10 flex justify-center md:justify-start">
+              <div className="py-10 flex justify-center md:justify-start md:ml-4">
             	<Link href="/campaigns" className="custom-btn">
                   Schedule a demo
                 </Link>

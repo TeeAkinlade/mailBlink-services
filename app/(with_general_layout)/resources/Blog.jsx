@@ -7,7 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { blogTitles, blogs, caseStudies, enterprise, podcast, webinars, whitepaper } from "@/constants";
+import { blogTitles, blogs, caseStudies, enterprise, webinars, } from "@/constants";
 import { SampleNextArrow, SamplePrevArrow } from "./SwiperButton";
 import { useState } from "react";
 
@@ -140,44 +140,8 @@ const Blog = () => {
                             ))}
                             </Slider>
                         }
-                                {/* ------------------------------Podcast------------------------------               */}
-                        {toggle === 4 &&
-                            <Slider {...settings}>
-                            {podcast.map((data , id ) => (
-                                    <div className='w-[240px] sm:w-[275px] md:w-[280px] gap-15 relative' key={id}>
-                                            <Image src={data.src} width='100' height='100' alt ='blog image' className='w-full' />
-                                            <div className="shadow-md py-5 px-4 rounded-b-2xl h-[230px] bg-white">
-                                                <h3 className="text-[18px] font-semibold">{data.heading}</h3>
-                                                <p className="text-sm mt-2">{data.content}</p>
-                                                <p className="text-sm my-3">{data.content2}</p>
-                                                <div className="absolute bottom-7">
-                                                    <Link href='#' className='text-xs text-navyBlue font-semibold flex items-center pt-2'><span>Read More</span> <MdKeyboardArrowRight size={20} className='font-semibold ml-1' /></Link>
-                                                </div>
-                                            </div>
-                                    </div>
-                            ))}
-                        </Slider>
-                        }
-                                {/* ------------------------------White Paper------------------------------               */}
-                        {toggle === 5 && 
-                            <Slider {...settings}>
-                            {whitepaper.map((data , id ) => (
-                                    <div className='w-[240px] sm:w-[275px] md:w-[280px] gap-15 relative' key={id}>
-                                            <Image src={data.src} width='100' height='100' alt ='blog image' className='w-full' />
-                                            <div className="shadow-md py-5 px-4 rounded-b-2xl h-[230px] bg-white">
-                                                <h3 className="text-[18px] font-semibold">{data.heading}</h3>
-                                                <p className="text-sm mt-2">{data.content}</p>
-                                                <p className="text-sm my-3">{data.content2}</p>
-                                                <div className="absolute bottom-7">
-                                                    <Link href='#' className='text-xs text-navyBlue font-semibold flex items-center pt-2'><span>Read More</span> <MdKeyboardArrowRight size={20} className='font-semibold ml-1' /></Link>
-                                                </div>
-                                            </div>
-                                    </div>
-                            ))}
-                        </Slider>
-                        }
                                 {/* ------------------------------case studies------------------------------               */}
-                        {toggle === 6 &&  
+                        {toggle === 4 &&  
                             <Slider {...settings}>
                             {caseStudies.map((data , id ) => (
                                     <div className='w-[240px] sm:w-[275px] md:w-[280px] relative' key={id}>
@@ -195,11 +159,7 @@ const Blog = () => {
                         </Slider>
                         }
                     </section>
-                    <div className="flex justify-center my-12">
-                        <Link href='#' className='text-xs text-navyBlue font-semibold flex items-center pt-2'>View all</Link>
-                    </div>
-                        </div>
-                
+                </div> 
             </div>
         </main>
     )

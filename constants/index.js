@@ -127,6 +127,33 @@ export const servicesData = [
     href: "#",
     linkText: "Learn more",
   },
+  {
+    id: 4,
+    icon: <FaSms size={30} />,
+    title: "Form",
+    contents:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+    href: "#",
+    linkText: "Learn more",
+  },
+  {
+    id: 5,
+    icon: <FaWpforms size={30} />,
+    title: "Form",
+    contents:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+    href: "#",
+    linkText: "Learn more",
+  },
+  {
+    id: 6,
+    icon: <IoMdMail size={30} />,
+    title: "Form",
+    contents:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+    href: "#",
+    linkText: "Learn more",
+  },
 ];
 
 // Team Section of About page
@@ -232,6 +259,9 @@ export const socialMediaLinks = [
   {
     id: 1,
     href: "#",
+    // { icon: <FaGithub />, key: "githubUrl" },
+    // { icon: <FaTwitterSquare />, key: "twitterUrl" },
+    // { icon: <FaLinkedin />, key: "linkedinUrl" },
     photo: image6,
     alt: "facebook-icon",
   },
@@ -721,14 +751,6 @@ export const blogTitles = [
   },
   {
     id: 4,
-    title: "Podcasts",
-  },
-  {
-    id: 5,
-    title: "White papers",
-  },
-  {
-    id: 6,
     title: "Case Studies",
   },
 ];
@@ -829,6 +851,7 @@ export const webinars = [
       "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
   },
 ];
+
 export const enterprise = [
   {
     id: 1,
@@ -870,98 +893,6 @@ export const enterprise = [
   {
     id: 6,
     src: photo3,
-    heading: "Reasoning Ability",
-    content:
-      "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
-  },
-];
-export const podcast = [
-  {
-    id: 1,
-    src: photo4,
-    heading: "Reasoning Ability",
-    content: "Check your reasoning abilities.",
-    content2:
-      "Discover the top traits that help you excel and determine your work fit.",
-  },
-  {
-    id: 2,
-    src: photo2,
-    heading: "Cope Inventory",
-    content:
-      "Discover the top traits that help you excel and determine your work fit.",
-    content2: "Check your reasoning abilities.",
-  },
-  {
-    id: 3,
-    src: photo3,
-    heading: "Cope Inventory",
-    content: "Discover your communication style! Really useful for teams.",
-    content2: "Check your reasoning abilities",
-  },
-  {
-    id: 4,
-    src: photo2,
-    heading: "Entrepreneurial Personality",
-    content:
-      "Get a clean picture of yourself with insights into your personality and character.",
-  },
-  {
-    id: 5,
-    src: photo4,
-    heading: "Reasoning Ability",
-    content:
-      "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
-  },
-  {
-    id: 6,
-    src: photo3,
-    heading: "Reasoning Ability",
-    content:
-      "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
-  },
-];
-export const whitepaper = [
-  {
-    id: 1,
-    src: photo3,
-    heading: "Reasoning Ability",
-    content: "Check your reasoning abilities.",
-    content2:
-      "Discover the top traits that help you excel and determine your work fit.",
-  },
-  {
-    id: 2,
-    src: photo2,
-    heading: "Cope Inventory",
-    content:
-      "Discover the top traits that help you excel and determine your work fit.",
-    content2: "Check your reasoning abilities.",
-  },
-  {
-    id: 3,
-    src: photo4,
-    heading: "Cope Inventory",
-    content: "Discover your communication style! Really useful for teams.",
-    content2: "Check your reasoning abilities",
-  },
-  {
-    id: 4,
-    src: photo4,
-    heading: "Entrepreneurial Personality",
-    content:
-      "Get a clean picture of yourself with insights into your personality and character.",
-  },
-  {
-    id: 5,
-    src: photo4,
-    heading: "Reasoning Ability",
-    content:
-      "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
-  },
-  {
-    id: 6,
-    src: photo2,
     heading: "Reasoning Ability",
     content:
       "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
@@ -1013,4 +944,11 @@ export const caseStudies = [
     content:
       "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
   },
+];
+
+import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
+export const teamSocialIcons = [
+  { icon: <FaLinkedin />, key: "linkedinUrl" },
+  { icon: <FaGithub />, key: "githubUrl" },
+  { icon: <FaTwitterSquare />, key: "twitterUrl" },
 ];
