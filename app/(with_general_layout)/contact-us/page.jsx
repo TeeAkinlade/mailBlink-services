@@ -11,7 +11,7 @@ const Contact = () => {
           <h2 className="font-poppins text-[2.2rem] font-bold md:text-[3.125rem]">
             Get In <span className="font-light">Touch</span>
           </h2>
-          <p className="font-normal text-[#575757]">
+          <p className="font-normal text-[#171717]">
             {`Whether you have questions, suggestions, or just want to say hello,
             we're here and ready to assist you in any way we can.`}
           </p>
@@ -23,11 +23,11 @@ const Contact = () => {
             Send Us a Message 👇
           </Link>
         </div>
-        <div className="hidden w-full md:block">
+        <div className="hidden w-full md:block pl-10 pb-10">
           <Image
             src="/assets/images/contact-us-hero.webp"
             alt="hero image"
-            width={400}
+            width={450}
             height={350}
             className="object-cover"
           />
