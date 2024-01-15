@@ -142,7 +142,7 @@ export default function Sidebar() {
 				<aside
 					className={` ${
 						toggle ? 'w-96' : 'w-20'
-					}  ease-in-out duration-500 h-screen bg-ui_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
+					}  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
 				>
 					<TiChevronLeft
 						alt='Controller icon for collapsable sidebar'
@@ -168,7 +168,7 @@ export default function Sidebar() {
 						{MenuLinks.map((menu, index) => (
 							<>
 								{menu.gap && (
-									<span className=' mt-2  text-[0.66rem] text-[#7C8693] text-opacity-50 '>
+									<span className=' mt-2  text-[0.66rem] text-[#919cab] text-opacity-50 '>
 										{menu.header}
 									</span>
 								)}
@@ -191,8 +191,9 @@ export default function Sidebar() {
 								>
 									{' '}
 									<div
-										className={` md:h-4 md:w-4  ${
-											activeLink === index && 'text-ui_button'
+										className={` md:h-4 md:w-4 group-hover:text-ui_secondary1 dark:group-hover:text-ui_button  ${
+											activeLink === index &&
+											'text-[#84f2da]   dark:text-ui_button'
 										} `}
 									>
 										{menu.src}
@@ -200,7 +201,7 @@ export default function Sidebar() {
 									<span
 										className={`${
 											!toggle && 'scale-0'
-										} duration-500 ease-in-out group-hover:text-ui_button`}
+										} duration-500 ease-in-out group-hover:text-ui_secondary1 dark:group-hover:text-ui_button`}
 									>
 										{' '}
 										{menu.title}{' '}
@@ -209,7 +210,7 @@ export default function Sidebar() {
 							</>
 						))}
 						<div
-							className='text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_button bg-transparent  rounded-md duration-500'
+							className='text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 dark:hover:text-ui_button bg-transparent  rounded-md duration-500'
 							onClick={() => setToggle(!toggle)}
 						>
 							<div className=' '>
@@ -270,7 +271,7 @@ export default function Sidebar() {
 				<aside
 					className={` ${
 						miniToggle ? 'w-72' : 'fixed left-[-70%] duration-500 '
-					}  ease-in-out duration-500 h-screen bg-ui_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
+					}  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-ui_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
 				>
 					<IoIosArrowBack
 						onClick={() => setMiniToggle(!miniToggle)}

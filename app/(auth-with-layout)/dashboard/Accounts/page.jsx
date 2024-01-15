@@ -167,7 +167,7 @@ const Account = () => {
 			) : (
 				<main className='text-base flex'>
 					<div className='padding-x padding-y w-[100%] m-auto'>
-						<h2 className='font-bold text-3xl text-ui_secondary1'>
+						<h2 className='font-bold text-3xl text-ui_secondary1 dark:text-ui_button'>
 							Account Settings
 						</h2>
 
@@ -196,7 +196,7 @@ const Account = () => {
 								) : (
 									<p className='text-slate-500'>
 										Your email address is{' '}
-										<span className='font-bold text-lg  text-ui_secondary1'>
+										<span className='font-bold text-lg  text-ui_secondary1 dark:text-ui_button'>
 											{values.email}
 										</span>
 									</p>
@@ -211,7 +211,11 @@ const Account = () => {
 						{/* Password  */}
 						<div className='mt-20'>
 							<div className=' flex justify-between items-center'>
-								<h3 className={`${h3Style} text-ui_secondary1`}>Password</h3>
+								<h3
+									className={`${h3Style} text-ui_secondary1 dark:text-ui_button`}
+								>
+									Password
+								</h3>
 							</div>
 							<div className='flex gap-8'>
 								{passwordInputs.map((input) => (
@@ -248,14 +252,19 @@ const Account = () => {
 									</div>
 								))}
 							</div>
-							<button onClick={updatePassword} className='custom-btn mt-7'>
+							<button
+								onClick={updatePassword}
+								className='custom-btn mt-7 bg-[#089373] dark:bg-[#0070f0]'
+							>
 								Save Password
 							</button>
 						</div>
 
 						{/* Delete account */}
 						<div className='mt-20'>
-							<h3 className={`${h3Style} text-ui_secondary1`}>
+							<h3
+								className={`${h3Style} text-ui_secondary1 dark:text-ui_button`}
+							>
 								Delete account
 							</h3>
 							<p className='mb-10 text-slate-500'>
