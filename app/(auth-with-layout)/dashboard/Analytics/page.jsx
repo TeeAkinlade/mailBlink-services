@@ -37,7 +37,7 @@ const analytics = () => {
 							<SlPeople />
 						</span>
 						<span className='flex flex-col gap-0 text-[0.8rem] font-[700] dark:text-dark_text leading-5'>
-							<h3>Something I'm not every sure of</h3>
+							<h3>{`Something I'm not every sure of`}</h3>
 
 							<p className='text-slate-500 text-[0.8rem] font-[400]'>
 								<strong>2670</strong> Overall Subscriber count
@@ -55,7 +55,7 @@ const analytics = () => {
 							Contact Demographic
 						</h3>
 						<p className='text-[0.7rem] text-slate-500'>
-							Visualization of the contacts you've made over time
+							{`Visualization of the contacts you've made over time`}
 						</p>
 					</span>
 

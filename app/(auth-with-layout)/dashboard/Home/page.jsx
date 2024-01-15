@@ -27,7 +27,7 @@ export default function Home() {
 						</strong>
 					</h2>
 					<p className='text-slate-500 text-[1rem] font-[400]'>
-						Here's the summary of your email marketing process so far
+						{`Here's the summary of your email marketing process so far`}
 					</p>
 				</div>{' '}
 				<div className='grid grid-cols-1 xl:grid-cols-3 xl:gap-12 pb-8'>
@@ -114,7 +114,7 @@ export default function Home() {
 								</span>
 								<span className='flex flex-col gap-0 text-[0.8rem] font-[700] leading-5'>
 									<h3 className='dark:text-dark_text'>
-										Something I'm not every sure of
+										{`Something I'm not every sure of`}
 									</h3>
 
 									<p className='text-slate-500 text-[0.8rem] font-[400]'>
@@ -257,7 +257,7 @@ export default function Home() {
 										Contact Demographic
 									</h3>
 									<p className='text-[0.7rem] text-slate-500'>
-										Visualization of the contacts you've made over time
+										{`Visualization of the contacts you've made over time`}
 									</p>
 								</span>
 

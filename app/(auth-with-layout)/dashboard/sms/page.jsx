@@ -31,7 +31,7 @@ const SmsDetails = () => {
     <>
       <header className="mx-10 py-5 ">
         <div className="flex justify-between">
-          <article className="w-full text-center text-4xl font-bold text-ui_primary lg:text-left">
+          <article className="w-full text-center text-2xl font-bold text-ui_primary lg:text-left">
             <h1>SMS Campaign details</h1>
           </article>
           <div className="hidden w-60 lg:block">

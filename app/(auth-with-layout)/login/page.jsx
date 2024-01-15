@@ -75,7 +75,7 @@ const Login = () => {
       if (error) {
         alert(error.message);
       } else if (user.length !== 0) {
-        router.push("/auth/dashboard/Home");
+        router.push("/dashboard/Home");
       }
     } catch (error) {
       // Handle unexpected errors
@@ -85,92 +85,100 @@ const Login = () => {
 
   return (
     <div>
-      {/* loading animation */}
-      {loading && <Spinner />}
       <div className="lg:flex">
         <div
-          className="lg:w-[720px] h-[100vh]"
           style={{
-            background: `linear-gradient(141deg, #F5F0FF 0%, #EFF6FE 50.36%, #EDFAF5 100%)`,
+            background: "rgb(243,255,250)",
+            background:
+              "linear-gradient(90deg, rgba(243,255,250,1) 0%, rgba(210,249,232,1) 35%, rgba(204,250,230,1) 100%)",
           }}
+          className="hidden h-[100vh] lg:block lg:w-[720px]"
         >
-          <h1 className="text-[#17181A] text-[35px] ps-[1rem] font-[700] leading-[64px] font-Poppins">
-            MailBlink
-          </h1>
-          <div className="lg:w-[720px] lg:ps-[190px] lg:pr-[109px] xs:ps-[10px] pt-[190px]">
-            <h3 className="text-[#17181A] text-[48px] font-[700] leading-[64px] font-Poppins">
-              Welcome back <br /> to MailBlink
+          <Link href={"/"} className="font-Poppins ps-[1rem] text-[35px] font-[700] leading-[64px] text-[#17181A]">
+            SalesBlink
+          </Link>
+          <div className="pt-[190px] xs:ps-[10px] lg:w-[720px] lg:pr-[109px] lg:ps-[190px]">
+            <h3 className="font-Poppins text-[48px] font-[700] leading-[64px] text-[#17181A]">
+              Welcome back <br /> to SalesBlink
             </h3>
             <Image
               src="/assets/images/Group 2936.svg"
-              className="flex justify-end ms-[6rem]"
+              className="ms-[6rem] flex justify-end"
               width="172"
               height="23"
             />
           </div>
         </div>
-        <div className="lg:w-[720px] bg-[#fff] lg:ps-[109px] xs:ps-[10px] lg:pt-[90px] xs:pt-[100px]  xs:px-[0.85rem] md:px-[0.85rem]">
-          <h3 className="text-[#17181A] text-[24px] font-[600] leading-[32px] font-Poppins lg:ms-[9rem] xs:ms-[9rem] md:ms-[20rem]">
-            Login
-          </h3>
-          <form className="mt-[16px]" onSubmit={handleSubmit}>
-            <label className="text-[#515458] text-[12px] font-[500] font-Poppins mt-[22px]">
-              user name
-            </label>
-            <input
-              type="text"
-              placeholder="enter user name"
-              className="text-[#575757] bg-[#fff] border-[#B7BFC7] border-[1px] border-solid rounded-[8px] text-[16px] font-[400] leading-[24px] font-Poppins outline-none lg:w-[364px] xs:w-[100%] md:w-[600px] login-input-text mt-[-1rem]"
-              style={{ padding: "12px 0px 12px 12px", height: "48px" }}
-              value={email}
-              onChange={handleEmailChange}
-            />
-            {errors.email && <p className="text-red-500">{errors.email}</p>}{" "}
-            {/* Display error message */}
-            <label className="text-[#515458] text-[12px] font-[500] font-Poppins">
-              password
-            </label>{" "}
-            <input
-              type="password"
-              placeholder="enter password"
-              className="text-[#575757] bg-[#fff] border-[#B7BFC7] border-[1px] border-solid rounded-[8px] text-[16px] font-[400] font-Poppins outline-none lg:w-[364px] xs:w-[100%] md:w-[600px] mt-[-1rem]"
-              style={{ padding: "12px 0px 12px 12px", height: "48px" }}
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            {errors.password && (
-              <p className="text-red-500">{errors.password}</p>
-            )}{" "}
-            {/* Display error message */}
-            <p className="mt-[5px]">
-              <Link
-                href="/auth/reset"
-                className="text-[#1F284F] text-[14px] font-[600] leading-[18px] font-Poppins"
+
+      {/* loading animation */}
+        {loading && (
+          <div className="h-screen w-full flex items-center justify-center">
+            <Spinner />
+          </div>
+        )}
+        {!loading && (
+          <div className="flex h-screen w-full flex-col items-center justify-center bg-[#fff]">
+            <h3 className="font-Poppins text-center text-[24px] font-[600] leading-[32px] text-[#17181A]">
+              Login
+            </h3>
+            <form className="mt-[16px] w-4/5 lg:w-3/5" onSubmit={handleSubmit}>
+              <label className="font-Poppins mt-[22px] text-[12px] font-[500] text-[#515458]">
+                user name
+              </label>
+              <input
+                type="text"
+                placeholder="enter user name"
+                className="font-Poppins mt-[-1rem] rounded-[8px] border-[1px] border-solid border-[#B7BFC7] bg-[#fff] text-[16px] font-[400] leading-[24px] text-[#575757] outline-none"
+                style={{ padding: "12px 0px 12px 12px", height: "48px" }}
+                value={email}
+                onChange={handleEmailChange}
+              />
+              {errors.email && <p className="text-red-500">{errors.email}</p>}
+              {/* Display error message */}
+              <label className="font-Poppins text-[12px] font-[500] text-[#515458]">
+                password
+              </label>
+              <input
+                type="password"
+                placeholder="enter password"
+                className="font-Poppins mt-[-1rem] rounded-[8px] border-[1px] border-solid border-[#B7BFC7] bg-[#fff] text-[16px] font-[400] text-[#575757] outline-none"
+                style={{ padding: "12px 0px 12px 12px", height: "48px" }}
+                value={password}
+                onChange={handlePasswordChange}
+              />
+              {errors.password && (
+                <p className="text-red-500">{errors.password}</p>
+              )}
+              {/* Display error message */}
+              <p className="mt-[5px]">
+                <Link
+                  href="/reset"
+                  className="font-Poppins text-[14px] font-[600] leading-[18px] text-navyBlue"
+                >
+                  Forgot password?
+                </Link>
+              </p>
+
+              {/* Normal login */}
+              <button
+                type="submit"
+                className="w-full rounded-[24px] border border-navyBlue bg-navyBlue px-6 py-2 text-center text-sm font-medium text-white duration-200 hover:border hover:border-navyBlue hover:bg-white hover:text-navyBlue"
               >
-                Forgot password?
-              </Link>
-            </p>
-            <button
-              type="submit"
-              style={{
-                background: `rgba(0, 112, 240, 0.90)`,
-                border: `1px solid rgba(0, 112, 240, 0.90))`,
-                borderRadius: "30px",
-                padding: "12px 24px",
-              }}
-              className="text-[16px] font-[600] leading-[24px] flex justify-center items-center font-Poppins text-[#fff]  lg:w-[364px] xs:w-[100%] md:w-[600px] hover:bg-white duration-200"
-            >
-              Sign In
-            </button>
-            <OauthComponent className="mt-[-8rem]" />
-            <p className="text-[#575757] text-center text-[14px] font-Poppins font-[400] leading-[18px] lg:ms-[-12rem] md:ms-[-8rem]">
-              Don't have an account? {" "}
-              <Link href="/login" className="text-[#1F284F] font-[600]">
-                 Create an account
-              </Link>
-            </p>
-          </form>
-        </div>
+                Sign In
+              </button>
+
+              {/* Google login */}
+              <OauthComponent />
+
+              <p className="font-Poppins text-left text-[14px] font-[400] leading-[18px] text-[#575757]">
+                {`Don't have an account? `}
+                <Link href="/signup" className="font-[600] text-navyBlue">
+                  Create an account
+                </Link>
+              </p>
+            </form>
+          </div>
+        )}
       </div>
     </div>
     // </div>
