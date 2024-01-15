@@ -1,16 +1,36 @@
+'use client'
+
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import Image from "next/image";
+import { useState, useEffect } from 'react';
+import TextTransition, { presets } from 'react-text-transition';
 
 const Hero = () => {
+  const TEXTS = ['Made Easy.', 'In a  Blink.', ];
+  const [index, setIndex] = useState(0);
+
+  // text transition
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000, // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
   return (
-    <section className="max-width md:pr-12  mx-auto mb-24 md:mb-0">
+
+    <section className="max-width md:px-12 mx-auto mb-24 md:mb-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-4 md:pt-12">
             <p className="text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left">
-              Email and SMS <span className="text-forestGreen">Marketing </span>
-              Made Easy.
+              Email and SMS
             </p>
+              <div className="flex items-center text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left mt-2">
+              <span className="text-forestGreen mr-2">Marketing </span>
+                <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
+              </div>
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
                 MailBlink is an email and sms marketing for everything you need
@@ -41,11 +61,9 @@ const Hero = () => {
               <input
                 type="email"
                 placeholder="Enter email"
-                className="px-3 md:px-5 py-2 focus:border-0 text-[#565656] outline-none inputShadow w-full md:w-2/3 cursor-pointer hover:scale-110 hover:shadow-xl hover:rounded-md ease-in-out duration-500"
+                className="px-3 md:px-5 py-2 focus:border-0 outline-none shadow-md w-full md:w-2/3 cursor-pointer hover:border hover:border-navyBlue hover:rounded-md"
               />
-              <button className="custom-btn whitespace-nowrap">
-                Let’s Talk
-              </button>
+              <button className="custom-btn whitespace-nowrap">Let’s Talk</button>
             </div>
           </div>
           <div className="">
@@ -61,14 +79,14 @@ const Hero = () => {
               alt="left-half-cirle 2"
               width="64"
               height="44"
-              className="hidden lg:block absolute -left-16 bottom-0 "
+              className="hidden lg:block absolute -left-16 bottom-0"
             />
             <Image
               src="/assets/images/Rectangle (2).svg"
               alt="left-half-cirle 2"
               width="20"
               height="20"
-              className="absolute right-0 bottom-4 md:bottom-10 hover:drop-shadow-[0rem_0rem_0.75rem_rgb(85,232,198)] ease-in-out duration-500"
+              className="absolute right-0 bottom-4 md:bottom-10"
             />
           </div>
         </div>
@@ -78,12 +96,13 @@ const Hero = () => {
             alt="hero-dashboard-image"
             width="100"
             height="100"
-            className="w-full object-cover hover:drop-shadow-[0rem_0rem_0.75rem_rgb(85,232,198)] ease-in-out duration-700"
+            className="w-full object-cover"
           />
         </div>
       </div>
     </section>
   );
+
 };
 
 export default Hero;
