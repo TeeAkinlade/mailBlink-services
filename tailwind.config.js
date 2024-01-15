@@ -41,6 +41,7 @@ module.exports = {
         dark_secondary: "#1c2438",
         dark_text: "#B7C5CC",
       },
+      
       keyframes: {
         "animate-fade-in": {
           "0%": { opacity: "0" },
