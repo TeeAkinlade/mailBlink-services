@@ -7,8 +7,6 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
 import Spinner from "../../../components/Spinner";
 
-import { useCurrentUser } from "../currentUser";
-
 import { useCurrentUser } from "@/app/(auth-with-layout)/currentUser";
 
 import OauthComponent from "../OauthComponent";
@@ -200,7 +198,7 @@ const Signup = () => {
             >
               Sign up
             </button>
-            <OauthComponent className="-mt-4"/>
+            <OauthComponent className="-mt-4" />
             <div className="lg:ms-[-12rem] xs:ms-[-1rem] md:ms-[-4rem]">
               <p className="text-[#575757] text-center text-[14px] font-Poppins font-[400] leading-[18px] mt-[3px]">
                 Already have an account?
