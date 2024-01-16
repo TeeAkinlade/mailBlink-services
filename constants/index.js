@@ -27,8 +27,8 @@ export const NAV_LINKS = [
         label: "Email Marketing",
       },
       {
-        href: "/sms-marketing",
-        key: "sms-marketing",
+        href: "/sales-funnel",
+        key: "Sales Funnel",
         label: "SmS Marketing",
       },
       {
