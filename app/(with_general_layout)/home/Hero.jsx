@@ -4,6 +4,7 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
   const TEXTS = ["Made Easy.", "In a  Blink."];
@@ -18,6 +19,13 @@ const Hero = () => {
     return () => clearTimeout(intervalId);
   }, []);
 
+  const [typeEffect] = useTypewriter({
+    words: ["All-in-One Solution", "One-stop shop Digital Solutions"],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 40,
+  });
+
   return (
     <section className="max-width md:px-12 mx-auto mb-24 md:mb-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
@@ -29,9 +37,10 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row items-center text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left md:mt-2">
               <span className="text-forestGreen mr-2">Marketing </span>
               <div>
-                <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
+                <TextTransition springConfig={presets.wobbly}>
+                  {TEXTS[index % TEXTS.length]}
+                </TextTransition>
               </div>
-
             </div>
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">

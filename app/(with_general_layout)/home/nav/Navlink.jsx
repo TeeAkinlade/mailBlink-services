@@ -35,7 +35,7 @@ const Navlink = () => {
 
   return (
     <nav className="flex flex-col items-center 2lg:flex-row 2lg:items-start px-5 2lg:px-0">
-      <ul className="h-full gap-6 w-full 2lg:flex">
+      <ul className="h-[5rem] gap-6 w-full 2lg:flex">
         {NAV_LINKS.map((link, index) => (
           <li
             key={link.key}
