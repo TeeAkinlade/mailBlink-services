@@ -1,4 +1,4 @@
-import NMIS from "../sms-marketing/NMIS";
+import NMIS from "../sales-funnel/NMIS";
 import { EmailAbout } from "./About";
 import { EmailHero } from "./EmailHero";
 import { Products } from "./Product";
