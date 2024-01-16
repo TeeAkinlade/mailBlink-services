@@ -230,19 +230,18 @@ export const footerLinks = [
     links: [
       { id: 1, link: "Blog", href: "/blog" },
       { id: 2, link: "Marketing Guides", href: "#" },
-      { id: 3, link: "Get a demo", href: "#" },
-      { id: 4, link: "Contact us", href: "/contact-us" },
+      { id: 3, link: "About Us", href: "/about" },
+      { id: 4, link: "Contact Us", href: "/contact-us" },
     ],
   },
   {
     id: 2,
-    title: "Products",
+    title: "Services",
     links: [
       { id: 1, link: "Email Marketing", href: "/email-marketing" },
       { id: 2, link: "Social Media", href: "/socia-media" },
       { id: 3, link: "Sales Funnel", href: "/sales-funnel" },
-      { id: 4, link: "Email", href: "#" },
-      { id: 5, link: "Landing Pages", href: "#" },
+      { id: 4, link: "Landing Pages", href: "#" },
     ],
   },
 ];
@@ -253,14 +252,14 @@ export const contacts = [
     photo: image10,
     alt: "Email-icon",
     title: "Support: ",
-    details: "hello@landify.co",
+    details: "hello@vendgenix.co",
   },
   {
     id: 2,
     photo: image11,
     alt: "Mobile-icon",
     title: "Phone: ",
-    details: "+234 98765 43210",
+    details: "+234 806 736 0647",
     styles: "h-6 w-8",
   },
 ];

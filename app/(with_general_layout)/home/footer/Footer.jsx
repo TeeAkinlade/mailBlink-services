@@ -36,7 +36,7 @@ const Footer = () => {
                       height="25"
                       className={styles}
                     />
-                    <p className="text-xs text-primaryBlack md:text-sm">
+                    <p className="text-xs text-black md:text-sm">
                       {title}
                       <Link
                         href={

@@ -30,7 +30,7 @@ const FooterLink = () => {
       </div>
       <div>
         <h3 className="font-Roboto mb-6 text-base font-semibold text-primaryBlack2 md:text-lg">
-          Newsletter
+          Join Our Newsletter
         </h3>
         <form
           onSubmit={(e) => {
@@ -50,7 +50,7 @@ const FooterLink = () => {
             <input
               type="email"
               placeholder="Your best email"
-              className="w-full rounded-lg bg-gray-100 px-5 py-3"
+              className="w-full rounded-lg bg-gray-100 px-16 py-3"
             />
           </div>
 
@@ -69,7 +69,7 @@ const FooterLink = () => {
                 d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
               />
             </svg>
-            Subscribe
+            Subscribe Now!
           </button>
         </form>
         <h3
