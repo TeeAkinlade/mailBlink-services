@@ -238,11 +238,11 @@ export const footerLinks = [
     id: 2,
     title: "Products",
     links: [
-      { id: 1, link: "Newsletter", href: "#" },
-      { id: 2, link: "Email Marketing", href: "/features/email-marketing" },
-      { id: 3, link: "SMS Marketing", href: "/sms/email-marketing" },
+      { id: 1, link: "Email Marketing", href: "/email-marketing" },
+      { id: 2, link: "Social Media", href: "/socia-media" },
+      { id: 3, link: "Sales Funnel", href: "/sales-funnel" },
       { id: 4, link: "Email", href: "#" },
-      { id: 5, link: "Form", href: "#" },
+      { id: 5, link: "Landing Pages", href: "#" },
     ],
   },
 ];

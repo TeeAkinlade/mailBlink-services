@@ -8,18 +8,18 @@ const FooterLink = () => {
   const [subscribed, setSubscribed] = useState(false);
 
   return (
-    <div className="flex flex-col md:gap-10 md:flex-row">
+    <div className="flex flex-col md:gap-16 md:flex-row">
       <div className="flex gap-10">
         {footerLinks.map((item) => (
           <div key={item.id}>
-            <h3 className="mb-6 text-base text-primaryBlack2 md:text-lg">
+            <h3 className="mb-6 text-base font-semibold text-black md:text-lg">
               {item.title}
             </h3>
             {item.links.map(({ id, href, link }) => (
               <div className="pb-4" key={id}>
                 <Link
                   href={href}
-                  className="text-sm font-medium text-primaryBlack hover:text-[#089373] md:text-base"
+                  className="text-sm text-primaryBlack hover:text-[#089373] md:text-base"
                 >
                   {link}
                 </Link>
