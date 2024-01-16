@@ -15,7 +15,7 @@ const About = () => {
               alt="About section image"
               width="80"
               height="80"
-              className=" w-full md:w-[80%]"
+              className=" w-full lg:w-[80%]"
             />
           </div>
           <div className="mt-10 md:mt-0">

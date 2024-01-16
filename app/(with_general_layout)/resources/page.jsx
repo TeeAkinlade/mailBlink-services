@@ -19,9 +19,9 @@ const Resouces = () => {
 
     <div className="max-width mx-auto">
         <div className="px-8 md:px-20 pb-12">
-            <div className="flex flex-col md:flex-row items-center gap-20 lg:gap-40">
+            <div className="flex flex-col md:flex-row gap-20 lg:gap-40">
                 <div>
-                    <h2 className="text-center md:text-start font-bold text-[42px] md:text-5xl text-navyBlue">Resource Hub</h2>
+                    <h2 className="text-center md:text-start font-bold text-[42px] md:text-6xl md:mt-12 text-navyBlue">Resource Hub</h2>
                     <Swiper
                         slidespreview={'1'}
                         centeredSlides={true}
@@ -31,13 +31,13 @@ const Resouces = () => {
                     >
                             { resourceHeroData.map((heroData, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className='flex-col flex-center pt-6'>
+                                    <div className='flex-col pt-10'>
                                         {heroData.variations.map(({id, content1, content2, content3 }) => (
                                             <div className="w-[300px] md:w-[22rem] lg:w-[400px] flex" key={id}>
                                                 <GiCheckMark size={20} className='mt-2 mr-3'/>
                                                 <>
-                                                    <p className='text-sm md:text-base pb-2 leading-6'>{content1}</p>
-                                                    <p className='text-sm md:text-base pb-2 leading-6'>{content2}</p>
+                                                    <p className='text-sm md:text-base pb-5 leading-6'>{content1}</p>
+                                                    <p className='text-sm md:text-base pb-5 leading-6'>{content2}</p>
                                                     <p className='text-sm md:text-base leading-6'>{content3}</p>
                                                 </>
                                             </div>

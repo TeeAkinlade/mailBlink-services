@@ -26,11 +26,12 @@ const Hero = () => {
             <p className="text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left">
               Email and SMS
             </p>
-            <div className="flex items-center text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left mt-2">
+            <div className="flex flex-col md:flex-row items-center text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left md:mt-2">
               <span className="text-forestGreen mr-2">Marketing </span>
-              <TextTransition springConfig={presets.wobbly}>
-                {TEXTS[index % TEXTS.length]}
-              </TextTransition>
+              <div>
+                <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
+              </div>
+
             </div>
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
@@ -93,7 +94,7 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="px-8 md:pt-20">
+        <div className="px-8 pt-10 md:py-20 lg:pt-20 lg:mb-0">
           <Image
             src="/assets/images/pana.svg"
             alt="hero-dashboard-image"

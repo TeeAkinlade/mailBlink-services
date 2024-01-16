@@ -8,7 +8,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { blogTitles, blogs, caseStudies, enterprise, webinars, } from "@/constants";
-import { SampleNextArrow, SamplePrevArrow } from "./SwiperButton";
 import { useState } from "react";
 
 
@@ -21,8 +20,6 @@ const Blog = () => {
         speed: 500,
         slidesToShow: 3.5,
         slidesToScroll: 1,
-        nextArrow: <SampleNextArrow to="next" />,
-        prevArrow: <SamplePrevArrow to="prev" />,
         initialSlide: 0,
         responsive: [
           {
@@ -35,7 +32,7 @@ const Blog = () => {
             }
           },
           {
-            breakpoint: 768,
+            breakpoint: 978,
             settings: {
               slidesToShow: 2.5,
               slidesToScroll: 1,
@@ -43,7 +40,7 @@ const Blog = () => {
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
@@ -51,7 +48,7 @@ const Blog = () => {
             }
           },
           {
-            breakpoint: 480,
+            breakpoint: 600,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -64,15 +61,14 @@ const Blog = () => {
 
     const toggleTab = (index) =>{
         setToggle(index)
-        console.log(index)
     }
 
     return (
 
         <main className="bg-[#ECFDF6]">
-            <div className="mt-16 px-8 md:px-28 py-20">
+            <div className="mt-16 px-8 md:px-20 py-20">
                 <div className=''>
-                    <div className="flex flex-col md:flex-row items-center gap-10 mb-20">
+                    <div className="flex flex-col md:flex-row items-center ml-10 gap-10 mb-20">
                         <p className="font-bold text-3xl">Blogs</p>
                         <div className="flex items-center flex-wrap lg:flex-nowrap gap-y-4 gap-x-3 lg:gap-y-0">
                             {blogTitles.map(({title, id}) => (
