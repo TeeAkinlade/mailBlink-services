@@ -20,7 +20,7 @@ const About = () => {
           </div>
           <div className="mt-10 md:mt-0">
             <h2 className="font-semibold text-4xl lg:text-5xl text-navyBlue mb-10 hidden md:block">
-              About Us
+              Why VendGenix?
             </h2>
             <h3 className="text-navyBlue font-semibold leading-[28px] mb-4 text-lg text-center md:text-left">
               Who are we? MailBlink is a team of talented individuals working
@@ -32,7 +32,10 @@ const About = () => {
               marketing business with ourplatform tailored for visionary website
               designers, skilled developers, and ambitious entrepreneurs.
             </p>
-            <Link href="/about" className="custom-btn block sm:inline-block text-center">
+            <Link
+              href="/about"
+              className="custom-btn block sm:inline-block text-center"
+            >
               Read More
             </Link>
             <div className="mt-4"></div>

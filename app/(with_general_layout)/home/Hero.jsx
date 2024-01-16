@@ -30,13 +30,14 @@ const Hero = () => {
     <section className="max-width md:px-12 mx-auto mb-24 md:mb-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-14">
         <div className="px-8 pb-6 lg:pb-48 relative">
-          <div className="pt-4 md:pt-12 leading-[2rem]">
-            <p className="text-primaryBlack2 text-4xl md:text-5xl  font-semibold text-center md:text-left">
-              Grow Your Business
+          <div className="pt-4 md:pt-12">
+            <p className="text-primaryBlack2 text-4xl md:text-5xl font-semibold text-center md:text-left">
+              Grow Your Business With{" "}
+              <span className="text-forestGreen mr-2 text-4xl md:text-5xl">
+                {typeEffect}
+              </span>
             </p>
-            <span className="text-forestGreen font-bold mr-2 text-4xl md:text-5xl">
-              {typeEffect}
-            </span>
+
             {/* <div>
                 <TextTransition springConfig={presets.wobbly}>
                   {TEXTS[index % TEXTS.length]}
@@ -44,27 +45,29 @@ const Hero = () => {
               </div> */}
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
-                MailBlink is an email and sms marketing for everything you need
-                to create a campaign. Hundreds of independent developers sell
-                their products here so that you could create your own unique
-                project.
+                Experience the convenience of a single platform that integrates
+                everything your business needs for online success. From email
+                campaigns to content marketing SEO optimization and social media
+                management, we've got you covered.
               </p>
               <ul className="my-10 md:my-6">
                 <li className="flex items-center text-sm md:text-base">
                   <RiVerifiedBadgeFill className="text-navyBlue" size={24} />
-                  <span className="ml-4 text-[#565656]">
-                    Get Overview at a glance
+                  <span className="ml-4 text-[#000]">
+                    All-in-One Marketing Hub
                   </span>
                 </li>
                 <li className="flex items-center text-sm md:text-base my-2">
                   <RiVerifiedBadgeFill className="text-navyBlue" size={24} />
-                  <span className="ml-4 text-[#565656]">
-                    Deposit funds easily, security
+                  <span className="ml-4 text-[#000]">
+                    User-Friendly Interface
                   </span>
                 </li>
                 <li className="flex items-center text-sm md:text-base">
                   <RiVerifiedBadgeFill className="text-navyBlue" size={24} />
-                  <span className="ml-4 text-[#565656]">Get Live Support</span>
+                  <span className="ml-4 text-[#000000]">
+                    Results That Matter
+                  </span>
                 </li>
               </ul>
             </div>
