@@ -138,7 +138,7 @@ export const servicesData = [
   },
   {
     id: 5,
-    icon: <FaWpforms size={30} />,
+    icon: <FaSms size={30} />,
     title: "Form",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
@@ -259,9 +259,6 @@ export const socialMediaLinks = [
   {
     id: 1,
     href: "#",
-    // { icon: <FaGithub />, key: "githubUrl" },
-    // { icon: <FaTwitterSquare />, key: "twitterUrl" },
-    // { icon: <FaLinkedin />, key: "linkedinUrl" },
     photo: image6,
     alt: "facebook-icon",
   },
