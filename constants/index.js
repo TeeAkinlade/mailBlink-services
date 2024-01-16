@@ -104,7 +104,7 @@ export const servicesData = [
     icon: <IoMdMail size={30} />,
     title: "Email Marketing",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Unlock the power of personalized messaging with our Email Marketing service. Craft engaging campaigns, nurture leads, and build lasting relationships with your audience.",
     href: "#",
     linkText: "Learn more",
   },
@@ -113,7 +113,7 @@ export const servicesData = [
     icon: <FaSms size={30} />,
     title: "Social Media",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Boost your brand across platforms with our Social Media Management tool. Schedule posts, analyze performance, and engage with your audience seamlessly, all from one central hub.",
     href: "/sms",
     linkText: "Learn more",
   },
@@ -122,7 +122,7 @@ export const servicesData = [
     icon: <FaWpforms size={30} />,
     title: "Form Builders",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Build stunning landing pages with our intuitive Form Building tools. Capture leads, gather valuable insights, and guide visitors through a seamless journey from discovery to conversion.",
     href: "#",
     linkText: "Learn more",
   },
@@ -131,7 +131,7 @@ export const servicesData = [
     icon: <FaSms size={30} />,
     title: "WhatsApp Marketing",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Our WhatsApp Marketing service allows you to engage customers personally, share updates, and drive conversions—all from the convenience of their favorite messaging app.",
     href: "#",
     linkText: "Learn more",
   },
@@ -140,7 +140,7 @@ export const servicesData = [
     icon: <FaSms size={30} />,
     title: "Content Marketing",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Create compelling content effortlessly. Our Content Marketing tools empower you to craft impactful narratives, share your brand story, and establish authority in your industry.",
     href: "#",
     linkText: "Learn more",
   },
@@ -149,7 +149,7 @@ export const servicesData = [
     icon: <IoMdMail size={30} />,
     title: "Sales Funnel",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Optimize your sales process with our Sales Funnel feature. From awareness to conversion, track customer journeys, and turn leads into loyal customers, ensuring every interaction counts.",
     href: "#",
     linkText: "Learn more",
   },
