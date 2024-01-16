@@ -99,7 +99,7 @@ const Testimonial = (props) => {
         />
         <div className="md:-mt-14 md:ml-16 -mt-10 ml-12">
           <h2 className="text-ui_primary font-bold md:text-[2.5rem] text-[2rem]">
-            Hear What <br /> Real Customers Are Saying
+            Hear What <br /> Real Customers Are Saying:
           </h2>
           <p className=" text-Ash md:text-lg">
             Find a strong reason to do <br />

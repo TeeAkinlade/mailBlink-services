@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Home() {
   const items = [
     {
-      title: "Sophisticated Business Rules",
+      title: "Comprehensive All-in-One Solution",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "From email marketing and social media management to content creation and analytics, our platform consolidates essential tools, streamlining your marketing efforts",
     },
     {
       title: "Pre-Configured Out-of-the",
