@@ -36,7 +36,7 @@ const About = () => {
               href="/about"
               className="custom-btn block sm:inline-block text-center"
             >
-              Read More
+              Lean More About Us
             </Link>
             <div className="mt-4"></div>
           </div>
