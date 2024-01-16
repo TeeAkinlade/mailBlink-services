@@ -28,13 +28,15 @@ const Hero = () => {
 
   return (
     <section className="max-width md:px-12 mx-auto mb-24 md:mb-0">
-      <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-14">
         <div className="px-8 pb-6 lg:pb-48 relative">
-          <div className="pt-4 md:pt-12">
-            <p className="text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left">
-              Grow and Scale
+          <div className="pt-4 md:pt-12 leading-[2rem]">
+            <p className="text-primaryBlack2 text-4xl md:text-5xl  font-semibold text-center md:text-left">
+              Grow Your Business
             </p>
-            <span className="text-forestGreen mr-2 ">Business </span>
+            <span className="text-forestGreen font-bold mr-2 text-4xl md:text-5xl">
+              {typeEffect}
+            </span>
             {/* <div>
                 <TextTransition springConfig={presets.wobbly}>
                   {TEXTS[index % TEXTS.length]}
