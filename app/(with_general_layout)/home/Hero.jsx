@@ -20,10 +20,10 @@ const Hero = () => {
   // }, []);
 
   const [typeEffect] = useTypewriter({
-    words: ["All-in-One Solution", "One-stop shop Digital Solutions"],
+    words: ["Generate Leads", "Grow your business", "Scale with Speed"],
     loop: {},
-    typeSpeed: 100,
-    deleteSpeed: 40,
+    typeSpeed: 75,
+    deleteSpeed: 85,
   });
 
   return (
@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-4 md:pt-12">
             <p className="text-primaryBlack2 text-4xl md:text-5xl font-semibold text-center md:text-left">
-              Grow Your Business With{" "}
+              One-Stop Shop To{" "}
               <span className="text-forestGreen mr-2 text-4xl md:text-5xl">
                 {typeEffect}
               </span>
