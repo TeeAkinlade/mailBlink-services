@@ -44,7 +44,7 @@ const Footer = () => {
                             ? `sms:${details.replace(/\s/g, "")}`
                             : `mailto:${details}`
                         }
-                        className="pb-4 font-normal hover:text-[#089373]"
+                        className="pb-4 hover:text-[#089373]"
                       >
                         {details}
                       </Link>
