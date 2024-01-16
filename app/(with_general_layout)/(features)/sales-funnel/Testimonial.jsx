@@ -101,7 +101,10 @@ const Testimonial = (props) => {
           <h2 className="text-ui_primary font-bold md:text-[2.5rem] text-[2rem]">
             Hear What <br /> Real Customers Are Saying
           </h2>
-          <p className=" text-Ash md:text-lg">Get inspired by these stories.</p>
+          <p className=" text-Ash md:text-lg">
+            Find a strong reason to do <br />
+            business with VendGenix.
+          </p>
         </div>
       </div>
       <div className=" flex md:flex-nowrap mt-5 flex-wrap items-center justify-center gap-10">
