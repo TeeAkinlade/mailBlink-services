@@ -29,7 +29,7 @@ export const NAV_LINKS = [
       {
         href: "/sales-funnel",
         key: "Sales Funnel",
-        label: "SmS Marketing",
+        label: "Sales Funnel",
       },
       {
         href: "/forms",
