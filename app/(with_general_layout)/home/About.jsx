@@ -15,25 +15,28 @@ const About = () => {
               alt="About section image"
               width="80"
               height="80"
-              className=" w-full md:w-[80%]"
+              className=" w-full lg:w-[80%]"
             />
           </div>
           <div className="mt-10 md:mt-0">
             <h2 className="font-semibold text-4xl lg:text-5xl text-navyBlue mb-10 hidden md:block">
-              About Us
+              Why VendGenix?
             </h2>
             <h3 className="text-navyBlue font-semibold leading-[28px] mb-4 text-lg text-center md:text-left">
-              Who are we? MailBlink is a team of talented individuals working
-              together to make software people love.
+              We want you to stay ahead with cutting-edge marketing tools. No
+              tech hurdles – just focus on your business.
             </h3>
             <p className="text-primaryBlack text-sm md:text-base leading-[28px] py-4 md:py-0 text-center md:text-left mb-8">
-              We develop multi-award winning enterprise-class software that
-              helps IT teams audit IT environments. Elevate your digital
-              marketing business with ourplatform tailored for visionary website
-              designers, skilled developers, and ambitious entrepreneurs.
+              We understand the challenges faced by small businesses. That's why
+              we've created an inclusive community and an all-in-one hub,
+              ensuring you have everything necessary for a successful digital
+              presence.
             </p>
-            <Link href="/about" className="custom-btn block sm:inline-block text-center">
-              Read More
+            <Link
+              href="/about"
+              className="custom-btn block sm:inline-block text-center"
+            >
+              Learn More About Us
             </Link>
             <div className="mt-4"></div>
           </div>

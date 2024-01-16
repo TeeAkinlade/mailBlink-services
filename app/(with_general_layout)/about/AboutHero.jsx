@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const AboutHero = () => {
   return (
-    <section className="md:bg-white-500 flex flex-col items-center justify-center gap-5 bg-white px-4 text-center font-poppins md:my-20 md:flex-row md:gap-10 md:px-24">
+    <section className="md:bg-white-500 flex flex-col items-center justify-center gap-40 bg-white px-4 text-center font-poppins md:my-6 md:flex-row md:gap-10 md:px-20">
       <div className="mb-4 bg-white md:w-4/5 md:text-left">
-        <h1 className="mt-2 cursor-pointer text-4xl font-extrabold text-ui_primary md:mt-2 md:text-7xl">
+        <h1 className="mt-2 cursor-pointer text-4xl font-bold text-ui_primary md:mt-2 md:text-5xl">
           About Us
         </h1>
         <p className="mt-3 text-sm font-bold text-ui_primary md:mt-10 md:text-lg">
@@ -24,11 +24,11 @@ const AboutHero = () => {
           </button>
         </div>
       </div>
-      <div className="mb-4 flex w-full justify-center">
+      <div className="mb-4 flex w-full md:justify-center">
         <Image
-          src="/assets/images/about-hero.png"
+          src="/assets/images/amico1.svg"
           alt="heroimg"
-          width={1000}
+          width={500}
           height={500}
         />
       </div>
