@@ -51,7 +51,7 @@ export const campaignDetailsList = [
     alt: "Feature Icon",
     heading: "Community Support",
     content:
-      "Secure your organization without changing all the settings. The text will be populated with the right information later on.",
+      " Connect, learn, and grow with our vibrant community of entrepreneurs. Gain insights, share experiences, and forge partnerships that transcend the digital space.",
   },
   {
     id: 2,
@@ -68,33 +68,33 @@ export const campaignFeaturesDetails = [
     id: 1,
     photo: image2,
     alt: "Feature Icon with circle",
-    heading: "Web Security",
+    heading: "Community Support",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis et sed nam sem tellus erat.",
+      "Connect, learn, and grow with our vibrant community of entrepreneurs. Gain insights, share experiences, and forge partnerships that transcend the digital space.",
   },
   {
     id: 2,
     photo: image3,
     alt: "Feature Icon with circle",
-    heading: "Email Security",
+    heading: "User-Friendly Experience",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis et sed nam sem tellus erat.",
+      "Navigate effortlessly with our intuitive platform. No technical hurdles—just a seamless experience, allowing you to focus on what you do best: running your business.",
   },
   {
     id: 3,
     photo: image4,
     alt: "Feature Icon with circle",
-    heading: "Endpoint Security",
+    heading: "Bespoke Solutions",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis et sed nam sem tellus erat",
+      "We recognize that every business is unique. Our platform offers customizable solutions to suit your specific needs, ensuring a personalized approach to your digital success.",
   },
   {
     id: 4,
     photo: image5,
     alt: "Feature Icon with circle",
-    heading: "Firewall & ADR",
+    heading: "Affordability Without Compromise",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis et sed nam sem tellus erat",
+      "Experience enterprise-level features without the hefty price tag. We believe in providing affordable solutions that deliver exceptional value.",
   },
 ];
 
