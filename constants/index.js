@@ -34,7 +34,7 @@ export const NAV_LINKS = [
       {
         href: "/forms",
         key: "forms",
-        label: "Form Builder",
+        label: "Landing Pages",
       },
     ],
   },
@@ -120,7 +120,7 @@ export const servicesData = [
   {
     id: 3,
     icon: <FaWpforms size={30} />,
-    title: "Form Builders",
+    title: "Landing Pages",
     contents:
       "Build stunning landing pages with our intuitive Form Building tools. Capture leads, gather valuable insights, and guide visitors through a seamless journey from discovery to conversion.",
     href: "#",
