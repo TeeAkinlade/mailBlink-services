@@ -9,7 +9,6 @@ import image8 from "@/public/assets/images/LinkedIn.svg";
 import image9 from "@/public/assets/images/Instagram.svg";
 import image10 from "@/public/assets/images/email-icon.svg";
 import image11 from "@/public/assets/images/Mobile.svg";
-import photo from "@/public/assets/images/unsplash_376KN_ISplE.svg";
 import photo2 from "@/public/assets/images/unsplash_g1Kr4Ozfoac.svg";
 import photo3 from "@/public/assets/images/unsplash_QckxruozjRg.svg";
 import photo4 from "@/public/assets/images/unsplash_UpsEF48wAgk.svg";
