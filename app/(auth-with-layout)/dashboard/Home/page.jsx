@@ -22,7 +22,7 @@ export default function Home() {
 					{' '}
 					<h2 className='text-xl dark:text-dark_text'>
 						Welcome{' '}
-						<strong className='text-ui_button'>
+						<strong className='text-ui_secondary1 dark:text-ui_button'>
 							{firstName ? firstName : user?.email}!
 						</strong>
 					</h2>
@@ -34,7 +34,7 @@ export default function Home() {
 					<div className='col-span-2'>
 						{/* First Three Card Section */}
 						<div className=' md:grid md:grid-cols-3 gap-4 justify-between  mt-10'>
-							<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 rounded-xl pb-4 hover:scale-110 duration-500 ease-in-out '>
+							<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 rounded-xl pb-4 hover:scale-105 duration-500 ease-in-out '>
 								<div className='flex justify-between w-auto'>
 									{' '}
 									<span className='text-ui_button bg-[#6aacf844] rounded-xl flex items-center p-2 '>
@@ -54,7 +54,7 @@ export default function Home() {
 									</span>
 								</div>
 							</div>
-							<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 mt-4 md:mt-0 rounded-xl pb-4 hover:scale-110 duration-500 ease-in-out '>
+							<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 mt-4 md:mt-0 rounded-xl pb-4 hover:scale-105 duration-500 ease-in-out '>
 								<div className='flex justify-between w-auto'>
 									{' '}
 									<span className='bg-[#8df4bf48] text-[#228B22] dark:text-[#66ee7e] rounded-xl flex items-center p-2 '>
@@ -71,7 +71,7 @@ export default function Home() {
 									</span>
 								</div>
 							</div>
-							<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 mt-4 md:mt-0 rounded-xl pb-4 hover:scale-110 duration-500 ease-in-out '>
+							<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 mt-4 md:mt-0 rounded-xl pb-4 hover:scale-105 duration-500 ease-in-out '>
 								<div className='flex justify-between w-auto'>
 									{' '}
 									<span className='bg-[#f4c0785c] text-[#FDBC64] rounded-xl flex items-center p-2 '>

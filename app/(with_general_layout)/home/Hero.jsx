@@ -1,25 +1,24 @@
-'use client'
+"use client";
 
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import Image from "next/image";
-import { useState, useEffect } from 'react';
-import TextTransition, { presets } from 'react-text-transition';
+import { useState, useEffect } from "react";
+import TextTransition, { presets } from "react-text-transition";
 
 const Hero = () => {
-  const TEXTS = ['Made Easy.', 'In a  Blink.', ];
+  const TEXTS = ["Made Easy.", "In a  Blink."];
   const [index, setIndex] = useState(0);
 
   // text transition
   useEffect(() => {
     const intervalId = setInterval(
       () => setIndex((index) => index + 1),
-      3000, // every 3 seconds
+      2000 // every 3 seconds
     );
     return () => clearTimeout(intervalId);
   }, []);
 
   return (
-
     <section className="max-width md:px-12 mx-auto mb-24 md:mb-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
         <div className="px-8 pb-6 lg:pb-48 relative">
@@ -32,6 +31,7 @@ const Hero = () => {
               <div>
                 <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
               </div>
+
             </div>
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
@@ -65,7 +65,9 @@ const Hero = () => {
                 placeholder="Enter email"
                 className="px-3 md:px-5 py-2 focus:border-0 outline-none shadow-md w-full md:w-2/3 cursor-pointer hover:border hover:border-navyBlue hover:rounded-md"
               />
-              <button className="custom-btn whitespace-nowrap">Let’s Talk</button>
+              <button className="custom-btn whitespace-nowrap">
+                Let’s Talk
+              </button>
             </div>
           </div>
           <div className="">
@@ -104,7 +106,6 @@ const Hero = () => {
       </div>
     </section>
   );
-
 };
 
 export default Hero;

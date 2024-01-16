@@ -12,7 +12,10 @@ const analytics = () => {
 				{' '}
 				<h3 className='text-[0.8rem] leading-[1.12rem] lg:text-xl text-black lg:leading-7 dark:text-dark_text'>
 					Welcome to our analytics dashboard, where data transforms into
-					actionable <strong className='text-ui_button'>insights! </strong>{' '}
+					actionable{' '}
+					<strong className='text-ui_secondary1 dark:text-[#14F5C8]'>
+						insights!{' '}
+					</strong>{' '}
 				</h3>{' '}
 				<p className='text-[0.67rem] lg:text-sm text-primaryBlack dark:text-slate-500 leading-3'>
 					Dive into real-time analytics, visualize trends, and uncover valuable
