@@ -7,17 +7,17 @@ import TextTransition, { presets } from "react-text-transition";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
-  const TEXTS = ["Made Easy.", "In a  Blink."];
-  const [index, setIndex] = useState(0);
+  // const TEXTS = ["Made Easy.", "In a  Blink."];
+  // const [index, setIndex] = useState(0);
 
-  // text transition
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      2000 // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
+  // // text transition
+  // useEffect(() => {
+  //   const intervalId = setInterval(
+  //     () => setIndex((index) => index + 1),
+  //     2000 // every 3 seconds
+  //   );
+  //   return () => clearTimeout(intervalId);
+  // }, []);
 
   const [typeEffect] = useTypewriter({
     words: ["All-in-One Solution", "One-stop shop Digital Solutions"],
