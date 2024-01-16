@@ -197,64 +197,6 @@ export const teams = [
   },
 ];
 
-// Location Section of About page
-
-export const aboutData = [
-  {
-    id: 1,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300,Sausalito, CA, 94965, United States of America`,
-  },
-
-  {
-    id: 2,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300,Sausalito, CA, 94965,United States of America`,
-  },
-
-  {
-    id: 3,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
-  },
-
-  {
-    id: 4,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
-  },
-
-  {
-    id: 5,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
-  },
-
-  {
-    id: 6,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
-  },
-];
-
 export const socialMediaLinks = [
   {
     id: 1,
