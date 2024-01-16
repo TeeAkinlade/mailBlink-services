@@ -14,11 +14,17 @@ const Footer = () => {
                 href="/"
                 className="font-Roboto mb-8 text-xl font-semibold text-primaryBlack2 md:text-3xl"
               >
-                MailBlink.io
+                <Image
+                  src="/assets/images/Logo VendGenix.svg"
+                  ait="logo"
+                  width="150"
+                  height="150"
+                />
               </Link>
               <p className="my-4 text-base font-medium text-primaryBlack">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                non leo at justo posuere luctus. Maecenas id mauris sit.
+                Ready to take the leap into a new era of digital marketing? Join
+                VendGenix today and witness the transformation of your small
+                business. Let's write the success story of your brand together.
               </p>
               <div>
                 <p className="font-Roboto padding-y text-lg font-semibold text-primaryBlack2">

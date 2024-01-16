@@ -102,7 +102,7 @@ export const servicesData = [
   {
     id: 1,
     icon: <IoMdMail size={30} />,
-    title: "Email",
+    title: "Email Marketing",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
     href: "#",
