@@ -55,7 +55,7 @@ const HeatMap = () => {
 			}}
 			colors={{
 				type: 'diverging',
-				scheme: 'blues',
+				scheme: 'green_blue',
 				minValue: -100000,
 				maxValue: 100000,
 				divergeAt: 0.25,

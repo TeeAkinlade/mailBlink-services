@@ -170,7 +170,7 @@ button {
 .fc .fc-toolbar-title {
 	font-weight: 700;
 	font-size: 1rem;
-	color: #0070f0;
+	color: #089373;
 	text-transform: uppercase;
 }
 .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
@@ -250,6 +250,8 @@ button {
 		font-weight: 700;
 	}
 }
+
+
 
 /* .............................Blog slider............................... */
 .slick-slide > div{
