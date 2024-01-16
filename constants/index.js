@@ -49,7 +49,7 @@ export const campaignDetailsList = [
     id: 1,
     photo: image1,
     alt: "Feature Icon",
-    heading: "Plug-n-plPlug-n-play configuration",
+    heading: "Community Support",
     content:
       "Secure your organization without changing all the settings. The text will be populated with the right information later on.",
   },

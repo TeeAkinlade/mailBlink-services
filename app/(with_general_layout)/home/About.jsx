@@ -23,14 +23,14 @@ const About = () => {
               Why VendGenix?
             </h2>
             <h3 className="text-navyBlue font-semibold leading-[28px] mb-4 text-lg text-center md:text-left">
-              Who are we? MailBlink is a team of talented individuals working
-              together to make software people love.
+              We want you to stay ahead with cutting-edge marketing tools. No
+              tech hurdles – just focus on your business.
             </h3>
             <p className="text-primaryBlack text-sm md:text-base leading-[28px] py-4 md:py-0 text-center md:text-left mb-8">
-              We develop multi-award winning enterprise-class software that
-              helps IT teams audit IT environments. Elevate your digital
-              marketing business with ourplatform tailored for visionary website
-              designers, skilled developers, and ambitious entrepreneurs.
+              We understand the challenges faced by small businesses. That's why
+              we've created an inclusive community and an all-in-one hub,
+              ensuring you have everything necessary for a successful digital
+              presence.
             </p>
             <Link
               href="/about"
