@@ -29,7 +29,7 @@ const FooterLink = () => {
         ))}
       </div>
       <div>
-        <h3 className="font-Roboto mb-6 text-base font-semibold text-primaryBlack2 md:text-lg">
+        <h3 className="mb-6 text-base font-semibold text-primaryBlack2 md:text-lg">
           Join Our Newsletter
         </h3>
         <form
@@ -37,14 +37,14 @@ const FooterLink = () => {
             e.preventDefault();
             setSubscribed(true);
           }}
-          className={`mb-10 p-2 flex-col items-center justify-center gap-4 rounded-lg border-[1px] bg-white  text-center ${
+          className={`mb-10 p-2 flex-col items-center justify-center gap-4 rounded-lg border-[1px] bg-white ${
             subscribed ? "hidden" : "flex"
           }`}
         >
           <div className="flex w-full flex-col gap-2">
             <input
               type="text"
-              placeholder="Your name"
+              placeholder="Enter your Name"
               className="w-full rounded-lg bg-gray-100 px-5 py-3"
             />
             <input
@@ -77,7 +77,7 @@ const FooterLink = () => {
             subscribed ? "flex" : "hidden"
           } text-xs font-medium text-primaryBlack py-2 md:text-sm`}
         >
-          Thank you!
+          Thank you for subscribing! We'll get back to you.
         </h3>
       </div>
     </div>
