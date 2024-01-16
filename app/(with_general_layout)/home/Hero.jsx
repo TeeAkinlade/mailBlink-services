@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-14">
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-4 md:pt-12">
-            <p className="text-primaryBlack2 text-4xl md:text-5xl font-semibold text-center md:text-left">
+            <p className="text-primaryBlack2 text-4xl md:text-5xl leading-[3rem] font-semibold text-center md:text-left">
               One-Stop Shop To{" "}
               <span className="text-forestGreen mr-2 text-4xl md:text-5xl">
                 {typeEffect}
