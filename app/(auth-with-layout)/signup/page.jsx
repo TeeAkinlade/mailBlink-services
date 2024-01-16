@@ -9,8 +9,6 @@ import Spinner from "../../../components/Spinner";
 
 import { useCurrentUser } from "../currentUser";
 
-import { useCurrentUser } from "@/app/(auth-with-layout)/currentUser";
-
 import OauthComponent from "../OauthComponent";
 // import { useRouter } from "next/router"; // Import useRouter from Next.js
 
