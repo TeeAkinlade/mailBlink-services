@@ -10,10 +10,7 @@ const Footer = () => {
         <div className="px-8 pt-14">
           <div className="flex flex-col gap-12 md:gap-28 md:flex-row">
             <div className="col-span-5 md:col-span-2 md:w-2/5">
-              <Link
-                href="/"
-                className="font-Roboto mb-8 text-xl font-semibold text-primaryBlack2 md:text-3xl"
-              >
+              <Link href="/">
                 <Image
                   src="/assets/images/Logo VendGenix.svg"
                   ait="logo"
@@ -21,13 +18,13 @@ const Footer = () => {
                   height="150"
                 />
               </Link>
-              <p className="my-4 text-base font-medium text-primaryBlack">
+              <p className="my-4 text-base text-primaryBlack">
                 Ready to take the leap into a new era of digital marketing? Join
                 VendGenix today and witness the transformation of your small
                 business. Let's write the success story of your brand together.
               </p>
               <div>
-                <p className="font-Roboto padding-y text-lg font-semibold text-primaryBlack2">
+                <p className="padding-y text-lg font-semibold text-primaryBlack2">
                   Reach us
                 </p>
                 {contacts.map(({ id, photo, alt, title, details, styles }) => (
@@ -39,7 +36,7 @@ const Footer = () => {
                       height="25"
                       className={styles}
                     />
-                    <p className="text-xs font-semibold text-primaryBlack md:text-sm">
+                    <p className="text-xs text-primaryBlack md:text-sm">
                       {title}
                       <Link
                         href={
@@ -60,7 +57,7 @@ const Footer = () => {
                   <Link
                     href={href}
                     key={id}
-                    className="hover:bg-forestGreen border-2 border-[#515458] rounded-full transition-colors"
+                    className="hover:bg-green-400 border-2 border-forestGreen rounded-full transition-colors"
                   >
                     <Image src={photo} alt={alt} width="40" height="40" />
                   </Link>
