@@ -32,15 +32,15 @@ const Hero = () => {
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-4 md:pt-12">
             <p className="text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left">
-              Email and SMS
+              Grow and Scale Your
             </p>
             <div className="flex flex-col md:flex-row items-center text-primaryBlack2 text-4xl md:text-5xl font-semibold font-Roboto leading-tight text-center md:text-left md:mt-2">
-              <span className="text-forestGreen mr-2">Marketing </span>
-              <div>
+              <span className="text-forestGreen mr-2">Business </span>
+              {/* <div>
                 <TextTransition springConfig={presets.wobbly}>
                   {TEXTS[index % TEXTS.length]}
                 </TextTransition>
-              </div>
+              </div> */}
             </div>
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
