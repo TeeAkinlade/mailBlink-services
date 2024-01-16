@@ -60,7 +60,7 @@ const Footer = () => {
                   <Link
                     href={href}
                     key={id}
-                    className="hover:bg-gray-300 border-2 border-[#515458] rounded-full transition-colors"
+                    className="hover:bg-forestGreen border-2 border-[#515458] rounded-full transition-colors"
                   >
                     <Image src={photo} alt={alt} width="40" height="40" />
                   </Link>
