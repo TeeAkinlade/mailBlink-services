@@ -111,7 +111,7 @@ export const servicesData = [
   {
     id: 2,
     icon: <FaSms size={30} />,
-    title: "SMS",
+    title: "Social Media",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
     href: "/sms",
@@ -120,7 +120,7 @@ export const servicesData = [
   {
     id: 3,
     icon: <FaWpforms size={30} />,
-    title: "Form",
+    title: "Form Builders",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
     href: "#",
@@ -129,7 +129,7 @@ export const servicesData = [
   {
     id: 4,
     icon: <FaSms size={30} />,
-    title: "Form",
+    title: "WhatsApp Marketing",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
     href: "#",
@@ -138,7 +138,7 @@ export const servicesData = [
   {
     id: 5,
     icon: <FaSms size={30} />,
-    title: "Form",
+    title: "Content Marketing",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
     href: "#",
@@ -147,7 +147,7 @@ export const servicesData = [
   {
     id: 6,
     icon: <IoMdMail size={30} />,
-    title: "Form",
+    title: "Sales Funnel",
     contents:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
     href: "#",
