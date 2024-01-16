@@ -9,13 +9,11 @@ import "slick-carousel/slick/slick-theme.css";
 const Services = () => {
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // nextArrow: <SampleNextArrow to="next" />,
-    // prevArrow: <SamplePrevArrow to="prev" />,
     initialSlide: 0,
     responsive: [
       {
@@ -24,11 +22,11 @@ const Services = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: false,
-          dots: true
+          dots: false
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 976,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -37,14 +35,6 @@ const Services = () => {
       },
       {
         breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 1
-        }
-      },
-      {
-        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -69,11 +59,11 @@ const Services = () => {
             populated with the right information later on.
           </p>
             <div className="my-12">
-                <Slider {...settings} className='grid grid-cols-1 md:grid-cols-3 lg:grid-col-3'>
+                <Slider {...settings} className='grid grid-cols-1 md:grid-cols-2 lg:grid-col-3'>
                   {servicesData.map(
                   ({ id, icon, title, contents, href, linkText }) => (
                       <div
-                        className="py-16 bg-backGround shadow-xl p-8 rounded-lg transform transition-transform hover:scale-105 duration-200 border-b-4 border-transparent hover:border-navyBlue w-[330px]" key={id}
+                        className="py-16 bg-backGround shadow-xl p-8 rounded-lg transform transition-transform hover:scale-105 duration-200 border-b-4 border-transparent hover:border-navyBlue w-[250px] md:w-[330px]" key={id}
                       >
                         <div className="bg-navyBlue p-3 rounded-[50%] inline-block">
                           <span className="text-white">{icon}</span>

@@ -259,11 +259,7 @@ border-radius: 50%;
 opacity: 0.8;
 height:30px;
 width:30px;
-transform: translate(0)
-}
-
-ul .slick-dots {
-	bottom: -40px;
+transform: translate(0);
 }
 
 .slick-arrow.slick-next:hover,
@@ -275,15 +271,9 @@ ul .slick-dots {
     opacity:1;
 }
 .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
-    opacity: .25;
+    opacity: 0.25;
 	background-color: transparent;
 }
-
-
-.slick-prev::before,.slick-next::before{
-   /* display:none; */
-    
-    }
 
 .arrows{
 height:20px;

@@ -32,7 +32,7 @@ const Blog = () => {
             }
           },
           {
-            breakpoint: 768,
+            breakpoint: 978,
             settings: {
               slidesToShow: 2.5,
               slidesToScroll: 1,
@@ -40,7 +40,7 @@ const Blog = () => {
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
@@ -48,7 +48,7 @@ const Blog = () => {
             }
           },
           {
-            breakpoint: 480,
+            breakpoint: 600,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -61,7 +61,6 @@ const Blog = () => {
 
     const toggleTab = (index) =>{
         setToggle(index)
-        console.log(index)
     }
 
     return (
