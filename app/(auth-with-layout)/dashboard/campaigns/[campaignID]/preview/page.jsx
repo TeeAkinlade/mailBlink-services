@@ -55,7 +55,7 @@ const CampaignPreview = () => {
         updateCampaignStatus(campaignID, "sent");
       })
       .then(() => {
-        router.push("/campaigns");
+        router.push("/dashboard/campaigns");
       })
       .catch((error) => console.error("Error:", error));
   };
@@ -64,13 +64,16 @@ const CampaignPreview = () => {
     <>
       <header className="mx-10 py-5">
         <div className="flex justify-between">
-          <article className="w-full text-center text-4xl font-bold text-ui_primary lg:text-left">
-            <h1>Review and Send</h1>
-          </article>
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold">Review Campaign</h1>
+            <p className="text-lg text-gray-600">
+              Review your campaign and send it
+            </p>
+          </div>
           <div className="hidden w-60 lg:block">
             <button
               href={`/campaigns`}
-              className="custom-btn"
+              className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
               onClick={sendCampaign}
             >
               Send Campaign

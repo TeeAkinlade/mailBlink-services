@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }) {
 	const router = useRouter();
 	const [authorized, setAuthorized] = useState(false);
 
-  console.log(user);
+//   console.log(user);
   let timer;
   useEffect(() => {
     timer = setTimeout(() => {
@@ -32,7 +32,7 @@ export default function DashboardLayout({ children }) {
     };
   }, [timer]);
 
-	console.log(timer);
+	// console.log(timer);
 	// protected route logic using a timer
 	if (!authorized && timer === 10000) {
 		return router.push('/auth/login');

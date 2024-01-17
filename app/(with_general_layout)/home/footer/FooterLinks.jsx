@@ -77,7 +77,7 @@ const FooterLink = () => {
             subscribed ? "flex" : "hidden"
           } text-xs font-medium text-primaryBlack py-2 md:text-sm`}
         >
-          Thank you for subscribing! We'll get back to you.
+          {`Thank you for subscribing! We'll get back to you.`}
         </h3>
       </div>
     </div>

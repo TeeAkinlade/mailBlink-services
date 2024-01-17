@@ -56,7 +56,7 @@ const CampaignsEditor = () => {
 
   const onSubmit = (data) => {
     exportHtml(data.email_name);
-    router.push(`/campaigns/${campaignID}/preview`);
+    router.push(`/dashboard/campaigns/${campaignID}/preview`);
   };
 
   useEffect(() => {
@@ -75,15 +75,14 @@ const CampaignsEditor = () => {
     <div className="mx-10 h-screen flex flex-col gap-4">
       <header className="py-5">
         <div className="flex justify-between">
-          <article className="w-full text-center text-4xl font-bold text-ui_primary lg:text-left">
-            <h1>Email Editor</h1>
-          </article>
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold">Email Editor</h1>
+            <p className="text-lg text-gray-600">
+              Edit your email before sending it to your contacts
+            </p>
+          </div>
           <div className="hidden w-60 lg:block">
-            <button
-              form="email-name"
-              type="submit"
-              className="custom-btn"
-            >
+            <button form="email-name" type="submit"  className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80">
               Done editing
             </button>
           </div>
