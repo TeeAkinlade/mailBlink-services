@@ -3,7 +3,7 @@
 import Spinner from "@/components/Spinner";
 import { SlArrowDown, SlMagnifier } from "react-icons/sl";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { deleteDBData } from "@/services/supabase.service";
 import Link from "next/link";
 import { IoMdOpen } from "react-icons/io";
@@ -16,9 +16,43 @@ export const CampaingList = ({ campaigns, getCampaigns }) => {
   const actionsButtonRef = useRef(null);
   const [searchInput, setSearchInput] = useState("");
 
+  const handleCheckboxChange = useCallback(
+    (campaign) => {
+      if (selectedCampaigns.some((selected) => selected.id === campaign.id)) {
+        setSelectedCampaigns(
+          selectedCampaigns.filter((selected) => selected.id !== campaign.id)
+        );
+      } else {
+        setSelectedCampaigns([...selectedCampaigns, campaign]);
+      }
+    },
+    [selectedCampaigns]
+  );
+
+  const handleDeleteCampaign = useCallback(async () => {
+    try {
+      const deletePromises = selectedCampaigns.map((camp) =>
+        deleteDBData("CAMPAIGNS", "id", camp.id)
+      );
+      await Promise.all(deletePromises);
+      await getCampaigns();
+      setShowActionsMenu(false);
+      setSelectedCampaigns([]);
+      setSelectAll(false);
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
+  }, [getCampaigns, selectedCampaigns]);
+
+  const handleSearchInputChange = useCallback((e) => {
+    setSearchInput(e.target.value);
+    setSelectedCampaigns([]);
+    setSelectAll(false);
+  }, []);
+
   useEffect(() => {
     getCampaigns();
-  }, []);
+  }, [getCampaigns]);
 
   useEffect(() => {
     console.log(campaigns);
@@ -49,7 +83,7 @@ export const CampaingList = ({ campaigns, getCampaigns }) => {
     };
   }, []);
 
-  const handleSelectAll = () => {
+  const handleSelectAll = useCallback(() => {
     setSelectAll(!selectAll);
 
     if (!selectAll) {
@@ -57,47 +91,13 @@ export const CampaingList = ({ campaigns, getCampaigns }) => {
     } else {
       setSelectedCampaigns([]);
     }
-  };
+  }, [selectAll, uiCampaigns]);
 
-  const handleCheckboxChange = (campaign) => {
-    if (selectedCampaigns.some((selected) => selected.id === campaign.id)) {
-      setSelectedCampaigns(
-        selectedCampaigns.filter((selected) => selected.id !== campaign.id)
-      );
-    } else {
-      setSelectedCampaigns([...selectedCampaigns, campaign]);
-    }
-  };
-
-  const handleActionsButtonClick = () => {
+  const handleActionsButtonClick = useCallback(() => {
     if (!isActionsButtonDisabled) {
       setShowActionsMenu(!showActionsMenu);
     }
-  };
-
-  const handleDeleteCampaign = async () => {
-    try {
-      // Create an array of promises for each deleteDBData operation
-      const deletePromises = selectedCampaigns.map((camp) =>
-        deleteDBData("CAMPAIGNS", "id", camp.id)
-      );
-      // Wait for all deleteDBData operations to complete
-      await Promise.all(deletePromises);
-      // After all deletions are done, fetch updated campaigns
-      await getCampaigns();
-      setShowActionsMenu(false);
-      setSelectedCampaigns([]);
-      setSelectAll(false);
-    } catch (error) {
-      console.error("An error occurred:", error);
-    }
-  };
-
-  const handleSearchInputChange = (e) => {
-    setSearchInput(e.target.value);
-    setSelectedCampaigns([]);
-    setSelectAll(false);
-  };
+  }, [isActionsButtonDisabled, showActionsMenu]);
 
   const isActionsButtonDisabled = selectedCampaigns.length === 0;
 
