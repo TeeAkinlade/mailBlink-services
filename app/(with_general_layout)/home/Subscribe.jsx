@@ -8,7 +8,9 @@ const Subscribe = () => {
       <div className="max-width md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center px-8 py-24 md:gap-10 lg:gap-40">
           <div className="text-white">
-            <p className="uppercase text-sm text-center md:text-left">Why Choose Us</p>
+            <p className="text-sm text-center md:text-left">
+              🌟 Why Choose Us?
+            </p>
             <h3 className="font-Roboto text-4xl md:text-5xl font-semibold py-8 leading-tight text-center md:text-left">
               Partiality on or continue in the particular principles
             </h3>
