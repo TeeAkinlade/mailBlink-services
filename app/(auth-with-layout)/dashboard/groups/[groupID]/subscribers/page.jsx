@@ -8,7 +8,7 @@
 // import Link from "next/link";
 import Spinner from "@/components/Spinner";
 import { SlArrowDown, SlMagnifier } from "react-icons/sl";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import {
   deleteDBData,
   deleteSubFromGroup,
@@ -29,14 +29,14 @@ const GroupDetail = () => {
   const actionsButtonRef = useRef(null);
   const [searchInput, setSearchInput] = useState("");
 
-  const fetchSubscribers = async () => {
+  const fetchSubscribers = useCallback(async () => {
     const subs = await readRelatedSubscribers(groupID).then((group) => {
       setGroup(group[0]);
       if (group[0].SUBSCRIBERS) {
         setSubscribers(group[0]?.SUBSCRIBERS);
       }
     });
-  };
+  }, [groupID]);
 
   useEffect(() => {
     fetchSubscribers();
@@ -52,7 +52,6 @@ const GroupDetail = () => {
     );
     setUiSubscribers(filteredSubscribers);
   }, [searchInput, subscribers]);
-
   //   useEffect(() => {
   //     console.log("isAddToGroupOpen", isAddToGroupOpen);
   //   }, [isAddToGroupOpen]);
