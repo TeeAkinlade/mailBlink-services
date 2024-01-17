@@ -44,7 +44,7 @@ const Hero = () => {
                 </TextTransition>
               </div> */}
             <div className="my-6 md:my-12 lg:my-8">
-              <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
+              <p className="text-[#171414] text-sm md:text-lg text-center md:text-left">
                 {`Experience the convenience of a single platform that integrates
                 everything your business needs for online success. From email
                 campaigns to content marketing SEO optimization and social media
