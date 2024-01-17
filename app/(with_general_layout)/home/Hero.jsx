@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-4 md:pt-12">
             <p className="text-primaryBlack2 text-4xl md:text-5xl leading-tight font-semibold text-center md:text-left">
-              One-Stop Shop To{" "}
+              One-Stop Platform To{" "}
               <span className="text-forestGreen mr-2 text-4xl md:text-5xl">
                 {typeEffect}
               </span>
