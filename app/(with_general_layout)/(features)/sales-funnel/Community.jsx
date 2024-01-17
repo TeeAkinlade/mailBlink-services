@@ -16,7 +16,6 @@ const items = [
     description: "Track the MailBlink development changes on GitHub.",
   },
 ];
-
 const Community = () => {
   return (
     <section className="flex flex-col items-center justify-center rounded-[100px] px-6 md:h-[49.875rem] md:flex-row md:gap-5 md:px-10 lg:gap-5 lg:px-[7.37rem]">
