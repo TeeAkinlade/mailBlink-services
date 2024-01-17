@@ -144,13 +144,14 @@ const Signup = () => {
               />
             </h3>
             <p className="font-Poppins mt-[24px] text-[16px] font-[400] leading-[28px] text-[#17181A]">
-              Join to improve your job search, yourself, and
-              <br className="md:hidden" /> more. Get started by creating
+              Unleash the Power of Our
+              <br className="md:hidden" /> All-in-One Digital Marketing Hub. Get
+              started by creating
               <br className="xs:hidden md:block lg:hidden" /> a free account!
             </p>
             <p className="font-Poppins mt-[5px] text-[16px] font-[400] leading-[28px] text-[#17181A]">
-              We’re creating a service that puts you front
-              <br className="md:hidden" /> and center in your career.
+              VendGenix is where your business dreams take flight! 🚀
+              <br className="md:hidden" /> and keeps getting better.
             </p>
           </div>
         </div>
