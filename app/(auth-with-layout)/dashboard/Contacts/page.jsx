@@ -103,6 +103,8 @@ const Contacts = () => {
     setIsAddToGroupOpen(true);
     getGroups();
     setShowActionsMenu(false);
+    setSelectedSubscribers([]);
+    setSelectAll(false);
   };
 
   const handleCreateGroup = () => {
@@ -124,6 +126,8 @@ const Contacts = () => {
       await getSubscribers();
 
       setShowActionsMenu(false);
+      setSelectedSubscribers([]);
+      setSelectAll(false);
     } catch (error) {
       console.error("An error occurred:", error);
     }
@@ -152,11 +156,14 @@ const Contacts = () => {
 
     // Hide the actions menu
     setShowActionsMenu(false);
+    setSelectedSubscribers([]);
+    setSelectAll(false);
   };
 
   const handleSearchInputChange = (e) => {
     setSearchInput(e.target.value);
     setSelectedSubscribers([]);
+    setSelectAll(false);
   };
 
   const parseCSV = (csvData) => {
@@ -253,7 +260,7 @@ const Contacts = () => {
         </div>
         <div>
           <p className="text-sm text-gray-500">
-            Showing {subscribers?.length} results
+            Showing {uiSubscribers?.length} results
           </p>
         </div>
         <div className="relative w-full overflow-auto">

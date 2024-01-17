@@ -106,6 +106,8 @@ const Groups = () => {
       await getGroups();
 
       setShowActionsMenu(false);
+      setSelectedGroups([]);
+      setSelectAll(false);
     } catch (error) {
       console.error("An error occurred:", error);
     }
@@ -114,6 +116,7 @@ const Groups = () => {
   const handleSearchInputChange = (e) => {
     setSearchInput(e.target.value);
     setSelectedGroups([]);
+    setSelectAll(false);
   };
 
   const isActionsButtonDisabled = selectedGroups.length === 0;
@@ -163,7 +166,7 @@ const Groups = () => {
         </div>
         <div>
           <p className="text-sm text-gray-500">
-            Showing {groups?.length} results
+            Showing {uiGroups?.length} results
           </p>
         </div>
         <div className="relative w-full overflow-auto">
