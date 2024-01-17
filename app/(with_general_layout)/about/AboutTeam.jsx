@@ -18,7 +18,7 @@ const AboutTeam = () => {
           {teams.map((item, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden  px-5 py-5 text-center"
+              className="rounded-lg overflow-hidden px-5 py-5 text-center"
             >
                 <div className="flex items-center justify-center relative overflow-hidden"
                   onMouseEnter={() => setHoveredMember(index)}
@@ -26,13 +26,13 @@ const AboutTeam = () => {
                 >
                 <Image
                 alt="team profile picture"
-                width="200"
-                height="200"
+                width="250"
+                height="250"
                 src={item.image}
                 />     
                   {/* mouse over effect */}
                 <div
-                  className="absolute -bottom-[6px] mt-4 flex-center flex-col text-center bg-[rgba(208,240,200,0.6)] w-[100%] h-[7rem] px-5 text-black rounded-b-[55%]"
+                  className="absolute -bottom-[7px] mt-4 flex-center flex-col text-center bg-[rgba(216,218,215,0.6)] w-[262px] h-[6.5rem] px-5 text-black rounded-b-full"
                   style={{
                     opacity: hoveredMember === index ? 1 : 0,
                     transition: "opacity 0.3s ease",
