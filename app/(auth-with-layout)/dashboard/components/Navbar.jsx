@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useCurrentUser } from '../../currentUser';
 import ThemeToggle from '@/components/ThemeToggle';
 import Link from 'next/link';
+import { IoMenuOutline } from 'react-icons/io5';
 
 export default function Navbar() {
 	const { user } = useCurrentUser();
@@ -22,10 +23,12 @@ export default function Navbar() {
 					/>
 
 					<MdSearch className='text-ui_primary dark:text-[#B7C5CC] font-[900] h-5 w-5 cursor-pointer' />
+					<IoMenuOutline className='text-ui_primary dark:text-[#B7C5CC] font-[900] h-5 w-5 cursor-pointer' />
 				</div>
 				<div className=' flex justify-end md:justify-center gap-8 p-2 w-full md:w-fit items-center'>
 					<ThemeToggle />
-					<Link href="/dashboard/Notifications"><IoNotificationsOutline className='h-[1.2rem] w-[1.2rem] hover:scale-110 text-ui_primary dark:text-white hover:text-ui_button dark:hover:text-[#FDBC64] font-[700] duration-500 ease-in-out cursor-pointer' />
+					<Link href='/dashboard/Notifications'>
+						<IoNotificationsOutline className='h-[1.2rem] w-[1.2rem] hover:scale-110 text-ui_primary dark:text-white hover:text-ui_button dark:hover:text-[#FDBC64] font-[700] duration-500 ease-in-out cursor-pointer' />
 					</Link>
 					{/* Customer icon */}
 					<Link
@@ -45,7 +48,7 @@ export default function Navbar() {
 								className='text-white italic h-[50px]  rounded-full flex items-center bg-ui_button cursor-pointer'
 							/>
 						)}
-						<span className={`flex flex-col gap-0 md:hidden`}>
+						{/* <span className={`flex flex-col gap-0 md:hidden`}>
 							<h3 className='text-md font-[600] text-ui_primary'>
 								{firstName}
 								<strong> {LastName}</strong>
@@ -57,7 +60,7 @@ export default function Navbar() {
 							<p className='text-[0.75rem] text-slate-500 mt-1'>
 								Your personal account
 							</p>
-						</span>
+						</span> */}
 					</Link>
 				</div>
 			</nav>
