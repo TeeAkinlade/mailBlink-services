@@ -23,7 +23,7 @@ export const SMSList = ({ smsCampaigns, getCampaigns }) => {
   useEffect(() => {
     console.log(smsCampaigns);
     setUiCampaigns(smsCampaigns);
-  }, [smsCampaigns]);
+  }, [smsCampaigns, getCampaigns]);
 
   useEffect(() => {
     const filteredCampaigns = smsCampaigns?.filter((camp) =>

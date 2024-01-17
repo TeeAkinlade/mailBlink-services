@@ -15,7 +15,7 @@ const SmsDetails = () => {
 
   useEffect(() => {
     getCampaigns("sms");
-  }, []);
+  }, [getCampaigns]);
 
   useEffect(() => {
     // Filtering campaigns based on their status

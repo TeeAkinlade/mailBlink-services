@@ -54,7 +54,7 @@ export const CreateSMSForm = () => {
   useEffect(() => {
     getGroups();
     getSms();
-  }, []);
+  }, [getGroups, getSms]);
 
   const onSubmit = async (data) => {
     if (isValid) {
@@ -195,7 +195,10 @@ export const CreateSMSForm = () => {
                   </div>
 
                   {/* Button */}
-                  <button  className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80" type="submit">
+                  <button
+                    className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
+                    type="submit"
+                  >
                     Next: Content
                   </button>
 
@@ -228,7 +231,10 @@ export const CreateSMSForm = () => {
 
                   {/* Button */}
                   <section>
-                    <button type="submit"  className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80">
+                    <button
+                      type="submit"
+                      className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
+                    >
                       Next: Preview
                     </button>
                   </section>
