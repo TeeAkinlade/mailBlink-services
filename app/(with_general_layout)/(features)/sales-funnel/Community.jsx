@@ -16,6 +16,7 @@ const items = [
     description: "Track the MailBlink development changes on GitHub.",
   },
 ];
+
 const Community = () => {
   return (
     <section className="flex flex-col items-center justify-center rounded-[100px] px-6 md:h-[49.875rem] md:flex-row md:gap-5 md:px-10 lg:gap-5 lg:px-[7.37rem]">
@@ -49,9 +50,11 @@ const Community = () => {
               key={item.id}
               className="flex flex-col items-center text-center md:items-start md:text-left"
             >
-              <img
+              <Image
                 src={item.image}
                 alt=""
+                width={40} // Set the width of the image (adjust as needed)
+                height={40} // Set the height of the image (adjust as needed)
                 className="mb-2 h-10 w-10 object-contain"
               />
               <h3 className="text-xl font-semibold md:text-2xl">
