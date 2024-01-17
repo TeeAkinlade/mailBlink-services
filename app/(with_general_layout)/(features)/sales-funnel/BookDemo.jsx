@@ -1,4 +1,5 @@
 import Form from "./Form";
+import Image from "next/image";
 
 const BookDemo = () => {
   return (
@@ -19,10 +20,13 @@ const BookDemo = () => {
       </div>
       <div className="relative flex h-[12rem] w-full items-center bg-[#032b25] md:h-[15rem]">
         <div className="relative -left-[7rem] h-[9.6rem] w-[9.6rem] rounded-full bg-[#074d40] opacity-70 md:h-[11.6rem] md:w-[11.6rem]"></div>
-        <img
+        {/* Replace <img> with <Image> */}
+        <Image
           src="/assets/icons/dots.svg"
           alt=""
-          className="absolute bottom-6 left-[45%] w-36"
+          width={144} // Specify the width of the image
+          height={36} // Specify the height of the image
+          className="absolute bottom-6 left-[45%]"
         />
       </div>
     </section>

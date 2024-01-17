@@ -4,19 +4,19 @@ import Image from "next/image";
 export default function Home() {
   const items = [
     {
-      title: "Comprehensive All-in-One Solution",
+      title: "All-in-One Simplicity",
       description:
-        "From email marketing and social media management to content creation and analytics, our platform consolidates essential tools, streamlining your marketing efforts",
+        "Simplify your digital journey with our all-in-one platform. From email campaigns to social media, we've consolidated the tools you need for a seamless marketing experience.",
     },
     {
-      title: "Pre-Configured Out-of-the",
+      title: "Innovative Technology",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "We're committed to providing you with the latest tools and features, empowering your business to adapt and thrive in the dynamic digital space.",
     },
     {
-      title: "Massively Scalable",
+      title: "Vibrant Community Support",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "Exchange ideas, seek advice, and learn from the experiences of others. Our community is a valuable resource for networking and collective growth.",
     },
     {
       title: "Visible Operational Impact",

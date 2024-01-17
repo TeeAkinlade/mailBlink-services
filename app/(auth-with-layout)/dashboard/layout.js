@@ -1,12 +1,14 @@
-'use client';
-import { useEffect, useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Navbar from './components/Navbar';
-import { useCurrentUser } from '../currentUser';
-import { useRouter } from 'next/navigation';
-import Spinner from '@/components/Spinner';
-import Footer from './components/Footer';
-import '/styles/globals.css';
+"use client";
+
+import { useEffect, useState, useRef } from "react";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import { useCurrentUser } from "../currentUser";
+import { useRouter } from "next/navigation";
+import Spinner from "@/components/Spinner";
+import Footer from "./components/Footer";
+import "/styles/globals.css";
+
 export default function DashboardLayout({ children }) {
 	const { user, loading } = useCurrentUser();
 	const router = useRouter();
@@ -18,22 +20,20 @@ const toggleMini = () => {
   console.log(user);
   let timer;
   useEffect(() => {
-    timer = setTimeout(() => {
+    timerRef.current = setTimeout(() => {
       return null;
     }, 10000);
 
     if (user?.aud === "authenticated") {
-      console.log("authorized")
+      console.log("authorized");
       setAuthorized(true);
-
-      // 10 seconds in milliseconds
     }
 
     return () => {
       // Clear the timer if the component unmounts before the delay
-      clearTimeout(timer);
+      clearTimeout(timerRef.current);
     };
-  }, [timer]);
+  }, [user]);
 
 	console.log(timer);
 	// protected route logic using a timer

@@ -54,7 +54,7 @@ export const CreateSMSForm = () => {
   useEffect(() => {
     getGroups();
     getSms();
-  }, []);
+  }, [getGroups, getSms]);
 
   const onSubmit = async (data) => {
     if (isValid) {
@@ -81,7 +81,7 @@ export const CreateSMSForm = () => {
         content: data.content,
       };
       createSMS(campaign.id, sms);
-      router.push(`/sms/${campaign.id}/preview`);
+      router.push(`/dashboard/sms/${campaign.id}/preview`);
     }
     return;
   };
@@ -92,7 +92,7 @@ export const CreateSMSForm = () => {
         onClick={() => {
           setIsCreateCampaignOpen(true);
         }}
-        className="rounded-xl bg-navyBlue p-2 px-4 text-[0.8rem] leading-7 text-white duration-500 hover:scale-105 hover:opacity-80"
+        className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
       >
         Create Campaign
       </button>
@@ -100,138 +100,153 @@ export const CreateSMSForm = () => {
       {isCreateCampaignOpen && (
         <dialog
           open={isCreateCampaignOpen}
-          className="fixed top-0 flex h-full w-full animate-fade-in items-center justify-center bg-gray-400 bg-opacity-60 backdrop-blur-sm"
+          className="fixed top-0 z-20 h-full w-full animate-fade-in bg-gray-400 bg-opacity-60"
         >
-          <div className="mx-10 flex w-full max-w-md flex-col rounded-md bg-gray-100">
-            <div className="m-2 flex items-center justify-between">
-              <article className="relative left-5 z-0 flex w-full items-center justify-center">
-                <h2 className="text-lg font-bold">
-                  {isEditorOpen ? "SMS Content" : "Campaign Settings"}
-                </h2>
-              </article>
+          <div className="flex h-full items-center justify-center">
+            <div
+              className={`mx-10 flex w-full max-w-md flex-col rounded-md bg-gray-50`}
+            >
+              <div className="m-2 flex flex-col items-center justify-between">
+                <div className="m-2 flex w-full items-center justify-between">
+                  <article className="relative left-5 z-0 flex w-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">
+                      {isEditorOpen ? "SMS Content" : "Campaign Settings"}
+                    </h1>
+                  </article>
 
-              <button
-                className="z-10 p-2"
-                onClick={() => {
-                  setIsEditorOpen(false);
-                  setIsCreateCampaignOpen(false);
-                }}
-              >
-                <Image src={close} alt="close" />
-              </button>
-            </div>
-
-            {!isEditorOpen && (
-              <form
-                className="form mx-2 mb-4 flex flex-col"
-                onSubmit={handleSubmit(onSubmit)}
-              >
-                {/* Campaign name */}
-                <div className="flex flex-col gap-1">
-                  <label>Campaign name</label>
-                  <input
-                    type="text"
-                    placeholder="Campaign"
-                    {...register("campaign_name", {
-                      required: "The campaign name field must be filled",
-                      minLength: {
-                        value: 3,
-                        message:
-                          "The campaign name should have at least 3 characters",
-                      },
-                      pattern: {
-                        value: /^(?!\d+$).*/,
-                        message: "A campaign name can't only be a number",
-                      },
-                    })}
-                  />
-                </div>
-
-                {/* Sender */}
-                <div className="flex flex-col gap-1">
-                  <label>Sender phone number</label>
-
-                  <input
-                    type="text"
-                    placeholder="+1501712266"
-                    {...register("sender_phone", {
-                      required: "The sender field must be filled",
-                      minLength: {
-                        value: 3,
-                        message:
-                          "The subject should have at least 3 characters",
-                      },
-                      pattern: {
-                        value: /^(\+|\d)+$/,
-                        message: "A phone number can't contain letters",
-                      },
-                    })}
-                  />
-                </div>
-
-                {/* Recipients */}
-                <div className="flex flex-col gap-1">
-                  <label>Recipients</label>
-                  <select
-                    {...register("recipients", {
-                      required: "Please choose the recipients",
-                    })}
+                  <button
+                    className="z-10 p-2"
+                    onClick={() => {
+                      setIsEditorOpen(false);
+                      setIsCreateCampaignOpen(false);
+                    }}
                   >
-                    <option>Select recipient group</option>
-                    {groups.map((group) => (
-                      <option key={group.id} id={group.id} value={group.id}>
-                        {group.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Button */}
-                <button className="custom-btn" type="submit">
-                  Next: Content
-                </button>
-
-                {Object.keys(errors).length > 0 && (
-                  <Alert
-                    severity="error"
-                    message={String(Object.values(errors)[0]?.message)}
-                  />
-                )}
-              </form>
-            )}
-
-            {isEditorOpen && (
-              <form
-                className="form mx-2 mb-4 flex flex-col"
-                onSubmit={handleSubmitContent(onSubmitContent)}
-              >
-                {/* SMS body */}
-                <div>
-                  <label>Sms content*</label>
-                  <textarea
-                    name="sms-body"
-                    rows="4"
-                    placeholder="Your text message content"
-                    {...registerContent("content", {
-                      required: "Please choose the recipients",
-                    })}
-                  />
-                </div>
-
-                {/* Button */}
-                <section>
-                  <button type="submit" className="custom-btn">
-                    Next: Preview
+                    <Image src={close} alt="close" />
                   </button>
-                </section>
-                {Object.keys(errorsContent).length > 0 && (
-                  <Alert
-                    severity="error"
-                    message={String(Object.values(errorsContent)[0]?.message)}
-                  />
-                )}
-              </form>
-            )}
+                </div>
+                <p className="text-lg text-gray-600">
+                  Create a new email campaign
+                </p>
+              </div>
+
+              {!isEditorOpen && (
+                <form
+                  className="form mx-2 mb-4 flex flex-col"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
+                  {/* Campaign name */}
+                  <div className="flex flex-col gap-1">
+                    <label>Campaign name</label>
+                    <input
+                      type="text"
+                      placeholder="Campaign"
+                      {...register("campaign_name", {
+                        required: "The campaign name field must be filled",
+                        minLength: {
+                          value: 3,
+                          message:
+                            "The campaign name should have at least 3 characters",
+                        },
+                        pattern: {
+                          value: /^(?!\d+$).*/,
+                          message: "A campaign name can't only be a number",
+                        },
+                      })}
+                    />
+                  </div>
+
+                  {/* Sender */}
+                  <div className="flex flex-col gap-1">
+                    <label>Sender phone number</label>
+
+                    <input
+                      type="text"
+                      placeholder="+1501712266"
+                      {...register("sender_phone", {
+                        required: "The sender field must be filled",
+                        minLength: {
+                          value: 3,
+                          message:
+                            "The subject should have at least 3 characters",
+                        },
+                        pattern: {
+                          value: /^(\+|\d)+$/,
+                          message: "A phone number can't contain letters",
+                        },
+                      })}
+                    />
+                  </div>
+
+                  {/* Recipients */}
+                  <div className="flex flex-col gap-1">
+                    <label>Recipients</label>
+                    <select
+                      {...register("recipients", {
+                        required: "Please choose the recipients",
+                      })}
+                    >
+                      <option>Select recipient group</option>
+                      {groups.map((group) => (
+                        <option key={group.id} id={group.id} value={group.id}>
+                          {group.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Button */}
+                  <button
+                    className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
+                    type="submit"
+                  >
+                    Next: Content
+                  </button>
+
+                  {Object.keys(errors).length > 0 && (
+                    <Alert
+                      severity="error"
+                      message={String(Object.values(errors)[0]?.message)}
+                    />
+                  )}
+                </form>
+              )}
+
+              {isEditorOpen && (
+                <form
+                  className="form mx-2 mb-4 flex flex-col"
+                  onSubmit={handleSubmitContent(onSubmitContent)}
+                >
+                  {/* SMS body */}
+                  <div>
+                    <label>Sms content*</label>
+                    <textarea
+                      name="sms-body"
+                      rows="4"
+                      placeholder="Your text message content"
+                      {...registerContent("content", {
+                        required: "Please choose the recipients",
+                      })}
+                    />
+                  </div>
+
+                  {/* Button */}
+                  <section>
+                    <button
+                      type="submit"
+                      className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
+                    >
+                      Next: Preview
+                    </button>
+                  </section>
+                  {Object.keys(errorsContent).length > 0 && (
+                    <Alert
+                      severity="error"
+                      message={String(Object.values(errorsContent)[0]?.message)}
+                    />
+                  )}
+                </form>
+              )}
+            </div>
           </div>
         </dialog>
       )}

@@ -38,11 +38,13 @@ const Hero = () => {
 							</span>
 						</p>
 
+
 						{/* <div>
                 <TextTransition springConfig={presets.wobbly}>
                   {TEXTS[index % TEXTS.length]}
                 </TextTransition>
               </div> */}
+
 						<div className='my-6 md:my-12 lg:my-8'>
 							<p className='text-[#565656] text-sm md:text-lg text-center md:text-left'>
 								Experience the convenience of a single platform that integrates
@@ -118,6 +120,7 @@ const Hero = () => {
 			</div>
 		</section>
 	);
+
 };
 
 export default Hero;

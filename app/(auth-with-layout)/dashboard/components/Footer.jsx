@@ -48,6 +48,7 @@ function Footer() {
 					</div>
 					<div className='font-[400] text-[1rem] cursor-pointer gap-4 pr-[.3rem] flex items-center'>
 						{/* <p className='text-[.67rem] text-[rgb(136,147,151)]'>
+
 							Follow us on{' '}
 						</p>
 						<div className='flex flex-row text-slate-600 dark:text-dark_text dark:hover:text-[#228b22] hover:text-[#228b22] hover:scale-110 ease-in-out duration-300  items-center'>
@@ -62,11 +63,11 @@ function Footer() {
 						<div className='flex flex-row text-slate-600 dark:text-dark_text dark:hover:text-[#228b22] hover:text-[#228b22] hover:scale-110 ease-in-out duration-300 items-center'>
 							<RiTwitterXFill />
 						</div> */}
-					</div>
-				</div>
-			</section>
-		</footer>
-	);
+          </div>
+        </div>
+      </section>
+    </footer>
+  );
 }
 
 export default Footer;

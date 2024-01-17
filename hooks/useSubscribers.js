@@ -11,6 +11,7 @@ export const useSubscribers = () => {
       setIsLoading(true);
       const subscribers = await readAllDB("SUBSCRIBERS");
       setSubscribersData(subscribers);
+
       setError(null);
     } catch (error) {
       setError(error.message);

@@ -52,8 +52,7 @@ export const CreateCampaignForm = () => {
   useEffect(() => {
     getGroups();
     getEmails();
-  }, []);
-
+  }, [getGroups, getEmails]);
 
   const saveTemplate = (template) => {
     localStorage.setItem("template", template.design);
@@ -80,10 +79,10 @@ export const CreateCampaignForm = () => {
   return (
     <>
       <button
+        className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
         onClick={() => {
           setIsCreateCampaignOpen(true);
         }}
-        className="custom-btn"
       >
         Create Campaign
       </button>
@@ -93,222 +92,239 @@ export const CreateCampaignForm = () => {
       {isCreateCampaignOpen && (
         <dialog
           open={isCreateCampaignOpen}
-          className="fixed top-0 flex h-full w-full animate-fade-in items-center justify-center bg-gray-400 bg-opacity-60 backdrop-blur-sm"
+          className="fixed top-0 z-20 h-full w-full animate-fade-in bg-black bg-opacity-60"
         >
-          <div
-            className={`bg-gray-200 mx-10 flex w-full max-w-md flex-col rounded-md`}
-          >
-            <div className="m-2 flex items-center justify-between">
-              <article className="relative left-5 z-0 flex w-full items-center justify-center">
-                <h2 className="text-lg font-bold">
-                  {isEditorSelectOpen || isEmailSelectOpen
-                    ? "Editor Settings"
-                    : "Campaign Settings"}
-                </h2>
-              </article>
+          <div className="flex h-full items-center justify-center">
+            <div
+              className={`mx-10 flex w-full max-w-md flex-col rounded-md bg-gray-50`}
+            >
+              <div className="m-2 flex flex-col items-center justify-between">
+                <div className="m-2 flex w-full items-center justify-between">
+                  <article className="relative left-5 z-0 flex w-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">
+                      {isEditorSelectOpen || isEmailSelectOpen
+                        ? "Editor Settings"
+                        : "Campaign Settings"}
+                    </h1>
+                  </article>
 
-              <button
-                className="z-10 p-2"
-                onClick={() => {
-                  setIsEditorSelectOpen(false);
-                  setIsEmailSelectOpen(false);
-                  setIsCreateCampaignOpen(false);
-                }}
-              >
-                <Image src={close} alt="close" />
-              </button>
-            </div>
-
-            {!isEditorSelectOpen && !isEmailSelectOpen && (
-              <form
-                className="form mx-2 mb-4 flex flex-col"
-                onSubmit={handleSubmit(onSubmit)}
-              >
-                {/* Campaign name */}
-                <div className="flex flex-col gap-1">
-                  <label>Campaign name</label>
-                  <input
-                    type="text"
-                    placeholder="Campaign"
-                    {...register("campaign_name", {
-                      required: "The campaign name field must be filled",
-                      minLength: {
-                        value: 3,
-                        message:
-                          "The campaign name should have at least 3 characters",
-                      },
-                      pattern: {
-                        value: /^(?!\d+$).*/,
-                        message: "A campaign name can't only be a number",
-                      },
-                    })}
-                  />
+                  <button
+                    className="z-10 p-2"
+                    onClick={() => {
+                      setIsEditorSelectOpen(false);
+                      setIsEmailSelectOpen(false);
+                      setIsCreateCampaignOpen(false);
+                    }}
+                  >
+                    <Image src={close} alt="close" />
+                  </button>
                 </div>
 
-                {/* Subject */}
-                <div className="flex flex-col gap-1">
-                  <label>Subject</label>
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    {...register("subject", {
-                      required: "The subject field must be filled",
-                      minLength: {
-                        value: 3,
-                        message:
-                          "The subject should have at least 3 characters",
-                      },
-                      pattern: {
-                        value: /^(?!\d+$).*/,
-                        message: "A subject can't only be a number",
-                      },
-                    })}
-                  />
-                </div>
+                <p className="text-lg text-gray-600">
+                  Create a new email campaign
+                </p>
+              </div>
 
-                {/* Sender */}
-                <div className="flex flex-col gap-1">
-                  <label>Sender</label>
-                  <div className="flex gap-2">
+              {!isEditorSelectOpen && !isEmailSelectOpen && (
+                <form
+                  className="form mx-2 mb-4 flex flex-col"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
+                  {/* Campaign name */}
+                  <div className="flex flex-col gap-1">
+                    <label>Campaign name</label>
                     <input
                       type="text"
-                      placeholder="Name of the sender"
-                      {...register("sender_name", {
-                        required: "The sender name field must be filled",
+                      placeholder="Campaign"
+                      {...register("campaign_name", {
+                        required: "The campaign name field must be filled",
                         minLength: {
                           value: 3,
                           message:
-                            "The sender name should have at least 3 characters",
+                            "The campaign name should have at least 3 characters",
                         },
                         pattern: {
                           value: /^(?!\d+$).*/,
-                          message: "A sender name can't only be a number",
+                          message: "A campaign name can't only be a number",
                         },
                       })}
                     />
+                  </div>
+
+                  {/* Subject */}
+                  <div className="flex flex-col gap-1">
+                    <label>Subject</label>
                     <input
-                      type="email"
-                      placeholder="Email of the sender"
-                      {...register("sender_email", {
-                        required: "The sender email field must be filled",
+                      type="text"
+                      placeholder="Subject"
+                      {...register("subject", {
+                        required: "The subject field must be filled",
                         minLength: {
                           value: 3,
                           message:
-                            "The sender email should have at least 3 characters",
+                            "The subject should have at least 3 characters",
                         },
                         pattern: {
                           value: /^(?!\d+$).*/,
-                          message: "A sender email can't only be a number",
+                          message: "A subject can't only be a number",
                         },
                       })}
                     />
                   </div>
-                </div>
 
-                {/* Recipients */}
-                <div className="flex flex-col gap-1">
-                  <label>Recipients</label>
-                  <select
-                    {...register("recipients", {
-                      required: "Please choose the recipients",
-                    })}
-                  >
-                    <option>Select recipient group</option>
-                    {groups.map((group) => (
-                      <option key={group.id} id={group.id} value={group.id}>
-                        {group.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Button */}
-                <section>
-                  <button className="custom-btn" type="submit">
-                    Continue
-                  </button>
-                </section>
-                {Object.keys(errors).length > 0 && (
-                  <Alert
-                    severity="error"
-                    message={String(Object.values(errors)[0]?.message)}
-                  />
-                )}
-              </form>
-            )}
-
-            {isEditorSelectOpen && !isEmailSelectOpen && (
-              <div className="mx-2 mb-2 grid min-h-[15rem] animate-fade-in grid-cols-2 gap-5 font-semibold text-slate-700">
-                <button
-                  onClick={() => {
-                    setIsEmailSelectOpen(true);
-                  }}
-                  className="overflow-hidden rounded-md"
-                >
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    className="flex h-full w-full items-center justify-center bg-slate-200 transition-all hover:scale-110 hover:bg-slate-400"
-                  >
-                    <span>
-                      Choose one of your previous emails as a template
-                    </span>
+                  {/* Sender */}
+                  <div className="flex flex-col gap-1">
+                    <label>Sender</label>
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        placeholder="Name of the sender"
+                        {...register("sender_name", {
+                          required: "The sender name field must be filled",
+                          minLength: {
+                            value: 3,
+                            message:
+                              "The sender name should have at least 3 characters",
+                          },
+                          pattern: {
+                            value: /^(?!\d+$).*/,
+                            message: "A sender name can't only be a number",
+                          },
+                        })}
+                      />
+                      <input
+                        type="email"
+                        placeholder="Email of the sender"
+                        className="w-full rounded-lg border-[1px] border-slate-400 px-2 py-3 font-normal"
+                        {...register("sender_email", {
+                          required: "The sender email field must be filled",
+                          minLength: {
+                            value: 3,
+                            message:
+                              "The sender email should have at least 3 characters",
+                          },
+                          pattern: {
+                            value: /^(?!\d+$).*/,
+                            message: "A sender email can't only be a number",
+                          },
+                        })}
+                      />
+                    </div>
                   </div>
-                </button>
 
-                <Link
-                  href={`campaigns/${campaign.id}/email`}
-                  onClick={() => {
-                    saveTemplate({ design: "" });
-                  }}
-                  className="overflow-hidden rounded-md"
-                >
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    className="flex h-full w-full items-center justify-center bg-slate-200 transition-all hover:scale-110 hover:bg-slate-400"
-                  >
-                    <span>Start from scratch</span>
-                  </div>
-                </Link>
-              </div>
-            )}
-
-            {/* Select previous email screen */}
-            {isEmailSelectOpen && (
-              <div className="mx-2 mb-2 flex min-h-[15rem] animate-fade-in items-center font-semibold text-slate-700">
-                <form
-                  className="form w-full"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    saveTemplate(
-                      emails.find((email) => email.id == selectedEmail)
-                    );
-                    window.location.href = `/campaigns/${campaign.id}/email`;
-                  }}
-                >
-                  <div>
-                    <label htmlFor="select-email">Email template</label>
+                  {/* Recipients */}
+                  <div className="flex flex-col gap-1">
+                    <label>Recipients</label>
                     <select
-                      name="select-email"
-                      onChange={(e) => {
-                        e.preventDefault();
-                        setSelectedEmail(e.target.value);
-                      }}
+                      {...register("recipients", {
+                        required: "Please choose the recipients",
+                      })}
                     >
-                      <option>Select an email</option>
-                      {emails.map((email) => (
-                        <option key={email.id} id={email.id} value={email.id}>
-                          {email.name}
+                      <option>Select recipient group</option>
+                      {groups.map((group) => (
+                        <option key={group.id} id={group.id} value={group.id}>
+                          {group.name}
                         </option>
                       ))}
                     </select>
                   </div>
 
-                  <button type="submit" className="custom-btn">Next: Content</button>
+                  {/* Button */}
+                  <section>
+                    <button
+                      className="h-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
+                      type="submit"
+                    >
+                      Continue
+                    </button>
+                  </section>
+                  {Object.keys(errors).length > 0 && (
+                    <Alert
+                      severity="error"
+                      message={String(Object.values(errors)[0]?.message)}
+                    />
+                  )}
                 </form>
-              </div>
-            )}
+              )}
+
+              {isEditorSelectOpen && !isEmailSelectOpen && (
+                <div className="mx-2 mb-2 grid min-h-[15rem] animate-fade-in grid-cols-2 gap-5 font-semibold text-slate-700">
+                  <button
+                    onClick={() => {
+                      setIsEmailSelectOpen(true);
+                    }}
+                    className="overflow-hidden rounded-md"
+                  >
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      className="flex h-full w-full items-center justify-center bg-slate-200 transition-all hover:scale-110 hover:bg-slate-400"
+                    >
+                      <span>
+                        Choose one of your previous emails as a template
+                      </span>
+                    </div>
+                  </button>
+
+                  <Link
+                    href={`campaigns/${campaign.id}/email`}
+                    onClick={() => {
+                      saveTemplate({ design: "" });
+                    }}
+                    className="overflow-hidden rounded-md"
+                  >
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      className="flex h-full w-full items-center justify-center bg-slate-200 transition-all hover:scale-110 hover:bg-slate-400"
+                    >
+                      <span>Start from scratch</span>
+                    </div>
+                  </Link>
+                </div>
+              )}
+
+              {/* Select previous email screen */}
+              {isEmailSelectOpen && (
+                <div className="mx-2 mb-2 flex min-h-[15rem] animate-fade-in items-center font-semibold text-slate-700">
+                  <form
+                    className="form w-full"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      saveTemplate(
+                        emails.find((email) => email.id == selectedEmail)
+                      );
+                      window.location.href = `/dashboard/campaigns/${campaign.id}/email`;
+                    }}
+                  >
+                    <div>
+                      <label htmlFor="select-email">Email template</label>
+                      <select
+                        name="select-email"
+                        onChange={(e) => {
+                          e.preventDefault();
+                          setSelectedEmail(e.target.value);
+                        }}
+                      >
+                        <option>Select an email</option>
+                        {emails.map((email) => (
+                          <option key={email.id} id={email.id} value={email.id}>
+                            {email.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="h-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
+                    >
+                      Next: Content
+                    </button>
+                  </form>
+                </div>
+              )}
+            </div>
           </div>
         </dialog>
       )}

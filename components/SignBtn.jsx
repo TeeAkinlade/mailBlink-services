@@ -11,7 +11,7 @@ const SignBtn = () => {
       </Link>
       <Link
         href="/login"
-        className="text-navyblue border-navyBlue 2lg:border-transparent w-full rounded-[24px] border bg-transparent px-6 py-2 text-center text-sm font-medium duration-200 hover:border-navyBlue"
+        className="text-navyblue 2lg:border 2lg:border-solid 2lg:border-navyBlue w-full rounded-[24px] hover:bg-transparent px-6 py-2 text-center text-sm font-medium duration-200 hover:text-navyBlue"
       >
         Login
       </Link>

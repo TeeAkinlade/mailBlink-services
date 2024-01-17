@@ -1,54 +1,56 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { TiChevronLeft } from 'react-icons/ti';
-import { MdDashboardCustomize } from 'react-icons/md';
-import { HiInboxArrowDown } from 'react-icons/hi2';
-import { LiaSignOutAltSolid } from 'react-icons/lia';
-import { RiContactsLine } from 'react-icons/ri';
-import { AiOutlineSchedule } from 'react-icons/ai';
-import { TbBrandCampaignmonitor } from 'react-icons/tb';
-import { IoSettingsOutline } from 'react-icons/io5';
-import { IoIosArrowBack } from 'react-icons/io';
-import { MdSearch } from 'react-icons/md';
-import { VscAccount } from 'react-icons/vsc';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { IoNotificationsOutline } from 'react-icons/io5';
-import { useCurrentUser } from '../../currentUser';
-import Image from 'next/image';
-import Spinner from '../../../../components/Spinner';
+"use client";
+import { useState, useEffect } from "react";
+import { TiChevronLeft } from "react-icons/ti";
+import { MdDashboardCustomize } from "react-icons/md";
+import { HiInboxArrowDown } from "react-icons/hi2";
+import { LiaSignOutAltSolid } from "react-icons/lia";
+import { GrGroup } from "react-icons/gr";
+import { RiContactsLine } from "react-icons/ri";
+import { AiOutlineSchedule } from "react-icons/ai";
+import { TbBrandCampaignmonitor } from "react-icons/tb";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoIosArrowBack } from "react-icons/io";
+import { MdSearch } from "react-icons/md";
+import { VscAccount } from "react-icons/vsc";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { IoNotificationsOutline } from "react-icons/io5";
+import { useCurrentUser } from "../../currentUser";
+import Image from "next/image";
+import Spinner from "../../../../components/Spinner";
+import { TiMessages } from "react-icons/ti";
 
 export default function Sidebar({ miniToggle, toggleMini }) {
 	const { user, loading } = useCurrentUser();
 
-	// SignOut Functionality
-	const supabase = createClientComponentClient();
-	const router = useRouter();
-	const handleSignOut = async () => {
-		await supabase.auth.signOut();
-		router.push('/');
+  // SignOut Functionality
+  const supabase = createClientComponentClient();
+  const router = useRouter();
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    router.push("/");
 
-		if (loading) {
-			return <Spinner />;
-		}
-	};
+    if (loading) {
+      return <Spinner />;
+    }
+  };
 
-	//Handling Navigation for the sidebar
-	const handleNavigate = (point) => {
-		return router.push(`/dashboard/${point}`);
-	};
-	const externalNavigate = (point) => {
-		return router.push(`/${point}`);
-	};
+  //Handling Navigation for the sidebar
+  const handleNavigate = (point) => {
+    return router.push(`/dashboard/${point}`);
+  };
+  const externalNavigate = (point) => {
+    return router.push(`/${point}`);
+  };
 
-	// retrieving user information from currentUser.js
-	const name = user?.user_metadata?.name?.split(' ');
-	const firstName = name?.[0]
-		.charAt(0)
-		.toUpperCase()
-		.concat(name?.[0].slice(1));
-	const LastName = name?.[1].charAt(0).toUpperCase().concat(name?.[1].slice(1));
+  // retrieving user information from currentUser.js
+  const name = user?.user_metadata?.name?.split(" ");
+  const firstName = name?.[0]
+    .charAt(0)
+    .toUpperCase()
+    .concat(name?.[0].slice(1));
+  const LastName = name?.[1].charAt(0).toUpperCase().concat(name?.[1].slice(1));
 
 	// State Management for smaller screens
 	// const [miniToggle, setMiniToggle] = useState(true);
@@ -57,103 +59,103 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 	const [toggle, setToggle] = useState(true);
 	const [activeLink, setActiveLink] = useState(false);
 
-	const MenuLinks = [
-		{
-			title: 'Home',
-			src: <MdDashboardCustomize />,
-			route: 'Home',
-			onClick: handleNavigate,
-		},
-		{
-			header: 'Utilities',
-			title: 'Campaigns',
-			src: <HiInboxArrowDown />,
-			route: 'campaigns',
-			gap: true,
-			onClick: handleNavigate,
-		},
-		{
-			title: 'Schedule',
-			src: <AiOutlineSchedule />,
-			route: 'Schedule',
-			onClick: handleNavigate,
-		},
-		{
-			title: 'Analytics',
-			src: <TbBrandCampaignmonitor />,
-			route: 'Analytics',
-			onClick: handleNavigate,
-		},
-		{
-			title: 'Contacts',
-			src: <RiContactsLine />,
-			route: 'Contacts',
-			onClick: handleNavigate,
-		},
+  const MenuLinks = [
+    {
+      title: "Home",
+      src: <MdDashboardCustomize />,
+      route: "Home",
+      onClick: handleNavigate,
+    },
+    {
+      header: "Utilities",
+      title: "Campaigns",
+      src: <HiInboxArrowDown />,
+      route: "campaigns",
+      gap: true,
+      onClick: handleNavigate,
+    },
+    {
+      title: "Schedule",
+      src: <AiOutlineSchedule />,
+      route: "Schedule",
+      onClick: handleNavigate,
+    },
+    {
+      title: "Analytics",
+      src: <TbBrandCampaignmonitor />,
+      route: "Analytics",
+      onClick: handleNavigate,
+    },
+    {
+      title: "Contacts",
+      src: <RiContactsLine />,
+      route: "Contacts",
+      onClick: handleNavigate,
+    },
 
-		{
-			header: 'Settings',
-			title: 'Profile Settings',
-			route: 'Settings',
-			src: <IoSettingsOutline />,
-			gap: true,
-			onClick: handleNavigate,
-		},
-		{
-			title: 'Account Settings',
-			route: 'Accounts',
-			src: <VscAccount />,
-			gap: false,
-			onClick: handleNavigate,
-		},
-		{
-			title: 'Notification Settings',
-			route: 'Notifications',
-			src: <IoNotificationsOutline />,
+    {
+      header: "Settings",
+      title: "Profile Settings",
+      route: "Settings",
+      src: <IoSettingsOutline />,
+      gap: true,
+      onClick: handleNavigate,
+    },
+    {
+      title: "Account Settings",
+      route: "Accounts",
+      src: <VscAccount />,
+      gap: false,
+      onClick: handleNavigate,
+    },
+    {
+      title: "Notification Settings",
+      route: "Notifications",
+      src: <IoNotificationsOutline />,
 
-			onClick: handleNavigate,
-		},
-		{
-			header: 'Exit',
-			title: 'Sign Out',
-			src: <LiaSignOutAltSolid />,
-			gap: true,
-			onClick: handleSignOut,
-		},
-	];
+      onClick: handleNavigate,
+    },
+    {
+      header: "Exit",
+      title: "Sign Out",
+      src: <LiaSignOutAltSolid />,
+      gap: true,
+      onClick: handleSignOut,
+    },
+  ];
 
-	useEffect(() => {
-		const handleSideMenu = () => {
-			setMiniSidebar(window?.innerWidth < 768);
-		};
+  useEffect(() => {
+    const handleSideMenu = () => {
+      setMiniSidebar(window?.innerWidth < 768);
+    };
 
-		// Calling the SideMenu function to decide which sidebar to render
-		handleSideMenu();
-		window.addEventListener('resize', handleSideMenu);
+    // Calling the SideMenu function to decide which sidebar to render
+    handleSideMenu();
+    window.addEventListener("resize", handleSideMenu);
 
-		return () => {
-			window.removeEventListener('resize', handleSideMenu);
-		};
-	}, []);
+    return () => {
+      window.removeEventListener("resize", handleSideMenu);
+    };
+  }, []);
 
-	return (
-		<>
-			{!miniSidebar ? (
-				<aside
-					className={` ${
-						toggle ? 'w-96' : 'w-20'
-					}  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
-				>
-					<TiChevronLeft
-						alt='Controller icon for collapsable sidebar'
-						className={`absolute bg-white cursor-pointer  rounded-full -right-3 top-9 w-7 border-2 border-ui_primary ${
-							!toggle && 'rotate-180'
-						} ease-in-out duration-500 hidden`}
-					/>
+  return (
+    <>
+      {!miniSidebar ? (
+        <aside
+          className={` ${
+            toggle ? "w-96" : "w-20"
+          }  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
+        >
+          <TiChevronLeft
+            alt="Controller icon for collapsable sidebar"
+            className={`absolute bg-white cursor-pointer  rounded-full -right-3 top-9 w-7 border-2 border-ui_primary ${
+              !toggle && "rotate-180"
+            } ease-in-out duration-500 hidden`}
+          />
 
-					{/* Header for sidebar */}
-					<div className='flex gap-x-4 items-center'>
-						{/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
+          {/* Header for sidebar */}
+          <div className="flex items-center gap-x-4">
+            {/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
 
 						<Link
 							href='/'
@@ -251,21 +253,21 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 								/>
 							)}
 
-							<span className={`flex flex-col gap-0 ${!toggle && 'scale-0'}`}>
-								{name && (
-									<h3 className={`text-md font-[400] text-[#fefefe] `}>
-										{firstName} <strong>{LastName}</strong>
-										<br />
-									</h3>
-								)}
-								<div
-									className={`text-md font-[600] text-[#fefefe] ${
-										user?.email?.length >= 20 && 'text-[0.65rem]'
-									}`}
-								>
-									{''}
-									{user?.email}
-								</div>
+              <span className={`flex flex-col gap-0 ${!toggle && "scale-0"}`}>
+                {name && (
+                  <h3 className={`text-md font-[400] text-[#fefefe]`}>
+                    {firstName} <strong>{LastName}</strong>
+                    <br />
+                  </h3>
+                )}
+                <div
+                  className={`text-md font-[600] text-[#fefefe] ${
+                    user?.email?.length >= 20 && "text-[0.65rem]"
+                  }`}
+                >
+                  {""}
+                  {user?.email}
+                </div>
 
 								<p className='text-[0.7rem] text-[#B7C5CC] '>
 									Your personal account
