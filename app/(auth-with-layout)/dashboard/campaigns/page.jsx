@@ -14,7 +14,7 @@ const CampaignsDetails = () => {
 
   useEffect(() => {
     getCampaigns("email");
-  }, []);
+  }, [getCampaigns]);
 
   useEffect(() => {
     // Filtering campaigns based on their status
@@ -30,10 +30,12 @@ const CampaignsDetails = () => {
     <>
       <header className="mx-10 ">
         <div className="flex justify-between">
-        <div className="space-y-2">
-          <h1 className="text-3xl font-bold">Email Campaigns</h1>
-          <p className="text-lg text-gray-600">View and manage your email campaigns</p>
-        </div>
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold">Email Campaigns</h1>
+            <p className="text-lg text-gray-600">
+              View and manage your email campaigns
+            </p>
+          </div>
           <div className="hidden w-60 lg:block">
             <CreateCampaignForm />
           </div>
@@ -91,7 +93,10 @@ const CampaignsDetails = () => {
         {showingSent ? (
           <CampaingList campaigns={sentCampaigns} getCampaigns={getCampaigns} />
         ) : (
-          <CampaingList campaigns={draftCampaigns} getCampaigns={getCampaigns} />
+          <CampaingList
+            campaigns={draftCampaigns}
+            getCampaigns={getCampaigns}
+          />
         )}
       </section>
     </>
