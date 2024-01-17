@@ -18,28 +18,31 @@ export const EmailHero = () => {
               corporis odit praesentium sunt iste?.
             </p>
             <div className="flex gap-4 md:gap-7 justify-start mt-5">
-            <Link href="/campaigns">
-              <button className="custom-btn">
-                Get Started
-              </button>
-            </Link>
-            <Link href="/campaigns">
-              <button className="custom-btn flex ">
-                <GoVideo size={18} className="relative top-[1px] mr-2"/>
-                Watch a demo
-              </button>
-            </Link>
+              <Link href="/campaigns">
+                <button className="custom-btn">Get Started</button>
+              </Link>
+              <Link href="/campaigns">
+                <button className="custom-btn flex ">
+                  <GoVideo size={18} className="relative top-[1px] mr-2" />
+                  Watch a demo
+                </button>
+              </Link>
             </div>
           </div>
           <div className="relative md:top-10 md:w-[140%] md:block hidden">
-            <img
+            <Image
               src="/assets/icons/hero_dots.svg"
               alt=""
-              className=" absolute top-[3.5rem] -left-6 md:w-28"
+              width={28}
+              height={28}
+              className="absolute top-[3.5rem] -left-6 md:w-28"
             />
-            <div className=" relative pl-10 py-5 pr-0 justify-between flex bg-white rounded-lg shadow-lg">
+            <div className="relative pl-10 py-5 pr-0 justify-between flex bg-white rounded-lg shadow-lg">
               {stats.map((stat) => (
-                <div className="w-[25%] flex flex-col justify-center" key={stat.id}>
+                <div
+                  className="w-[25%] flex flex-col justify-center"
+                  key={stat.id}
+                >
                   <span className=" font-semibold text-ui_secondary1 text-base block">
                     {stat.title}
                   </span>
@@ -53,13 +56,14 @@ export const EmailHero = () => {
         </div>
         <div className=" md:w-[50%] w-full bg-[#EFF6FE] md:h-full h-[25rem] md:pr-[4rem] flex justify-end md:items-center items-end rounded-bl-[4rem] md:rounded-tr-[0] rounded-tr-[4rem] md:mt-0 mt-20">
           <div className="md:h-[65%] h-[80%] md:w-[70%] w-[80%]">
-          <Image
-          src="/assets/images/amico1.svg"
-          alt=""
-          width={400}
-          height={300}
-          quality={100}
-           className="h-full w-full object-cover rounded-md"/>
+            <Image
+              src="/assets/images/amico1.svg"
+              alt=""
+              width={400}
+              height={300}
+              quality={100}
+              className="h-full w-full object-cover rounded-md"
+            />
           </div>
         </div>
       </div>
