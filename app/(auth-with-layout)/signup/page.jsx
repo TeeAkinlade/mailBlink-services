@@ -128,7 +128,12 @@ const Signup = () => {
             href={"/"}
             className="font-Poppins ps-[1rem] text-[35px] font-[700] leading-[64px] text-[#17181A]"
           >
-            MailBlink
+            <Image
+              src="/assets/images/Logo VendGenix.svg"
+              alt="logo at footer"
+              width="150"
+              height="150"
+            />
           </Link>
           <div className="pt-[160px] xs:ps-[10px] lg:pr-[109px] lg:ps-[110px]">
             <h3 className="font-Poppins mt-[15px] flex text-[32px] font-[700] leading-[40px] text-[#17181A]">
