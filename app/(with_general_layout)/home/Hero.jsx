@@ -45,10 +45,10 @@ const Hero = () => {
               </div> */}
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
-                Experience the convenience of a single platform that integrates
+               {`Experience the convenience of a single platform that integrates
                 everything your business needs for online success. From email
                 campaigns to content marketing SEO optimization and social media
-                management, we've got you covered.
+                management, we've got you covered.`}
               </p>
               <ul className="my-10 md:my-6">
                 <li className="flex items-center text-sm md:text-base">

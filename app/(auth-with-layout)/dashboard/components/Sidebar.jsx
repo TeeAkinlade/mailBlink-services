@@ -4,6 +4,7 @@ import { TiChevronLeft } from 'react-icons/ti';
 import { MdDashboardCustomize } from 'react-icons/md';
 import { HiInboxArrowDown } from 'react-icons/hi2';
 import { LiaSignOutAltSolid } from 'react-icons/lia';
+import { GrGroup } from "react-icons/gr";
 import { RiContactsLine } from 'react-icons/ri';
 import { AiOutlineSchedule } from 'react-icons/ai';
 import { TbBrandCampaignmonitor } from 'react-icons/tb';
@@ -18,6 +19,7 @@ import { IoNotificationsOutline } from 'react-icons/io5';
 import { useCurrentUser } from '../../currentUser';
 import Image from 'next/image';
 import Spinner from '../../../../components/Spinner';
+import { TiMessages } from "react-icons/ti";
 
 export default function Sidebar() {
 	const { user, loading } = useCurrentUser();
@@ -66,11 +68,17 @@ export default function Sidebar() {
 		},
 		{
 			header: 'Utilities',
-			title: 'Campaigns',
+			title: 'Email Campaigns',
 			src: <HiInboxArrowDown />,
 			route: 'campaigns',
 			gap: true,
-			onClick: externalNavigate,
+			onClick: handleNavigate,
+		},
+		{
+			title: 'Sms Campaigns',
+			src: <TiMessages />,
+			route: 'sms',
+			onClick: handleNavigate,
 		},
 		{
 			title: 'Schedule',
@@ -88,6 +96,12 @@ export default function Sidebar() {
 			title: 'Contacts',
 			src: <RiContactsLine />,
 			route: 'Contacts',
+			onClick: handleNavigate,
+		},
+		{
+			title: 'Groups',
+			src: <GrGroup />,
+			route: 'groups',
 			onClick: handleNavigate,
 		},
 
@@ -166,7 +180,7 @@ export default function Sidebar() {
 					{/* Link Items */}
 					<ul className='pt-6'>
 						{MenuLinks.map((menu, index) => (
-							<>
+							<div key={index}>
 								{menu.gap && (
 									<span className=' mt-2  text-[0.66rem] text-[#919cab] text-opacity-50 '>
 										{menu.header}
@@ -207,7 +221,7 @@ export default function Sidebar() {
 										{menu.title}{' '}
 									</span>
 								</li>
-							</>
+							</div>
 						))}
 						<div
 							className='text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 dark:hover:text-ui_button bg-transparent  rounded-md duration-500'

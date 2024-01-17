@@ -28,16 +28,13 @@ const Nav = () => {
   });
 
   return (
-    <nav className="max-width md:px-12 mx-auto">
+    <nav className="max-width mx-auto md:px-12">
       <div className="px-8 py-6">
-        <div className="flex items-center justify-between py-8">
-          <Link
-            href="/"
-            className="font-Roboto text-2xl font-bold text-[#17181A] md:text-4xl"
-          >
+        <div className="flex justify-between py-8">
+          <Link href="/">
             <Image
               src="/assets/images/Logo VendGenix.svg"
-              ait="logo"
+              alt="logo"
               width="150"
               height="150"
             />
@@ -48,7 +45,7 @@ const Nav = () => {
           >
             <RxHamburgerMenu />
           </button>
-          <div className="hidden items-baseline space-x-6 2lg:flex  whitespace-nowrap">
+          <div className="hidden items-baseline space-x-6 whitespace-nowrap 2lg:flex">
             <Navlink />
             <SignBtn />
           </div>
@@ -57,7 +54,7 @@ const Nav = () => {
 
         {/* Dark background */}
         <div
-          className={`fixed w-full h-[3rem] top-0 left-0 z-10 bg-black transition-opacity duration-500 ${
+          className={`fixed w-full h-full top-0 left-0 z-10 bg-black transition-opacity duration-500 ${
             open
               ? "pointer-events-auto opacity-50"
               : "pointer-events-none opacity-0"
@@ -66,7 +63,7 @@ const Nav = () => {
 
         {/* Mobile links */}
         <div
-          className={`fixed bottom-0 flex flex-col justify-between ${
+          className={`fixed bottom-0 flex flex-col  ${
             open ? "right-0" : "-right-[100%]"
           }  top-0 z-50 w-2/3  bg-tertiary pt-20 pb-2 text-left opacity-100 transition-all duration-500 2lg:hidden`}
           ref={menuRef}
@@ -76,7 +73,7 @@ const Nav = () => {
           </button>
 
           <Navlink />
-          <div className="flex items-center px-5">
+          <div className="flex items-center px-5 mt-24">
             <SignBtn />
           </div>
         </div>
