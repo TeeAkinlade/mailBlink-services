@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useCurrentUser } from '../../currentUser';
 import ThemeToggle from '@/components/ThemeToggle';
 import Link from 'next/link';
+
 export default function Navbar() {
 	const { user } = useCurrentUser();
 	const name = user?.user_metadata?.name?.split(' ');
@@ -24,7 +25,8 @@ export default function Navbar() {
 				</div>
 				<div className=' flex justify-end md:justify-center gap-8 p-2 w-full md:w-fit items-center'>
 					<ThemeToggle />
-					<IoNotificationsOutline className='h-[1.2rem] w-[1.2rem] hover:scale-110 text-ui_primary dark:text-white hover:text-ui_button dark:hover:text-[#FDBC64] font-[700] duration-500 ease-in-out cursor-pointer' />
+					<Link href="/dashboard/Notifications"><IoNotificationsOutline className='h-[1.2rem] w-[1.2rem] hover:scale-110 text-ui_primary dark:text-white hover:text-ui_button dark:hover:text-[#FDBC64] font-[700] duration-500 ease-in-out cursor-pointer' />
+					</Link>
 					{/* Customer icon */}
 					<Link
 						href='/dashboard/Accounts'
@@ -49,7 +51,7 @@ export default function Navbar() {
 								<strong> {LastName}</strong>
 								{''} <br />
 								<span className='text-[0.77rem] dark:text-dark_text'>
-									({user?.email})
+									{user?.email}
 								</span>
 							</h3>
 							<p className='text-[0.75rem] text-slate-500 mt-1'>

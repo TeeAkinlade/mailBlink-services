@@ -70,7 +70,7 @@ export default function Sidebar() {
 			src: <HiInboxArrowDown />,
 			route: 'campaigns',
 			gap: true,
-			onClick: externalNavigate,
+			onClick: handleNavigate,
 		},
 		{
 			title: 'Schedule',

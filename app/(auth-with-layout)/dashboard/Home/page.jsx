@@ -13,7 +13,7 @@ export default function Home() {
 	const { user, loading } = useCurrentUser();
 	const name = user?.user_metadata?.name?.split(' ');
 	// const firstName = name?.[0];
-	
+
 	const firstName = name?.[0].charAt(0).toUpperCase() + name?.[0].slice(1);
 	return (
 		<>
@@ -93,7 +93,7 @@ export default function Home() {
 							</div>
 						</div>
 						{/* Barchart X Subscribers */}
-						<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 rounded-xl pb-4 mt-8 '>
+						<div className='flex flex-col gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 rounded-xl pb-4 mt-8 overflow-hidden'>
 							<div className='flex justify-between items-center'>
 								{' '}
 								<h2 className='text-[1rem] text-ui_primary dark:text-ui_button font-[600]'>
@@ -171,11 +171,14 @@ export default function Home() {
 									</span>
 								</div>
 							</div>
-							<Link href="/campaigns" className='flex w-full justify-end items-end'>
+							<Link
+								href='/campaigns'
+								className='flex w-full justify-end items-end'
+							>
 								<button className='p-2 px-4 text-white bg-ui_button cursor-pointer rounded-xl text-[0.8rem] leading-7 hover:scale-105 duration-500 hover:opacity-80'>
 									View Campaign
 								</button>
-							</Link >
+							</Link>
 						</div>
 					</div>
 					{/* SCHEDULE */}

@@ -220,7 +220,7 @@ const Account = () => {
 							<div className='flex gap-8'>
 								{passwordInputs.map((input) => (
 									<div key={input.id} className='flex flex-col w-[50%]'>
-										<label htmlFor={input.id} className=' font-bold mb-2'>
+										<label htmlFor={input.id} className=' font-bold mb-2 md:text-[1rem] text-[0.8rem]' >
 											{input.label}
 										</label>
 										<div className='border border-gray-400 flex-between px-3 rounded-md focus:border-2'>
