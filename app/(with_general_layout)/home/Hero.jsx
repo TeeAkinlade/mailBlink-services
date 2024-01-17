@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-14">
         <div className="px-8 pb-6 lg:pb-48 relative">
           <div className="pt-4 md:pt-12">
-            <p className="text-primaryBlack2 text-4xl md:text-5xl leading-[3rem] font-semibold text-center md:text-left">
+            <p className="text-primaryBlack2 text-4xl md:text-5xl leading-tight font-semibold text-center md:text-left">
               One-Stop Shop To{" "}
               <span className="text-forestGreen mr-2 text-4xl md:text-5xl">
                 {typeEffect}
@@ -45,7 +45,7 @@ const Hero = () => {
               </div> */}
             <div className="my-6 md:my-12 lg:my-8">
               <p className="text-[#565656] text-sm md:text-lg text-center md:text-left">
-               {`Experience the convenience of a single platform that integrates
+                {`Experience the convenience of a single platform that integrates
                 everything your business needs for online success. From email
                 campaigns to content marketing SEO optimization and social media
                 management, we've got you covered.`}
@@ -94,27 +94,27 @@ const Hero = () => {
         </div>
       </div>
       <div className="hidden lg:block absolute w-full h-full top-48 left-0">
-            <Image
-              src="/assets/images/Rectangle.svg"
-              alt="left-half-circle"
-              width="24"
-              height="24"
-            />
-            <Image
-              src="/assets/images/Rectangle (1).svg"
-              alt="left-half-cirle 2"
-              width="64"
-              height="44"
-              className="relative top-[26rem]"
-            />
-            <Image
-              src="/assets/images/Rectangle (2).svg"
-              alt="left-half-cirle 2"
-              width="20"
-              height="20"
-              className="relative left-1/2 top-96"
-            />
-          </div>
+        <Image
+          src="/assets/images/Rectangle.svg"
+          alt="left-half-circle"
+          width="24"
+          height="24"
+        />
+        <Image
+          src="/assets/images/Rectangle (1).svg"
+          alt="left-half-cirle 2"
+          width="64"
+          height="44"
+          className="relative top-[26rem]"
+        />
+        <Image
+          src="/assets/images/Rectangle (2).svg"
+          alt="left-half-cirle 2"
+          width="20"
+          height="20"
+          className="relative left-1/2 top-96"
+        />
+      </div>
     </section>
   );
 };
