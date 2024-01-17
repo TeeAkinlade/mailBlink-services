@@ -344,3 +344,13 @@ button {
 		left: -40px;
 	}
 }
+
+.slick-slide {
+    height: 500px
+}
+.slick-slider {
+	height: 400px;
+}
+.slick-track {
+	height: 500px;
+}
