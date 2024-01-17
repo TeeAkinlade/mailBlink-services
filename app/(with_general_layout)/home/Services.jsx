@@ -37,7 +37,7 @@ const Services = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
+          dots: false,
         },
       },
     ],
@@ -62,7 +62,7 @@ const Services = () => {
               {servicesData.map(
                 ({ id, icon, title, contents, href, linkText }) => (
                   <div
-                    className="py-16 bg-backGround shadow-xl p-8 rounded-lg transform transition-transform hover:scale-105 duration-200 border-b-4 border-transparent hover:border-navyBlue w-[250px] md:w-[330px]"
+                    className="py-16 bg-backGround shadow-md md:shadow-xl p-8 rounded-lg transform transition-all hover:scale-105 duration-200 border-b-4 border-transparent hover:border-navyBlue w-[250px] md:w-[330px]"
                     key={id}
                   >
                     <div className="bg-navyBlue p-3 rounded-[50%] inline-block">

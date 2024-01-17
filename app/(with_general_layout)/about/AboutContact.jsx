@@ -8,11 +8,11 @@ const AboutContact = () => {
           <h2 className=" md:text-[2.1rem] text-[38px] font-bold mb-3">
            Become a Partner
           </h2>
-          <p className=" text-Ash md:text-xl text-lg md:w-[80%] w-full">
+          <p className=" text-Ash md:text-xl text-lg w-full">
             Used and supported in over 178 countries around the globe.<br/>We’ll work with you to open more doors and close more sales across all verticals.
           </p>
         </div>
-        <div className="md:w-[30.15rem] w-full z-[1] relative md:top-[10rem] top-[4rem]">
+        <div className="md:w-[30.15rem] w-full z-[1] relative md:ml-36 lg:ml-48 md:top-[10rem] top-[4rem]">
           <AboutForm/>
         </div>
         <div class="w-[186px] h-[186px] opacity-30 relative bg-blue-950 bg-opacity-90 rounded-[100px] right-40"></div>
@@ -27,7 +27,7 @@ const AboutContact = () => {
           className="absolute md:top-[200] right-[45%] w-46"
         />
         <div className=" rounded-full bg-blue-950 opacity-70 md:w-[11.6rem] md:h-[11.6rem] w-[9.6rem] h-[9.6rem] relative -left-[27rem] "></div>
-        <div class="w-[186px] hidden md:block relative h-[186px] opacity-80 bg-blue-600 bg-opacity-90 rounded-[100px] left-40"></div>
+        <div class="w-[186px] hidden md:block relative h-[186px] opacity-80 bg-blue-600 bg-opacity-90 rounded-[100px] left-52"></div>
       </div>
     </section>
   );
