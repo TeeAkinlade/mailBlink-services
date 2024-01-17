@@ -59,41 +59,6 @@ export default function Sidebar() {
   const [toggle, setToggle] = useState(true);
   const [activeLink, setActiveLink] = useState(false);
 
-<<<<<<< HEAD
-	const MenuLinks = [
-		{
-			title: 'Home',
-			src: <MdDashboardCustomize />,
-			route: 'Home',
-			onClick: handleNavigate,
-		},
-		{
-			header: 'Utilities',
-			title: 'Campaigns',
-			src: <HiInboxArrowDown />,
-			route: 'campaigns',
-			gap: true,
-			onClick: handleNavigate,
-		},
-		{
-			title: 'Schedule',
-			src: <AiOutlineSchedule />,
-			route: 'Schedule',
-			onClick: handleNavigate,
-		},
-		{
-			title: 'Analytics',
-			src: <TbBrandCampaignmonitor />,
-			route: 'Analytics',
-			onClick: handleNavigate,
-		},
-		{
-			title: 'Contacts',
-			src: <RiContactsLine />,
-			route: 'Contacts',
-			onClick: handleNavigate,
-		},
-=======
   const MenuLinks = [
     {
       title: "Home",
@@ -103,16 +68,10 @@ export default function Sidebar() {
     },
     {
       header: "Utilities",
-      title: "Email Campaigns",
+      title: "Campaigns",
       src: <HiInboxArrowDown />,
       route: "campaigns",
       gap: true,
-      onClick: handleNavigate,
-    },
-    {
-      title: "Sms Campaigns",
-      src: <TiMessages />,
-      route: "sms",
       onClick: handleNavigate,
     },
     {
@@ -133,13 +92,6 @@ export default function Sidebar() {
       route: "Contacts",
       onClick: handleNavigate,
     },
-    {
-      title: "Groups",
-      src: <GrGroup />,
-      route: "groups",
-      onClick: handleNavigate,
-    },
->>>>>>> 194bee6c0d5043c6c109e3bf3ee620a6af25b6c4
 
     {
       header: "Settings",
