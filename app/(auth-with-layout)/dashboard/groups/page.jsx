@@ -22,7 +22,7 @@ const Groups = () => {
 
   useEffect(() => {
     getGroups();
-  }, []);
+  }, [getGroups]);
 
   useEffect(() => {
     const fetchGroupsData = async () => {

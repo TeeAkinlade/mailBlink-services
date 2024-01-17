@@ -28,7 +28,7 @@ const CampaignPreview = () => {
       });
     };
     getPreview();
-  }, []);
+  }, [campaignID]);
 
   const sendCampaign = async () => {
     // console.log(campaign, email, group);

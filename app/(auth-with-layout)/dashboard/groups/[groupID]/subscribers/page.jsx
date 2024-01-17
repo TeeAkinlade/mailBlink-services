@@ -40,7 +40,7 @@ const GroupDetail = () => {
 
   useEffect(() => {
     fetchSubscribers();
-  }, []);
+  }, [fetchSubscribers]);
 
   useEffect(() => {
     setUiSubscribers(subscribers);

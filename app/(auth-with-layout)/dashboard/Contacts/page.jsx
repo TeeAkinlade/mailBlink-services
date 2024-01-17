@@ -39,7 +39,7 @@ const Contacts = () => {
 
   useEffect(() => {
     getSubscribers();
-  }, []);
+  }, [getSubscribers]);
 
   useEffect(() => {
     setUiSubscribers(subscribers);
