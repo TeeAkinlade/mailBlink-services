@@ -78,32 +78,9 @@ const Hero = () => {
                 className="px-3 md:px-5 py-2 focus:border-0 outline-none shadow-md w-full md:w-2/3 cursor-pointer hover:border hover:border-navyBlue hover:rounded-md"
               />
               <button className="custom-btn whitespace-nowrap">
-                Let’s Talk
+                {`Let’s Talk`}
               </button>
             </div>
-          </div>
-          <div className="">
-            <Image
-              src="/assets/images/Rectangle.svg"
-              alt="left-half-circle"
-              width="24"
-              height="24"
-              className="absolute -left-14 top-0"
-            />
-            <Image
-              src="/assets/images/Rectangle (1).svg"
-              alt="left-half-cirle 2"
-              width="64"
-              height="44"
-              className="hidden lg:block absolute -left-16 bottom-0"
-            />
-            <Image
-              src="/assets/images/Rectangle (2).svg"
-              alt="left-half-cirle 2"
-              width="20"
-              height="20"
-              className="absolute right-0 bottom-4 md:bottom-10"
-            />
           </div>
         </div>
         <div className="px-8 pt-10 md:py-20 lg:pt-20 lg:mb-0">
@@ -116,6 +93,28 @@ const Hero = () => {
           />
         </div>
       </div>
+      <div className="hidden lg:block absolute w-full h-full top-48 left-0">
+            <Image
+              src="/assets/images/Rectangle.svg"
+              alt="left-half-circle"
+              width="24"
+              height="24"
+            />
+            <Image
+              src="/assets/images/Rectangle (1).svg"
+              alt="left-half-cirle 2"
+              width="64"
+              height="44"
+              className="relative top-[26rem]"
+            />
+            <Image
+              src="/assets/images/Rectangle (2).svg"
+              alt="left-half-cirle 2"
+              width="20"
+              height="20"
+              className="relative left-1/2 top-96"
+            />
+          </div>
     </section>
   );
 };

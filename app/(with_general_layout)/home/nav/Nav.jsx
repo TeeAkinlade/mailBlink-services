@@ -7,8 +7,11 @@ import { LiaTimesSolid } from "react-icons/lia";
 import { RxHamburgerMenu } from "react-icons/rx";
 import SignBtn from "@/components/SignBtn";
 import Navlink from "./Navlink";
+import DashboardBtn from "@/components/DashboardBtn";
+import { useCurrentUser } from "@/app/(auth-with-layout)/currentUser";
 
 const Nav = () => {
+  const {user} = useCurrentUser();
   const [open, setOpen] = useState(false);
 
   const menuRef = useRef();
@@ -30,7 +33,7 @@ const Nav = () => {
   return (
     <nav className="max-width mx-auto md:px-12">
       <div className="px-8 py-6">
-        <div className="flex justify-between py-8">
+        <div className="flex items-center justify-between py-8">
           <Link href="/">
             <Image
               src="/assets/images/Logo VendGenix.svg"
@@ -47,7 +50,7 @@ const Nav = () => {
           </button>
           <div className="hidden items-baseline space-x-6 whitespace-nowrap 2lg:flex">
             <Navlink />
-            <SignBtn />
+            {user ? <DashboardBtn /> : <SignBtn />}
           </div>
         </div>
         {/* Mobile nav */}
@@ -74,7 +77,7 @@ const Nav = () => {
 
           <Navlink />
           <div className="flex items-center px-5 mt-24">
-            <SignBtn />
+            {user ? <DashboardBtn /> : <SignBtn />}
           </div>
         </div>
       </div>

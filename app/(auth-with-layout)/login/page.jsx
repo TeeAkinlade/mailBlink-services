@@ -94,15 +94,22 @@ const Login = () => {
           }}
           className="hidden h-[100vh] lg:block lg:w-[720px]"
         >
-          <Link href={"/"} className="font-Poppins ps-[1rem] text-[35px] font-[700] leading-[64px] text-[#17181A]">
-            SalesBlink
-          </Link>
           <div className="pt-[190px] xs:ps-[10px] lg:w-[720px] lg:pr-[109px] lg:ps-[190px]">
-            <h3 className="font-Poppins text-[48px] font-[700] leading-[64px] text-[#17181A]">
-              Welcome back <br /> to SalesBlink
+            <h3 className="relative font-Poppins text-[48px] font-[700] leading-[64px] text-[#17181A]">
+              {`Welcome back
+               to `}
+              <Link className="absolute ml-4 mt-1" href="/">
+                <Image
+                  src="/assets/images/Logo VendGenix.svg"
+                  alt="logo"
+                  width="280"
+                  height="280"
+                />
+              </Link>
             </h3>
             <Image
               src="/assets/images/Group 2936.svg"
+              alt="underline VendGenix"
               className="ms-[6rem] flex justify-end"
               width="172"
               height="23"
@@ -110,7 +117,7 @@ const Login = () => {
           </div>
         </div>
 
-      {/* loading animation */}
+        {/* loading animation */}
         {loading && (
           <div className="h-screen w-full flex items-center justify-center">
             <Spinner />

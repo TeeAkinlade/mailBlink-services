@@ -75,7 +75,7 @@ const Footer = () => {
                 href="#"
                 className="text-xs text-primaryBlack hover:text-[#089373] md:text-sm"
               >
-                MailBlink &copy; 2023. All rights reserved
+                VendGenix &copy; 2023. All rights reserved
               </Link>
             </p>
             <div>
