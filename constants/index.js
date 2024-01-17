@@ -161,7 +161,7 @@ export const teams = [
   {
     id: 1,
     image: "/assets/images/team-01.png",
-    name: "Chris Awoke",
+    name: "Michal Kosinski",
     position: "Software Engineer & Team Lead",
   },
   {
