@@ -62,11 +62,7 @@ const Services = () => {
               {servicesData.map(
                 ({ id, icon, title, contents, href, linkText }) => (
                   <div
-<<<<<<< HEAD
                     className="w-[250px] transform rounded-lg border-b-4 border-transparent bg-backGround p-8 py-16 shadow-xl transition-transform duration-200 hover:scale-105 hover:border-navyBlue md:w-[330px]"
-=======
-                    className="py-16 bg-backGround shadow-md md:shadow-xl p-8 rounded-lg transform transition-all hover:scale-105 duration-200 border-b-4 border-transparent hover:border-navyBlue w-[250px] md:w-[330px]"
->>>>>>> cee7808a2c05bd74a179a76d0cb958b71a31db71
                     key={id}
                   >
                     <div className="inline-block rounded-[50%] bg-navyBlue p-3">
