@@ -52,7 +52,7 @@ export const CreateCampaignForm = () => {
   useEffect(() => {
     getGroups();
     getEmails();
-  }, []);
+  }, [getGroups, getEmails]);
 
   const saveTemplate = (template) => {
     localStorage.setItem("template", template.design);
