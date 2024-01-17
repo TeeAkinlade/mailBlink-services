@@ -21,7 +21,8 @@ const Footer = () => {
 							<p className='my-4 text-base text-primaryBlack'>
 								Ready to take the leap into a new era of digital marketing? Join
 								VendGenix today and witness the transformation of your small
-								business. Let's write the success story of your brand together.
+								business. Let&apos;s write the success story of your brand
+								together.
 							</p>
 							<div>
 								<p className='padding-y text-lg font-semibold text-primaryBlack2'>
@@ -59,12 +60,7 @@ const Footer = () => {
 										key={id}
 										className='hover:bg-green-400  hover:border-transparent border-2 border-forestGreen rounded-full transition-colors'
 									>
-										<Image
-											src={photo}
-											alt={alt}
-											width='40'
-											height='40'
-										/>
+										<Image src={photo} alt={alt} width='40' height='40' />
 									</Link>
 								))}
 							</div>

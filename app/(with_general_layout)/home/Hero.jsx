@@ -32,7 +32,7 @@ const Hero = () => {
 				<div className='px-8 pb-6 lg:pb-48 relative'>
 					<div className='pt-4 md:pt-12'>
 						<p className='text-primaryBlack2 text-4xl md:text-5xl leading-[3rem] font-semibold text-center md:text-left'>
-							One-Stop Shop To{' '}<br/>
+							One-Stop Shop To <br />
 							<span className='text-forestGreen mr-2 text-4xl md:text-5xl'>
 								{typeEffect}
 							</span>
@@ -48,7 +48,7 @@ const Hero = () => {
 								Experience the convenience of a single platform that integrates
 								everything your business needs for online success. From email
 								campaigns to content marketing SEO optimization and social media
-								management, we've got you covered.
+								management, we&apos;ve got you covered.
 							</p>
 							<ul className='my-10 md:my-6'>
 								<li className='flex items-center text-sm md:text-base'>

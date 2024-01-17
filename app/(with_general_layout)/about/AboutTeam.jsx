@@ -35,7 +35,7 @@ const AboutTeam = () => {
                   className="absolute -bottom-[6px] mt-4 flex-center flex-col text-center bg-[rgba(208,240,200,0.6)] w-[100%] h-[7rem] px-5 text-black rounded-b-[55%]"
                   style={{
                     opacity: hoveredMember === index ? 1 : 0,
-                    transition: "opacity 0.3s ease",
+                    transition: "opacity 0.5s ease-in-out",
                   }}>
                   <div className="flex-center gap-2 mt-3">
                     {teamSocialIcons.map((icon) => (

@@ -15,7 +15,12 @@ import photo3 from '@/public/assets/images/unsplash_QckxruozjRg.svg';
 import photo4 from '@/public/assets/images/unsplash_UpsEF48wAgk.svg';
 import { IoMdMail } from 'react-icons/io';
 import { FaSms, FaWpforms } from 'react-icons/fa';
-
+import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
+export const teamSocialIcons = [
+	{ icon: <FaLinkedin />, key: 'linkedinUrl' },
+	{ icon: <FaGithub />, key: 'githubUrl' },
+	{ icon: <FaTwitterSquare />, key: 'twitterUrl' },
+];
 export const NAV_LINKS = [
 	{
 		href: '',
