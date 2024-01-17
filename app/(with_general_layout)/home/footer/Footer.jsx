@@ -13,13 +13,13 @@ const Footer = () => {
               <Link href="/">
                 <Image
                   src="/assets/images/Logo VendGenix.svg"
-                  ait="logo"
+                  ait="logo at footer"
                   width="150"
                   height="150"
                 />
               </Link>
               <p className="my-4 text-base text-primaryBlack">
-               {` Ready to take the leap into a new era of digital marketing? Join
+                {` Ready to take the leap into a new era of digital marketing? Join
                 VendGenix today and witness the transformation of your small
                 business. Let's write the success story of your brand together.`}
               </p>
