@@ -18,7 +18,7 @@ export const SMSList = ({ smsCampaigns, getCampaigns }) => {
 
   useEffect(() => {
     getCampaigns();
-  }, []);
+  }, [getCampaigns]);
 
   useEffect(() => {
     console.log(smsCampaigns);
