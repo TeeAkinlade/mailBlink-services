@@ -50,7 +50,7 @@ const Schedule = () => {
 	};
 
 	return (
-		<main className='flex flex-col px-8'>
+		<main className='flex flex-col px-8 items-center'>
 			<div className='flex flex-col gap-y-2 mb-8'>
 				<h2 className='text-2xl text-ui_secondary1 dark:text-db_light_secondary font-[700]'>
 					CALENDAR
