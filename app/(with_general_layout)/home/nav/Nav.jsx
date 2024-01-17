@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -33,8 +34,10 @@ const Nav = () => {
   // Close the navbar when the route changes
   const router = useRouter();
   useEffect(() => {
-    setOpen(false);
-  }, [router.asPath]);
+    if (router) {
+      setOpen(false);
+    }
+  }, [router.asPath]); // Use optional chaining to handle cases where router is undefined
 
   return (
     <nav className="max-width mx-auto md:px-12">
