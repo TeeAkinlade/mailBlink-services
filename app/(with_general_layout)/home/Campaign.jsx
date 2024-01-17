@@ -15,7 +15,7 @@ const Campaign = () => {
             className="w-full md:w-[80%] object-cover"
           />
           <div className="">
-            <p className="font-Roboto text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-0 font-bold text-primaryBlack2 leading-tight md:hidden lg:block text-center md:text-left">
+            <p className="text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-0 font-bold text-primaryBlack2 leading-tight md:hidden lg:block text-center md:text-left">
               Turn Around
               <span className="text-forestGreen"> Your Business </span>
             </p>
