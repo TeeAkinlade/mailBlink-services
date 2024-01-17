@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -7,9 +9,6 @@ import SignBtn from "@/components/SignBtn";
 import Navlink from "./Navlink";
 import DashboardBtn from "@/components/DashboardBtn";
 import { useCurrentUser } from "@/app/(auth-with-layout)/currentUser";
-import { Router } from "next/navigation"; // Import Router from 'next/router'
-import Image from "next/image";
-import Link from "next/link";
 
 const Nav = () => {
   const { user } = useCurrentUser();
@@ -17,7 +16,7 @@ const Nav = () => {
 
   const menuRef = useRef();
 
-  // detects if outside the navbar on mobile is clicked and closes the navbar
+  //detects if outside the navbar on mobile is clicked and closes the navbar
   useEffect(() => {
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
@@ -29,22 +28,7 @@ const Nav = () => {
     return () => {
       document.removeEventListener("mousedown", handler);
     };
-  }, []); // Added an empty dependency array to run the effect only once on mount
-
-  // Close the navbar when the route changes
-  useEffect(() => {
-    const handleRouteChange = () => {
-      setOpen(false);
-    };
-
-    // Subscribe to route changes
-    Router.events.on("routeChangeStart", handleRouteChange);
-
-    // Unsubscribe when the component unmounts
-    return () => {
-      Router.events.off("routeChangeStart", handleRouteChange);
-    };
-  }, []);
+  });
 
   return (
     <nav className="max-width mx-auto md:px-12">
