@@ -12,12 +12,12 @@ const Subscribe = () => {
               🌟 Why Choose Us?
             </p>
             <h3 className="font-Roboto text-4xl md:text-5xl font-semibold py-8 leading-tight text-center md:text-left">
-              We're your strategic partner in digital success.
+              We&apos;re your strategic partner in digital success.
             </h3>
             <p className="text-base md:text-sm pb-6 leading-[2] text-center md:text-left">
               Choose VendGenix – where innovation meets simplicity, and your
               digital success is our priority. <br />
-              Let's embark on this journey together.
+              Let&apos;s embark on this journey together.
             </p>
           </div>
           <ul>
