@@ -12,7 +12,6 @@ const SmsDetails = () => {
   const [sentSms, setSentSms] = useState([]);
 
   const [showingSent, setShowingSent] = useState(false);
-  const [showingDraft, setShowingDraft] = useState(true);
 
   useEffect(() => {
     getCampaigns("sms");
@@ -29,11 +28,14 @@ const SmsDetails = () => {
 
   return (
     <>
-      <header className="mx-10 py-5 ">
+      <header className="mx-10 ">
         <div className="flex justify-between">
-          <article className="w-full text-center text-2xl font-bold text-ui_primary lg:text-left">
-            <h1>SMS Campaign details</h1>
-          </article>
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold">Sms Campaigns</h1>
+            <p className="text-lg text-gray-600">
+              View and manage your sms campaigns
+            </p>
+          </div>
           <div className="hidden w-60 lg:block">
             <CreateSMSForm />
           </div>
@@ -51,12 +53,11 @@ const SmsDetails = () => {
           <li
             className={`flex flex-shrink pb-3 border-b-2 transition-all hover:cursor-pointer  ${
               showingSent
-                ? "border-navyBlue"
+                ? "border-ui_secondary1"
                 : "border-transparent hover:scale-95"
             }`}
             onClick={() => {
               setShowingSent(true);
-              setShowingDraft(false);
             }}
           >
             <div className="flex gap-2 items-center">
@@ -71,11 +72,10 @@ const SmsDetails = () => {
           <li
             className={`flex flex-shrink pb-3 border-b-2 transition-all hover:cursor-pointer  ${
               !showingSent
-                ? "border-navyBlue"
+                ? "border-ui_secondary1"
                 : "border-transparent hover:scale-95"
             }`}
             onClick={() => {
-              setShowingDraft(true);
               setShowingSent(false);
             }}
           >
@@ -89,7 +89,7 @@ const SmsDetails = () => {
         </ul>
       </header>
 
-      <section className="mx-10 mt-5 mb-10 bg-white rounded-md p-6">
+      <section className="mb-10 bg-white rounded-md">
         {showingSent ? (
           <SMSList smsCampaigns={sentSms} getCampaigns={getCampaigns} />
         ) : (

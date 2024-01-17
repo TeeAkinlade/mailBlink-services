@@ -89,7 +89,7 @@ export const fetchID = async (tableName, column, columnValue) => {
 };
 
 //Creates a group given a group object { id:uuid() , name:string }
-export const createGroup = (group) => {
+export const createGroup = async (group) => {
   addToDB("GROUPS", group);
 };
 
@@ -112,7 +112,7 @@ export const addSubscriberToGroup = async (subscriberID, groupName) => {
 };
 
 //Adds a subscriber to our database, also adds it to the general subscriber group by default
-export const addSubscriber = (subscriber) => {
+export const addSubscriber = async (subscriber) => {
   //We add the subscriber to the SUBSCRIBERS table
   addToDB("SUBSCRIBERS", subscriber);
 
@@ -226,7 +226,7 @@ export const readRelatedGroups = async (campaignID) => {
 export const readRelatedSubscribers = async (groupID) => {
   const { data, error } = await supabase
     .from("GROUPS")
-    .select(`*, SUBSCRIBERS (id, first_name, last_name, email)`)
+    .select(`*, SUBSCRIBERS (id, first_name, last_name, email, phone_number)`)
     .eq("id", groupID);
 
   if (error) throw error;
@@ -236,4 +236,18 @@ export const readRelatedSubscribers = async (groupID) => {
 export const addSubToGroup = async (groupID, subID) => {
   console.log(groupID, subID);
   addToDB("GROUPS_SUBSCRIBERS", { group_id: groupID, subscriber_id: subID });
+};
+
+export const deleteSubFromGroup = async (groupID, subId) => {
+  const { error } = await supabase
+    .from("GROUPS_SUBSCRIBERS")
+    .delete()
+    .eq("group_id", groupID)
+    .eq("subscriber_id", subId);
+
+  if (error) {
+    throw error;
+  }
+
+  console.log("Deletion successful");
 };

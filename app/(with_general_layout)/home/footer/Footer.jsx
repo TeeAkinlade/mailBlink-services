@@ -19,9 +19,9 @@ const Footer = () => {
                 />
               </Link>
               <p className="my-4 text-base text-primaryBlack">
-                Ready to take the leap into a new era of digital marketing? Join
+               {` Ready to take the leap into a new era of digital marketing? Join
                 VendGenix today and witness the transformation of your small
-                business. Let's write the success story of your brand together.
+                business. Let's write the success story of your brand together.`}
               </p>
               <div>
                 <p className="padding-y text-lg font-semibold text-primaryBlack2">
@@ -75,7 +75,7 @@ const Footer = () => {
                 href="#"
                 className="text-xs text-primaryBlack hover:text-[#089373] md:text-sm"
               >
-                MailBlink &copy; 2023. All rights reserved
+                VendGenix &copy; 2023. All rights reserved
               </Link>
             </p>
             <div>

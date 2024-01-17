@@ -27,10 +27,10 @@ const About = () => {
               tech hurdles – just focus on your business.
             </h3>
             <p className="text-primaryBlack text-sm md:text-base leading-[28px] py-4 md:py-0 text-center md:text-left mb-8">
-              We understand the challenges faced by small businesses. That's why
+              {`We understand the challenges faced by small businesses. That's why
               we've created an inclusive community and an all-in-one hub,
               ensuring you have everything necessary for a successful digital
-              presence.
+              presence.`}
             </p>
             <Link
               href="/about"

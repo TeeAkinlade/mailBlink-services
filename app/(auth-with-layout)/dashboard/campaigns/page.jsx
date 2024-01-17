@@ -28,11 +28,12 @@ const CampaignsDetails = () => {
 
   return (
     <>
-      <header className="mx-10 py-5 ">
+      <header className="mx-10 ">
         <div className="flex justify-between">
-          <article className="w-full text-center text-4xl font-bold text-ui_primary lg:text-left">
-            <h1>Campaign details</h1>
-          </article>
+        <div className="space-y-2">
+          <h1 className="text-3xl font-bold">Email Campaigns</h1>
+          <p className="text-lg text-gray-600">View and manage your email campaigns</p>
+        </div>
           <div className="hidden w-60 lg:block">
             <CreateCampaignForm />
           </div>
@@ -86,7 +87,7 @@ const CampaignsDetails = () => {
         </ul>
       </header>
 
-      <section className="mx-10 mt-5 mb-10 bg-white rounded-md p-6">
+      <section className="mb-10 bg-white rounded-md">
         {showingSent ? (
           <CampaingList campaigns={sentCampaigns} getCampaigns={getCampaigns} />
         ) : (
