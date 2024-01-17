@@ -124,17 +124,20 @@ const Signup = () => {
           }}
           className="hidden h-[100vh] lg:block w-full pb-20"
         >
-          <Link href={"/"} className="  ">
-            <Image
-              src="/assets/images/Logo VendGenix.svg"
-              alt="logo at footer"
-              width="150"
-              height="150"
-            />
-          </Link>
+          <div className="pt-14 pl-6">
+            <Link href={"/"}>
+              <Image
+                src="/assets/images/Logo VendGenix.svg"
+                alt="logo at footer"
+                width="150"
+                height="150"
+              />
+            </Link>
+          </div>
+
           <div className="pt-[160px] xs:ps-[10px] lg:pr-[109px] lg:ps-[110px]">
             <h3 className="font-Poppins mt-[15px] flex text-[32px] font-[700] leading-[40px] text-[#17181A]">
-              We are VendGenix <br /> So are you.
+              We are VendGenix, <br /> so are you.
               <Image
                 src="/assets/images/Group 2942.svg"
                 alt="MailBlink"
