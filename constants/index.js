@@ -9,7 +9,6 @@ import image8 from "@/public/assets/images/LinkedIn.svg";
 import image9 from "@/public/assets/images/Instagram.svg";
 import image10 from "@/public/assets/images/email-icon.svg";
 import image11 from "@/public/assets/images/Mobile.svg";
-import photo from "@/public/assets/images/unsplash_376KN_ISplE.svg";
 import photo2 from "@/public/assets/images/unsplash_g1Kr4Ozfoac.svg";
 import photo3 from "@/public/assets/images/unsplash_QckxruozjRg.svg";
 import photo4 from "@/public/assets/images/unsplash_UpsEF48wAgk.svg";
@@ -28,14 +27,14 @@ export const NAV_LINKS = [
         label: "Email Marketing",
       },
       {
-        href: "/sms-marketing",
-        key: "sms-marketing",
-        label: "SmS Marketing",
+        href: "/sales-funnel",
+        key: "Sales Funnel",
+        label: "Sales Funnel",
       },
       {
         href: "/forms",
         key: "forms",
-        label: "Form Builder",
+        label: "Landing Pages",
       },
     ],
   },
@@ -50,9 +49,9 @@ export const campaignDetailsList = [
     id: 1,
     photo: image1,
     alt: "Feature Icon",
-    heading: "Plug-n-plPlug-n-play configuration",
+    heading: "Community Support",
     content:
-      "Secure your organization without changing all the settings. The text will be populated with the right information later on.",
+      " Connect, learn, and grow with our vibrant community of entrepreneurs. Gain insights, share experiences, and forge partnerships that transcend the digital space.",
   },
   {
     id: 2,
@@ -69,33 +68,33 @@ export const campaignFeaturesDetails = [
     id: 1,
     photo: image2,
     alt: "Feature Icon with circle",
-    heading: "Web Security",
+    heading: "Community Support",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis et sed nam sem tellus erat.",
+      "Connect, learn, and grow with our vibrant community of entrepreneurs. Gain insights, share experiences, and forge partnerships that transcend the digital space.",
   },
   {
     id: 2,
     photo: image3,
     alt: "Feature Icon with circle",
-    heading: "Email Security",
+    heading: "User-Friendly Experience",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis et sed nam sem tellus erat.",
+      "Navigate effortlessly with our intuitive platform. No technical hurdles—just a seamless experience, allowing you to focus on what you do best: running your business.",
   },
   {
     id: 3,
     photo: image4,
     alt: "Feature Icon with circle",
-    heading: "Endpoint Security",
+    heading: "Bespoke Solutions",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis et sed nam sem tellus erat",
+      "We recognize that every business is unique. Our platform offers customizable solutions to suit your specific needs, ensuring a personalized approach to your digital success.",
   },
   {
     id: 4,
     photo: image5,
     alt: "Feature Icon with circle",
-    heading: "Firewall & ADR",
+    heading: "Affordability Without Compromise",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis et sed nam sem tellus erat",
+      "Experience enterprise-level features without the hefty price tag. We believe in providing affordable solutions that deliver exceptional value.",
   },
 ];
 
@@ -103,27 +102,54 @@ export const servicesData = [
   {
     id: 1,
     icon: <IoMdMail size={30} />,
-    title: "Email",
+    title: "Email Marketing",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Unlock the power of personalized messaging with our Email Marketing service. Craft engaging campaigns, nurture leads, and build lasting relationships with your audience.",
     href: "#",
     linkText: "Learn more",
   },
   {
     id: 2,
     icon: <FaSms size={30} />,
-    title: "SMS",
+    title: "Social Media",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Boost your brand across platforms with our Social Media Management tool. Schedule posts, analyze performance, and engage with your audience seamlessly, all from one central hub.",
     href: "/sms",
     linkText: "Learn more",
   },
   {
     id: 3,
     icon: <FaWpforms size={30} />,
-    title: "Form",
+    title: "Landing Pages",
     contents:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.",
+      "Build stunning landing pages with our intuitive Form Building tools. Capture leads, gather valuable insights, and guide visitors through a seamless journey from discovery to conversion.",
+    href: "#",
+    linkText: "Learn more",
+  },
+  {
+    id: 4,
+    icon: <FaSms size={30} />,
+    title: "WhatsApp Marketing",
+    contents:
+      "Our WhatsApp Marketing service allows you to engage customers personally, share updates, and drive conversions—all from the convenience of their favorite messaging app.",
+    href: "#",
+    linkText: "Learn more",
+  },
+  {
+    id: 5,
+    icon: <FaSms size={30} />,
+    title: "Content Marketing",
+    contents:
+      "Create compelling content effortlessly. Our Content Marketing tools empower you to craft impactful narratives, share your brand story, and establish authority in your industry.",
+    href: "#",
+    linkText: "Learn more",
+  },
+  {
+    id: 6,
+    icon: <IoMdMail size={30} />,
+    title: "Sales Funnel",
+    contents:
+      "Optimize your sales process with our Sales Funnel feature. From awareness to conversion, track customer journeys, and turn leads into loyal customers, ensuring every interaction counts.",
     href: "#",
     linkText: "Learn more",
   },
@@ -170,64 +196,6 @@ export const teams = [
   },
 ];
 
-// Location Section of About page
-
-export const aboutData = [
-  {
-    id: 1,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300,Sausalito, CA, 94965, United States of America`,
-  },
-
-  {
-    id: 2,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300,Sausalito, CA, 94965,United States of America`,
-  },
-
-  {
-    id: 3,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
-  },
-
-  {
-    id: 4,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
-  },
-
-  {
-    id: 5,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
-  },
-
-  {
-    id: 6,
-    image: "/assets/images/location-img-1.png",
-    title: "Head Office and USA West Coast",
-    phone: "+1 (415) 322 2479",
-    contact: "contact@opmantek.com",
-    address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
-  },
-];
-
 export const socialMediaLinks = [
   {
     id: 1,
@@ -262,19 +230,18 @@ export const footerLinks = [
     links: [
       { id: 1, link: "Blog", href: "/blog" },
       { id: 2, link: "Marketing Guides", href: "#" },
-      { id: 3, link: "Get a demo", href: "#" },
-      { id: 4, link: "Contact us", href: "/contact-us" },
+      { id: 3, link: "About Us", href: "/about" },
+      { id: 4, link: "Contact Us", href: "/contact-us" },
     ],
   },
   {
     id: 2,
-    title: "Products",
+    title: "Services",
     links: [
-      { id: 1, link: "Newsletter", href: "#" },
-      { id: 2, link: "Email Marketing", href: "/features/email-marketing" },
-      { id: 3, link: "SMS Marketing", href: "/sms/email-marketing" },
-      { id: 4, link: "Email", href: "#" },
-      { id: 5, link: "Form", href: "#" },
+      { id: 1, link: "Email Marketing", href: "/email-marketing" },
+      { id: 2, link: "Social Media", href: "/socia-media" },
+      { id: 3, link: "Sales Funnel", href: "/sales-funnel" },
+      { id: 4, link: "Landing Pages", href: "#" },
     ],
   },
 ];
@@ -285,14 +252,14 @@ export const contacts = [
     photo: image10,
     alt: "Email-icon",
     title: "Support: ",
-    details: "hello@landify.co",
+    details: "hello@vendgenix.co",
   },
   {
     id: 2,
     photo: image11,
     alt: "Mobile-icon",
     title: "Phone: ",
-    details: "+234 98765 43210",
+    details: "+234 806 736 0647",
     styles: "h-6 w-8",
   },
 ];
@@ -721,14 +688,6 @@ export const blogTitles = [
   },
   {
     id: 4,
-    title: "Podcasts",
-  },
-  {
-    id: 5,
-    title: "White papers",
-  },
-  {
-    id: 6,
     title: "Case Studies",
   },
 ];
@@ -829,6 +788,7 @@ export const webinars = [
       "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
   },
 ];
+
 export const enterprise = [
   {
     id: 1,
@@ -870,98 +830,6 @@ export const enterprise = [
   {
     id: 6,
     src: photo3,
-    heading: "Reasoning Ability",
-    content:
-      "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
-  },
-];
-export const podcast = [
-  {
-    id: 1,
-    src: photo4,
-    heading: "Reasoning Ability",
-    content: "Check your reasoning abilities.",
-    content2:
-      "Discover the top traits that help you excel and determine your work fit.",
-  },
-  {
-    id: 2,
-    src: photo2,
-    heading: "Cope Inventory",
-    content:
-      "Discover the top traits that help you excel and determine your work fit.",
-    content2: "Check your reasoning abilities.",
-  },
-  {
-    id: 3,
-    src: photo3,
-    heading: "Cope Inventory",
-    content: "Discover your communication style! Really useful for teams.",
-    content2: "Check your reasoning abilities",
-  },
-  {
-    id: 4,
-    src: photo2,
-    heading: "Entrepreneurial Personality",
-    content:
-      "Get a clean picture of yourself with insights into your personality and character.",
-  },
-  {
-    id: 5,
-    src: photo4,
-    heading: "Reasoning Ability",
-    content:
-      "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
-  },
-  {
-    id: 6,
-    src: photo3,
-    heading: "Reasoning Ability",
-    content:
-      "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
-  },
-];
-export const whitepaper = [
-  {
-    id: 1,
-    src: photo3,
-    heading: "Reasoning Ability",
-    content: "Check your reasoning abilities.",
-    content2:
-      "Discover the top traits that help you excel and determine your work fit.",
-  },
-  {
-    id: 2,
-    src: photo2,
-    heading: "Cope Inventory",
-    content:
-      "Discover the top traits that help you excel and determine your work fit.",
-    content2: "Check your reasoning abilities.",
-  },
-  {
-    id: 3,
-    src: photo4,
-    heading: "Cope Inventory",
-    content: "Discover your communication style! Really useful for teams.",
-    content2: "Check your reasoning abilities",
-  },
-  {
-    id: 4,
-    src: photo4,
-    heading: "Entrepreneurial Personality",
-    content:
-      "Get a clean picture of yourself with insights into your personality and character.",
-  },
-  {
-    id: 5,
-    src: photo4,
-    heading: "Reasoning Ability",
-    content:
-      "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
-  },
-  {
-    id: 6,
-    src: photo2,
     heading: "Reasoning Ability",
     content:
       "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
@@ -1013,4 +881,11 @@ export const caseStudies = [
     content:
       "Check your reasoning abilities. Discover the top traits that help you excel and determine your work fit.",
   },
+];
+
+import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
+export const teamSocialIcons = [
+  { icon: <FaLinkedin />, key: "linkedinUrl" },
+  { icon: <FaGithub />, key: "githubUrl" },
+  { icon: <FaTwitterSquare />, key: "twitterUrl" },
 ];

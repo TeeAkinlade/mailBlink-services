@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
 import Spinner from '../../../components/Spinner';
-
 import { useCurrentUser } from '../currentUser';
 
 import OauthComponent from '../OauthComponent';
@@ -283,6 +282,7 @@ const Signup = () => {
 			</div>
 		</div>
 	);
+
 };
 
 export default Signup;

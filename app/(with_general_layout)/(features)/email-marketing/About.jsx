@@ -34,12 +34,7 @@ export const EmailAbout = () => {
             expedita odit, rerum asperiores harum ratione voluptatum laborum
             ullam excepturi consectetur deserunt est. Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Optio placeat ducimus nostrum est nisi
-            excepturi, asperiores architecto dolorem dolor laborum perspiciatis,
-            rem quo harum omnis ut beatae delectus porro quisquam? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Quia nemo voluptatibus
-            eius odio voluptates ab aperiam laudantium architecto, sapiente
-            harum, incidunt nobis quo nostrum, repellat velit officia temporibus
-            similique fugit.
+            temporibus similique fugit.
           </p>
           <Link href="/campaigns">
             <button className="custom-btn mt-5">Learn more</button>

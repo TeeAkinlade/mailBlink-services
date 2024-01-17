@@ -13,7 +13,7 @@ const FAQs = ({ faqItems }) => {
   return (
     <main className="z-10 mb-12">
       <h3 className="mb-5 text-center text-4xl font-bold text-gray-900 lg:text-left">
-        FAQ
+        Frequently Asked Questions
       </h3>
 
       <div>
@@ -22,10 +22,10 @@ const FAQs = ({ faqItems }) => {
             <div
               className={`flex gap-4 w-full z-40 relative cursor-pointer items-center justify-between rounded-t-md ${
                 visibleAnswer === item.id ? "" : "rounded-b-md"
-              } transition-all duration-300 bg-white px-3 py-4 font-semibold`}
+              } transition-all duration-300 bg-white px-3 py-4`}
               onClick={() => toggleAnswer(item.id)}
             >
-              <span className="text-lg">{item.question}</span>
+              <span className="text-[15px]">{item.question}</span>
               <IoIosArrowDropdown
                 style={{
                   transform: `rotate(${

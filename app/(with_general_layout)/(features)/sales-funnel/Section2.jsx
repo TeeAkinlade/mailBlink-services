@@ -1,12 +1,12 @@
 import { FaBalanceScale } from "react-icons/fa";
 import Image from "next/image";
 
-export default function AboutProducts() {
+export default function Home() {
   const items = [
     {
-      title: "Sophisticated Business Rules",
+      title: "Comprehensive All-in-One Solution",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "From email marketing and social media management to content creation and analytics, our platform consolidates essential tools, streamlining your marketing efforts",
     },
     {
       title: "Pre-Configured Out-of-the",
@@ -36,16 +36,16 @@ export default function AboutProducts() {
   ];
 
   return (
-    <main className="mt-10 bg-blue-50 px-4 py-16 font-poppins text-ui_primary md:px-20 md:py-[100px] lg:px-40">
-      <h2 className="text-center text-[38px] font-extrabold md:text-4xl">
-        Why Top Companies use MailBlink
+    <main className="mt-10 bg-[#ecfdf6] px-4 py-10 font-poppins text-navyBlue md:px-20 md:py-[100px] lg:px-40">
+      <h2 className="text-center text-2xl font-extrabold md:text-4xl">
+        Why Choose VendGenix?
       </h2>
-      <div className="flex flex-col items-center mt-6 md:mt-10 px-10 md:px-0">
+      <div className="flex flex-col items-center px-10 md:mt-10 md:px-0">
         <div className="mt-5 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, index) => (
             <div
               key={index}
-              className={`transform overflow-hidden rounded-xl border-b-4 border-transparent px-5 py-5 text-center transition-transform hover:scale-105 hover:border-ui_primary hover:bg-white hover:shadow-lg`}
+              className={`transform overflow-hidden rounded-xl border-b-4 border-transparent px-5 py-5 text-center transition-transform hover:scale-105 hover:border-[#e0fffd] hover:bg-[#086250] hover:text-white hover:shadow-xl ease-in-out duration-500`}
             >
               <div className="flex items-center justify-center">
                 <FaBalanceScale className="h-8 w-[50%]" />
