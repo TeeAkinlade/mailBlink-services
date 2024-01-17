@@ -251,11 +251,17 @@ button {
 	}
 
 	.fc .fc-toolbar-title {
-		font-size: 1rem;
+		font-size: 0.7rem;
 		font-weight: 700;
+		white-space:nowrap;
+	}
+
+	.calendarPosition{
+
+		align-items: center;
 	}
 }
-/* DB Footer Grid Styling for mobile*/
+/*-------------------- DB Footer Grid Styling for mobile-------------------------------------------*/
 @media screen and (max-width: 768px) {
 	.gridlayout {
 		display: grid;

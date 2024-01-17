@@ -124,7 +124,7 @@ export default function Home() {
 							</div>
 
 							<div className='flex items-center justify-start md:w-[45rem] h-[15rem] p-0 relative z-1'>
-								<BarChart />
+								<BarChart  />
 							</div>
 						</div>
 						{/* RECENT CAMPAIGN */}
@@ -264,8 +264,8 @@ export default function Home() {
 									</p>
 								</span>
 
-								<div className='  md:w-[45rem] h-[18rem] flex justify-center items-center overflow-hidden  relative z-1'>
-									<RadialChart />
+								<div className='  md:w-[45rem] h-[18rem] flex justify-center items-center overflow-hidden  relative -left-[15%] md:left-3 z-1'>
+									<RadialChart  />
 								</div>
 							</div>
 						</div>

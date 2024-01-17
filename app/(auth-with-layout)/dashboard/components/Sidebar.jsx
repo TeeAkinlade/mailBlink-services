@@ -19,7 +19,7 @@ import { useCurrentUser } from '../../currentUser';
 import Image from 'next/image';
 import Spinner from '../../../../components/Spinner';
 
-export default function Sidebar() {
+export default function Sidebar({ miniToggle, toggleMini }) {
 	const { user, loading } = useCurrentUser();
 
 	// SignOut Functionality
@@ -51,7 +51,7 @@ export default function Sidebar() {
 	const LastName = name?.[1].charAt(0).toUpperCase().concat(name?.[1].slice(1));
 
 	// State Management for smaller screens
-	const [miniToggle, setMiniToggle] = useState(true);
+	// const [miniToggle, setMiniToggle] = useState(true);
 	const [miniSidebar, setMiniSidebar] = useState(false);
 	// State Management for regular sized screens
 	const [toggle, setToggle] = useState(true);
@@ -155,13 +155,20 @@ export default function Sidebar() {
 					<div className='flex gap-x-4 items-center'>
 						{/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
 
-						<h1
-							className={`font-poppins origin-left text-[2rem] font-[700] leading-8 text-white ${
-								!toggle && 'scale-[0.3]'
-							} cursor-pointer hover:animate-pulse duration-500 mb-2`}
+						<Link
+							href='/'
+							className={` font-poppins origin-left text-[2rem] font-[700] leading-8 text-white  ${
+								!toggle && 'scale-[0]'
+							} cursor-pointer bg-transparent hover:animate-pulse duration-500 mb-2`}
 						>
-							Salesblink.
-						</h1>
+							<Image
+								src='/assets/images/Logo VendGenix.svg'
+								className='rounded-md'
+								alt='logo'
+								width='150'
+								height='150'
+							/>
+						</Link>
 					</div>
 					{/* Link Items */}
 					<ul className='pt-6'>
@@ -270,27 +277,34 @@ export default function Sidebar() {
 			) : (
 				<aside
 					className={` ${
-						miniToggle ? 'w-72' : 'fixed left-[-70%] duration-500 '
-					}  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-ui_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
+						miniToggle ? 'w-72' : 'fixed left-[-100%] ease-in-out duration-700 '
+					}  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
 				>
-					<IoIosArrowBack
+					{/* <IoIosArrowBack
 						onClick={() => setMiniToggle(!miniToggle)}
 						alt='Controller icon for collapsable sidebar'
 						className={`absolute bg-slate-200 font-[600] cursor-pointer text-ui_button  rounded-md h-10 -right-14 p-2 top-28 shadow-[-5px 0px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)] w-10 ${
 							!miniToggle && 'rotate-180'
 						} ease-in-out duration-500`}
-					/>
+					/> */}
 					{/* Header for sidebar */}
 					<div className='flex gap-x-4 items-center'>
 						{/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
 
-						<h1
-							className={`font-poppins origin-left text-[2rem] font-[700] leading-8 text-white ${
-								!miniToggle && 'scale-[0.3]'
-							} cursor-pointer hover:animate-pulse duration-500`}
+						<Link
+							href='/'
+							className={`rounded-md font-poppins origin-left text-[2rem] font-[700] leading-8 text-white  ${
+								!toggle && 'scale-[0]'
+							} cursor-pointer bg-transparent hover:animate-pulse duration-500 mb-2`}
 						>
-							Saleblink.
-						</h1>
+							<Image
+								src='/assets/images/Logo VendGenix.svg'
+								className='rounded-md'
+								alt='logo'
+								width='150'
+								height='150'
+							/>
+						</Link>
 					</div>
 					{/* Link Items */}
 					<ul className='pt-6'>
@@ -302,7 +316,8 @@ export default function Sidebar() {
 								}  `}
 								onClick={() => {
 									setActiveLink(index);
-									setMiniToggle(!miniToggle);
+									// setMiniToggle(!miniToggle);
+									toggleMini();
 									if (menu.onClick == handleSignOut) {
 										menu.onClick();
 									} else if (menu.onClick == handleNavigate) {
@@ -331,17 +346,20 @@ export default function Sidebar() {
 						))}
 
 						<div
-							className={`bg-[#fff] shadow-md rounded-md flex gap-2 justify-between px-3 py-0 items-center mt-8 md:hidden ${
+							className={`bg-[#fff] shadow-md rounded-md flex gap-2 justify-center  mt-12 px-3 py-3 items-center md:hidden ${
 								!miniToggle && 'left-[-100%] duration-500 '
 							} `}
+							onClick={toggleMini}
 						>
-							<input
-								type='text'
-								placeholder='Search'
-								className='outline-none bg-transparent px-3 py-2 text-[0.8rem] font-poppins text-black placeholder-[#B7C5CC] '
-							/>
-
-							<MdSearch className='text-ui_primary font-[900] h-5 w-5 cursor-pointer' />
+							<div className=' text-ui_secondary1 dark:text-ui_button '>
+								<TiChevronLeft />
+							</div>
+							<span
+								className={`text-[0.75rem]  text-ui_secondary1 dark:text-ui_button `}
+							>
+								{' '}
+								Collapse Menu{' '}
+							</span>
 						</div>
 					</ul>
 				</aside>

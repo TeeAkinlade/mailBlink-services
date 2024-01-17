@@ -11,7 +11,10 @@ export default function DashboardLayout({ children }) {
 	const { user, loading } = useCurrentUser();
 	const router = useRouter();
 	const [authorized, setAuthorized] = useState(false);
-
+	const [miniToggle, setMiniToggle] = useState(true);
+const toggleMini = () => {
+	setMiniToggle(!miniToggle);
+};
   console.log(user);
   let timer;
   useEffect(() => {
@@ -42,12 +45,12 @@ export default function DashboardLayout({ children }) {
 			{/* Sidebar component remains static above all elements on the page */}
 			<main className='flex overflow-hidden h-screen w-screen dark:bg-dark_bg dark:text-dark_text '>
 				{/* <Sidebar /> */}
-				<Sidebar />
+				<Sidebar  toggleMini={toggleMini} miniToggle={miniToggle}  />
 				{/* Main Dashboard display area */}
 				<div className='flex flex-col overflow-x-hidden justify-between gap-4 md:gap-0 w-full h-full overflow-y-auto '>
 					{/* Navbar COMPONENT goes here */}
 
-					<Navbar />
+					<Navbar toggleMini={toggleMini} miniToggle={miniToggle}  />
 					{/* When routing begins we would use the <Outlet/> functionality to render different pages */}
 					{loading ? <Spinner /> : <div className='flex flex-col mb-6'>{children}</div>}
 				
