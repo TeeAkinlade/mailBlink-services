@@ -16,10 +16,11 @@ export const EmailAbout = () => {
             className="h-full w-full rounded-md object-cover"
           />
           <div className="relative bottom-[2rem] left-8 z-[2] float-right w-fit md:left-[10rem] md:float-left">
-            <img
+            <Image
               src="/assets/icons/hero_dots.svg"
               alt=""
-              className="w-20 sm:w-32"
+              width={80}
+              height={80}
             />
           </div>
         </div>

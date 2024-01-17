@@ -7,10 +7,14 @@ export const useCampaigns = () => {
   const [error, setError] = useState(null);
 
   const getCampaigns = useCallback(async (type) => {
+    if(!type) return;
+
     try {
       setIsLoading(true);
       const campaigns = await fetchCampaigns(type);
       setCampaignsData(campaigns);
+
+      console.log(campaigns)
       setError(null);
     } catch (error) {
       setError(error.message);

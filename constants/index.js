@@ -46,22 +46,23 @@ export const NAV_LINKS = [
 ];
 
 export const campaignDetailsList = [
-	{
-		id: 1,
-		photo: image1,
-		alt: 'Feature Icon',
-		heading: 'Plug-n-plPlug-n-play configuration',
-		content:
-			'Secure your organization without changing all the settings. The text will be populated with the right information later on.',
-	},
-	{
-		id: 2,
-		photo: image1,
-		alt: 'Feature Icon',
-		heading: 'Easy Integration',
-		content:
-			'Smooth Integrated with Microsoft Office 365.The text will be populated with the right information later on.',
-	},
+
+  {
+    id: 1,
+    photo: image1,
+    alt: "Feature Icon",
+    heading: "Simplicity Meets Power",
+    content:
+      " Our user-friendly interface ensures that harnessing the power of digital marketing is easy and intuitive. No steep learning curves – just a seamless experience for you and your team.",
+  },
+  {
+    id: 2,
+    photo: image1,
+    alt: "Feature Icon",
+    heading: "Dedicated Customer Success Team",
+    content:
+      "Our commitment goes beyond providing tools. With VendGenix, you gain access to a dedicated customer success team ready to assist you at every step. ",
+  },
 ];
 
 export const campaignFeaturesDetails = [
@@ -226,6 +227,7 @@ export const aboutData = [
 		contact: 'contact@opmantek.com',
 		address: `One Harbor Drive, Suite 300, Sausalito, CA, 94965, United States of America`,
 	},
+
 ];
 
 export const socialMediaLinks = [

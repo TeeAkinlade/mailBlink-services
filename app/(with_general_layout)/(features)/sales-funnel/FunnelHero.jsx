@@ -15,9 +15,10 @@ export const FunnelHero = () => {
           Transform your digital marketing experience.
         </p>
         <p className="mt-3 text-sm md:mt-7 md:text-lg p-4 md:p-0">
-          Network Management Information System (NMIS) is the robust software
-          platform underpinning Opmantek Performance and Management solutions.
-          More text will be available in the documentation.
+          Stand out in the crowded digital space with our cutting-edge tools.
+          Craft compelling content, engage with your audience, and build a brand
+          that captivates. Our platform empowers you to create, schedule, and
+          analyze your digital campaigns with ease.
         </p>
         <div className="mt-10 flex-center flex-wrap gap-5 md:flex-row md:justify-start">
           <button className="cursor-pointer rounded-full border border-navyBlue bg-navyBlue px-8 py-3 text-white transition duration-150 ease-in-out hover:border-navyBlue hover:bg-white hover:text-navyBlue">
