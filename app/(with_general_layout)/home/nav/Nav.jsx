@@ -11,12 +11,12 @@ import DashboardBtn from "@/components/DashboardBtn";
 import { useCurrentUser } from "@/app/(auth-with-layout)/currentUser";
 
 const Nav = () => {
-  const {user} = useCurrentUser();
+  const { user } = useCurrentUser();
   const [open, setOpen] = useState(false);
 
   const menuRef = useRef();
 
-  //detects if outside the navbar on mobile is clicked and closes the navbar
+  // detects if outside the navbar on mobile is clicked and closes the navbar
   useEffect(() => {
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
@@ -28,7 +28,13 @@ const Nav = () => {
     return () => {
       document.removeEventListener("mousedown", handler);
     };
-  });
+  }, []); // Added an empty dependency array to run the effect only once on mount
+
+  // Close the navbar when the route changes
+  const router = useRouter();
+  useEffect(() => {
+    setOpen(false);
+  }, [router.asPath]);
 
   return (
     <nav className="max-width mx-auto md:px-12">
