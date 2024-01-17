@@ -122,12 +122,9 @@ const Signup = () => {
             background:
               "linear-gradient(90deg, rgba(243,255,250,1) 0%, rgba(210,249,232,1) 35%, rgba(204,250,230,1) 100%)",
           }}
-          className="hidden h-[100vh] lg:block w-full"
+          className="hidden h-[100vh] lg:block w-full pb-20"
         >
-          <Link
-            href={"/"}
-            className="mr-4 font-Poppins ps-[1rem] text-[35px] font-[700] leading-[64px] text-[#17181A]"
-          >
+          <Link href={"/"} className="  ">
             <Image
               src="/assets/images/Logo VendGenix.svg"
               alt="logo at footer"
@@ -137,7 +134,7 @@ const Signup = () => {
           </Link>
           <div className="pt-[160px] xs:ps-[10px] lg:pr-[109px] lg:ps-[110px]">
             <h3 className="font-Poppins mt-[15px] flex text-[32px] font-[700] leading-[40px] text-[#17181A]">
-              We are mailblink <br /> So are you.
+              We are VendGenix <br /> So are you.
               <Image
                 src="/assets/images/Group 2942.svg"
                 alt="MailBlink"
@@ -146,7 +143,7 @@ const Signup = () => {
                 className="mt-[-5rem]"
               />
             </h3>
-            <p className="font-Poppins mt-[24px] text-[16px] font-[400] leading-[28px] text-[#17181A] h-full">
+            <p className="font-Poppins mt-[24px] text-[16px] font-[400] leading-[28px] text-[#17181A]">
               Join to improve your job search, yourself, and
               <br className="md:hidden" /> more. Get started by creating
               <br className="xs:hidden md:block lg:hidden" /> a free account!
