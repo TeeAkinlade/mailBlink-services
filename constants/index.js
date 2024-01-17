@@ -49,17 +49,17 @@ export const campaignDetailsList = [
     id: 1,
     photo: image1,
     alt: "Feature Icon",
-    heading: "Community Support",
+    heading: "Simplicity Meets Power",
     content:
-      " Connect, learn, and grow with our vibrant community of entrepreneurs. Gain insights, share experiences, and forge partnerships that transcend the digital space.",
+      " Our user-friendly interface ensures that harnessing the power of digital marketing is easy and intuitive. No steep learning curves – just a seamless experience for you and your team.",
   },
   {
     id: 2,
     photo: image1,
     alt: "Feature Icon",
-    heading: "Easy Integration",
+    heading: "Dedicated Customer Success Team",
     content:
-      "Smooth Integrated with Microsoft Office 365.The text will be populated with the right information later on.",
+      "Our commitment goes beyond providing tools. With VendGenix, you gain access to a dedicated customer success team ready to assist you at every step. ",
   },
 ];
 

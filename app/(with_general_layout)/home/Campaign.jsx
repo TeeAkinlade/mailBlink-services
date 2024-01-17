@@ -4,7 +4,6 @@ import { campaignDetailsList, campaignFeaturesDetails } from "@/constants";
 
 const Campaign = () => {
   return (
-
     <section className="max-width md:px-12 mx-auto">
       <div className="my-20 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center md:gap-10 lg:gap-20">
@@ -17,16 +16,17 @@ const Campaign = () => {
           />
           <div className="">
             <p className="font-Roboto text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-0 font-bold text-primaryBlack2 leading-tight md:hidden lg:block text-center md:text-left">
-              Create beautiful <br />
-              <span className="text-forestGreen">Email Campaigns </span>
+              Turn Around
+              <span className="text-forestGreen"> Your Business </span>
             </p>
             <div className="mt-4">
               <p className="text-base text-center md:text-left text-primaryBlack leading-6 md:hidden lg:block">
-                Use our machine learning powered propriotory solutions to
-                protect your business from any cybersecurity attacts.
+                We believe in simplifying the complexities of online marketing,
+                providing you with the tools and support needed to achieve your
+                goals.
               </p>
               <p className="text-navyBlue font-semibold mt-6 md:mt-2 font-lg text-sm md:text-base">
-                Schedule a demo with our friendly experts.
+                💡 Explore VendGenix:
               </p>
               <div className="mt-4">
                 {campaignDetailsList.map(
@@ -46,8 +46,8 @@ const Campaign = () => {
                 )}
               </div>
               <div className="py-10 flex justify-center md:justify-start md:ml-4">
-            	<Link href="/campaigns" className="custom-btn">
-                  Schedule a demo
+                <Link href="/campaigns" className="custom-btn">
+                  Get Start Today!
                 </Link>
               </div>
             </div>
