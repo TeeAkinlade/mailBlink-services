@@ -14,10 +14,13 @@ export default function DashboardLayout({ children }) {
 	const router = useRouter();
 	const [authorized, setAuthorized] = useState(false);
 	const [miniToggle, setMiniToggle] = useState(true);
+  const timerRef =  useRef()
 const toggleMini = () => {
 	setMiniToggle(!miniToggle);
 };
   console.log(user);
+
+
   let timer;
   useEffect(() => {
     timerRef.current = setTimeout(() => {
