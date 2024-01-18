@@ -177,14 +177,14 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 						{MenuLinks.map((menu, index) => (
 							<>
 								{menu.gap && (
-									<span className=' mt-2  text-[0.66rem] text-[#919cab] text-opacity-50 '>
+									<span className=' mt-2  text-[0.6rem] text-[#919cab] text-opacity-50 '>
 										{menu.header}
 									</span>
 								)}
 								<li
 									key={index}
-									className={`text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
-										menu.gap ? 'mt-4 ' : 'mt-2'
+									className={`text-[#B7C5CC] text-[0.7rem] flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
+										menu.gap ? 'mt-1 ' : 'mt-2'
 									}  `}
 									onClick={() => {
 										setActiveLink(index);
@@ -219,7 +219,7 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 							</>
 						))}
 						<div
-							className='text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 dark:hover:text-ui_button bg-transparent  rounded-md duration-500'
+							className='text-[#B7C5CC] text-[0.7rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 dark:hover:text-ui_button bg-transparent  rounded-md duration-500'
 							onClick={() => setToggle(!toggle)}
 						>
 							<div className=' '>
