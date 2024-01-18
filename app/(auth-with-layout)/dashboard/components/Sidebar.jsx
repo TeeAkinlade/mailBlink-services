@@ -21,8 +21,8 @@ import Image from "next/image";
 import Spinner from "../../../../components/Spinner";
 import { TiMessages } from "react-icons/ti";
 
-export default function Sidebar() {
-  const { user, loading } = useCurrentUser();
+export default function Sidebar({ miniToggle, toggleMini }) {
+	const { user, loading } = useCurrentUser();
 
   // SignOut Functionality
   const supabase = createClientComponentClient();
@@ -52,12 +52,12 @@ export default function Sidebar() {
     .concat(name?.[0].slice(1));
   const LastName = name?.[1].charAt(0).toUpperCase().concat(name?.[1].slice(1));
 
-  // State Management for smaller screens
-  const [miniToggle, setMiniToggle] = useState(true);
-  const [miniSidebar, setMiniSidebar] = useState(false);
-  // State Management for regular sized screens
-  const [toggle, setToggle] = useState(true);
-  const [activeLink, setActiveLink] = useState(false);
+	// State Management for smaller screens
+	// const [miniToggle, setMiniToggle] = useState(true);
+	const [miniSidebar, setMiniSidebar] = useState(false);
+	// State Management for regular sized screens
+	const [toggle, setToggle] = useState(true);
+	const [activeLink, setActiveLink] = useState(false);
 
   const MenuLinks = [
     {
@@ -139,216 +139,240 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <>
-      {!miniSidebar ? (
-        <aside
-          className={` ${
-            toggle ? "w-96" : "w-20"
-          }  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
-        >
-          <TiChevronLeft
-            alt="Controller icon for collapsable sidebar"
-            className={`absolute bg-white cursor-pointer  rounded-full -right-3 top-9 w-7 border-2 border-ui_primary ${
-              !toggle && "rotate-180"
-            } ease-in-out duration-500 hidden`}
-          />
+		<>
+			{!miniSidebar ? (
+				<aside
+					className={` ${
+						toggle ? 'w-96' : 'w-20'
+					}  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
+				>
+					<TiChevronLeft
+						alt='Controller icon for collapsable sidebar'
+						className={`absolute bg-white cursor-pointer  rounded-full -right-3 top-9 w-7 border-2 border-ui_primary ${
+							!toggle && 'rotate-180'
+						} ease-in-out duration-500 hidden`}
+					/>
 
-          {/* Header for sidebar */}
-          <div className="flex items-center gap-x-4">
-            {/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
+					{/* Header for sidebar */}
+					<div className='flex items-center gap-x-4'>
+						{/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
 
-            <Link href="/">
-              <Image
-                src="/assets/images/Logo VendGenix white.svg"
-                alt="logo"
-                width="150"
-                height="150"
-              />
-            </Link>
-          </div>
-          {/* Link Items */}
-          <ul className="pt-6">
-            {MenuLinks.map((menu, index) => (
-              <div key={index}>
-                {menu.gap && (
-                  <span className="mt-2 text-[0.66rem] text-[#919cab] text-opacity-50">
-                    {menu.header}
-                  </span>
-                )}
-                <li
-                  key={index}
-                  className={`text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
-                    menu.gap ? "mt-4 " : "mt-2"
-                  }  `}
-                  onClick={() => {
-                    setActiveLink(index);
-                    setToggle(!toggle);
-                    if (menu.onClick == handleSignOut) {
-                      menu.onClick();
-                    } else if (menu.onClick == handleNavigate) {
-                      menu.onClick(menu.route);
-                    } else if (menu.onClick == externalNavigate) {
-                      menu.onClick(menu.route);
-                    }
-                  }}
-                >
-                  {" "}
-                  <div
-                    className={` md:h-4 md:w-4 group-hover:text-ui_secondary1 dark:group-hover:text-ui_button  ${
-                      activeLink === index &&
-                      "text-[#84f2da]   dark:text-ui_button"
-                    } `}
-                  >
-                    {menu.src}
-                  </div>
-                  <span
-                    className={`${
-                      !toggle && "scale-0"
-                    } duration-500 ease-in-out group-hover:text-ui_secondary1 dark:group-hover:text-ui_button`}
-                  >
-                    {" "}
-                    {menu.title}{" "}
-                  </span>
-                </li>
-              </div>
-            ))}
-            <div
-              className="flex cursor-pointer items-center gap-x-4 rounded-md bg-transparent p-2 text-[0.75rem] text-[#B7C5CC] duration-500 hover:bg-white hover:text-ui_secondary1 dark:hover:text-ui_button"
-              onClick={() => setToggle(!toggle)}
-            >
-              <div className=" ">
-                <TiChevronLeft className={`${!toggle && "rotate-180"}`} />
-              </div>
-              <span
-                className={`${
-                  !toggle && "scale-0"
-                } text-[0.75rem] duration-500 ease-in-out`}
-              >
-                {" "}
-                Collapse Menu{" "}
-              </span>
-            </div>
-            <Link
-              href="/dashboard/Accounts"
-              className="mt-5 flex cursor-pointer items-center gap-x-4 bg-transparent p-2 text-sm text-[#B7C5CC]"
-              onClick={() => setToggle(!toggle)}
-            >
-              {user ? (
-                <div className="flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full bg-slate-500 text-white">
-                  {user?.email[0].toUpperCase()}
-                </div>
-              ) : (
-                <Image
-                  src="/assets/images/pexels-vlad-bagacian-1368382.jpg"
-                  width={40}
-                  height={30}
-                  alt="Profile Icon"
-                  className="flex h-[50px] cursor-pointer items-center rounded-full bg-ui_button italic text-white"
-                />
-              )}
+						<Link
+							href='/'
+							className={` font-poppins origin-left text-[2rem] font-[700] leading-8 text-white  ${
+								!toggle && 'scale-[0]'
+							} cursor-pointer bg-transparent hover:animate-pulse duration-500 mb-2`}
+						>
+							<Image
+								src='/assets/images/Logo VendGenix.svg'
+								className='rounded-md drop-shadow-[2px_4px_6px_black] brightness-[1.7] '
+								alt='logo'
+								width='150'
+								height='150'
+							/>
+						</Link>
+					</div>
+					{/* Link Items */}
+					<ul className='pt-6'>
+						{MenuLinks.map((menu, index) => (
+							<>
+								{menu.gap && (
+									<span className=' mt-2  text-[0.66rem] text-[#919cab] text-opacity-50 '>
+										{menu.header}
+									</span>
+								)}
+								<li
+									key={index}
+									className={`text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
+										menu.gap ? 'mt-4 ' : 'mt-2'
+									}  `}
+									onClick={() => {
+										setActiveLink(index);
+										setToggle(!toggle);
+										if (menu.onClick == handleSignOut) {
+											menu.onClick();
+										} else if (menu.onClick == handleNavigate) {
+											menu.onClick(menu.route);
+										} else if (menu.onClick == externalNavigate) {
+											menu.onClick(menu.route);
+										}
+									}}
+								>
+									{' '}
+									<div
+										className={` md:h-4 md:w-4 group-hover:text-ui_secondary1 dark:group-hover:text-ui_button  ${
+											activeLink === index &&
+											'text-[#84f2da]   dark:text-ui_button'
+										} `}
+									>
+										{menu.src}
+									</div>
+									<span
+										className={`${
+											!toggle && 'scale-0'
+										} duration-500 ease-in-out group-hover:text-ui_secondary1 dark:group-hover:text-ui_button`}
+									>
+										{' '}
+										{menu.title}{' '}
+									</span>
+								</li>
+							</>
+						))}
+						<div
+							className='text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 dark:hover:text-ui_button bg-transparent  rounded-md duration-500'
+							onClick={() => setToggle(!toggle)}
+						>
+							<div className=' '>
+								<TiChevronLeft className={`${!toggle && 'rotate-180'}`} />
+							</div>
+							<span
+								className={`${
+									!toggle && 'scale-0'
+								} text-[0.75rem] duration-500 ease-in-out`}
+							>
+								{' '}
+								Collapse Menu{' '}
+							</span>
+						</div>
+						<Link
+							href='/dashboard/Accounts'
+							className='text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  bg-transparent mt-5'
+							onClick={() => setToggle(!toggle)}
+						>
+							{user ? (
+								<div className='text-white  h-[50px] w-[50px] rounded-full flex items-center justify-center bg-slate-500 cursor-pointer'>
+									{user?.email[0].toUpperCase()}
+								</div>
+							) : (
+								<Image
+									src='/assets/images/pexels-vlad-bagacian-1368382.jpg'
+									width={40}
+									height={30}
+									alt='Profile Icon'
+									className='text-white italic h-[50px]  rounded-full flex items-center bg-ui_button cursor-pointer'
+								/>
+							)}
 
-              <span className={`flex flex-col gap-0 ${!toggle && "scale-0"}`}>
-                {name && (
-                  <h3 className={`text-md font-[400] text-[#fefefe]`}>
-                    {firstName} <strong>{LastName}</strong>
-                    <br />
-                  </h3>
-                )}
-                <div
-                  className={`text-md font-[600] text-[#fefefe] ${
-                    user?.email?.length >= 20 && "text-[0.65rem]"
-                  }`}
-                >
-                  {""}
-                  {user?.email}
-                </div>
+							<span className={`flex flex-col gap-0 ${!toggle && 'scale-0'}`}>
+								{name && (
+									<h3 className={`text-md font-[400] text-[#fefefe]`}>
+										{firstName} <strong>{LastName}</strong>
+										<br />
+									</h3>
+								)}
+								<div
+									className={`text-md font-[600] text-[#fefefe] ${
+										user?.email?.length >= 20 && 'text-[0.65rem]'
+									}`}
+								>
+									{''}
+									{user?.email}
+								</div>
 
-                <p className="text-[0.7rem] text-[#B7C5CC]">
-                  Your personal account
-                </p>
-              </span>
-            </Link>
-          </ul>
-        </aside>
-      ) : (
-        <aside
-          className={` ${
-            miniToggle ? "w-72" : "fixed left-[-70%] duration-500 "
-          }  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-ui_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
-        >
-          <IoIosArrowBack
-            onClick={() => setMiniToggle(!miniToggle)}
-            alt="Controller icon for collapsable sidebar"
-            className={`absolute bg-slate-200 font-[600] cursor-pointer text-ui_button  rounded-md h-10 -right-14 p-2 top-28 shadow-[-5px 0px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)] w-10 ${
-              !miniToggle && "rotate-180"
-            } ease-in-out duration-500`}
-          />
-          {/* Header for sidebar */}
-          <div className="flex items-center gap-x-4">
-            {/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
+								<p className='text-[0.7rem] text-[#B7C5CC] '>
+									Your personal account
+								</p>
+							</span>
+						</Link>
+					</ul>
+				</aside>
+			) : (
+				<aside
+					className={` ${
+						miniToggle ? 'w-72' : 'fixed left-[-100%] ease-in-out duration-700 '
+					}  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
+				>
+					{/* <IoIosArrowBack
+						onClick={() => setMiniToggle(!miniToggle)}
+						alt='Controller icon for collapsable sidebar'
+						className={`absolute bg-slate-200 font-[600] cursor-pointer text-ui_button  rounded-md h-10 -right-14 p-2 top-28 shadow-[-5px 0px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)] w-10 ${
+							!miniToggle && 'rotate-180'
+						} ease-in-out duration-500`}
+					/> */}
+					{/* Header for sidebar */}
+					<div className='flex gap-x-4 items-center'>
+						{/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
 
-            <h1
-              className={`font-poppins origin-left text-[2rem] font-[700] leading-8 text-white ${
-                !miniToggle && "scale-[0.3]"
-              } cursor-pointer hover:animate-pulse duration-500`}
-            >
-              Saleblink.
-            </h1>
-          </div>
-          {/* Link Items */}
-          <ul className="pt-6">
-            {MenuLinks.map((menu, index) => (
-              <li
-                key={index}
-                className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 hover:text-ui_button bg-transparent rounded-md duration-500 ${
-                  menu.gap ? "mt-9" : "mt-5"
-                }  `}
-                onClick={() => {
-                  setActiveLink(index);
-                  setMiniToggle(!miniToggle);
-                  if (menu.onClick == handleSignOut) {
-                    menu.onClick();
-                  } else if (menu.onClick == handleNavigate) {
-                    menu.onClick(menu.route);
-                  } else if (menu.onClick == externalNavigate) {
-                    menu.onClick(menu.route);
-                  }
-                }}
-              >
-                <div
-                  className={` md:h-4 md:w-4  ${
-                    activeLink === index && "text-ui_button"
-                  } `}
-                >
-                  {menu.src}
-                </div>
-                <span
-                  className={`${
-                    !miniToggle && "scale-0"
-                  } duration-500 ease-in-out`}
-                >
-                  {" "}
-                  {menu.title}{" "}
-                </span>
-              </li>
-            ))}
+						<Link
+							href='/'
+							className={`rounded-md font-poppins origin-left text-[2rem] font-[700] leading-8 text-white  ${
+								!toggle && 'scale-[0]'
+							} cursor-pointer bg-transparent hover:animate-pulse duration-500 mb-2`}
+						>
+							<Image
+								src='/assets/images/Logo VendGenix.svg'
+								className='rounded-md drop-shadow-[2px_4px_6px_black] brightness-[1.7] mb-3'
+								alt='logo'
+								width='150'
+								height='150'
+							/>
+						</Link>
+					</div>
+					{/* Link Items */}
+					<ul className='pt-6'>
+						{MenuLinks.map((menu, index) => (
+							<>{menu.gap && (
+									<span className=' mt-2  text-[0.66rem] text-[#919cab] text-opacity-50 '>
+										{menu.header}
+									</span>
+								)}
+								
+							<li
+								key={index}
+								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 hover:text-ui_button bg-transparent rounded-md duration-500 ${
+									menu.gap ? 'mt-3' : 'mt-3'
+								}  `}
+								onClick={() => {
+									setActiveLink(index);
+									// setMiniToggle(!miniToggle);
+									toggleMini();
+									if (menu.onClick == handleSignOut) {
+										menu.onClick();
+									} else if (menu.onClick == handleNavigate) {
+										menu.onClick(menu.route);
+									} else if (menu.onClick == externalNavigate) {
+										menu.onClick(menu.route);
+									}
+								}}
+							>
+								<div
+									className={` md:h-4 md:w-4  ${
+										activeLink === index && 'text-ui_button'
+									} `}
+								>
+									{menu.src}
+								</div>
+								<span
+									className={`${
+										!miniToggle && 'scale-0'
+									} duration-500 ease-in-out`}
+								>
+									{' '}
+									{menu.title}{' '}
+								</span>
+							</li>
+								</>
+						))}
 
-            <div
-              className={`bg-[#fff] shadow-md rounded-md flex gap-2 justify-between px-3 py-0 items-center mt-8 md:hidden ${
-                !miniToggle && "left-[-100%] duration-500 "
-              } `}
-            >
-              <input
-                type="text"
-                placeholder="Search"
-                className="bg-transparent px-3 py-2 font-poppins text-[0.8rem] text-black placeholder-[#B7C5CC] outline-none"
-              />
-
-              <MdSearch className="h-5 w-5 cursor-pointer font-[900] text-ui_primary" />
-            </div>
-          </ul>
-        </aside>
-      )}
-    </>
-  );
+						<div
+							className={`bg-white dark:bg-ui_secondary1 dark:text-white shadow-md rounded-md flex gap-2 justify-center  mt-12 px-3 py-3 items-center md:hidden ${
+								!miniToggle && 'left-[-100%] duration-500 '
+							} `}
+							onClick={toggleMini}
+						>
+							<div className=' text-ui_secondary1 dark:text-white '>
+								<TiChevronLeft />
+							</div>
+							<span
+								className={`text-[0.75rem]  text-ui_secondary1 dark:text-white `}
+							>
+								{' '}
+								Collapse Menu{' '}
+							</span>
+						</div>
+					</ul>
+				</aside>
+			)}
+		</>
+	);
 }

@@ -37,7 +37,8 @@ export const EmailHero = () => {
               height={28}
               className="absolute top-[3.5rem] -left-6 md:w-28"
             />
-            <div className="relative pl-10 py-5 pr-0 justify-between flex bg-white rounded-lg shadow-lg">
+            <div className=" relative pl-10 py-5 pr-0 justify-between flex bg-white  rounded-lg shadow-lg md:hover:scale-105 hover:shadow-xl ease-in-out duration-500">
+
               {stats.map((stat) => (
                 <div
                   className="w-[25%] flex flex-col justify-center"

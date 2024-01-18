@@ -8,51 +8,51 @@ const FooterLink = () => {
   const [subscribed, setSubscribed] = useState(false);
 
   return (
-    <div className="flex flex-col md:gap-16 md:flex-row">
-      <div className="flex gap-10">
-        {footerLinks.map((item) => (
-          <div key={item.id}>
-            <h3 className="mb-6 text-base font-semibold text-black md:text-lg">
-              {item.title}
-            </h3>
-            {item.links.map(({ id, href, link }) => (
-              <div className="pb-4" key={id}>
-                <Link
-                  href={href}
-                  className="text-sm text-primaryBlack hover:text-[#089373] md:text-base"
-                >
-                  {link}
-                </Link>
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-      <div>
-        <h3 className="mb-6 text-base font-semibold text-primaryBlack2 md:text-lg">
-          Join Our Newsletter
-        </h3>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSubscribed(true);
-          }}
-          className={`mb-10 p-2 flex-col items-center justify-center gap-4 rounded-lg border-[1px] bg-white ${
-            subscribed ? "hidden" : "flex"
-          }`}
-        >
-          <div className="flex w-full flex-col gap-2">
-            <input
-              type="text"
-              placeholder="Enter your Name"
-              className="w-full rounded-lg bg-gray-100 px-5 py-3"
-            />
-            <input
-              type="email"
-              placeholder="Your best email"
-              className="w-full rounded-lg bg-gray-100 px-16 py-3"
-            />
-          </div>
+		<div className='flex flex-col md:gap-16 md:flex-row'>
+			<div className='flex gap-10'>
+				{footerLinks.map((item) => (
+					<div key={item.id}>
+						<h3 className='mb-6 text-base font-semibold text-black md:text-lg'>
+							{item.title}
+						</h3>
+						{item.links.map(({ id, href, link }) => (
+							<div className='pb-4' key={id}>
+								<Link
+									href={href}
+									className='text-sm text-primaryBlack hover:text-[#089373] md:text-base'
+								>
+									{link}
+								</Link>
+							</div>
+						))}
+					</div>
+				))}
+			</div>
+			<div>
+				<h3 className='mb-6 text-base font-semibold text-primaryBlack2 md:text-lg'>
+					Join Our Newsletter
+				</h3>
+				<form
+					onSubmit={(e) => {
+						e.preventDefault();
+						setSubscribed(true);
+					}}
+					className={`mb-10 p-2 flex-col items-center justify-center gap-4 rounded-lg border-[1px] bg-white ${
+						subscribed ? 'hidden' : 'flex'
+					}`}
+				>
+					<div className='flex w-full flex-col gap-2'>
+						<input
+							type='text'
+							placeholder='Enter your Name'
+							className='w-full rounded-lg bg-gray-100 px-5 py-3'
+						/>
+						<input
+							type='email'
+							placeholder='Your best email'
+							className='w-full rounded-lg bg-gray-100 px-16 py-3'
+						/>
+					</div>
 
           <button type="submit" className="custom-btn gap-2">
             <svg
