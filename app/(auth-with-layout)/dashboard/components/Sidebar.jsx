@@ -301,7 +301,7 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 						>
 							<Image
 								src='/assets/images/Logo VendGenix.svg'
-								className='rounded-md drop-shadow-[2px_4px_6px_black] brightness-[1.7] mb-8'
+								className='rounded-md drop-shadow-[2px_4px_6px_black] brightness-[1.7] mb-3'
 								alt='logo'
 								width='150'
 								height='150'
