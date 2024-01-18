@@ -348,16 +348,16 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 						))}
 
 						<div
-							className={`bg-[#fff] shadow-md rounded-md flex gap-2 justify-center  mt-12 px-3 py-3 items-center md:hidden ${
+							className={`bg-white dark:bg-ui_secondary1 dark:text-white shadow-md rounded-md flex gap-2 justify-center  mt-12 px-3 py-3 items-center md:hidden ${
 								!miniToggle && 'left-[-100%] duration-500 '
 							} `}
 							onClick={toggleMini}
 						>
-							<div className=' text-ui_secondary1 dark:text-ui_button '>
+							<div className=' text-ui_secondary1 dark:text-white '>
 								<TiChevronLeft />
 							</div>
 							<span
-								className={`text-[0.75rem]  text-ui_secondary1 dark:text-ui_button `}
+								className={`text-[0.75rem]  text-ui_secondary1 dark:text-white `}
 							>
 								{' '}
 								Collapse Menu{' '}
