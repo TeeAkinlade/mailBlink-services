@@ -320,7 +320,7 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 							<li
 								key={index}
 								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 hover:text-ui_button bg-transparent rounded-md duration-500 ${
-									menu.gap ? 'mt-9' : 'mt-5'
+									menu.gap ? 'mt-3' : 'mt-3'
 								}  `}
 								onClick={() => {
 									setActiveLink(index);
