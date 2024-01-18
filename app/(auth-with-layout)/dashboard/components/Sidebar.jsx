@@ -139,23 +139,23 @@ export default function Sidebar({ miniToggle, toggleMini }) {
   }, []);
 
   return (
-    <>
-      {!miniSidebar ? (
-        <aside
-          className={` ${
-            toggle ? "w-96" : "w-20"
-          }  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
-        >
-          <TiChevronLeft
-            alt="Controller icon for collapsable sidebar"
-            className={`absolute bg-white cursor-pointer  rounded-full -right-3 top-9 w-7 border-2 border-ui_primary ${
-              !toggle && "rotate-180"
-            } ease-in-out duration-500 hidden`}
-          />
+		<>
+			{!miniSidebar ? (
+				<aside
+					className={` ${
+						toggle ? 'w-96' : 'w-20'
+					}  ease-in-out duration-500 h-screen bg-[#0A372F] dark:bg-dark_primary fixed left-0 top-0 md:relative p-5 pt-8 z-50`}
+				>
+					<TiChevronLeft
+						alt='Controller icon for collapsable sidebar'
+						className={`absolute bg-white cursor-pointer  rounded-full -right-3 top-9 w-7 border-2 border-ui_primary ${
+							!toggle && 'rotate-180'
+						} ease-in-out duration-500 hidden`}
+					/>
 
-          {/* Header for sidebar */}
-          <div className="flex items-center gap-x-4">
-            {/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
+					{/* Header for sidebar */}
+					<div className='flex items-center gap-x-4'>
+						{/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
 
 						<Link
 							href='/'
@@ -165,7 +165,7 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 						>
 							<Image
 								src='/assets/images/Logo VendGenix.svg'
-								className='rounded-md'
+								className='rounded-md drop-shadow-[2px_4px_6px_black] brightness-[1.7] '
 								alt='logo'
 								width='150'
 								height='150'
@@ -253,21 +253,21 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 								/>
 							)}
 
-              <span className={`flex flex-col gap-0 ${!toggle && "scale-0"}`}>
-                {name && (
-                  <h3 className={`text-md font-[400] text-[#fefefe]`}>
-                    {firstName} <strong>{LastName}</strong>
-                    <br />
-                  </h3>
-                )}
-                <div
-                  className={`text-md font-[600] text-[#fefefe] ${
-                    user?.email?.length >= 20 && "text-[0.65rem]"
-                  }`}
-                >
-                  {""}
-                  {user?.email}
-                </div>
+							<span className={`flex flex-col gap-0 ${!toggle && 'scale-0'}`}>
+								{name && (
+									<h3 className={`text-md font-[400] text-[#fefefe]`}>
+										{firstName} <strong>{LastName}</strong>
+										<br />
+									</h3>
+								)}
+								<div
+									className={`text-md font-[600] text-[#fefefe] ${
+										user?.email?.length >= 20 && 'text-[0.65rem]'
+									}`}
+								>
+									{''}
+									{user?.email}
+								</div>
 
 								<p className='text-[0.7rem] text-[#B7C5CC] '>
 									Your personal account
@@ -301,7 +301,7 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 						>
 							<Image
 								src='/assets/images/Logo VendGenix.svg'
-								className='rounded-md'
+								className='rounded-md drop-shadow-[2px_4px_6px_black] brightness-[1.7] mb-8'
 								alt='logo'
 								width='150'
 								height='150'
@@ -311,6 +311,12 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 					{/* Link Items */}
 					<ul className='pt-6'>
 						{MenuLinks.map((menu, index) => (
+							<>{menu.gap && (
+									<span className=' mt-2  text-[0.66rem] text-[#919cab] text-opacity-50 '>
+										{menu.header}
+									</span>
+								)}
+								
 							<li
 								key={index}
 								className={`text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 hover:text-ui_button bg-transparent rounded-md duration-500 ${
@@ -345,6 +351,7 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 									{menu.title}{' '}
 								</span>
 							</li>
+								</>
 						))}
 
 						<div
