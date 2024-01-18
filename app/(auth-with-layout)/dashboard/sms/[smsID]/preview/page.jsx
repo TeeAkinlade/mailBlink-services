@@ -5,7 +5,7 @@ import {
   readRelatedSMS,
   updateCampaignStatus,
 } from "@/services/supabase.service";
-import Link from "next/link";
+import { ImSpinner8 } from "react-icons/im";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -15,16 +15,17 @@ const SMSCampaignPreview = () => {
   const [campaign, setCampaign] = useState(null);
   const [sms, setSms] = useState(null);
   const [group, setGroup] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getPreview = async () => {
       await readRelatedSMS(smsID).then((camp) => {
         setCampaign(camp[0]);
-        setSms(camp[0].SMS[0]);
+        setSms(camp[0]?.SMS[0]);
       });
 
       await readRelatedGroups(smsID).then((group) => {
-        setGroup(group[0].GROUPS[0]);
+        setGroup(group[0]?.GROUPS[0]);
       });
     };
     getPreview();
@@ -48,6 +49,7 @@ const SMSCampaignPreview = () => {
       },
       body: JSON.stringify(data),
     })
+      .then(setLoading(true))
       .then((response) => response.json())
       .then((data) => console.log("Success:", data))
       .then(() => {
@@ -71,10 +73,13 @@ const SMSCampaignPreview = () => {
           <div className="hidden w-60 lg:block">
             <button
               href={`/campaigns`}
-              className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
+              className="flex h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
               onClick={sendCampaign}
             >
-              Send Campaign
+              {loading && (
+                <ImSpinner8 className="mr-3 h-5 w-5 animate-spin" />
+              )}
+              {` Send Campaign`}
             </button>
           </div>
         </div>

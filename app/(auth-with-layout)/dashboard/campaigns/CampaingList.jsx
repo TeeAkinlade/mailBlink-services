@@ -3,7 +3,7 @@
 import Spinner from "@/components/Spinner";
 import { SlArrowDown, SlMagnifier } from "react-icons/sl";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 import { deleteDBData } from "@/services/supabase.service";
 import Link from "next/link";
 import { IoMdOpen } from "react-icons/io";
@@ -16,46 +16,11 @@ export const CampaingList = ({ campaigns, getCampaigns }) => {
   const actionsButtonRef = useRef(null);
   const [searchInput, setSearchInput] = useState("");
 
-  const handleCheckboxChange = useCallback(
-    (campaign) => {
-      if (selectedCampaigns.some((selected) => selected.id === campaign.id)) {
-        setSelectedCampaigns(
-          selectedCampaigns.filter((selected) => selected.id !== campaign.id)
-        );
-      } else {
-        setSelectedCampaigns([...selectedCampaigns, campaign]);
-      }
-    },
-    [selectedCampaigns]
-  );
-
-  const handleDeleteCampaign = useCallback(async () => {
-    try {
-      const deletePromises = selectedCampaigns.map((camp) =>
-        deleteDBData("CAMPAIGNS", "id", camp.id)
-      );
-      await Promise.all(deletePromises);
-      await getCampaigns();
-      setShowActionsMenu(false);
-      setSelectedCampaigns([]);
-      setSelectAll(false);
-    } catch (error) {
-      console.error("An error occurred:", error);
-    }
-  }, [getCampaigns, selectedCampaigns]);
-
-  const handleSearchInputChange = useCallback((e) => {
-    setSearchInput(e.target.value);
-    setSelectedCampaigns([]);
-    setSelectAll(false);
-  }, []);
-
   useEffect(() => {
-    getCampaigns();
+    getCampaigns("email");
   }, [getCampaigns]);
 
   useEffect(() => {
-    console.log(campaigns);
     setUiCampaigns(campaigns);
   }, [campaigns]);
 
@@ -83,7 +48,7 @@ export const CampaingList = ({ campaigns, getCampaigns }) => {
     };
   }, []);
 
-  const handleSelectAll = useCallback(() => {
+  const handleSelectAll = () => {
     setSelectAll(!selectAll);
 
     if (!selectAll) {
@@ -91,13 +56,49 @@ export const CampaingList = ({ campaigns, getCampaigns }) => {
     } else {
       setSelectedCampaigns([]);
     }
-  }, [selectAll, uiCampaigns]);
+  };
 
-  const handleActionsButtonClick = useCallback(() => {
+  const handleCheckboxChange = (campaign) => {
+    if (selectedCampaigns.some((selected) => selected.id === campaign.id)) {
+      setSelectedCampaigns(
+        selectedCampaigns.filter((selected) => selected.id !== campaign.id)
+      );
+    } else {
+      setSelectedCampaigns([...selectedCampaigns, campaign]);
+    }
+  };
+
+  const handleActionsButtonClick = () => {
     if (!isActionsButtonDisabled) {
       setShowActionsMenu(!showActionsMenu);
     }
-  }, [isActionsButtonDisabled, showActionsMenu]);
+  };
+
+  const handleDeleteCampaign = async () => {
+    try {
+      // Create an array of promises for each deleteDBData operation
+      const deletePromises = selectedCampaigns.map((camp) =>
+        deleteDBData("CAMPAIGNS", "id", camp.id)
+      );
+      // Wait for all deleteDBData operations to complete
+      await Promise.all(deletePromises);
+      // After all deletions are done, fetch updated campaigns
+
+      await getCampaigns("email").then(() => {
+        setShowActionsMenu(false);
+        setSelectedCampaigns([]);
+        setSelectAll(false);
+      });
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
+  };
+
+  const handleSearchInputChange = (e) => {
+    setSearchInput(e.target.value);
+    setSelectedCampaigns([]);
+    setSelectAll(false);
+  };
 
   const isActionsButtonDisabled = selectedCampaigns.length === 0;
 
@@ -203,9 +204,9 @@ export const CampaingList = ({ campaigns, getCampaigns }) => {
                   <td className="w-[20%] p-4 align-middle">
                     {camp.from_email}
                   </td>
-                  <td className="flex w-full justify-end  p-4 text-end align-middle">
+                  <td className="flex h-full w-full items-end justify-end p-4">
                     <Link
-                      className="hover:scale-125 transition-transform"
+                      className="transition-transform hover:scale-125"
                       href={`/dashboard/campaigns/${camp.id}/preview`}
                     >
                       <IoMdOpen />

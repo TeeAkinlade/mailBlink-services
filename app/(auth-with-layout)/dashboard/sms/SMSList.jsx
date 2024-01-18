@@ -17,7 +17,7 @@ export const SMSList = ({ smsCampaigns, getCampaigns }) => {
   const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
-    getCampaigns();
+    getCampaigns("sms");
   }, [getCampaigns]);
 
   useEffect(() => {
@@ -84,10 +84,11 @@ export const SMSList = ({ smsCampaigns, getCampaigns }) => {
       // Wait for all deleteDBData operations to complete
       await Promise.all(deletePromises);
       // After all deletions are done, fetch updated campaigns
-      await getCampaigns();
-      setShowActionsMenu(false);
-      setSelectedCampaigns([]);
-      setSelectAll(false);
+      await getCampaigns("sms").then(() => {
+        setShowActionsMenu(false);
+        setSelectedCampaigns([]);
+        setSelectAll(false);
+      });
     } catch (error) {
       console.error("An error occurred:", error);
     }

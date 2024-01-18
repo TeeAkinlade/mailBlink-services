@@ -18,7 +18,7 @@ export default function DashboardLayout({ children }) {
 const toggleMini = () => {
 	setMiniToggle(!miniToggle);
 };
-  console.log(user);
+//   console.log(user);
 
 
   let timer;
@@ -28,7 +28,7 @@ const toggleMini = () => {
     }, 10000);
 
     if (user?.aud === "authenticated") {
-      console.log("authorized");
+    //   console.log("authorized");
       setAuthorized(true);
     }
 
@@ -38,7 +38,7 @@ const toggleMini = () => {
     };
   }, [user]);
 
-	console.log(timer);
+	// console.log(timer);
 	// protected route logic using a timer
 	if (!authorized && timer === 10000) {
 		return router.push('/auth/login');

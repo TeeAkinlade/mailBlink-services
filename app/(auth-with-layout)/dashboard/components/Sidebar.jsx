@@ -68,10 +68,16 @@ export default function Sidebar({ miniToggle, toggleMini }) {
     },
     {
       header: "Utilities",
-      title: "Campaigns",
+      title: "Email Campaigns",
       src: <HiInboxArrowDown />,
       route: "campaigns",
       gap: true,
+      onClick: handleNavigate,
+    },
+    {
+      title: "Sms Campaigns",
+      src: <TiMessages />,
+      route: "sms",
       onClick: handleNavigate,
     },
     {
@@ -90,6 +96,12 @@ export default function Sidebar({ miniToggle, toggleMini }) {
       title: "Contacts",
       src: <RiContactsLine />,
       route: "Contacts",
+      onClick: handleNavigate,
+    },
+    {
+      title: "Groups",
+      src: <GrGroup />,
+      route: "groups",
       onClick: handleNavigate,
     },
 
