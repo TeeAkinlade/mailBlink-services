@@ -48,6 +48,8 @@ const CampaignsEditor = () => {
         content: html,
       };
 
+      console.log(email)
+
       createEmail(campaignID, email);
     } catch (error) {
       console.error("Export HTML error:", error);
@@ -72,7 +74,7 @@ const CampaignsEditor = () => {
   };
 
   return (
-    <div className="mx-10 h-screen flex flex-col gap-4">
+    <div className="mx-10 flex h-screen flex-col gap-4">
       <header className="py-5">
         <div className="flex justify-between">
           <div className="space-y-2">
@@ -82,7 +84,11 @@ const CampaignsEditor = () => {
             </p>
           </div>
           <div className="hidden w-60 lg:block">
-            <button form="email-name" type="submit"  className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80">
+            <button
+              form="email-name"
+              type="submit"
+              className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
+            >
               Done editing
             </button>
           </div>

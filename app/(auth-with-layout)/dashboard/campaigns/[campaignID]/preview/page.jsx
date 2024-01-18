@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -8,6 +7,7 @@ import {
   readRelatedGroups,
   updateCampaignStatus,
 } from "@/services/supabase.service";
+import { ImSpinner8 } from "react-icons/im";
 
 const CampaignPreview = () => {
   const router = useRouter();
@@ -15,16 +15,17 @@ const CampaignPreview = () => {
   const [campaign, setCampaign] = useState();
   const [email, setEmail] = useState(null);
   const [group, setGroup] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getPreview = async () => {
       await readRelatedEmail(campaignID).then((camp) => {
         setCampaign(camp[0]);
-        setEmail(camp[0].EMAILS[0]);
+        setEmail(camp[0]?.EMAILS[0]);
       });
 
       await readRelatedGroups(campaignID).then((camp) => {
-        setGroup(camp[0].GROUPS[0]);
+        setGroup(camp[0]?.GROUPS[0]);
       });
     };
     getPreview();
@@ -49,6 +50,7 @@ const CampaignPreview = () => {
       },
       body: JSON.stringify(data),
     })
+      .then(setLoading(true))
       .then((response) => response.json())
       .then((data) => console.log("Success:", data))
       .then(() => {
@@ -76,7 +78,8 @@ const CampaignPreview = () => {
               className="h-full w-full items-center justify-center rounded-md bg-navyBlue px-4 text-sm font-medium text-white transition-all hover:bg-navyBlue/80"
               onClick={sendCampaign}
             >
-              Send Campaign
+              {loading && <ImSpinner8 className="mr-3 h-5 w-5 animate-spin" />}
+              {` Send Campaign`}
             </button>
           </div>
         </div>

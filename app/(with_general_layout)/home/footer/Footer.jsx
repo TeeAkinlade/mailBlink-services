@@ -13,7 +13,7 @@ const Footer = () => {
 							<Link href='/'>
 								<Image
 									src='/assets/images/Logo VendGenix.svg'
-									ait='logo'
+									alt='logo'
 									width='150'
 									height='150'
 								/>
