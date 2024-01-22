@@ -184,7 +184,7 @@ export default function Sidebar({ miniToggle, toggleMini }) {
 								<li
 									key={index}
 									className={`text-[#B7C5CC] text-[0.7rem] flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
-										menu.gap ? 'mt-1 ' : 'mt-2'
+										menu.gap ? 'mt-1 ' : 'mt-[.1rem]'
 									}  `}
 									onClick={() => {
 										setActiveLink(index);

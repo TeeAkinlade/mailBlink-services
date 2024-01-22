@@ -305,6 +305,12 @@ button {
 		place-items: flex-end;
 	}
 }
+/* --------------------SIDEBAR MEDIA QUERIES FOR HEIGHT ------------------------------*/
+@media (max-height: 40rem) {
+  div {
+    border: 2px solid blue;
+  }
+}
 
 /* .............................Blog & services slider............................... */
 .slick-slide > div{

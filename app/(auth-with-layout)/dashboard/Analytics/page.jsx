@@ -24,7 +24,7 @@ const analytics = () => {
 				</p>
 			</div>
 			<div className='grid grid-cols-1 xl:grid-cols-3 mt-8 md:gap-x-10 gap-y-8'>
-				<div className='flex flex-col col-span-2 gap-y-4 bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 rounded-xl pb-4 mt-8 '>
+				<div className='flex flex-col col-span-2 gap-y-4 overflow-hidden bg-white dark:bg-dark_secondary shadow-md cursor-pointer p-4 rounded-xl pb-4 mt-8 '>
 					<div className='flex justify-between items-center'>
 						{' '}
 						<h2 className='text-[1rem] text-ui_primary dark:text-ui_button font-[600]'>
