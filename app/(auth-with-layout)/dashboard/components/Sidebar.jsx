@@ -169,101 +169,101 @@ export default function Sidebar({ miniToggle, toggleMini }) {
           <div className="flex items-center gap-x-4">
             {/* The images are commented out and icons are used as placeholders till the main logo and other icons arrive */}
 
-            <Link
-              href="/"
-              className={` font-poppins origin-left text-[2rem] font-[700] leading-8 text-white  ${
-                !toggle && "scale-[0]"
-              } cursor-pointer bg-transparent hover:animate-pulse duration-500 mb-2`}
-            >
-              <Image
-                src="/assets/images/Logo VendGenix.svg"
-                className="rounded-md drop-shadow-[2px_4px_6px_black] brightness-[1.7] "
-                alt="logo"
-                width="150"
-                height="150"
-              />
-            </Link>
-          </div>
-          {/* Link Items */}
-          <ul className="pt-6">
-            {MenuLinks.map((menu, index) => (
-              <>
-                {menu.gap && (
-                  <span className=" mt-2  text-[0.66rem] text-[#919cab] text-opacity-50 ">
-                    {menu.header}
-                  </span>
-                )}
-                <li
-                  key={index}
-                  className={`text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
-                    menu.gap ? "mt-4 " : "mt-2"
-                  }  `}
-                  onClick={() => {
-                    setActiveLink(index);
-                    setToggle(!toggle);
-                    if (menu.onClick == handleSignOut) {
-                      menu.onClick();
-                    } else if (menu.onClick == handleNavigate) {
-                      menu.onClick(menu.route);
-                    } else if (menu.onClick == externalNavigate) {
-                      menu.onClick(menu.route);
-                    }
-                  }}
-                >
-                  {" "}
-                  <div
-                    className={` md:h-4 md:w-4 group-hover:text-ui_secondary1 dark:group-hover:text-ui_button  ${
-                      activeLink === index &&
-                      "text-[#84f2da]   dark:text-ui_button"
-                    } `}
-                  >
-                    {menu.src}
-                  </div>
-                  <span
-                    className={`${
-                      !toggle && "scale-0"
-                    } duration-500 ease-in-out group-hover:text-ui_secondary1 dark:group-hover:text-ui_button`}
-                  >
-                    {" "}
-                    {menu.title}{" "}
-                  </span>
-                </li>
-              </>
-            ))}
-            <div
-              className="text-[#B7C5CC] text-[0.75rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 dark:hover:text-ui_button bg-transparent  rounded-md duration-500"
-              onClick={() => setToggle(!toggle)}
-            >
-              <div className=" ">
-                <TiChevronLeft className={`${!toggle && "rotate-180"}`} />
-              </div>
-              <span
-                className={`${
-                  !toggle && "scale-0"
-                } text-[0.75rem] duration-500 ease-in-out`}
-              >
-                {" "}
-                Collapse Menu{" "}
-              </span>
-            </div>
-            <Link
-              href="/dashboard/Accounts"
-              className="text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  bg-transparent mt-5"
-              onClick={() => setToggle(!toggle)}
-            >
-              {user ? (
-                <div className="text-white  h-[50px] w-[50px] rounded-full flex items-center justify-center bg-slate-500 cursor-pointer">
-                  {user?.email[0].toUpperCase()}
-                </div>
-              ) : (
-                <Image
-                  src="/assets/images/pexels-vlad-bagacian-1368382.jpg"
-                  width={40}
-                  height={30}
-                  alt="Profile Icon"
-                  className="text-white italic h-[50px]  rounded-full flex items-center bg-ui_button cursor-pointer"
-                />
-              )}
+						<Link
+							href='/'
+							className={` font-poppins origin-left text-[2rem] font-[700] leading-8 text-white  ${
+								!toggle && 'scale-[0]'
+							} cursor-pointer bg-transparent hover:animate-pulse duration-500 mb-2`}
+						>
+							<Image
+								src='/assets/images/Logo VendGenix.svg'
+								className='rounded-md drop-shadow-[2px_4px_6px_black] brightness-[1.7] '
+								alt='logo'
+								width='150'
+								height='150'
+							/>
+						</Link>
+					</div>
+					{/* Link Items */}
+					<ul className='pt-6'>
+						{MenuLinks.map((menu, index) => (
+							<>
+								{menu.gap && (
+									<span className=' mt-2  text-[0.6rem] text-[#919cab] text-opacity-50 '>
+										{menu.header}
+									</span>
+								)}
+								<li
+									key={index}
+									className={`text-[#B7C5CC] text-[0.7rem] flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-50 group bg-transparent rounded-md duration-500 ${
+										menu.gap ? 'mt-1 ' : 'mt-[.1rem]'
+									}  `}
+									onClick={() => {
+										setActiveLink(index);
+										setToggle(!toggle);
+										if (menu.onClick == handleSignOut) {
+											menu.onClick();
+										} else if (menu.onClick == handleNavigate) {
+											menu.onClick(menu.route);
+										} else if (menu.onClick == externalNavigate) {
+											menu.onClick(menu.route);
+										}
+									}}
+								>
+									{' '}
+									<div
+										className={` md:h-4 md:w-4 group-hover:text-ui_secondary1 dark:group-hover:text-ui_button  ${
+											activeLink === index &&
+											'text-[#84f2da]   dark:text-ui_button'
+										} `}
+									>
+										{menu.src}
+									</div>
+									<span
+										className={`${
+											!toggle && 'scale-0'
+										} duration-500 ease-in-out group-hover:text-ui_secondary1 dark:group-hover:text-ui_button`}
+									>
+										{' '}
+										{menu.title}{' '}
+									</span>
+								</li>
+							</>
+						))}
+						<div
+							className='text-[#B7C5CC] text-[0.7rem] flex items-center gap-x-4 cursor-pointer p-2  hover:bg-white  hover:text-ui_secondary1 dark:hover:text-ui_button bg-transparent  rounded-md duration-500'
+							onClick={() => setToggle(!toggle)}
+						>
+							<div className=' '>
+								<TiChevronLeft className={`${!toggle && 'rotate-180'}`} />
+							</div>
+							<span
+								className={`${
+									!toggle && 'scale-0'
+								} text-[0.75rem] duration-500 ease-in-out`}
+							>
+								{' '}
+								Collapse Menu{' '}
+							</span>
+						</div>
+						<Link
+							href='/dashboard/Accounts'
+							className='text-[#B7C5CC] text-sm flex items-center gap-x-4 cursor-pointer p-2  bg-transparent mt-5'
+							onClick={() => setToggle(!toggle)}
+						>
+							{user ? (
+								<div className='text-white  h-[50px] w-[50px] rounded-full flex items-center justify-center bg-slate-500 cursor-pointer'>
+									{user?.email[0].toUpperCase()}
+								</div>
+							) : (
+								<Image
+									src='/assets/images/pexels-vlad-bagacian-1368382.jpg'
+									width={40}
+									height={30}
+									alt='Profile Icon'
+									className='text-white italic h-[50px]  rounded-full flex items-center bg-ui_button cursor-pointer'
+								/>
+							)}
 
               <span className={`flex flex-col gap-0 ${!toggle && "scale-0"}`}>
                 {name && (

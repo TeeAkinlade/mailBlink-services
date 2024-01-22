@@ -13,7 +13,7 @@ export default function DashboardLayout({ children }) {
 	const { user, loading } = useCurrentUser();
 	const router = useRouter();
 	const [authorized, setAuthorized] = useState(false);
-	const [miniToggle, setMiniToggle] = useState(true);
+	const [miniToggle, setMiniToggle] = useState(false);
   const timerRef =  useRef()
 const toggleMini = () => {
 	setMiniToggle(!miniToggle);
