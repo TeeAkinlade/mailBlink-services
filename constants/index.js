@@ -105,35 +105,64 @@ export const campaignFeaturesDetails = [
 	},
 ];
 
+//service mock data
+
 export const servicesData = [
 	{
-		id: 1,
-		icon: <IoMdMail size={30} />,
-		title: 'Email',
-		contents:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.',
-		href: '#',
-		linkText: 'Learn more',
+	  id: 1,
+	  icon: <IoMdMail size={30} />,
+	  title: "Email Marketing",
+	  contents:
+		"Unlock the power of personalized messaging with our Email Marketing service. Craft engaging campaigns, nurture leads, and build lasting relationships with your audience.",
+	  href: "#",
+	  linkText: "Learn more",
 	},
 	{
-		id: 2,
-		icon: <FaSms size={30} />,
-		title: 'SMS',
-		contents:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.',
-		href: '/sms',
-		linkText: 'Learn more',
+	  id: 2,
+	  icon: <FaSms size={30} />,
+	  title: "Social Media",
+	  contents:
+		"Boost your brand across platforms with our Social Media Management tool. Schedule posts, analyze performance, and engage with your audience seamlessly, all from one central hub.",
+	  href: "/sms",
+	  linkText: "Learn more",
 	},
 	{
-		id: 3,
-		icon: <FaWpforms size={30} />,
-		title: 'Form',
-		contents:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio natus officiis nesciunt eum repellendus commodi aliquam aperiam odit, iure illo ab esse molestias recusandae beatae ipsam, laudantium cum at.',
-		href: '#',
-		linkText: 'Learn more',
+	  id: 3,
+	  icon: <FaWpforms size={30} />,
+	  title: "Landing Pages",
+	  contents:
+		"Build stunning landing pages with our intuitive Form Building tools. Capture leads, gather valuable insights, and guide visitors through a seamless journey from discovery to conversion.",
+	  href: "#",
+	  linkText: "Learn more",
 	},
-];
+	{
+	  id: 4,
+	  icon: <FaSms size={30} />,
+	  title: "WhatsApp Marketing",
+	  contents:
+		"Our WhatsApp Marketing service allows you to engage customers personally, share updates, and drive conversions—all from the convenience of their favorite messaging app.",
+	  href: "#",
+	  linkText: "Learn more",
+	},
+	{
+	  id: 5,
+	  icon: <FaSms size={30} />,
+	  title: "Content Marketing",
+	  contents:
+		"Create compelling content effortlessly. Our Content Marketing tools empower you to craft impactful narratives, share your brand story, and establish authority in your industry.",
+	  href: "#",
+	  linkText: "Learn more",
+	},
+	{
+	  id: 6,
+	  icon: <IoMdMail size={30} />,
+	  title: "Sales Funnel",
+	  contents:
+		"Optimize your sales process with our Sales Funnel feature. From awareness to conversion, track customer journeys, and turn leads into loyal customers, ensuring every interaction counts.",
+	  href: "#",
+	  linkText: "Learn more",
+	},
+  ];
 
 // Team Section of About page
 

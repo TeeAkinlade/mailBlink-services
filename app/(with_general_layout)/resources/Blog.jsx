@@ -21,8 +21,6 @@ const Blog = () => {
         speed: 500,
         slidesToShow: 3.5,
         slidesToScroll: 1,
-        nextArrow: <SampleNextArrow to="next" />,
-        prevArrow: <SamplePrevArrow to="prev" />,
         initialSlide: 0,
         responsive: [
           {
